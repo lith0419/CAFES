@@ -1,0 +1,1 @@
+"""Packaged web UI assets."""

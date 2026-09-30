@@ -1,0 +1,7 @@
+health_score: 80
+citation_coverage_percent: 60
+citation_precision_percent: 90
+source_utilization_rate: 0.75
+source_warnings_max: 0
+claim_level_citation_rate: 0.2
+

@@ -1,0 +1,106 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyscf-agent"
+version = "0.2.0"
+description = "Agent workflows, CLI, and web UI for PySCF tasks"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+authors = [
+  { name = "Tenghui Li", email = "tenghui.li@rutgers.edu" }
+]
+maintainers = [
+  { name = "Tenghui Li", email = "tenghui.li@rutgers.edu" }
+]
+dependencies = [
+  "ase>=3.22,<3.30",
+  "seekpath>=2.1,<3",
+  "pyscf>=2.13,<2.14",
+  "scipy>=1.11,<1.19",
+  "langgraph>=0.6.11,<1.0",
+  "matplotlib>=3.7",
+]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.16,<0.17", "mypy>=2.3,<3"]
+mcp = ["mcp>=2.1,<3"]
+block2 = ["block2>=0.5.3,<0.6"]
+embedding-runtime = ["h5py>=3.8"]
+dmft-runtime = ["h5py>=3.8", "mpi4py>=3.1"]
+
+[project.scripts]
+pyscf-agent-mcp = "pyscf_agent.mcp_server.cli:main"
+pyscf-agent = "pyscf_agent.cli:main"
+pyscf-agent-web = "pyscf_agent.web.server:serve"
+pyscf-agent-webui = "pyscf_agent.web.server:serve"
+pyscf-computational-study = "computational_study_agent.cli:main"
+pyscf-agent-rpc = "pyscf_agent.remote.rpc_cli:main"
+pyscf-agent-benchmark = "pyscf_agent.benchmarks.cli:main"
+pyscf-agent-configure = "pyscf_agent.configure:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = [
+  "pyscf_agent",
+  "pyscf_agent.*",
+  "computational_study_agent",
+  "computational_study_agent.*",
+  "model_hamiltonian_ui",
+]
+
+[tool.setuptools.package-data]
+model_hamiltonian_ui = [
+  "*.html",
+  "*.css",
+  "*.js",
+  "README.md",
+  "examples/*.json",
+]
+"pyscf_agent.web_assets" = [
+  "*.html",
+  "*.css",
+  "*.js",
+]
+"pyscf_agent.benchmarks" = [
+  "data/*.tsv",
+]
+"pyscf_agent.resources" = [
+  "templates/*",
+]
+"computational_study_agent.web_assets" = [
+  "*.html",
+  "*.css",
+  "*.js",
+]
+"computational_study_agent.knowledge" = [
+  "curated_wiki.json",
+]
+
+[tool.ruff]
+target-version = "py310"
+extend-exclude = ["runs", ".pyscf-agent", "tmp", "datasets", "reports", "distribution"]
+
+[tool.ruff.lint]
+# Start with correctness; style migrations remain separate reviewable changes.
+select = ["E9", "E402", "F401", "F63", "F7", "F82"]
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+follow_imports = "skip"
+# Explicitly bounded first stage; this does not claim solver-wide type coverage.
+files = [
+  "pyscf_agent/paths.py",
+  "pyscf_agent/identifiers.py",
+  "pyscf_agent/timestamps.py",
+  "pyscf_agent/resources/text.py",
+  "pyscf_agent/transport/json.py",
+]

@@ -1,0 +1,21 @@
+name: pyscf-agent
+
+channels:
+  - conda-forge
+  - nodefaults
+
+dependencies:
+  - python=3.10
+  - pip
+  - "setuptools>=61"
+  - wheel
+  - "pyscf>=2.13,<2.14"
+  - h5py
+  - spglib
+  - pillow
+  - "ase>=3.22"
+  - "seekpath>=2.1,<3"
+  - "matplotlib>=3.7"
+  - pip:
+      - "build>=1.2,<2"
+      - "langgraph>=0.6.11,<1.0"

@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "scripts": {
+    "wiki:next": "llmwiki next --json",
+    "wiki:compile:review": "./compile_wiki.sh",
+    "wiki:compile": "./compile_wiki.sh --lang English",
+    "wiki:curate": "node curate_wiki.js",
+    "wiki:review:list": "llmwiki review list",
+    "wiki:review:bundle": "node build_review_bundle.js",
+    "wiki:lint": "llmwiki lint",
+    "wiki:view": "llmwiki view"
+  },
+  "devDependencies": {
+    "llm-wiki-compiler": "^0.9.0"
+  }
+}

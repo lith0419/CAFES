@@ -1,0 +1,10 @@
+.molecule-preview { display: grid; gap: 0.65rem; min-width: 0; }
+.molecule-preview-meta { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.molecule-preview-pill { display: inline-flex; align-items: center; padding: 0.22rem 0.55rem; border-radius: 999px; background: #f1f5f9; border: 1px solid #e2e8f0; font-size: 0.78rem; color: #334155; }
+.molecule-preview-canvas { min-height: 15rem; border: 1px solid #e2e8f0; border-radius: 0.7rem; background: #f8fafc; overflow: hidden; }
+.molecule-preview-svg { display: block; width: 100%; min-height: 15rem; max-height: 28rem; background: #f8fafc; }
+.molecule-preview-empty { min-height: 12rem; display: grid; place-items: center; text-align: center; color: #64748b; border: 1px dashed #cbd5e1; border-radius: 0.7rem; background: #f8fafc; padding: 1rem; }
+.molecule-preview-bond { stroke: #64748b; stroke-width: 7; stroke-linecap: round; }
+.molecule-preview-bond-highlight { stroke: rgba(255, 255, 255, 0.72); stroke-width: 2.4; stroke-linecap: round; }
+.molecule-preview-atom-label { text-anchor: middle; dominant-baseline: central; font-size: 13px; font-weight: 800; fill: #0f172a; pointer-events: none; }
+.molecule-preview-depth-shadow { fill: rgba(15, 23, 42, 0.10); }

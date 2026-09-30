@@ -1,0 +1,89 @@
+{
+  "name": "hubbard-uv-grid-refinement",
+  "objective": "Refine a two-dimensional U-V grid with a fixed FCI solver",
+  "system_type": "model_hamiltonian",
+  "base_task": {
+    "solver": "fci"
+  },
+  "base_model_spec": {
+    "schema": "pyscf-agent.model-hamiltonian.v1",
+    "model": "hubbard",
+    "preset": "chain",
+    "dimension": 1,
+    "boundary": "open",
+    "energy_unit": "a.u.",
+    "nelec": [
+      1,
+      1
+    ],
+    "sites": [
+      {
+        "id": 0,
+        "x": 0,
+        "y": 0,
+        "U": 0,
+        "epsilon": 0
+      },
+      {
+        "id": 1,
+        "x": 1,
+        "y": 0,
+        "U": 0,
+        "epsilon": 0
+      }
+    ],
+    "bonds": [
+      {
+        "id": 0,
+        "source": 0,
+        "target": 1,
+        "t": -1,
+        "effective_t": -1,
+        "V": 0,
+        "effective_V": 0
+      }
+    ]
+  },
+  "sweep": {
+    "U": [
+      0,
+      4,
+      8
+    ],
+    "V": [
+      0,
+      2,
+      4
+    ]
+  },
+  "observables": [
+    "energy"
+  ],
+  "grid_refinement": {
+    "enabled": true,
+    "axes": [
+      "U",
+      "V"
+    ],
+    "max_new_points": 120,
+    "max_rounds": 6,
+    "min_spacing": {
+      "U": 0.125,
+      "V": 0.125
+    },
+    "metrics": [
+      {
+        "name": "energy_per_site",
+        "atol": 0.03,
+        "rtol": 0,
+        "required": true
+      },
+      {
+        "name": "mean_double_occupancy",
+        "atol": 0.03,
+        "rtol": 0,
+        "required": true
+      }
+    ]
+  }
+}

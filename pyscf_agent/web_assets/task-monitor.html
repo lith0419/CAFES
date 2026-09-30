@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PySCF Task Monitor</title><style>/* TASK_MONITOR_CSS */</style></head>
+<body><main>
+<header><div><p class="eyebrow">PySCF Agent · Task monitor</p><h1 id="title">Calculation progress</h1></div><span id="outcome" class="badge">Connecting</span></header>
+<p id="identity" class="muted identity"></p>
+<div class="toolbar"><button id="refresh" disabled>Refresh now</button><label><input type="checkbox" id="auto" checked> Auto-refresh</label><span id="refresh-state" class="muted"></span><button id="open" hidden>Open in workbench ↗</button></div>
+<p id="message" role="status" aria-live="polite"></p>
+<section class="overview" aria-label="Task status">
+<div><span class="muted">Execution</span><strong id="scheduler">—</strong></div>
+<div><span class="muted">Scientific result</span><strong id="science">Not available</strong></div>
+<div><span class="muted">Elapsed time</span><strong id="elapsed">—</strong></div>
+<div><span class="muted">Report</span><strong id="report">Not available</strong></div>
+</section>
+<section id="result-section" hidden><h2>Saved result</h2><p id="result-energy"></p><p id="summary"></p><div id="errors" class="errors"></div></section>
+<section><div class="section-title"><h2 id="progress-title">Solver progress</h2><span id="log-age" class="muted"></span></div>
+<p id="progress-note" class="muted">No solver metrics have been reported.</p>
+<div id="sweeps" hidden>
+<p id="observed"></p>
+<div class="overview metrics">
+<div><span class="muted">Completed sweep</span><strong id="sweep">—</strong></div>
+<div><span class="muted">Bond dimension M</span><strong id="bond">—</strong></div>
+<div><span class="muted">|ΔE|</span><strong id="delta">—</strong></div>
+<div><span class="muted">Discarded weight</span><strong id="weight">—</strong></div>
+</div><p id="sweep-energy" class="muted"></p></div>
+<small id="progress-source" class="muted"></small></section>
+<section><h2>Recent output</h2><p class="muted">Bounded log excerpts. A quiet log does not by itself mean the calculation has stopped.</p><div id="logs"></div></section>
+<p id="notices" class="muted"></p><footer><span id="checked">Not checked yet</span><span>Read-only · Refresh never starts or retries a calculation</span></footer>
+<a id="link" hidden target="_blank" rel="noopener noreferrer"></a>
+</main><script>/* TASK_MONITOR_JS */</script></body></html>

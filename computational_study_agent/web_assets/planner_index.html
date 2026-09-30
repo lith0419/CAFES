@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Computational Study Planner</title>
+  <link rel="stylesheet" href="/computational-study/assets/planner.css">
+  <link rel="stylesheet" href="/assets/molecular-preview.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <h1>Computational Study Planner</h1>
+        <p class="subtitle">Design multi-task studies</p>
+      </div>
+      <div class="top-actions">
+        <a class="link-button secondary" href="/">Single Calculation</a>
+        <button id="top-open-model-builder" type="button" class="secondary">Model Builder</button>
+      </div>
+    </header>
+
+    <section class="layout">
+      <div class="stack">
+        <div class="panel stack">
+          <h2 class="section-title">Saved Studies</h2>
+          <label>Study ID <input id="saved-study-id" type="text" autocomplete="off" placeholder="Paste a Study ID from Codex"></label>
+          <div class="top-actions">
+            <button id="open-saved-study" type="button">Open Study</button>
+            <button id="refresh-saved-studies" type="button" class="secondary">List Studies</button>
+            <button id="refresh-saved-study" type="button" class="secondary" disabled>Refresh Status</button>
+            <button id="collect-saved-study" type="button" class="secondary" disabled>Collect Results</button>
+          </div>
+          <label>Saved in this work directory <select id="saved-study-list"><option value="">Select a Study</option></select></label>
+          <p id="saved-study-status" class="hint" role="status">Open an existing Study to view its plan, review decisions and results.</p>
+        </div>
+        <div class="panel stack">
+          <div>
+            <label class="inline-field">
+              <span>Work Directory</span>
+              <input id="work-dir" type="text" placeholder="Leave empty to use runs/ under the current directory">
+            </label>
+            <p id="effective-work-dir" class="hint"></p>
+          </div>
+          <div class="mode-grid">
+            <label>
+              Planner Template
+              <select id="planner-template">
+                <option value="standard">Standard Study</option>
+                <option value="hamiltonian_dataset">Hamiltonian Dataset</option>
+              </select>
+            </label>
+            <label>
+              Study System
+              <select id="study-system">
+                __STUDY_SYSTEM_OPTIONS__
+              </select>
+            </label>
+            <label id="study-mode-control">
+              Study Mode
+              <select id="study-mode">
+                __STUDY_MODE_OPTIONS__
+              </select>
+            </label>
+            <label id="adaptive-initial-scan-control">
+              Initial Scan
+              <select id="adaptive-initial-scan-strategy">
+                __ADAPTIVE_INITIAL_SCAN_STRATEGY_OPTIONS__
+              </select>
+            </label>
+            <label id="adaptive-active-space-solver-control" class="hidden">
+              Active Space
+              <select id="adaptive-active-space-solver">
+                __ACTIVE_SPACE_SOLVER_OPTIONS__
+              </select>
+            </label>
+            <label>
+              Execution
+              <select id="execution-target" aria-label="Execution target"></select>
+            </label>
+            <label>
+              Resource Profile
+              <select id="resource-profile" aria-label="Resource profile"></select>
+            </label>
+          </div>
+          <div id="adaptive-block2-orbital-controls" class="mode-grid contextual-controls hidden">
+            <label>
+              Active-orbital basis
+              <select id="adaptive-active-space-localization">
+                __ACTIVE_SPACE_LOCALIZATION_OPTIONS__
+              </select>
+            </label>
+            <label>
+              Orbital ordering
+              <select id="adaptive-orbital-ordering">
+                __ACTIVE_SPACE_ORDERING_OPTIONS__
+              </select>
+            </label>
+            <label id="adaptive-manual-orbital-order-control" class="hidden">
+              Manual permutation
+              <input id="adaptive-manual-orbital-order" type="text" inputmode="numeric" placeholder="e.g. 0,2,1,3">
+            </label>
+          </div>
+          <div class="task-session-grid">
+            <label>
+              Tasks
+              <select id="task-session-select"></select>
+            </label>
+            <button id="new-task" type="button" class="secondary">New Task</button>
+          </div>
+        </div>
+
+        <fieldset id="study-inputs" class="panel stack">
+          <textarea id="study-spec" class="hidden-state" aria-hidden="true"></textarea>
+          <input id="model-hamiltonian-input-file" type="hidden">
+          <div>
+            <h2 id="task-setup-title" class="section-title">Task Setup</h2>
+            <p id="task-setup-hint" class="hint"></p>
+          </div>
+          <div id="hamiltonian-dataset-setup" class="dataset-setup stack hidden">
+            <div class="mode-grid">
+              <label>
+                Dataset ID
+                <input id="dataset-id" type="text" value="qh9-small-1000" autocomplete="off">
+              </label>
+              <label>
+                Dataset Name
+                <input id="dataset-name" type="text" value="QH9-compatible 1000-structure dataset" autocomplete="off">
+              </label>
+              <label>
+                Molecules
+                <input id="dataset-molecule-count" type="number" value="100" readonly>
+              </label>
+              <label>
+                Frames per Molecule
+                <input id="dataset-frame-count" type="number" value="10" readonly>
+              </label>
+              <label>
+                Split Protocol
+                <select id="dataset-split-protocol">
+                  <option value="molecule_random">Molecule random</option>
+                  <option value="geometry_random">Geometry random</option>
+                  <option value="molecule_size_ood">Molecule size OOD</option>
+                </select>
+              </label>
+              <label>
+                Split Seed
+                <input id="dataset-split-seed" type="number" min="0" step="1" value="0">
+              </label>
+            </div>
+            <label>
+              Seed Geometries
+              <input id="dataset-seed-file" type="file" accept=".json,.jsonl,application/json,application/x-ndjson">
+            </label>
+            <p id="dataset-seed-status" class="hint">Import exactly 100 neutral closed-shell seed molecules as JSON or JSONL.</p>
+            <div class="dataset-profile" aria-label="Hamiltonian dataset scientific profile">
+              <span>B3LYP / def2-SVP</span>
+              <span>SCF 1e-8 · grid 3 · DIIS 8</span>
+              <span>NVE 300 K · 100 steps</span>
+              <span>frames 9, 19, …, 99</span>
+            </div>
+          </div>
+          <div id="model-hamiltonian-setup" class="stack">
+            <div class="mode-grid">
+              <label>
+                Method
+                <select id="planner-model-solver" aria-label="Model Hamiltonian method">
+                  __MODEL_SOLVER_OPTIONS__
+                </select>
+              </label>
+            </div>
+            <fieldset id="planner-grid-refinement" class="stack">
+              <legend>Automatic Parameter Grid Refinement</legend>
+              <label><input id="grid-refinement-enabled" type="checkbox"> Add points automatically where the results need finer sampling</label>
+              <div id="grid-refinement-controls" class="stack hidden">
+                <div class="mode-grid">
+                  <label>First parameter <select id="grid-axis-1"><option value="U">U</option><option value="V">V</option><option value="t">t</option><option value="epsilon">epsilon</option></select></label>
+                  <label>Second parameter (optional) <select id="grid-axis-2"><option value="">None</option><option value="U">U</option><option value="V">V</option><option value="t">t</option><option value="epsilon">epsilon</option></select></label>
+                  <label>Minimum spacing, first parameter <input id="grid-spacing-1" type="number" min="0" step="any" value="0.0001"></label>
+                  <label>Minimum spacing, second parameter <input id="grid-spacing-2" type="number" min="0" step="any" value="0.0001"></label>
+                  <label>Maximum interval, first parameter (optional) <input id="grid-width-1" type="number" min="0" step="any"></label>
+                  <label>Maximum interval, second parameter (optional) <input id="grid-width-2" type="number" min="0" step="any"></label>
+                  <label>Maximum new calculation points <input id="grid-max-points" type="number" min="1" step="1" value="64"></label>
+                  <label>Maximum refinement levels <input id="grid-max-rounds" type="number" min="1" step="1" value="4"></label>
+                </div>
+                <div class="table-wrap"><table><thead><tr><th>Quantity</th><th>Absolute tolerance</th></tr></thead><tbody>
+<tr><td><label><input id="grid-metric-energy_per_site" type="checkbox"> Energy per site</label></td><td><input id="grid-atol-energy_per_site" aria-label="Energy per site absolute tolerance" type="number" min="0" step="any" value="0.001"></td></tr>
+<tr><td><label><input id="grid-metric-mean_double_occupancy" type="checkbox"> Mean double occupancy</label></td><td><input id="grid-atol-mean_double_occupancy" aria-label="Mean double occupancy absolute tolerance" type="number" min="0" step="any" value="0.001"></td></tr>
+<tr><td><label><input id="grid-metric-nearest_neighbor_spin_correlation" type="checkbox"> Nearest-neighbor spin correlation</label></td><td><input id="grid-atol-nearest_neighbor_spin_correlation" aria-label="Nearest-neighbor spin correlation absolute tolerance" type="number" min="0" step="any" value="0.001"></td></tr>
+<tr><td><label><input id="grid-metric-nearest_neighbor_charge_correlation" type="checkbox"> Nearest-neighbor charge correlation</label></td><td><input id="grid-atol-nearest_neighbor_charge_correlation" aria-label="Nearest-neighbor charge correlation absolute tolerance" type="number" min="0" step="any" value="0.001"></td></tr>
+<tr><td><label><input id="grid-metric-staggered_magnetization" type="checkbox"> Staggered magnetization</label></td><td><input id="grid-atol-staggered_magnetization" aria-label="Staggered magnetization absolute tolerance" type="number" min="0" step="any" value="0.001"></td></tr>
+<tr><td><label><input id="grid-metric-sublattice_charge_imbalance" type="checkbox"> Sublattice charge imbalance</label></td><td><input id="grid-atol-sublattice_charge_imbalance" aria-label="Sublattice charge imbalance absolute tolerance" type="number" min="0" step="any" value="0.001"></td></tr>
+                </tbody></table></div>
+              </div>
+            </fieldset>
+            <div id="planner-dmet-controls" class="model-solver-controls stack hidden">
+              <h3 class="section-title">DMET Configuration</h3>
+              <div class="mode-grid">
+                <label>
+                  Representation
+                  <select id="planner-dmet-execution-mode">
+                    <option value="">Automatic</option>
+                    <option value="translational">Translational symmetry</option>
+                    <option value="finite_graph">Finite graph</option>
+                  </select>
+                </label>
+                <label>
+                  Fragment Definition
+                  <select id="planner-dmet-fragment-definition">
+                    <option value="">Automatic</option>
+                    <option value="primitive_cell">Primitive cell</option>
+                    <option value="cell_shape">Cell block</option>
+                    <option value="honeycomb_hexagon">Honeycomb hexagon (6 sites)</option>
+                    <option value="site_count">Site count</option>
+                  </select>
+                </label>
+                <label id="planner-dmet-impurity-shape-control" class="hidden">
+                  Fragment Shape
+                  <input id="planner-dmet-impurity-shape" type="text" placeholder="2 or 2,2">
+                </label>
+                <label id="planner-dmet-impurity-size-control" class="hidden">
+                  Impurity Size
+                  <input id="planner-dmet-impurity-size" type="number" min="1" step="1" value="1">
+                </label>
+                <label>
+                  Impurity Solver
+                  <select id="planner-dmet-impurity-solver">
+                    <option value="fci">FCI</option>
+                    <option value="ccsd">CCSD</option>
+                    <option value="block2_dmrg">block2 DMRG</option>
+                  </select>
+                </label>
+                <label>
+                  Bath
+                  <select id="planner-dmet-interacting-bath">
+                    <option value="true">Interacting</option>
+                    <option value="false">Non-interacting</option>
+                  </select>
+                </label>
+                <label id="planner-dmet-block2-preset-control" class="hidden">
+                  DMRG Preset
+                  <select id="planner-dmet-block2-preset">
+                    <option value="screening">Screening</option>
+                    <option value="balanced" selected>Balanced</option>
+                    <option value="high_accuracy">High accuracy</option>
+                  </select>
+                </label>
+                <label id="planner-dmet-block2-ordering-control" class="hidden">
+                  DMRG Orbital Ordering
+                  <select id="planner-dmet-block2-ordering">
+                    <option value="canonical">Canonical</option>
+                    <option value="fiedler">Fiedler</option>
+                  </select>
+                </label>
+                <label>
+                  Reference
+                  <select id="planner-dmet-reference">
+                    <option value="unrestricted">Unrestricted</option>
+                    <option value="restricted">Restricted</option>
+                  </select>
+                </label>
+                <label>
+                  Initial Density Seed
+                  <select id="planner-dmet-reference-density">
+                    __DMET_REFERENCE_DENSITY_OPTIONS__
+                  </select>
+                </label>
+                <label id="planner-dmet-ccsd-beta-control" class="hidden">
+                  CCSD / DMET β
+                  <input id="planner-dmet-ccsd-beta" type="number" min="0" step="any" placeholder="1000 (default)" disabled>
+                </label>
+                <label>
+                  Maximum Iterations
+                  <input id="planner-dmet-max-iterations" type="number" min="1" step="1" value="50">
+                </label>
+                <label>
+                  Energy Tolerance
+                  <input id="planner-dmet-energy-tolerance" type="number" min="1e-12" step="1e-6" value="1e-6">
+                </label>
+                <label>
+                  1RDM Tolerance
+                  <input id="planner-dmet-density-tolerance" type="number" min="1e-12" step="1e-5" value="1e-4">
+                </label>
+              </div>
+            </div>
+            <div class="model-toolbar">
+              <button id="open-model-builder" type="button" class="secondary">Open Model Builder</button>
+              <button id="preview-model-hamiltonian" type="button" class="secondary">Preview Model</button>
+            </div>
+            <div id="model-hamiltonian-structure-preview" class="model-structure-preview">
+              <div class="model-structure-empty">No model input yet.</div>
+            </div>
+          </div>
+          <div id="molecular-task-setup" class="task-setup-summary hidden">
+            <div id="molecular-task-summary" class="task-setup-grid"></div>
+            <div id="molecular-task-structure-preview" class="molecule-preview"></div>
+            <pre id="molecular-task-structure" class="task-structure"></pre>
+          </div>
+        </fieldset>
+
+        <div class="panel stack">
+          <div>
+            <h2 class="section-title">Planner Conversation</h2>
+            <div id="planner-chat" class="planner-chat" aria-live="polite"></div>
+          </div>
+          <div class="planner-composer">
+            <label>
+              Message
+              <textarea id="goal" placeholder="Describe the study you want to run."></textarea>
+            </label>
+            <p class="hint">Build and run stay explicit.</p>
+          </div>
+          <div class="button-row">
+            <button id="draft-with-llm" type="button">Send To Planner</button>
+            <button id="load-example" type="button" class="secondary">Load Example</button>
+          </div>
+          <div id="draft-status" class="status"></div>
+        </div>
+
+      </div>
+
+      <div class="stack">
+        <div class="panel stack">
+          <div>
+            <h2 class="section-title">Plan Review</h2>
+            <p class="approval-note">Review cases before running.</p>
+          </div>
+          <div class="button-row">
+            <button id="build-plan" type="button">Build Plan</button>
+            <button id="run-study" type="button">Run Plan</button>
+            <button id="stop-saved-study" type="button" class="secondary stop-calculation" disabled>Stop Calculation</button>
+          </div>
+          <div id="run-status" class="status"></div>
+          <div id="plan-summary" class="cards"></div>
+          <div id="review-gate" class="review-gate" aria-live="polite"></div>
+          <div id="case-table" class="empty">Build a plan to see cases.</div>
+          <section id="retry-editor" hidden>
+            <h3>Retry selected cases</h3>
+            <p id="retry-case-label"></p>
+            <label>Parameter <select id="retry-parameter">
+              <option value="">Keep current settings</option>
+              <option value="solver.options.max_iterations">DMET outer iterations</option>
+              <option value="solver.options.energy_tolerance">DMET energy tolerance</option>
+              <option value="solver.options.density_tolerance">DMET density tolerance</option>
+              <option value="solver.options.impurity_scf_diis">Impurity SCF DIIS (true/false)</option>
+              <option value="runtime.max_cycle">Molecular SCF maximum cycles</option>
+            </select></label>
+            <label>New value <input id="retry-value" placeholder="100"></label>
+            <label><input id="retry-dependents" type="checkbox"> Also update cases that use new results from these points</label>
+            <button id="preview-retry" type="button">Preview Retry</button>
+            <button id="close-retry" type="button" class="secondary">Close</button>
+          </section>
+          <section id="retry-preview" hidden aria-live="polite"></section>
+          <div id="adaptive-panel" class="adaptive-panel hidden">
+            <h3 class="section-title">Adaptive Decisions</h3>
+            <div id="adaptive-summary" class="empty">Build or run an adaptive scan to see initial-scan decisions.</div>
+          </div>
+        </div>
+
+        <div class="panel stack">
+          <div>
+            <h2 class="section-title">Postprocessing</h2>
+            <p class="approval-note">Plot results, select trajectory geometries, generate a portable dataset, or collect it locally.</p>
+          </div>
+          <div class="button-row">
+            <button id="suggest-plots" type="button" class="secondary">Suggest</button>
+            <button id="generate-default-plots" type="button" class="secondary">Default Plots</button>
+            <button id="generate-selected-plots" type="button">Generate</button>
+            <button id="generate-hamiltonian-dataset" type="button" class="secondary hidden">Generate Dataset</button>
+            <button id="collect-hamiltonian-dataset" type="button" class="secondary hidden">Collect</button>
+          </div>
+          <div id="energy-selection-controls" class="custom-plot-form hidden" aria-label="Select trajectory frames by energy">
+            <label>Frames per molecule<input id="energy-selection-count" type="number" min="1" step="1" value="20" required></label>
+            <label>Start (fs)<input id="energy-selection-start" type="number" min="0" step="any" value="0" required></label>
+            <label>End (fs)<input id="energy-selection-end" type="number" min="0" step="any" placeholder="Trajectory end"></label>
+            <button id="select-energy-frames" type="button" class="secondary">Select by Energy</button>
+          </div>
+          <div class="custom-plot-form" aria-label="Custom plot spec">
+            <label>
+              Tool
+              <select id="custom-plot-tool">
+                __POSTPROCESSING_TOOL_OPTIONS__
+              </select>
+            </label>
+            <label>
+              X
+              <select id="custom-plot-x"></select>
+            </label>
+            <label>
+              Y
+              <select id="custom-plot-y"></select>
+            </label>
+            <label>
+              Color
+              <select id="custom-plot-color"></select>
+            </label>
+            <label>
+              Group
+              <select id="custom-plot-group"></select>
+            </label>
+            <label>
+              Output
+              <input id="custom-plot-output" type="text" placeholder="auto">
+            </label>
+            <button id="add-custom-plot" type="button" class="secondary">Add</button>
+          </div>
+          <div id="postprocess-status" class="status"></div>
+          <div id="plot-spec-table" class="empty">No plot specs yet.</div>
+          <div id="postprocess-artifacts" class="empty">No postprocessing artifacts yet.</div>
+        </div>
+
+        <div class="panel stack">
+          <h2 class="section-title">Report</h2>
+          <div id="report-summary" class="empty">No run yet.</div>
+          <div class="button-row">
+            <button id="analyze-study-results" type="button" class="secondary">Analyze Results</button>
+          </div>
+          <div id="analysis-status" class="status"></div>
+          <div id="study-result-analysis" class="empty analysis-box">Run first.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const DEFAULT_STUDY_SPEC = __DEFAULT_STUDY_SPEC__;
+    const DEFAULT_MOLECULAR_STUDY_SPEC = __DEFAULT_MOLECULAR_STUDY_SPEC__;
+    const DEFAULT_WORK_DIR = __DEFAULT_WORK_DIR__;
+    const LLM_CONFIGURED = __LLM_CONFIGURED__;
+    const ADAPTIVE_INITIAL_SCAN_STRATEGIES = __ADAPTIVE_INITIAL_SCAN_STRATEGIES__;
+    let currentPlan = null;
+    let currentReport = null;
+    let currentAdaptivePreview = null;
+    let currentAnalysisRows = [];
+    let currentRunId = '';
+    let currentPlotSpecs = [];
+    let currentPostprocessArtifacts = [];
+    let artifactPreviewUrls = [];
+    let plannerMessages = [];
+    let currentReviewGate = null;
+    let currentExecution = null;
+    let currentSavedStudy = null;
+    let taskSessions = [];
+    let activeTaskSessionId = '';
+    let isRestoringTaskSession = false;
+    let currentDatasetSeedGeometries = [];
+    let currentDatasetSeedFileName = '';
+  </script>
+  <script src="/assets/shared.js"></script>
+  <script src="/assets/molecular-preview.js"></script>
+  <script src="/assets/execution-targets.js"></script>
+  <script src="/computational-study/assets/planner-core.js"></script>
+  <script src="/computational-study/assets/planner-spec.js"></script>
+  <script src="/computational-study/assets/planner-dataset.js"></script>
+  <script src="/computational-study/assets/planner-postprocessing.js"></script>
+  <script src="/computational-study/assets/planner-adaptive-decisions.js"></script>
+  <script src="/computational-study/assets/planner-adaptive-review.js"></script>
+  <script src="/computational-study/assets/planner-rendering.js"></script>
+  <script src="/computational-study/assets/planner-saved-studies.js"></script>
+  <script src="/computational-study/assets/planner-retry.js"></script>
+  <script src="/computational-study/assets/planner-dmet.js"></script>
+  <script src="/computational-study/assets/planner-init.js"></script>
+</body>
+</html>

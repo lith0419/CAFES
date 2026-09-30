@@ -1,0 +1,30 @@
+{
+  "name": "pyscf-agent",
+  "version": "0.1.0+codex.20260921025730",
+  "description": "Prepare, run, review and analyze PySCF calculations and Studies through CAFES.",
+  "author": {
+    "name": "Tenghui Li",
+    "url": "https://github.com/lith0419"
+  },
+  "repository": "https://github.com/lith0419/CAFES",
+  "license": "Apache-2.0",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "CAFES",
+    "shortDescription": "Run and review quantum chemistry Studies.",
+    "longDescription": "Use CAFES for molecular and model calculations, saved Study plans, scientific review, retries and result analysis on a configured local or Slurm execution target.",
+    "developerName": "Tenghui Li",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Prepare a small H2 basis-comparison Study with CAFES.",
+      "Check my existing Study and explain its convergence evidence.",
+      "Prepare active-space diagnostics for my molecular calculation."
+    ],
+    "brandColor": "#256D85"
+  },
+  "mcpServers": "./.mcp.json"
+}

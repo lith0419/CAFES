@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "pageKinds": {
+    "concept": {
+      "description": "A durable technical concept or architectural rule.",
+      "minWikilinks": 2
+    },
+    "entity": {
+      "description": "A concrete component, module, interface, or UI surface.",
+      "minWikilinks": 1
+    },
+    "comparison": {
+      "description": "A comparison between alternative designs or workflows.",
+      "minWikilinks": 2
+    },
+    "overview": {
+      "description": "A map-of-content page connecting several rules or components.",
+      "minWikilinks": 3
+    }
+  },
+  "seedPages": [
+    {
+      "title": "PySCF Agent Architecture",
+      "kind": "overview",
+      "summary": "Map of the single-calculation agent, model Hamiltonian builder, planner agent, and workflow rules."
+    },
+    {
+      "title": "Model Hamiltonian Planning Rules",
+      "kind": "overview",
+      "summary": "Rules for model Hamiltonian inputs, electron counts, solver selection, and supported operations."
+    },
+    {
+      "title": "Planner Agent Approval Boundary",
+      "kind": "concept",
+      "summary": "Why Build Plan and Run Plan require explicit human approval."
+    },
+    {
+      "title": "PySCF Agent Error Book",
+      "kind": "overview",
+      "summary": "Known failures and permanent rules derived from them."
+    }
+  ]
+}
+

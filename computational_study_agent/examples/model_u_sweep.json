@@ -1,0 +1,40 @@
+{
+  "name": "hubbard-u-sweep",
+  "objective": "Sweep the Hubbard U parameter and compare FCI energies",
+  "system_type": "model_hamiltonian",
+  "base_model_spec": {
+    "schema": "pyscf-agent.model-hamiltonian.v1",
+    "model": "hubbard",
+    "dimension": 1,
+    "preset": "chain",
+    "boundary": "open",
+    "energy_unit": "a.u.",
+    "nelec": [3, 3],
+    "sites": [
+      {"id": 0, "x": 0, "y": 0, "epsilon": 0, "U": 4},
+      {"id": 1, "x": 1, "y": 0, "epsilon": 0, "U": 4},
+      {"id": 2, "x": 2, "y": 0, "epsilon": 0, "U": 4},
+      {"id": 3, "x": 3, "y": 0, "epsilon": 0, "U": 4},
+      {"id": 4, "x": 4, "y": 0, "epsilon": 0, "U": 4},
+      {"id": 5, "x": 5, "y": 0, "epsilon": 0, "U": 4}
+    ],
+    "bonds": [
+      {"id": 0, "source": 0, "target": 1, "t": -1, "V": 0, "effective_t": -1, "effective_V": 0},
+      {"id": 1, "source": 1, "target": 2, "t": -1, "V": 0, "effective_t": -1, "effective_V": 0},
+      {"id": 2, "source": 2, "target": 3, "t": -1, "V": 0, "effective_t": -1, "effective_V": 0},
+      {"id": 3, "source": 3, "target": 4, "t": -1, "V": 0, "effective_t": -1, "effective_V": 0},
+      {"id": 4, "source": 4, "target": 5, "t": -1, "V": 0, "effective_t": -1, "effective_V": 0}
+    ]
+  },
+  "base_task": {
+    "solver": "fci"
+  },
+  "sweep": {
+    "U": [2, 4, 6, 8]
+  },
+  "observables": ["energy", "energy_level_count", "many_body_basis_dimension"],
+  "comparison": {
+    "x_axis": "U",
+    "y_axis": "energy"
+  }
+}

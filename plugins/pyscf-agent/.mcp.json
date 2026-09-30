@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "pyscf-agent": {
+      "command": "./scripts/start-mcp.sh",
+      "cwd": ".",
+      "env_vars": ["PYSCF_AGENT_CODEX_CONFIG", "XDG_CONFIG_HOME"],
+      "startup_timeout_sec": 30,
+      "tool_timeout_sec": 120
+    }
+  }
+}

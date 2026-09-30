@@ -1,0 +1,39 @@
+runs/
+block2-scratch/
+/remote-*-job.json
+# Local execution state, remote bindings, numerical data and inspection files.
+/.pyscf-agent/
+/tmp/
+/.venv/
+/venv/
+/llm.env
+/build/
+/dist/
+*.egg-info/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.tox/
+.nox/
+.eggs/
+node_modules/
+.DS_Store
+._*
+__pycache__/
+*.py[cod]
+.pytest_cache/
+# Local numerical dataset packages; publication is managed separately.
+/datasets/QM9_CCSD_upload*/
+/datasets/qm9-ccsd500-v2-dict/
+# Local manuscript material.
+/docs/si/
+/manuscript/
+
+# Research material stays outside the public source repository.
+/datasets/
+/reports/
+/docs/development/

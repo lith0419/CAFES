@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "CAFES"
+type: software
+version: 0.2.0
+authors:
+  - family-names: "Li"
+    given-names: "Tenghui"
+    affiliation: "Rutgers University"
+    email: "tenghui.li@rutgers.edu"
+license: Apache-2.0
+repository-code: "https://github.com/lith0419/CAFES"

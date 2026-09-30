@@ -1,0 +1,32 @@
+{
+  "schema": "pyscf-agent.model-hamiltonian.v1",
+  "model": "hubbard",
+  "dimension": 2,
+  "preset": "square",
+  "boundary": "open",
+  "nelec": [2, 2],
+  "geometry_coupled_hopping": false,
+  "geometry": {
+    "beta": 1.5,
+    "r0": 1
+  },
+  "globals": {
+    "t": -1,
+    "delta": 0,
+    "epsilon": 0,
+    "U": 4,
+    "V": 0.5
+  },
+  "sites": [
+    {"id": 0, "x": -0.5, "y": -0.5, "epsilon": 0, "U": 4},
+    {"id": 1, "x": 0.5, "y": -0.5, "epsilon": 0, "U": 4},
+    {"id": 2, "x": -0.5, "y": 0.5, "epsilon": 0, "U": 4},
+    {"id": 3, "x": 0.5, "y": 0.5, "epsilon": 0, "U": 4}
+  ],
+  "bonds": [
+    {"id": 0, "source": 0, "target": 1, "t": -1, "V": 0.5, "kind": "custom", "effective_t": -1},
+    {"id": 1, "source": 0, "target": 2, "t": -1, "V": 0.5, "kind": "custom", "effective_t": -1},
+    {"id": 2, "source": 1, "target": 3, "t": -1, "V": 0.5, "kind": "custom", "effective_t": -1},
+    {"id": 3, "source": 2, "target": 3, "t": -1, "V": 0.5, "kind": "custom", "effective_t": -1}
+  ]
+}

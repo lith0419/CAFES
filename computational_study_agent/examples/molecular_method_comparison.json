@@ -1,0 +1,20 @@
+{
+  "name": "water-method-comparison",
+  "objective": "Compare molecular total energies across supported methods",
+  "system_type": "molecular",
+  "base_task": {
+    "atom": "O 0 0 0; H 0 -0.757 0.587; H 0 0.757 0.587",
+    "basis": "sto-3g",
+    "job": "single_point",
+    "charge": 0,
+    "spin": 0,
+    "outputs": ["energy"]
+  },
+  "sweep": {
+    "method": ["hf", "mp2", "ccsd"]
+  },
+  "observables": ["energy", "reference_energy"],
+  "comparison": {
+    "reference_case": "lowest_energy"
+  }
+}

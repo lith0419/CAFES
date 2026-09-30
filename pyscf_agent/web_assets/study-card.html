@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PySCF Study</title>
+<style>
+:root { color-scheme: light dark; font: 14px/1.5 var(--font-sans, system-ui, sans-serif); }
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--color-text-primary, light-dark(#172d33, #e5edef)); background: var(--color-background-primary, light-dark(#fff, #182429)); }
+main { padding: 22px; }
+header, .actions, .counts { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+header { justify-content: space-between; align-items: flex-start; }
+.eyebrow { color: light-dark(#38796e, #83c8b9); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+h1 { margin: 5px 0; font-size: 21px; line-height: 1.3; overflow-wrap: anywhere; }
+h2 { font-size: 14px; margin: 20px 0 8px; }
+p { margin: 6px 0; }
+.muted, small { color: var(--color-text-secondary, light-dark(#5c6b70, #b0c0c5)); }
+#identity { font: 12px/1.6 ui-monospace, monospace; overflow-wrap: anywhere; }
+#execution { padding: 5px 10px; border: 1px solid light-dark(#c5d9d3, #4c6e64); border-radius: 20px; }
+.counts { margin: 12px 0; }
+.metric { background: var(--color-background-secondary, light-dark(#f2f6f5, #223239)); border-radius: 8px; padding: 9px 14px; }
+.metric strong { font-size: 20px; margin-right: 7px; font-variant-numeric: tabular-nums; }
+.table-wrap { overflow: auto; max-height: 330px; border: 1px solid light-dark(#dce6e2, #3c5157); border-radius: 8px; }
+table { border-collapse: collapse; width: 100%; text-align: left; font-size: 12px; }
+th, td { padding: 10px 12px; border-bottom: 1px solid light-dark(#e7eeeb, #30464b); white-space: nowrap; }
+th { background: var(--color-background-secondary, light-dark(#f2f6f5, #223239)); font-weight: 600; }
+td.energy { font-variant-numeric: tabular-nums; font-family: ui-monospace, monospace; }
+tr:last-child td { border-bottom: 0; }
+.actions { margin-top: 18px; }
+button { font: inherit; border: 1px solid light-dark(#bccfc9, #5c7776); border-radius: 7px; padding: 8px 14px; cursor: pointer; color: inherit; background: transparent; }
+button.primary { background: light-dark(#215d53, #8fd1bf); color: light-dark(#fff, #102f28); border-color: transparent; }
+button:disabled { opacity: .5; cursor: default; }
+button:focus-visible { outline: 2px solid #409b86; outline-offset: 3px; }
+#message { margin-top: 12px; overflow-wrap: anywhere; }
+#message.error { color: light-dark(#a23b2c, #ffb0a0); }
+#review { padding: 10px 12px; background: light-dark(#fff5db, #443e28); border-radius: 6px; }
+#link { display: block; overflow-wrap: anywhere; margin-top: 8px; color: inherit; }
+[hidden] { display: none !important; }
+@media (max-width: 440px) { main { padding: 15px; } h1 { font-size: 18px; } }
+</style>
+</head>
+<body><main>
+<header><div><div class="eyebrow">PySCF Agent · Study</div><h1 id="name">Study overview</h1><div id="identity" class="muted"></div></div><span id="execution">Loading</span></header>
+<p id="report-status" class="muted"></p>
+<div id="counts" class="counts" aria-label="Case counts"></div>
+<p id="count-source" class="muted"></p>
+<p id="scheduler" class="muted"></p>
+<p id="review" hidden>Review is available in the full workbench.</p>
+<h2 id="results-title">Saved results</h2>
+<p id="results-note" class="muted">Waiting for Study data.</p>
+<div class="table-wrap"><table><thead><tr><th>Case</th><th>Method / basis</th><th>CAS (e, o)</th><th>Task status</th><th>Energy</th><th>Converged</th></tr></thead><tbody id="rows"></tbody></table></div>
+<div class="actions"><button id="refresh" disabled>Refresh status</button><button id="open" class="primary" disabled>Open full workbench ↗</button></div>
+<p id="message" role="status" aria-live="polite">Connecting to the host…</p>
+<a id="link" hidden target="_blank" rel="noopener noreferrer"></a>
+<small id="checked"></small>
+</main>
+<script>
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const pending = new Map();
+  let sequence = 0, ready = false, busy = false, disposed = false;
+  let capabilities = {}, studyId = null, snapshot = null;
+  const labels = {succeeded: 'Succeeded', failed: 'Failed', running: 'Running', pending: 'Pending',
+    not_executed: 'Not started', cancelled: 'Cancelled', prepared: 'Prepared', interrupted: 'Interrupted',
+    results_available: 'Results available', submitted: 'Submitted', pending_review: 'Review required',
+    review_required: 'Review required', completed: 'Completed', unknown: 'Unknown'};
+  const label = value => labels[value] || value || 'Unknown';
+  const send = payload => window.parent.postMessage({jsonrpc: '2.0', ...payload}, '*');
+  function request(method, params) {
+    return new Promise((resolve, reject) => {
+      const id = ++sequence;
+      const timer = setTimeout(() => { pending.delete(id); reject(new Error('The host did not respond. Try again or open the workbench from the conversation.')); }, 30000);
+      pending.set(id, {resolve, reject, timer});
+      send({id, method, params});
+    });
+  }
+  function message(text, error = false) {
+    $('message').textContent = text;
+    $('message').className = error ? 'error' : 'muted';
+  }
+  function buttons() {
+    $('refresh').disabled = !ready || !capabilities.serverTools || !studyId || busy;
+    $('open').disabled = $('refresh').disabled || !snapshot?.can_open_workbench;
+  }
+  function context(value = {}) {
+    if (value.theme === 'light' || value.theme === 'dark') document.documentElement.style.colorScheme = value.theme;
+    for (const [key, cssValue] of Object.entries(value.styles?.variables || {})) {
+      if (key.startsWith('--')) document.documentElement.style.setProperty(key, cssValue);
+    }
+  }
+  function unpack(result) {
+    if (result?.isError) throw new Error((result.content || []).filter(x => x.type === 'text').map(x => x.text).join('\n') || 'The agent could not read this Study.');
+    return result?.structuredContent;
+  }
+  function render(data) {
+    if (!data?.study_id || !Array.isArray(data.rows) || (studyId && data.study_id !== studyId)) return;
+    studyId = data.study_id; snapshot = data;
+    $('name').textContent = data.name;
+    $('identity').textContent = `${studyId} · ${data.mode || 'Study'}`;
+    $('execution').textContent = label(data.execution_status);
+    $('report-status').textContent = `Saved report: ${data.study_status ? label(data.study_status) : 'Not available yet'}${data.workflow_stage ? ' · ' + data.workflow_stage : ''}`;
+    $('counts').replaceChildren();
+    for (const [status, count] of Object.entries(data.task_status_counts || {})) {
+      const item = document.createElement('div'); item.className = 'metric';
+      const number = document.createElement('strong'); number.textContent = count;
+      const text = document.createElement('span'); text.textContent = label(status);
+      item.append(number, text); $('counts').append(item);
+    }
+    $('count-source').textContent = data.count_source === 'agent_task_state' ? 'Case counts from agent task state.' : 'Case counts from the saved plan/report.';
+    const scheduler = Object.entries(data.scheduler_state_counts || {}).map(([key, value]) => `${label(key)} ${value}`).join(' · ');
+    $('scheduler').textContent = scheduler ? `Scheduler jobs across execution stages: ${scheduler}` : '';
+    $('review').hidden = !data.review_required;
+    $('results-title').textContent = data.rows_source === 'saved_report' ? 'Saved results' : 'Planned cases';
+    $('results-note').textContent = `Showing ${data.rows.length} of ${data.case_count} cases. Saved results may precede an active retry; refresh does not collect new results. Convergence is the reported summary; see the full report for inner-solver accuracy.`;
+    $('rows').replaceChildren();
+    for (const row of data.rows) {
+      const tr = document.createElement('tr');
+      const active = row.active_space || {};
+      const electrons = Array.isArray(active.nelecas) ? active.nelecas.join('+') : active.nelecas;
+      const cas = active.ncas != null ? `${electrons ?? '?'}, ${active.ncas}` : '—';
+      const values = [row.label, [row.method, row.basis].filter(Boolean).join(' / ') || '—', cas,
+        label(row.execution_status), Number.isFinite(row.energy) ? `${row.energy.toFixed(10)}${row.energy_unit ? ' ' + row.energy_unit : ''}` : '—',
+        row.converged === true ? 'Yes' : row.converged === false ? 'No' : 'Not reported'];
+      values.forEach((value, index) => { const td = document.createElement('td'); td.textContent = value; if (index === 4) td.className = 'energy'; tr.append(td); });
+      $('rows').append(tr);
+    }
+    $('checked').textContent = `Last checked: ${new Date(data.checked_at).toLocaleString()}`;
+    message(ready && !capabilities.serverTools ? 'This host displays results but does not support card actions.' : '');
+    buttons();
+  }
+  async function action(fn) {
+    if (busy || !ready || !studyId) return;
+    busy = true; buttons(); message('Loading…');
+    try { await fn(); } catch (error) { message(error.message, true); }
+    finally { busy = false; buttons(); }
+  }
+  $('refresh').addEventListener('click', () => action(async () => {
+    const result = await request('tools/call', {name: 'refresh_study_view', arguments: {study_id: studyId}});
+    render(unpack(result));
+  }));
+  $('open').addEventListener('click', () => action(async () => {
+    const data = unpack(await request('tools/call', {name: 'open_workbench', arguments: {study_id: studyId}}));
+    const url = new URL(data?.url);
+    if (!['http:', 'https:'].includes(url.protocol)) throw new Error('The workbench returned an invalid URL.');
+    $('link').href = url.href; $('link').textContent = url.href; $('link').hidden = false;
+    if (capabilities.openLinks) {
+      await request('ui/open-link', {url: url.href}); message('Workbench opened.');
+    } else message('Open the workbench using the link below.');
+  }));
+  const observer = new ResizeObserver(() => {
+    if (ready && !disposed) send({method: 'ui/notifications/size-changed', params: {width: document.documentElement.clientWidth, height: document.body.scrollHeight}});
+  });
+  observer.observe(document.body);
+  window.addEventListener('message', event => {
+    const data = event.data;
+    if (event.source !== window.parent || data?.jsonrpc !== '2.0' || disposed) return;
+    if (pending.has(data.id) && !data.method) {
+      const entry = pending.get(data.id); pending.delete(data.id); clearTimeout(entry.timer);
+      if (data.error) entry.reject(new Error(data.error.message || 'Host request failed.')); else entry.resolve(data.result);
+      return;
+    }
+    if (data.method === 'ping') { send({id: data.id, result: {}}); return; }
+    if (data.method === 'ui/resource-teardown') {
+      disposed = true; ready = false; observer.disconnect(); buttons();
+      for (const entry of pending.values()) { clearTimeout(entry.timer); entry.reject(new Error('Card closed.')); }
+      pending.clear(); send({id: data.id, result: {}}); return;
+    }
+    if (data.method === 'ui/notifications/host-context-changed') context(data.params);
+    if (data.method === 'ui/notifications/tool-input' && !studyId) studyId = data.params?.arguments?.study_id || null;
+    if (data.method === 'ui/notifications/tool-result') {
+      try { render(unpack(data.params)); } catch (error) { message(error.message, true); }
+    }
+    if (data.method === 'ui/notifications/tool-cancelled') message('Loading was cancelled. Ask to show the Study again.', true);
+  });
+  request('ui/initialize', {appInfo: {name: 'pyscf-study-card', version: '1.0.0'}, appCapabilities: {availableDisplayModes: ['inline']}, protocolVersion: '2026-01-26'})
+    .then(result => {
+      if (disposed) return;
+      if (result.protocolVersion !== '2026-01-26') throw new Error('This host uses an unsupported card protocol. Open the full workbench from the conversation.');
+      capabilities = result.hostCapabilities || {}; context(result.hostContext); ready = true;
+      send({method: 'ui/notifications/initialized', params: {}}); buttons();
+      message(capabilities.serverTools ? 'Waiting for Study data…' : 'This host displays results but does not support card actions.');
+    }).catch(error => message(error.message, true));
+})();
+</script></body></html>

@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Calculation Assistant</title>
+  <link rel="stylesheet" href="/assets/assistant.css">
+  <link rel="stylesheet" href="/assets/molecular-preview.css">
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <div class="hero-header">
+        <div>
+          <h1 id="hero-title">Calculation Assistant</h1>
+          <p id="hero-description" class="page-subtitle">Individual task calculation</p>
+        </div>
+        <div class="hero-actions">
+          <a id="study-agent-link" class="ghost-link" href="/computational-study/">Planner Agent</a>
+          <button id="lang-toggle" type="button" class="ghost" hidden disabled aria-hidden="true">English</button>
+        </div>
+      </div>
+      <div class="task-context-panel">
+        <div class="task-context-grid">
+          <div>
+            <label for="task-family"><strong id="label-task-family">System</strong></label>
+            <select id="task-family">{task_family_options}</select>
+            <p id="task-family-effective" class="context-selection-detail"></p>
+          </div>
+          <div>
+            <label for="work-dir"><strong id="label-work-dir">Work Directory</strong></label>
+            <input id="work-dir" type="text" placeholder="Leave blank to use runs/ under the current directory">
+            <p id="work-dir-effective" class="work-dir-effective"></p>
+          </div>
+          <div>
+            <label for="execution-target"><strong id="label-execution-target">Execution</strong></label>
+            <select id="execution-target" aria-label="Execution target"></select>
+            <p id="runtime-binding-detail" class="context-selection-detail"></p>
+          </div>
+          <div>
+            <label for="resource-profile"><strong id="label-resource-profile">Resource Profile</strong></label>
+            <select id="resource-profile" aria-label="Resource profile"></select>
+          </div>
+          <div>
+            <label for="task-session-select"><strong id="task-sessions-title">Tasks</strong></label>
+            <select id="task-session-select"></select>
+            <p id="task-session-effective" class="context-selection-detail"></p>
+          </div>
+          <div class="task-action-cell">
+            <button id="new-task" type="button" class="ghost">New Task</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="layout">
+      <section class="card stack task-setup-card">
+        <h2 id="config-title">Task Setup</h2>
+        <div id="model-hamiltonian-section" class="subsection hidden">
+          <input id="model-hamiltonian-input-file" type="hidden">
+          <div class="model-toolbar">
+            <button id="open-model-builder" type="button" class="secondary">Open Model Hamiltonian Builder</button>
+            <button id="preview-model-hamiltonian" type="button" class="secondary">Preview Structure</button>
+          </div>
+          <div>
+            <label for="model-solver"><strong id="label-model-solver">Model Solver</strong></label>
+            <select id="model-solver">
+              {model_solver_options}
+            </select>
+          </div>
+          <div id="model-root-control">
+            <label for="model-nroots"><strong>Number of states (nroots)</strong></label>
+            <input id="model-nroots" type="number" min="1" step="1" value="1">
+            <p class="field-hint">Lowest many-body states in the selected particle and spin sector.</p>
+          </div>
+          <div id="model-dmet-controls" class="form-section stack hidden">
+            <h4>DMET Settings</h4>
+            <div>
+              <label for="model-dmet-execution-mode"><strong>DMET Representation</strong></label>
+              <select id="model-dmet-execution-mode">
+                <option value="">Automatic</option>
+                <option value="translational">Translational symmetry</option>
+                <option value="finite_graph">Finite graph</option>
+              </select>
+            </div>
+            <div>
+              <label for="model-dmet-fragment-mode"><strong>Fragment Definition</strong></label>
+              <select id="model-dmet-fragment-mode">
+                <option value="">Automatic</option>
+                <option value="primitive_cell">Primitive cell</option>
+                <option value="cell_shape">Cell block</option>
+                <option value="honeycomb_hexagon">Honeycomb hexagon (6 sites)</option>
+                <option value="site_count">Site count (graphs without cell metadata)</option>
+              </select>
+            </div>
+            <div class="grid-two">
+              <div id="model-dmet-impurity-shape-control" class="hidden">
+                <label for="model-dmet-impurity-shape"><strong>Fragment Shape</strong></label>
+                <input id="model-dmet-impurity-shape" type="text" placeholder="2 or 2,2">
+                <p class="field-hint">Number of primitive cells along each Builder lattice direction.</p>
+              </div>
+              <div id="model-dmet-impurity-size-control" class="hidden">
+                <label for="model-dmet-impurity-size"><strong>Impurity Size</strong></label>
+                <input id="model-dmet-impurity-size" type="number" min="1" step="1" placeholder="1">
+                <p class="field-hint">Sites per fragment; use only when the graph has no primitive-cell metadata.</p>
+              </div>
+              <div>
+                <label for="model-dmet-impurity-solver"><strong>Impurity Solver</strong></label>
+                <select id="model-dmet-impurity-solver">
+                  <option value="fci">FCI</option>
+                  <option value="ccsd">CCSD</option>
+                  <option value="block2_dmrg">block2 DMRG</option>
+                </select>
+              </div>
+              <div>
+                <label for="model-dmet-interacting-bath"><strong>Bath</strong></label>
+                <select id="model-dmet-interacting-bath">
+                  <option value="true">Interacting</option>
+                  <option value="false">Non-interacting</option>
+                </select>
+              </div>
+              <div id="model-dmet-block2-preset-control" class="hidden">
+                <label for="model-dmet-block2-preset"><strong>DMRG Preset</strong></label>
+                <select id="model-dmet-block2-preset">
+                  <option value="screening">Screening</option>
+                  <option value="balanced" selected>Balanced</option>
+                  <option value="high_accuracy">High accuracy</option>
+                </select>
+              </div>
+              <div id="model-dmet-block2-ordering-control" class="hidden">
+                <label for="model-dmet-block2-ordering"><strong>DMRG Orbital Ordering</strong></label>
+                <select id="model-dmet-block2-ordering">
+                  <option value="canonical">Canonical</option>
+                  <option value="fiedler">Fiedler</option>
+                </select>
+              </div>
+              <div>
+                <label for="model-dmet-reference"><strong>Reference</strong></label>
+                <select id="model-dmet-reference">
+                  <option value="unrestricted">Unrestricted</option>
+                  <option value="restricted">Restricted</option>
+                </select>
+              </div>
+              <div>
+                <label for="model-dmet-reference-density"><strong>Initial Density Seed</strong></label>
+                <select id="model-dmet-reference-density">
+                  {model_dmet_reference_density_options}
+                </select>
+              </div>
+              <div id="model-dmet-ccsd-beta-control" class="hidden">
+                <label for="model-dmet-ccsd-beta"><strong>CCSD / DMET β</strong></label>
+                <input id="model-dmet-ccsd-beta" type="number" min="0" step="any" placeholder="1000 (default)" disabled>
+              </div>
+              <div id="model-dmet-spin-sector" class="dmet-spin-sector">
+                <div class="dmet-spin-sector-heading">Target Spin Sector</div>
+                <div id="model-dmet-spin-sector-values" class="dmet-spin-sector-values">
+                  Load a model input to derive the spin sector.
+                </div>
+                <p class="field-hint">Derived from the Builder electron counts and target spin multiplicity.</p>
+                <p id="model-dmet-validation" class="field-validation" role="alert"></p>
+              </div>
+              <div>
+                <label for="model-dmet-max-iterations"><strong>Maximum Iterations</strong></label>
+                <input id="model-dmet-max-iterations" type="number" min="1" step="1" value="50">
+              </div>
+              <div>
+                <label for="model-dmet-energy-tolerance"><strong>Energy Tolerance</strong></label>
+                <input id="model-dmet-energy-tolerance" type="number" min="1e-12" step="1e-6" value="1e-6">
+              </div>
+              <div>
+                <label for="model-dmet-density-tolerance"><strong>1RDM Tolerance</strong></label>
+                <input id="model-dmet-density-tolerance" type="number" min="1e-12" step="1e-5" value="1e-4">
+              </div>
+            </div>
+          </div>
+          <div class="model-preview-section">
+            <div class="section-header">
+              <h4 id="model-hamiltonian-preview-title">Model Structure Preview</h4>
+            </div>
+            <div id="model-hamiltonian-structure-preview" class="model-structure-preview">Generate an input with the builder to preview the model structure here.</div>
+          </div>
+        </div>
+        <div id="periodic-section" class="stack hidden">
+          <div class="form-section">
+            <h4 id="periodic-structure-title">Periodic Structure</h4>
+            <div class="periodic-file-row">
+              <div>
+                <label for="periodic-format"><strong id="label-periodic-format">Structure Format</strong></label>
+                <select id="periodic-format">
+                  <option value="poscar">POSCAR</option>
+                  <option value="cif">CIF</option>
+                </select>
+              </div>
+              <div>
+                <label for="periodic-file"><strong id="label-periodic-file">Load Structure File</strong></label>
+                <input id="periodic-file" type="file">
+              </div>
+            </div>
+            <div>
+              <label for="periodic-structure-text"><strong id="label-periodic-structure">POSCAR / CIF Content</strong></label>
+              <textarea id="periodic-structure-text" rows="9" spellcheck="false" placeholder="Upload or paste POSCAR/CIF content"></textarea>
+            </div>
+            <button id="preview-periodic-structure" type="button" class="secondary">Check Structure</button>
+            <div id="periodic-structure-preview" class="periodic-preview">Upload or paste POSCAR/CIF content, then check the structure.</div>
+          </div>
+          <div class="form-section">
+            <h4 id="periodic-calculation-settings-title">Calculation Settings</h4>
+            <div class="grid-two">
+              <div>
+                <label for="periodic-basis"><strong id="label-periodic-basis">Periodic Basis</strong></label>
+                <select id="periodic-basis">{periodic_basis_options}</select>
+              </div>
+              <div>
+                <label for="periodic-pseudo"><strong id="label-periodic-pseudo">Pseudopotential</strong></label>
+                <select id="periodic-pseudo">{periodic_pseudo_options}</select>
+              </div>
+            </div>
+            <div class="grid-two">
+              <div>
+                <label for="periodic-method"><strong id="label-periodic-method">Method</strong></label>
+                <select id="periodic-method">{periodic_method_options}</select>
+              </div>
+              <div id="periodic-xc-control">
+                <label for="periodic-xc"><strong id="label-periodic-xc">Exchange-Correlation Functional</strong></label>
+                <select id="periodic-xc">{periodic_xc_options}</select>
+              </div>
+            </div>
+            <div>
+              <label for="periodic-correlation-treatment"><strong>Correlation Treatment</strong></label>
+              <select id="periodic-correlation-treatment">{periodic_correlation_options}</select>
+            </div>
+            <div id="periodic-gw-controls" class="form-subsection hidden">
+              <h4>Periodic GW</h4>
+              <div class="grid-two">
+                <div>
+                  <label for="periodic-gw-broadening"><strong>Broadening (eV)</strong></label>
+                  <input id="periodic-gw-broadening" type="number" min="1e-6" step="any" value="0.1">
+                </div>
+                <div>
+                  <label for="periodic-gw-frequency-maximum"><strong>Frequency Maximum (eV)</strong></label>
+                  <input id="periodic-gw-frequency-maximum" type="number" min="1e-6" step="any" value="18">
+                </div>
+              </div>
+              <div class="grid-two">
+                <div>
+                  <label for="periodic-gw-real-points"><strong>Real-Frequency Points</strong></label>
+                  <input id="periodic-gw-real-points" type="number" min="2" step="1" value="181">
+                </div>
+                <div>
+                  <label for="periodic-gw-imaginary-points"><strong>Imaginary-Frequency Points</strong></label>
+                  <input id="periodic-gw-imaginary-points" type="number" min="1" step="1" value="100">
+                </div>
+              </div>
+              <label class="checkbox-row" for="periodic-gw-finite-size-correction">
+                <input id="periodic-gw-finite-size-correction" type="checkbox" checked>
+                <span>Finite-size exchange correction</span>
+              </label>
+            </div>
+            <div id="periodic-dmft-controls" class="form-subsection hidden">
+              <h4 id="periodic-dmft-controls-title">HF+DMFT</h4>
+              <div class="grid-two">
+                <div>
+                  <label for="periodic-dmft-localization"><strong>Localized Subspace</strong></label>
+                  <select id="periodic-dmft-localization">{periodic_dmft_localization_options}</select>
+                </div>
+                <div>
+                  <label for="periodic-dmft-impurity-solver"><strong>Impurity Solver</strong></label>
+                  <select id="periodic-dmft-impurity-solver">{periodic_dmft_impurity_solver_options}</select>
+                </div>
+              </div>
+              <div class="grid-two">
+                <div>
+                  <label for="periodic-dmft-correlated-orbitals"><strong>Correlated Orbitals</strong></label>
+                  <input id="periodic-dmft-correlated-orbitals" type="text" placeholder="automatic, or 0,1,2">
+                </div>
+                <div>
+                  <label for="periodic-dmft-minimal-basis"><strong>IAO Minimal Basis</strong></label>
+                  <input id="periodic-dmft-minimal-basis" type="text" value="minao">
+                </div>
+              </div>
+              <div class="grid-two">
+                <div>
+                  <label for="periodic-dmft-nbath"><strong>Bath Orbitals</strong></label>
+                  <input id="periodic-dmft-nbath" type="number" min="2" step="1" value="4">
+                </div>
+                <div>
+                  <label for="periodic-dmft-max-iterations"><strong>DMFT Iterations</strong></label>
+                  <input id="periodic-dmft-max-iterations" type="number" min="1" step="1" value="10">
+                </div>
+              </div>
+              <div>
+                <label for="periodic-dmft-convergence"><strong>Hybridization Tolerance</strong></label>
+                <input id="periodic-dmft-convergence" type="number" min="1e-12" step="any" value="1e-3">
+              </div>
+            </div>
+            <div>
+              <label><strong id="label-periodic-kmesh">k-point Mesh</strong></label>
+              <div class="kmesh-grid">
+                <input id="periodic-kmesh-x" type="number" min="1" step="1" value="1" aria-label="k mesh x">
+                <input id="periodic-kmesh-y" type="number" min="1" step="1" value="1" aria-label="k mesh y">
+                <input id="periodic-kmesh-z" type="number" min="1" step="1" value="1" aria-label="k mesh z">
+              </div>
+            </div>
+            <div class="grid-two">
+              <div>
+                <label for="periodic-kpoint-scheme"><strong id="label-periodic-kpoint-scheme">k-point Scheme</strong></label>
+                <select id="periodic-kpoint-scheme">{periodic_kpoint_scheme_options}</select>
+              </div>
+              <div>
+                <label for="periodic-band-path-mode"><strong id="label-periodic-band-path-mode">Band Path</strong></label>
+                <select id="periodic-band-path-mode">{periodic_band_path_mode_options}</select>
+              </div>
+            </div>
+            <div class="periodic-band-path-settings">
+              <div id="periodic-band-path-npoints-control">
+                <label for="periodic-band-path-npoints"><strong id="label-periodic-band-path-npoints">Band-Path Points</strong></label>
+                <input id="periodic-band-path-npoints" type="number" min="2" max="400" step="1" value="80">
+              </div>
+              <div id="periodic-band-path-reference-distance-control" class="hidden">
+                <label for="periodic-band-path-reference-distance"><strong id="label-periodic-band-path-reference-distance">Point Spacing (1/Angstrom)</strong></label>
+                <input id="periodic-band-path-reference-distance" type="number" min="0.005" max="0.5" step="any" value="0.025">
+              </div>
+              <div id="periodic-band-path-symprec-control" class="hidden">
+                <label for="periodic-band-path-symprec"><strong id="label-periodic-band-path-symprec">Symmetry Tolerance (Angstrom)</strong></label>
+                <input id="periodic-band-path-symprec" type="number" min="1e-8" max="0.1" step="any" value="1e-5">
+              </div>
+              <div id="periodic-band-path-control" class="hidden">
+                <label for="periodic-band-path"><strong id="label-periodic-band-path">High-Symmetry Path</strong></label>
+                <input id="periodic-band-path" type="text" maxlength="256" placeholder="For example: GXWKGLUWLK,UX">
+              </div>
+              <div id="periodic-band-special-points-control" class="periodic-band-special-points-control hidden">
+                <label for="periodic-band-special-points"><strong id="label-periodic-band-special-points">Reduced Coordinates of Special Points</strong></label>
+                <textarea id="periodic-band-special-points" rows="4" spellcheck="false" placeholder="G = 0, 0, 0&#10;X = 0.5, 0, 0.5"></textarea>
+              </div>
+            </div>
+            <div class="grid-two">
+              <div>
+                <label for="periodic-charge"><strong id="label-periodic-charge">Total Charge</strong></label>
+                <input id="periodic-charge" type="number" step="1" value="0">
+              </div>
+              <div>
+                <label for="periodic-spin"><strong id="label-periodic-spin">Spin (Nalpha - Nbeta)</strong></label>
+                <input id="periodic-spin" type="number" min="0" step="1" value="0">
+              </div>
+            </div>
+            <div>
+              <label for="periodic-restricted"><strong id="label-periodic-restricted">Reference Type</strong></label>
+              <select id="periodic-restricted">
+                <option value="auto" selected>Auto</option>
+                <option value="true">Restricted</option>
+                <option value="false">Unrestricted</option>
+              </select>
+            </div>
+          </div>
+          <details id="periodic-numerics-section" class="active-space-details">
+            <summary><strong id="periodic-numerics-title">Numerical Controls</strong></summary>
+            <div class="details-body form-section">
+              <div class="grid-two">
+                <div>
+                  <label for="periodic-precision"><strong id="label-periodic-precision">Integral Precision</strong></label>
+                  <input id="periodic-precision" type="number" min="1e-14" step="any" value="1e-8">
+                </div>
+                <div>
+                  <label for="periodic-ke-cutoff"><strong id="label-periodic-ke-cutoff">Plane-Wave Auxiliary Cutoff (Hartree)</strong></label>
+                  <input id="periodic-ke-cutoff" type="number" min="1e-12" step="any" placeholder="automatic">
+                </div>
+              </div>
+              <div>
+                <label><strong id="label-periodic-fft-mesh">FFT Mesh (blank for auto)</strong></label>
+                <div class="kmesh-grid">
+                  <input id="periodic-fft-mesh-x" type="number" min="1" step="1" placeholder="x" aria-label="FFT mesh x">
+                  <input id="periodic-fft-mesh-y" type="number" min="1" step="1" placeholder="y" aria-label="FFT mesh y">
+                  <input id="periodic-fft-mesh-z" type="number" min="1" step="1" placeholder="z" aria-label="FFT mesh z">
+                </div>
+              </div>
+              <div class="grid-two">
+                <div>
+                  <label for="periodic-density-fitting"><strong id="label-periodic-density-fitting">Density Fitting</strong></label>
+                  <select id="periodic-density-fitting">{periodic_density_fitting_options}</select>
+                </div>
+                <div>
+                  <label for="periodic-df-auxbasis"><strong id="label-periodic-df-auxbasis">Auxiliary Gaussian Basis (optional)</strong></label>
+                  <input id="periodic-df-auxbasis" type="text" placeholder="GDF / MDF only; blank for auto">
+                </div>
+              </div>
+              <div class="grid-two">
+                <div>
+                  <label for="periodic-exxdiv"><strong id="label-periodic-exxdiv">Exact-Exchange Divergence Treatment</strong></label>
+                  <select id="periodic-exxdiv">{periodic_exxdiv_options}</select>
+                </div>
+                <div>
+                  <label for="periodic-smearing"><strong id="label-periodic-smearing">Occupation Smearing</strong></label>
+                  <select id="periodic-smearing">{periodic_smearing_options}</select>
+                </div>
+              </div>
+              <div class="grid-two">
+                <div>
+                  <label for="periodic-smearing-sigma"><strong id="label-periodic-smearing-sigma">Smearing Sigma (Hartree)</strong></label>
+                  <input id="periodic-smearing-sigma" type="number" min="1e-12" step="any" value="0.01">
+                </div>
+                <label class="checkbox-item periodic-fix-spin">
+                  <input id="periodic-smearing-fix-spin" type="checkbox">
+                  <span id="label-periodic-smearing-fix-spin">Fix alpha and beta electron counts separately</span>
+                </label>
+              </div>
+              <div>
+                <label><strong id="label-periodic-kpoint-shift">k-point Shift (mesh steps)</strong></label>
+                <div class="kmesh-grid">
+                  <input id="periodic-kpoint-shift-x" type="number" min="-0.5" max="0.5" step="any" value="0" aria-label="k shift x">
+                  <input id="periodic-kpoint-shift-y" type="number" min="-0.5" max="0.5" step="any" value="0" aria-label="k shift y">
+                  <input id="periodic-kpoint-shift-z" type="number" min="-0.5" max="0.5" step="any" value="0" aria-label="k shift z">
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+        <div id="molecular-section" class="stack">
+          <div class="form-section">
+            <h4 id="structure-section-title">Structure</h4>
+            <div>
+              <label for="atom"><strong id="label-atom">Molecular Structure</strong></label>
+              <textarea id="atom" rows="5" aria-describedby="atom-validation" placeholder="For example: O 0 0 0; H 0 -0.757 0.587; H 0 0.757 0.587">{default_atom}</textarea>
+              <p id="atom-validation" class="field-validation" role="alert" aria-live="polite"></p>
+            </div>
+            <div id="molecular-structure-preview" class="molecule-preview"></div>
+          </div>
+          <div class="form-section">
+            <h4 id="calculation-settings-title">Calculation Settings</h4>
+            <div class="grid-two">
+              <div>
+                <label for="basis"><strong id="label-basis">Basis Set</strong></label>
+                <select id="basis">{basis_options}</select>
+              </div>
+              <div>
+                <label for="method"><strong id="label-method">Method</strong></label>
+                <select id="method">{method_options}</select>
+              </div>
+            </div>
+            <div class="grid-two">
+              <div>
+                <label for="xc"><strong id="label-xc">Exchange-Correlation Functional</strong></label>
+                <select id="xc">{xc_options}</select>
+              </div>
+              <div>
+                <label for="job"><strong id="label-job">Job Type</strong></label>
+                <select id="job">{job_options}</select>
+              </div>
+            </div>
+            <div>
+              <label for="density-fitting-auxbasis"><strong id="label-density-fitting-auxbasis">Density Fitting / Auxiliary Basis</strong></label>
+              <select id="density-fitting-auxbasis">{auxbasis_options}</select>
+            </div>
+            <div class="grid-two">
+              <div>
+                <input id="orbital-processing-enabled" type="checkbox" class="hidden">
+                <input id="use-natural-orbitals" type="checkbox" class="hidden">
+                <label for="localization-method"><strong id="label-localization-method">Orbital Localization</strong></label>
+                <select id="localization-method">{localization_method_options}</select>
+              </div>
+              <div>
+                <label for="localization-scope"><strong id="label-localization-scope">Localization Scope</strong></label>
+                <select id="localization-scope">
+                  <option value="analysis">Result analysis</option>
+                  <option value="active_space">block2 active space</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div id="advanced-parameters" class="form-section">
+            <h4 id="spin-parameters-title">Spin Parameters</h4>
+            <div class="grid-two">
+              <div>
+                <label for="charge"><strong id="label-charge">Total Charge</strong></label>
+                <input id="charge" type="number" step="1" value="0">
+              </div>
+              <div>
+                <label for="spin"><strong id="label-spin">Spin 2S</strong></label>
+                <input id="spin" type="number" step="1" min="0" value="0">
+              </div>
+            </div>
+            <div>
+              <label for="restricted"><strong id="label-restricted">Reference Type</strong></label>
+              <select id="restricted">
+                <option value="auto" selected>Auto</option>
+                <option value="true">Restricted</option>
+                <option value="false">Unrestricted</option>
+              </select>
+            </div>
+          </div>
+          <details id="active-space-section" class="active-space-details">
+            <summary id="active-space-section-title">Active Space</summary>
+            <div class="details-body form-section">
+              <div class="active-space-top-row">
+                <label class="checkbox-item">
+                  <input id="active-space-enabled" type="checkbox">
+                  <span id="label-active-space">Enable Active Space</span>
+                </label>
+                <div class="active-space-actions">
+                  <button id="screen-active-space" type="button" class="secondary">Auto Select</button>
+                </div>
+              </div>
+              <div id="active-space-summary" class="active-space-summary">No active space selected</div>
+              <div class="active-space-subsection">
+                <h4 id="active-space-contract-title">Active Space Contract</h4>
+                <div class="grid-two">
+                  <div>
+                    <label for="active-space-method"><strong id="label-active-space-method">Active-Space Selection</strong></label>
+                    <select id="active-space-method">{active_space_method_options}</select>
+                  </div>
+                  <div>
+                    <label for="active-space-solver"><strong id="label-active-space-solver">Active-Space Solver</strong></label>
+                    <select id="active-space-solver">{active_space_solver_options}</select>
+                    <p id="active-space-solver-hint" class="field-hint" data-optional-dependency="{block2_dependency}"></p>
+                  </div>
+                </div>
+                <div class="grid-two">
+                  <div>
+                    <label for="ncas"><strong id="label-ncas">Active Orbitals</strong></label>
+                    <input id="ncas" type="number" step="1" min="1" value="">
+                  </div>
+                  <div>
+                    <label for="nelecas"><strong id="label-nelecas">Active Electrons</strong></label>
+                    <input id="nelecas" type="text" placeholder="For example: 6 or 3,3">
+                  </div>
+                </div>
+                <div>
+                  <label for="active-orbitals"><strong id="label-active-orbitals">Active-Orbital Indices</strong></label>
+                  <input id="active-orbitals" type="text" placeholder="0-based, for example: 4,5,6,7">
+                </div>
+                <div id="avas-controls" class="grid-two hidden">
+                  <div>
+                    <label for="avas-targets"><strong id="label-avas-targets">AVAS AO/fragment targets</strong></label>
+                    <input id="avas-targets" type="text" placeholder="e.g. Fe 3d or atom:0,1">
+                  </div>
+                  <div>
+                    <label for="avas-threshold"><strong id="label-avas-threshold">AVAS threshold</strong></label>
+                    <input id="avas-threshold" type="number" min="0.01" max="1" step="0.01" value="0.2">
+                  </div>
+                </div>
+              </div>
+              <div class="active-space-subsection">
+                <h4 id="orbital-basis-section-title">Orbital Basis</h4>
+                <div class="grid-two">
+                  <div>
+                    <label for="orbital-ordering"><strong id="label-orbital-ordering">DMRG Orbital Ordering</strong></label>
+                    <select id="orbital-ordering">
+                      <option value="canonical">Canonical</option>
+                      <option value="fiedler">Fiedler</option>
+                      <option value="manual">Manual</option>
+                    </select>
+                  </div>
+                  <div id="manual-orbital-order-control" class="hidden">
+                    <label for="manual-orbital-order"><strong id="label-manual-orbital-order">Manual Ordering</strong></label>
+                    <input id="manual-orbital-order" type="text" inputmode="numeric" placeholder="For example: 0,2,1,3">
+                  </div>
+                </div>
+              </div>
+              <div class="active-space-subsection">
+                <h4 id="post-cas-section-title">Post-CAS</h4>
+                <label class="checkbox-item">
+                  <input id="sc-nevpt2-enabled" type="checkbox">
+                  <span id="label-sc-nevpt2">SC-NEVPT2 correction</span>
+                </label>
+                <div id="post-cas-controls" class="post-cas-controls">
+                  <div>
+                    <label for="sc-nevpt2-root"><strong id="label-sc-nevpt2-root">Root</strong></label>
+                    <input id="sc-nevpt2-root" type="number" step="1" min="0" max="0" value="0">
+                  </div>
+                  <label class="checkbox-item">
+                    <input id="sc-nevpt2-density-fit" type="checkbox" checked>
+                    <span id="label-sc-nevpt2-density-fit">Density fitting</span>
+                  </label>
+                </div>
+              </div>
+              <input id="active-space-approved" type="checkbox" class="hidden">
+            </div>
+          </details>
+          <details id="state-target-controls" class="active-space-details hidden">
+            <summary id="state-target-section-title">Low-Energy States</summary>
+            <div class="details-body form-section">
+              <div class="grid-two">
+                <div>
+                  <label for="state-target-nroots"><strong id="label-state-target-nroots">Number of roots</strong></label>
+                  <input id="state-target-nroots" type="number" step="1" min="1" value="1">
+                </div>
+                <div>
+                  <label for="state-average-weights"><strong id="label-state-average-weights">State-average weights</strong></label>
+                  <input id="state-average-weights" type="text" placeholder="e.g. 0.5,0.5">
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+        <div>
+          <div id="molecular-output-group" class="checkbox-group output-group" data-output-family="molecular">
+            {output_options}
+          </div>
+          <div id="model-output-group" class="checkbox-group output-group hidden" data-output-family="model_hamiltonian">
+            {model_output_options}
+          </div>
+          <div id="periodic-output-group" class="checkbox-group output-group hidden" data-output-family="periodic">
+            {periodic_output_options}
+          </div>
+        </div>
+      </section>
+      <section class="stack">
+        <div class="card">
+          <div class="section-header">
+            <div>
+              <h2 id="conversation-title">Assistant Conversation</h2>
+            </div>
+          </div>
+          <div id="conversation" class="conversation"></div>
+          <div id="approval-panel" class="approval-panel">
+            <div class="message system" id="approval-system-message"></div>
+            <div id="approval-assumptions" class="detail-panel" style="display:none; min-height: 0;">
+              <h4 id="approval-assumptions-title">Geometry Assumptions</h4>
+              <ul id="approval-assumptions-list" class="result-list"></ul>
+            </div>
+            <div id="approval-active-space-review" class="active-space-approval-review hidden"></div>
+            <details id="approval-draft-details" class="approval-draft-details" open>
+              <summary id="approval-draft-summary" class="hidden">Advanced Editing</summary>
+              <div>
+                <label for="approval-atom"><strong id="approval-atom-title">Structure Draft</strong></label>
+                <textarea id="approval-atom" rows="6" placeholder="Review or edit the structure draft here"></textarea>
+              </div>
+            </details>
+            <p id="approval-hint" class="approval-hint"></p>
+            <div class="approval-actions">
+              <button id="approve-structure" type="button">Confirm and Continue</button>
+              <button id="cancel-structure" type="button" class="secondary">Cancel</button>
+            </div>
+          </div>
+          <div class="conversation-request">
+            <label for="request"><strong id="label-request">Message</strong></label>
+            <textarea id="request" rows="3" placeholder="For example: Water single-point energy with B3LYP/6-31G.">{default_request}</textarea>
+          </div>
+          <div class="conversation-action-bar">
+            <div class="conversation-actions">
+              <button id="run">Prepare Request</button>
+              <div id="compute-confirm-panel" class="compute-confirm-panel">
+                <div class="calculation-actions">
+                  <button id="confirm-compute" type="button" disabled>Start Calculation</button>
+                </div>
+              </div>
+            </div>
+            <div class="conversation-secondary-actions">
+              <button id="refresh-status" type="button" class="secondary" disabled>Status</button>
+              <button id="analyze-result" type="button" class="secondary">Analyze Results</button>
+              <button id="clear" type="button" class="secondary">Clear</button>
+            </div>
+          </div>
+        </div>
+        <div class="card stack">
+          <div class="section-header">
+            <div>
+              <h2 id="summary-title">Results Overview</h2>
+              <p id="summary-description">Results, diagnostics, and provenance from the TaskReport.</p>
+            </div>
+            <div id="status-pill" class="status-pill unknown">unknown</div>
+          </div>
+          <div class="summary-grid">
+            <div class="summary-stat">
+              <span class="label" id="stat-status-label">Status</span>
+              <span id="stat-status" class="value">unknown</span>
+            </div>
+            <div class="summary-stat">
+              <span class="label" id="stat-retry-label">Retries</span>
+              <span id="stat-retry" class="value">0 / 0</span>
+            </div>
+            <div class="summary-stat">
+              <span class="label" id="stat-attempts-label">Attempts</span>
+              <span id="stat-attempts" class="value">0</span>
+            </div>
+          </div>
+          <div>
+            <div id="summary" class="result-table-block"></div>
+          </div>
+          <div id="strong-correlation-diagnostics-panel" class="detail-panel hidden">
+            <h4 id="strong-correlation-diagnostics-title">Strong Correlation Diagnostics</h4>
+            <div id="strong-correlation-diagnostics" class="result-table-block"></div>
+          </div>
+          <div id="active-space-audit-panel" class="detail-panel hidden">
+            <h4 id="active-space-audit-title">Active-Space Audit</h4>
+            <div id="active-space-audit" class="result-table-block"></div>
+          </div>
+          <div id="state-energies-panel" class="detail-panel hidden">
+            <h4>Low-Lying State Energies</h4>
+            <div id="state-energies" class="result-table-block"></div>
+          </div>
+          <div id="block2-analysis-panel" class="detail-panel hidden">
+            <h4 id="block2-analysis-title">block2 DMRG Analysis</h4>
+            <div id="block2-analysis-summary" class="result-table-block"></div>
+            <section id="block2-state-section" class="block2-state-section hidden">
+              <h5 id="block2-state-title">State Energies</h5>
+              <div id="block2-state-energies"></div>
+            </section>
+            <div id="block2-entanglement-grid" class="block2-analysis-grid hidden">
+              <section id="block2-entropy-section" class="hidden">
+                <h5 id="block2-entropy-title">Single-Orbital Entropy</h5>
+                <div id="block2-orbital-entropy" class="block2-bar-chart"></div>
+              </section>
+              <section id="block2-mutual-section" class="hidden">
+                <h5 id="block2-mutual-title">Orbital Mutual Information</h5>
+                <div id="block2-mutual-information" class="block2-matrix"></div>
+              </section>
+              <section id="block2-bipartite-section" class="hidden">
+                <h5 id="block2-bipartite-title">Bipartite Entanglement</h5>
+                <div id="block2-bipartite-entanglement" class="block2-bar-chart"></div>
+              </section>
+            </div>
+            <p id="block2-entanglement-note" class="block2-entanglement-note hidden"></p>
+          </div>
+          <details>
+            <summary id="structured-results-summary">Structured Results</summary>
+            <div class="details-body">
+              <div class="details-grid">
+                <div class="detail-panel full">
+                  <pre id="structured-results"></pre>
+                </div>
+                <div class="detail-panel full">
+                  <h4 id="llm-result-analysis-title">Analyze Results</h4>
+                  <pre id="llm-result-analysis">LLM result analysis has not been requested.</pre>
+                </div>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary id="input-preview-summary">PySCF Input Preview</summary>
+            <div class="details-body">
+              <pre id="input-preview"></pre>
+            </div>
+          </details>
+          <details>
+            <summary id="raw-output-summary">Raw Output and Debug Text</summary>
+            <div class="details-body">
+              <div class="details-grid">
+                <div class="detail-panel">
+                  <h4 id="defaults-and-retries-title">Defaults and Retries</h4>
+                  <ul id="defaults-and-retries" class="result-list"></ul>
+                </div>
+                <div class="detail-panel">
+                  <h4 id="diagnostics-title">Errors and Additional Details</h4>
+                  <ul id="diagnostics" class="result-list"></ul>
+                </div>
+                <div class="detail-panel full">
+                  <h4 id="attempts-title">Attempt History</h4>
+                  <ul id="attempts" class="result-list"></ul>
+                </div>
+                <div class="detail-panel">
+                  <h4>pyscf_out</h4>
+                  <pre id="raw-scf-output"></pre>
+                </div>
+                <div class="detail-panel">
+                  <h4>agent_out</h4>
+                  <pre id="raw-stdout"></pre>
+                </div>
+                <div class="detail-panel full">
+                  <h4>raw_stderr / analysis_text</h4>
+                  <pre id="stderr-and-analysis"></pre>
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script>
+    const initialRunLabel = document.getElementById('run').textContent;
+    const TRANSLATIONS = {translations_json};
+    const DEFAULT_WORK_DIR = {default_work_dir_json};
+    const LANGUAGE_SWITCH_ENABLED = false;
+    let currentLanguage = 'en';
+    let currentPrepareCacheScope = {llm_cache_scope};
+    let conversationHistory = [];
+    let currentRunId = '';
+    let pendingStructuredRequest = {{}};
+    let pendingApproval = null;
+    let pendingExecutionRequest = '';
+    let lastPrepareFingerprint = '';
+    let lastPreparedPayload = null;
+    let lastPreparationMeta = null;
+    let lastExecutionPayload = null;
+    let lastExecutedRequestText = '';
+    let currentTaskLifecycle = null;
+    let lastModelHamiltonianPreview = null;
+    let lastPeriodicStructurePreview = null;
+    let taskSessions = [];
+    let activeTaskSessionId = '';
+    let isRestoringTaskSession = false;
+    let calculationInProgress = false;
+    let activeRunHandle = null;
+    let activeRunTarget = '';
+    let activeRunPreparedRequestText = '';
+    let activeRunLastState = '';
+    let runStatusRefreshInProgress = false;
+    let activeRunStopRequested = false;
+    let activeRunCancelPromise = null;
+    let activeRunCancelledNotified = false;
+    let calculationControlsSnapshot = null;
+    const DEFAULT_MOLECULAR_OUTPUTS = {default_molecular_outputs_json};
+    const DEFAULT_PERIODIC_OUTPUTS = {default_periodic_outputs_json};
+    const DEFAULT_PERIODIC_BASIS = {default_periodic_basis_json};
+
+    const AUXBASIS_RECOMMENDATIONS = {auxbasis_recommendations_json};
+  </script>
+  <script src="/assets/shared.js"></script>
+  <script src="/assets/molecular-preview.js"></script>
+  <script src="/assets/execution-targets.js"></script>
+  <script src="/assets/assistant-core.js"></script>
+  <script src="/assets/assistant-sessions.js"></script>
+  <script src="/assets/assistant-structures.js"></script>
+  <script src="/assets/assistant-forms.js"></script>
+  <script src="/assets/assistant-results.js"></script>
+  <script src="/assets/assistant-actions.js"></script>
+  <script src="/assets/assistant-init.js"></script>
+</body>
+</html>

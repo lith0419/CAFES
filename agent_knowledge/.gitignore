@@ -1,0 +1,15 @@
+.llmwiki/candidates/
+.llmwiki/rule-candidates/
+.llmwiki/embeddings.json
+.llmwiki/last-lint.json
+.llmwiki/lock
+.llmwiki/state.json
+.llmwiki/export/
+.llmwiki/review-export/
+.llmwiki/eval/history.jsonl
+.llmwiki/eval/citation-cache.jsonl
+.DS_Store
+dist/
+wiki/
+log.md
+node_modules/

@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Model Hamiltonian Builder</title>
+  <link rel="stylesheet" href="styles.css?v=20260824a">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <h1>Model Hamiltonian Builder</h1>
+        <p>Construct model inputs</p>
+      </div>
+      <div class="topbar-actions">
+        <button id="reset-view" type="button" class="secondary">Rebuild</button>
+        <button id="download-json" type="button">JSON</button>
+        <button id="save-python" type="button">Save Input</button>
+        <button id="return-agent-ui" type="button" class="secondary">Back To Agent</button>
+        <button id="return-study-ui" type="button" class="secondary">Back To Planner</button>
+        <span id="save-status" class="save-status" aria-live="polite"></span>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <aside class="panel controls">
+        <section>
+          <h2>Model</h2>
+          <div id="representation-control" class="segmented-control" role="group" aria-label="Hamiltonian representation" hidden aria-hidden="true">
+            <button id="representation-finite" type="button" class="segment active" data-representation="finite_cluster">Finite Cluster</button>
+            <button id="representation-bloch" type="button" class="segment" data-representation="bloch">Bloch Lattice</button>
+          </div>
+          <label>
+            Type
+            <select id="model-type">
+              <option value="hubbard">Hubbard</option>
+            </select>
+          </label>
+          <label>
+            Dimension
+            <select id="dimension">
+              <option value="1">One-dimensional</option>
+              <option value="2" selected>Two-dimensional</option>
+            </select>
+          </label>
+          <label id="template-1d-row" class="hidden">
+            1D template
+            <select id="template-1d">
+              <option value="chain">Linear chain</option>
+              <option value="ring">Ring</option>
+              <option value="zigzag">Zigzag chain</option>
+              <option value="quasi_1d">Quasi-1D ladder</option>
+            </select>
+          </label>
+          <label id="template-2d-row">
+            2D template
+            <select id="template-2d">
+              <option value="square">Square</option>
+              <option value="lieb">Lieb</option>
+              <option value="honeycomb">Honeycomb</option>
+              <option value="triangular">Triangular</option>
+              <option value="kagome">Kagome</option>
+              <option value="dice">Dice</option>
+              <option value="square_octagon">Square-octagon</option>
+            </select>
+          </label>
+          <div id="size-controls" class="grid-two">
+            <label id="size-x-control">
+              <span id="size-x-label">Lx</span>
+              <input id="size-x" type="number" min="1" max="64" step="1" value="2">
+            </label>
+            <label id="size-y-control">
+              <span id="size-y-label">Ly</span>
+              <input id="size-y" type="number" min="1" max="16" step="1" value="2">
+            </label>
+          </div>
+          <label id="boundary-row">
+            Boundary
+            <select id="boundary">
+              <option value="open">Open</option>
+              <option value="periodic">Periodic</option>
+            </select>
+          </label>
+          <button id="build-lattice" type="button">Build Model</button>
+        </section>
+
+        <section id="bloch-reciprocal-section" class="hidden" hidden aria-hidden="true">
+          <h2>Reciprocal Space</h2>
+          <label>
+            Electrons per cell
+            <input id="electrons-per-cell" type="number" min="0" step="0.1" value="1">
+          </label>
+          <div class="grid-two">
+            <label>
+              k-mesh x
+              <input id="kmesh-x" type="number" min="1" max="223" step="1" value="100">
+            </label>
+            <label id="kmesh-y-row" class="hidden">
+              k-mesh y
+              <input id="kmesh-y" type="number" min="1" max="223" step="1" value="30">
+            </label>
+          </div>
+          <label>
+            k-point scheme
+            <select id="kpoint-scheme">
+              <option value="gamma_centered">Gamma-centered</option>
+              <option value="monkhorst_pack">Monkhorst-Pack</option>
+            </select>
+          </label>
+          <div class="grid-two">
+            <label>
+              Shift x (mesh steps)
+              <input id="kshift-x" type="number" step="0.5" value="0">
+            </label>
+            <label id="kshift-y-row" class="hidden">
+              Shift y (mesh steps)
+              <input id="kshift-y" type="number" step="0.5" value="0">
+            </label>
+          </div>
+          <label>
+            Path points per segment
+            <input id="path-points" type="number" min="2" max="1001" step="1" value="80">
+          </label>
+          <label class="checkbox-line">
+            <input id="dos-auto" type="checkbox" checked>
+            Automatic DOS broadening
+          </label>
+          <div class="grid-two">
+            <label id="dos-sigma-row" class="disabled-control">
+              DOS sigma <span class="unit-chip energy-unit-label">a.u.</span>
+              <input id="dos-sigma" type="number" min="0.000001" step="0.01" value="0.05" disabled>
+            </label>
+            <label>
+              DOS points
+              <input id="dos-points" type="number" min="2" max="4001" step="1" value="401">
+            </label>
+          </div>
+        </section>
+
+        <section>
+          <h2>Global Parameters</h2>
+          <label>
+            On-site ε <span class="unit-chip energy-unit-label">a.u.</span>
+            <input id="global-epsilon" type="number" step="0.1" value="0">
+          </label>
+          <div class="grid-two">
+            <label>
+              Hopping t <span class="unit-chip energy-unit-label">a.u.</span>
+              <input id="global-t" type="number" step="0.1" value="-1">
+            </label>
+            <label>
+              On-site U <span class="unit-chip energy-unit-label">a.u.</span>
+              <input id="global-u" type="number" step="0.1" value="4">
+            </label>
+          </div>
+          <div class="grid-two">
+            <label id="bond-modulation-label">
+              1D bond modulation
+              <select id="bond-modulation">
+                <option value="none">None</option>
+                <option value="ssh">SSH alternation</option>
+              </select>
+            </label>
+            <label id="ssh-delta-label">
+              SSH δ
+              <input id="ssh-delta" type="number" step="0.05" min="-0.95" max="0.95" value="0.2">
+            </label>
+          </div>
+          <label>
+            NN Coulomb V <span class="unit-chip energy-unit-label">a.u.</span>
+            <input id="global-v" type="number" step="0.1" value="0">
+          </label>
+          <label>
+            Energy unit
+            <select id="energy-unit">
+              <option value="a.u.">a.u.</option>
+              <option value="Ha">Hartree (Ha)</option>
+              <option value="eV">Electronvolt (eV)</option>
+              <option value="meV">Millielectronvolt (meV)</option>
+            </select>
+          </label>
+          <div id="phonon-parameters" class="hidden">
+            <div class="grid-two">
+              <label>
+                Phonon ω <span class="unit-chip energy-unit-label">a.u.</span>
+                <input id="phonon-omega" type="number" step="0.1" min="0" value="1">
+              </label>
+              <label>
+                e-ph coupling g <span class="unit-chip energy-unit-label">a.u.</span>
+                <input id="electron-phonon-g" type="number" step="0.1" value="0.5">
+              </label>
+            </div>
+            <label>
+              Phonon cutoff
+              <input id="phonon-cutoff" type="number" min="1" max="64" step="1" value="4">
+            </label>
+          </div>
+          <div id="finite-electron-controls" class="grid-two">
+            <label>
+              Alpha n
+              <input id="nalpha" type="number" min="0" step="1" value="4">
+            </label>
+            <label>
+              Beta n
+              <input id="nbeta" type="number" min="0" step="1" value="4">
+            </label>
+            <label>
+              Spin multiplicity (2S+1)
+              <input id="spin-multiplicity" type="number" min="1" step="1" value="1">
+              <span id="spin-multiplicity-validation" class="field-hint" role="alert"></span>
+            </label>
+          </div>
+          <button id="apply-globals" type="button" class="secondary">Apply To All</button>
+        </section>
+
+        <section>
+          <h2>Distance Functions</h2>
+          <label class="checkbox-line">
+            <input id="geometry-coupled" type="checkbox">
+            Distance hopping t(r)
+          </label>
+          <label>
+            Hopping function
+            <select id="hopping-function">
+              <option value="exponential">t0 * exp[-a(r-r0)]</option>
+              <option value="power">t0 * (r0/r)^a</option>
+              <option value="linear">t0 * [1-a(r-r0)]</option>
+              <option value="constant">constant t0</option>
+            </select>
+          </label>
+          <label>
+            Hopping a
+            <input id="hopping-parameter" type="number" step="0.1" value="1.5">
+          </label>
+          <label class="checkbox-line">
+            <input id="geometry-coupled-v" type="checkbox">
+            Distance interaction V(r)
+          </label>
+          <label>
+            Interaction function
+            <select id="interaction-function">
+              <option value="inverse">V0 * r0/r</option>
+              <option value="exponential">V0 * exp[-b(r-r0)]</option>
+              <option value="power">V0 * (r0/r)^b</option>
+              <option value="linear">V0 * [1-b(r-r0)]</option>
+              <option value="constant">constant V0</option>
+            </select>
+          </label>
+          <label>
+            Interaction b
+            <input id="interaction-parameter" type="number" step="0.1" value="1">
+          </label>
+          <label>
+            Reference r0
+            <input id="geo-r0" type="number" step="0.1" value="1">
+          </label>
+        </section>
+
+        <section>
+          <h2>Edit Tools</h2>
+          <div class="button-row">
+            <button id="tool-select" type="button" class="tool-button active">Select</button>
+            <button id="tool-add-site" type="button" class="tool-button">Site</button>
+            <button id="tool-add-bond" type="button" class="tool-button">Bond</button>
+          </div>
+          <div class="button-row">
+            <button id="delete-selected" type="button" class="secondary">Delete</button>
+            <button id="center-layout" type="button" class="secondary">Center</button>
+          </div>
+          <p class="hint">Drag sites. Bond mode: click two sites.</p>
+        </section>
+      </aside>
+
+      <section class="canvas-panel">
+        <div class="canvas-toolbar">
+          <div>
+            <strong id="canvas-title">1D chain</strong>
+            <span id="selection-summary">No selection</span>
+          </div>
+          <div class="canvas-meta">
+            <span id="model-summary"></span>
+            <span class="onsite-legend"><span class="legend-gradient"></span> onsite ε</span>
+          </div>
+          <div class="zoom-controls" aria-label="Canvas zoom controls">
+            <button id="tool-pan" type="button" class="secondary">Pan</button>
+            <button id="zoom-out" type="button" class="secondary">−</button>
+            <span id="zoom-label">100%</span>
+            <button id="zoom-in" type="button" class="secondary">+</button>
+            <button id="zoom-reset" type="button" class="secondary">Reset</button>
+          </div>
+        </div>
+        <svg id="lattice-canvas" viewBox="0 0 1000 680" role="img" aria-label="Hamiltonian lattice editor">
+          <defs>
+            <marker id="bond-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z"></path>
+            </marker>
+          </defs>
+          <rect class="canvas-bg" x="0" y="0" width="1000" height="680"></rect>
+          <g id="axis-layer"></g>
+          <g id="ghost-layer"></g>
+          <g id="cell-boundary-layer"></g>
+          <g id="bond-layer"></g>
+          <g id="site-layer"></g>
+          <g id="label-layer"></g>
+        </svg>
+      </section>
+
+      <aside class="panel inspector">
+        <section>
+          <h2>Inspector</h2>
+          <div id="empty-inspector" class="empty-state">Select a site or bond.</div>
+
+          <div id="site-inspector" class="hidden">
+            <h3>Site <span id="site-id-label"></span></h3>
+            <div class="grid-two">
+              <label>
+                x
+                <input id="site-x" type="number" step="any">
+              </label>
+              <label>
+                y
+                <input id="site-y" type="number" step="any">
+              </label>
+            </div>
+            <label>
+              On-site ε <span class="unit-chip energy-unit-label">a.u.</span>
+              <input id="site-epsilon" type="number" step="any">
+            </label>
+            <label>
+              On-site U <span class="unit-chip energy-unit-label">a.u.</span>
+              <input id="site-u" type="number" step="any">
+            </label>
+            <div id="site-phonon-fields" class="hidden">
+              <label>
+                Phonon ω <span class="unit-chip energy-unit-label">a.u.</span>
+                <input id="site-phonon-omega" type="number" step="any" min="0">
+              </label>
+              <label>
+                e-ph coupling g <span class="unit-chip energy-unit-label">a.u.</span>
+                <input id="site-electron-phonon-g" type="number" step="any">
+              </label>
+            </div>
+          </div>
+
+          <div id="bond-inspector" class="hidden">
+            <h3>Bond <span id="bond-id-label"></span></h3>
+            <div class="grid-two">
+              <label>
+                source
+                <input id="bond-source" type="number" disabled>
+              </label>
+              <label>
+                target
+                <input id="bond-target" type="number" disabled>
+              </label>
+            </div>
+            <label>
+              Hopping t <span class="unit-chip energy-unit-label">a.u.</span>
+              <input id="bond-t" type="number" step="any">
+            </label>
+            <label>
+              NN Coulomb V <span class="unit-chip energy-unit-label">a.u.</span>
+              <input id="bond-v" type="number" step="any">
+            </label>
+            <div id="bloch-bond-fields" class="hidden">
+              <div class="grid-two">
+                <label>
+                  Cell offset x
+                  <input id="bond-cell-offset-x" type="number" step="1">
+                </label>
+                <label id="bond-cell-offset-y-row" class="hidden">
+                  Cell offset y
+                  <input id="bond-cell-offset-y" type="number" step="1">
+                </label>
+              </div>
+              <label class="checkbox-line">
+                <input id="bond-add-hc" type="checkbox" checked>
+                Add Hermitian conjugate
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Hamiltonian Preview</h2>
+          <div class="tabs">
+            <button id="tab-summary" type="button" class="tab-button active">Summary</button>
+            <button id="tab-h1" type="button" class="tab-button">h1e</button>
+            <button id="tab-json" type="button" class="tab-button">JSON</button>
+            <button id="tab-python" type="button" class="tab-button">PySCF</button>
+          </div>
+          <pre id="preview"></pre>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <script src="state.js?v=20260819a"></script>
+  <script src="hamiltonian.js?v=20260722b"></script>
+  <script src="lattice_templates.js?v=20260819a"></script>
+  <script src="exporters.js?v=20260819a"></script>
+  <script src="rendering.js?v=20260722b"></script>
+  <script src="ui_controller.js?v=20260819a"></script>
+  <script src="app.js?v=20260722b"></script>
+</body>
+</html>
