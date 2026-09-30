@@ -1,4 +1,4 @@
-# CAFES
+# CAFES: A Correlation-Aware Agentic Framework for Electronic Structure
 
 CAFES is a reviewable workflow platform for molecular, periodic, and
 model-Hamiltonian calculations built around PySCF. It turns scientific requests

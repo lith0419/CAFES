@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pyscf-agent"
 version = "0.2.0"
-description = "Agent workflows, CLI, and web UI for PySCF tasks"
+description = "CAFES: A Correlation-Aware Agentic Framework for Electronic Structure"
 readme = "README.md"
 requires-python = ">=3.10"
 license = "Apache-2.0"
