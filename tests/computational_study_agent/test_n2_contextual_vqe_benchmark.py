@@ -2,13 +2,14 @@ from __future__ import annotations
 
 import math
 import unittest
-from pathlib import Path
+from importlib import resources
 
 from computational_study_agent.adaptive.path_diagnostics import analyze_scan_path
 
 
-_REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
-_BENCHMARK_PATH = _REPOSITORY_ROOT / 'reports' / 'benchmarks' / 'n2_contextual_vqe_comparison.txt'
+_BENCHMARK_PATH = resources.files('pyscf_agent.benchmarks').joinpath(
+    'data/n2_contextual_vqe_comparison.tsv'
+)
 _N2_REFERENCE_BOND_LENGTH_ANGSTROM = 1.09768
 
 
