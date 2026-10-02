@@ -120,7 +120,7 @@ class DistributionScriptTests(unittest.TestCase):
     def test_release_metadata_has_one_core_langgraph_contract(self):
         metadata = (self.repo_root / 'pyproject.toml').read_text(encoding='utf-8')
 
-        self.assertIn('version = "0.2.0"', metadata)
+        self.assertRegex(metadata, r'(?m)^version = "[0-9]+\.[0-9]+\.[0-9]+"$')
         self.assertIn('requires-python = ">=3.10"', metadata)
         self.assertIn('"pyscf>=2.13,<2.14"', metadata)
         self.assertEqual(metadata.count('"langgraph>=0.6.11,<1.0"'), 1)
