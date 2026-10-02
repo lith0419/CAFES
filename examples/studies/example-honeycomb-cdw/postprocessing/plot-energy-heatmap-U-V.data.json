@@ -1,0 +1,3520 @@
+{
+  "cells": [
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.0,
+          1.25
+        ],
+        "V": [
+          1.0,
+          1.25
+        ]
+      },
+      "cell_id": "cell-2f96ba6720260a3b75dd",
+      "depth": 2,
+      "corner_case_ids": [
+        "case-0001",
+        "grid-0065",
+        "grid-0067",
+        "grid-0025"
+      ],
+      "center_case_id": null,
+      "color_value": -1.1513018318885666,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.0,
+          1.25
+        ],
+        "V": [
+          1.25,
+          1.5
+        ]
+      },
+      "cell_id": "cell-c6b2bab83235eefc48d5",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0067",
+        "grid-0025",
+        "grid-0022",
+        "grid-0066"
+      ],
+      "center_case_id": null,
+      "color_value": 2.717523300463439,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.25,
+          1.5
+        ],
+        "V": [
+          1.0,
+          1.25
+        ]
+      },
+      "cell_id": "cell-ade7613e2b5d79a26681",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0065",
+        "grid-0020",
+        "grid-0025",
+        "grid-0068"
+      ],
+      "center_case_id": null,
+      "color_value": 1.8230120241046799,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.25,
+          1.5
+        ],
+        "V": [
+          1.25,
+          1.5
+        ]
+      },
+      "cell_id": "cell-96f6443a0e408c40a4fb",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0025",
+        "grid-0068",
+        "grid-0066",
+        "grid-0001"
+      ],
+      "center_case_id": null,
+      "color_value": 6.066500996825162,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.0,
+          1.5
+        ],
+        "V": [
+          1.5,
+          2.0
+        ]
+      },
+      "cell_id": "cell-fbd23cbcb28abaac4c11",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0022",
+        "grid-0001",
+        "case-0002",
+        "grid-0021"
+      ],
+      "center_case_id": "grid-0026",
+      "color_value": 8.206098996208137,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.5,
+          2.0
+        ],
+        "V": [
+          1.0,
+          1.5
+        ]
+      },
+      "cell_id": "cell-3b5464c85107e7731721",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0020",
+        "case-0005",
+        "grid-0001",
+        "grid-0019"
+      ],
+      "center_case_id": "grid-0027",
+      "color_value": 9.11006762859914,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.5,
+          2.0
+        ],
+        "V": [
+          1.5,
+          2.0
+        ]
+      },
+      "cell_id": "cell-8a471492c0b52e795677",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0001",
+        "grid-0019",
+        "grid-0021",
+        "case-0006"
+      ],
+      "center_case_id": "grid-0028",
+      "color_value": 15.402610598835551,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.0,
+          2.0
+        ],
+        "V": [
+          2.0,
+          4.0
+        ]
+      },
+      "cell_id": "cell-8312fc82cab88981791b",
+      "depth": 0,
+      "corner_case_ids": [
+        "case-0002",
+        "case-0006",
+        "case-0003",
+        "case-0007"
+      ],
+      "center_case_id": "grid-0002",
+      "color_value": 17.289212328969455,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.0,
+          2.0
+        ],
+        "V": [
+          4.0,
+          8.0
+        ]
+      },
+      "cell_id": "cell-07a221bf6f55c33d42d9",
+      "depth": 0,
+      "corner_case_ids": [
+        "case-0003",
+        "case-0007",
+        "case-0004",
+        "case-0008"
+      ],
+      "center_case_id": "grid-0003",
+      "color_value": 20.80059091509056,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.0,
+          3.0
+        ],
+        "V": [
+          1.0,
+          1.5
+        ]
+      },
+      "cell_id": "cell-f7f7523c92c8b0bdc6ca",
+      "depth": 1,
+      "corner_case_ids": [
+        "case-0005",
+        "grid-0017",
+        "grid-0019",
+        "grid-0004"
+      ],
+      "center_case_id": "grid-0029",
+      "color_value": 17.72128675354188,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.0,
+          3.0
+        ],
+        "V": [
+          1.5,
+          2.0
+        ]
+      },
+      "cell_id": "cell-209aefbb98e8bfcfbfc0",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0019",
+        "grid-0004",
+        "case-0006",
+        "grid-0018"
+      ],
+      "center_case_id": "grid-0030",
+      "color_value": 25.970338723677344,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.0,
+          3.5
+        ],
+        "V": [
+          1.0,
+          1.25
+        ]
+      },
+      "cell_id": "cell-6ba265bfff3dedfcae66",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0017",
+        "grid-0049",
+        "grid-0051",
+        "grid-0033"
+      ],
+      "center_case_id": null,
+      "color_value": 22.989464002102153,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.0,
+          3.5
+        ],
+        "V": [
+          1.25,
+          1.5
+        ]
+      },
+      "cell_id": "cell-3e7737a9ac744cf1aba6",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0051",
+        "grid-0033",
+        "grid-0004",
+        "grid-0050"
+      ],
+      "center_case_id": null,
+      "color_value": 30.068365386534083,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.5,
+          4.0
+        ],
+        "V": [
+          1.0,
+          1.25
+        ]
+      },
+      "cell_id": "cell-84ce6eaec6e2405f1d85",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0049",
+        "case-0009",
+        "grid-0033",
+        "grid-0052"
+      ],
+      "center_case_id": null,
+      "color_value": 25.29620705305323,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.5,
+          4.0
+        ],
+        "V": [
+          1.25,
+          1.5
+        ]
+      },
+      "cell_id": "cell-5bf551f2720e6d08cfa9",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0033",
+        "grid-0052",
+        "grid-0050",
+        "grid-0012"
+      ],
+      "center_case_id": null,
+      "color_value": 35.35157920957769,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.0,
+          3.5
+        ],
+        "V": [
+          1.5,
+          1.75
+        ]
+      },
+      "cell_id": "cell-396128128ab27b1bc05d",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0004",
+        "grid-0050",
+        "grid-0060",
+        "grid-0034"
+      ],
+      "center_case_id": null,
+      "color_value": 33.99075371272945,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.0,
+          3.5
+        ],
+        "V": [
+          1.75,
+          2.0
+        ]
+      },
+      "cell_id": "cell-580f40f01aab1a0e7251",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0060",
+        "grid-0034",
+        "grid-0018",
+        "grid-0059"
+      ],
+      "center_case_id": null,
+      "color_value": 37.520864849459386,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.5,
+          4.0
+        ],
+        "V": [
+          1.5,
+          1.75
+        ]
+      },
+      "cell_id": "cell-b6b8ad43fd11160cde32",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0050",
+        "grid-0012",
+        "grid-0034",
+        "grid-0057"
+      ],
+      "center_case_id": null,
+      "color_value": 40.913129544558316,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.5,
+          4.0
+        ],
+        "V": [
+          1.75,
+          2.0
+        ]
+      },
+      "cell_id": "cell-71f82beb59fda5ea11ed",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0034",
+        "grid-0057",
+        "grid-0059",
+        "case-0010"
+      ],
+      "center_case_id": null,
+      "color_value": 44.251810026355116,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.0,
+          3.0
+        ],
+        "V": [
+          2.0,
+          3.0
+        ]
+      },
+      "cell_id": "cell-2fefce38296e6e0d97c9",
+      "depth": 1,
+      "corner_case_ids": [
+        "case-0006",
+        "grid-0018",
+        "grid-0024",
+        "grid-0005"
+      ],
+      "center_case_id": "grid-0031",
+      "color_value": 31.050817823151892,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.0,
+          3.0
+        ],
+        "V": [
+          3.0,
+          4.0
+        ]
+      },
+      "cell_id": "cell-a68a392f8777b2bc31ee",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0024",
+        "grid-0005",
+        "case-0007",
+        "grid-0023"
+      ],
+      "center_case_id": "grid-0032",
+      "color_value": 33.91630444016254,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.0,
+          4.0
+        ],
+        "V": [
+          2.0,
+          3.0
+        ]
+      },
+      "cell_id": "cell-218d390459ce7162a214",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0018",
+        "case-0010",
+        "grid-0005",
+        "grid-0015"
+      ],
+      "center_case_id": "grid-0035",
+      "color_value": 46.07703938844904,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.0,
+          4.0
+        ],
+        "V": [
+          3.0,
+          4.0
+        ]
+      },
+      "cell_id": "cell-f64c2fc00f18c6286760",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0005",
+        "grid-0015",
+        "grid-0023",
+        "case-0011"
+      ],
+      "center_case_id": "grid-0036",
+      "color_value": 49.49608886026232,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.0,
+          4.0
+        ],
+        "V": [
+          4.0,
+          8.0
+        ]
+      },
+      "cell_id": "cell-7ff4a86bfc5ae0381cdf",
+      "depth": 0,
+      "corner_case_ids": [
+        "case-0007",
+        "case-0011",
+        "case-0008",
+        "case-0012"
+      ],
+      "center_case_id": "grid-0006",
+      "color_value": 44.60427241639802,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          5.0
+        ],
+        "V": [
+          1.0,
+          1.25
+        ]
+      },
+      "cell_id": "cell-ab5f2d8e8664685eca26",
+      "depth": 2,
+      "corner_case_ids": [
+        "case-0009",
+        "grid-0061",
+        "grid-0052",
+        "grid-0037"
+      ],
+      "center_case_id": null,
+      "color_value": 27.58022819042337,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          5.0
+        ],
+        "V": [
+          1.25,
+          1.5
+        ]
+      },
+      "cell_id": "cell-c0643a30f237cf5d6539",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0052",
+        "grid-0037",
+        "grid-0012",
+        "grid-0056"
+      ],
+      "center_case_id": null,
+      "color_value": 40.09100181247447,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          5.0,
+          6.0
+        ],
+        "V": [
+          1.0,
+          1.25
+        ]
+      },
+      "cell_id": "cell-6c1765498ae5dfd96dd1",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0061",
+        "grid-0010",
+        "grid-0037",
+        "grid-0062"
+      ],
+      "center_case_id": null,
+      "color_value": 31.64557502115115,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          5.0,
+          6.0
+        ],
+        "V": [
+          1.25,
+          1.5
+        ]
+      },
+      "cell_id": "cell-6604e646d80ba7145106",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0037",
+        "grid-0062",
+        "grid-0056",
+        "grid-0007"
+      ],
+      "center_case_id": null,
+      "color_value": 43.880686144809715,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          5.0
+        ],
+        "V": [
+          1.5,
+          1.75
+        ]
+      },
+      "cell_id": "cell-7f8356774553d26ab725",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0012",
+        "grid-0056",
+        "grid-0057",
+        "grid-0038"
+      ],
+      "center_case_id": null,
+      "color_value": 49.40560743811459,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          5.0
+        ],
+        "V": [
+          1.75,
+          2.0
+        ]
+      },
+      "cell_id": "cell-44fac0271c64fa8bd625",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0057",
+        "grid-0038",
+        "case-0010",
+        "grid-0053"
+      ],
+      "center_case_id": null,
+      "color_value": 56.31978995654897,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          5.0,
+          6.0
+        ],
+        "V": [
+          1.5,
+          1.75
+        ]
+      },
+      "cell_id": "cell-2fc0e84964d97693ba5e",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0056",
+        "grid-0007",
+        "grid-0038",
+        "grid-0058"
+      ],
+      "center_case_id": null,
+      "color_value": 56.021182655921265,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          5.0,
+          6.0
+        ],
+        "V": [
+          1.75,
+          2.0
+        ]
+      },
+      "cell_id": "cell-0d66a14984944c04e58c",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0038",
+        "grid-0058",
+        "grid-0053",
+        "grid-0011"
+      ],
+      "center_case_id": null,
+      "color_value": 67.0303920272116,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          8.0
+        ],
+        "V": [
+          1.0,
+          1.5
+        ]
+      },
+      "cell_id": "cell-9fb40e17db961debea96",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0010",
+        "case-0013",
+        "grid-0007",
+        "grid-0013"
+      ],
+      "center_case_id": "grid-0041",
+      "color_value": 42.90945919040091,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          7.0
+        ],
+        "V": [
+          1.5,
+          1.75
+        ]
+      },
+      "cell_id": "cell-3494c6c7f4df8f7afce1",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0007",
+        "grid-0063",
+        "grid-0058",
+        "grid-0042"
+      ],
+      "center_case_id": null,
+      "color_value": 58.846690514060356,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          7.0
+        ],
+        "V": [
+          1.75,
+          2.0
+        ]
+      },
+      "cell_id": "cell-ceb20cb018943d992603",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0058",
+        "grid-0042",
+        "grid-0011",
+        "grid-0045"
+      ],
+      "center_case_id": null,
+      "color_value": 70.46605993925783,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.0,
+          8.0
+        ],
+        "V": [
+          1.5,
+          1.75
+        ]
+      },
+      "cell_id": "cell-f41ee959364572ec0e87",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0063",
+        "grid-0013",
+        "grid-0042",
+        "grid-0064"
+      ],
+      "center_case_id": null,
+      "color_value": 60.95161713446454,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.0,
+          8.0
+        ],
+        "V": [
+          1.75,
+          2.0
+        ]
+      },
+      "cell_id": "cell-d6e4541e4b55e13fe590",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0042",
+        "grid-0064",
+        "grid-0045",
+        "case-0014"
+      ],
+      "center_case_id": null,
+      "color_value": 72.7276396956815,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          5.0
+        ],
+        "V": [
+          2.0,
+          2.5
+        ]
+      },
+      "cell_id": "cell-ee0ddf123968fb18fe67",
+      "depth": 2,
+      "corner_case_ids": [
+        "case-0010",
+        "grid-0053",
+        "grid-0055",
+        "grid-0039"
+      ],
+      "center_case_id": null,
+      "color_value": 60.389202938824255,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          5.0
+        ],
+        "V": [
+          2.5,
+          3.0
+        ]
+      },
+      "cell_id": "cell-2e587da46d4857b0218f",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0055",
+        "grid-0039",
+        "grid-0015",
+        "grid-0054"
+      ],
+      "center_case_id": null,
+      "color_value": 62.12135918634569,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          5.0,
+          6.0
+        ],
+        "V": [
+          2.0,
+          2.5
+        ]
+      },
+      "cell_id": "cell-fbf5d34a7c3346e91c69",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0053",
+        "grid-0011",
+        "grid-0039",
+        "grid-0047"
+      ],
+      "center_case_id": null,
+      "color_value": 73.90260352301182,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          5.0,
+          6.0
+        ],
+        "V": [
+          2.5,
+          3.0
+        ]
+      },
+      "cell_id": "cell-826a760b7dcca7e936be",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0039",
+        "grid-0047",
+        "grid-0054",
+        "grid-0008"
+      ],
+      "center_case_id": null,
+      "color_value": 76.87576415102248,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          6.0
+        ],
+        "V": [
+          3.0,
+          4.0
+        ]
+      },
+      "cell_id": "cell-c2fdc4d8bb7d13609f44",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0015",
+        "grid-0008",
+        "case-0011",
+        "grid-0014"
+      ],
+      "center_case_id": "grid-0040",
+      "color_value": 72.76342310917542,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          7.0
+        ],
+        "V": [
+          2.0,
+          2.5
+        ]
+      },
+      "cell_id": "cell-3c400157f2dde859d2a0",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0011",
+        "grid-0045",
+        "grid-0047",
+        "grid-0043"
+      ],
+      "center_case_id": null,
+      "color_value": 82.86793555682534,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          7.0
+        ],
+        "V": [
+          2.5,
+          3.0
+        ]
+      },
+      "cell_id": "cell-4cfffa07d0b7870d1eb5",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0047",
+        "grid-0043",
+        "grid-0008",
+        "grid-0046"
+      ],
+      "center_case_id": null,
+      "color_value": 91.21897288654911,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.0,
+          8.0
+        ],
+        "V": [
+          2.0,
+          2.5
+        ]
+      },
+      "cell_id": "cell-4ae69eba881333beda03",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0045",
+        "case-0014",
+        "grid-0043",
+        "grid-0048"
+      ],
+      "center_case_id": null,
+      "color_value": 88.94048574083561,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.0,
+          8.0
+        ],
+        "V": [
+          2.5,
+          3.0
+        ]
+      },
+      "cell_id": "cell-528e872eeb028646aa85",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0043",
+        "grid-0048",
+        "grid-0046",
+        "grid-0016"
+      ],
+      "center_case_id": null,
+      "color_value": 103.4138844411053,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          8.0
+        ],
+        "V": [
+          3.0,
+          4.0
+        ]
+      },
+      "cell_id": "cell-f8ed3271790baf0010e9",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0008",
+        "grid-0016",
+        "grid-0014",
+        "case-0015"
+      ],
+      "center_case_id": "grid-0044",
+      "color_value": 103.41638448167313,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          8.0
+        ],
+        "V": [
+          4.0,
+          8.0
+        ]
+      },
+      "cell_id": "cell-39381b7695fcba292770",
+      "depth": 0,
+      "corner_case_ids": [
+        "case-0011",
+        "case-0015",
+        "case-0012",
+        "case-0016"
+      ],
+      "center_case_id": "grid-0009",
+      "color_value": 92.16066330977556,
+      "value_source": "computed_center"
+    }
+  ],
+  "kind": "postprocess_plot_data",
+  "study_id": "example-honeycomb-cdw",
+  "plot_output": "energy-heatmap-U-V",
+  "plot_artifact_prefix": "plot-",
+  "plot_spec": {
+    "tool": "heatmap",
+    "x": "U",
+    "y": "V",
+    "color": "energy",
+    "group": null,
+    "title": "Total energy",
+    "xlabel": "U",
+    "ylabel": "V",
+    "colorbar_label": "",
+    "colormap": "RdBu_r",
+    "center": 0.0,
+    "output": "energy-heatmap-U-V",
+    "style": "pyscf_agent_classic",
+    "sort_by_x": true,
+    "figure_size": [
+      6.299212598425196,
+      6.299212598425196
+    ],
+    "dpi": 160,
+    "units": {
+      "U": null,
+      "V": null,
+      "energy": null
+    },
+    "local_cells": [
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            1.0,
+            1.25
+          ],
+          "V": [
+            1.0,
+            1.25
+          ]
+        },
+        "cell_id": "cell-2f96ba6720260a3b75dd",
+        "depth": 2,
+        "corner_case_ids": [
+          "case-0001",
+          "grid-0065",
+          "grid-0067",
+          "grid-0025"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            1.0,
+            1.25
+          ],
+          "V": [
+            1.25,
+            1.5
+          ]
+        },
+        "cell_id": "cell-c6b2bab83235eefc48d5",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0067",
+          "grid-0025",
+          "grid-0022",
+          "grid-0066"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            1.25,
+            1.5
+          ],
+          "V": [
+            1.0,
+            1.25
+          ]
+        },
+        "cell_id": "cell-ade7613e2b5d79a26681",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0065",
+          "grid-0020",
+          "grid-0025",
+          "grid-0068"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            1.25,
+            1.5
+          ],
+          "V": [
+            1.25,
+            1.5
+          ]
+        },
+        "cell_id": "cell-96f6443a0e408c40a4fb",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0025",
+          "grid-0068",
+          "grid-0066",
+          "grid-0001"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            1.0,
+            1.5
+          ],
+          "V": [
+            1.5,
+            2.0
+          ]
+        },
+        "cell_id": "cell-fbd23cbcb28abaac4c11",
+        "depth": 1,
+        "corner_case_ids": [
+          "grid-0022",
+          "grid-0001",
+          "case-0002",
+          "grid-0021"
+        ],
+        "center_case_id": "grid-0026"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            1.5,
+            2.0
+          ],
+          "V": [
+            1.0,
+            1.5
+          ]
+        },
+        "cell_id": "cell-3b5464c85107e7731721",
+        "depth": 1,
+        "corner_case_ids": [
+          "grid-0020",
+          "case-0005",
+          "grid-0001",
+          "grid-0019"
+        ],
+        "center_case_id": "grid-0027"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            1.5,
+            2.0
+          ],
+          "V": [
+            1.5,
+            2.0
+          ]
+        },
+        "cell_id": "cell-8a471492c0b52e795677",
+        "depth": 1,
+        "corner_case_ids": [
+          "grid-0001",
+          "grid-0019",
+          "grid-0021",
+          "case-0006"
+        ],
+        "center_case_id": "grid-0028"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            1.0,
+            2.0
+          ],
+          "V": [
+            2.0,
+            4.0
+          ]
+        },
+        "cell_id": "cell-8312fc82cab88981791b",
+        "depth": 0,
+        "corner_case_ids": [
+          "case-0002",
+          "case-0006",
+          "case-0003",
+          "case-0007"
+        ],
+        "center_case_id": "grid-0002"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            1.0,
+            2.0
+          ],
+          "V": [
+            4.0,
+            8.0
+          ]
+        },
+        "cell_id": "cell-07a221bf6f55c33d42d9",
+        "depth": 0,
+        "corner_case_ids": [
+          "case-0003",
+          "case-0007",
+          "case-0004",
+          "case-0008"
+        ],
+        "center_case_id": "grid-0003"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            2.0,
+            3.0
+          ],
+          "V": [
+            1.0,
+            1.5
+          ]
+        },
+        "cell_id": "cell-f7f7523c92c8b0bdc6ca",
+        "depth": 1,
+        "corner_case_ids": [
+          "case-0005",
+          "grid-0017",
+          "grid-0019",
+          "grid-0004"
+        ],
+        "center_case_id": "grid-0029"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            2.0,
+            3.0
+          ],
+          "V": [
+            1.5,
+            2.0
+          ]
+        },
+        "cell_id": "cell-209aefbb98e8bfcfbfc0",
+        "depth": 1,
+        "corner_case_ids": [
+          "grid-0019",
+          "grid-0004",
+          "case-0006",
+          "grid-0018"
+        ],
+        "center_case_id": "grid-0030"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            3.0,
+            3.5
+          ],
+          "V": [
+            1.0,
+            1.25
+          ]
+        },
+        "cell_id": "cell-6ba265bfff3dedfcae66",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0017",
+          "grid-0049",
+          "grid-0051",
+          "grid-0033"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            3.0,
+            3.5
+          ],
+          "V": [
+            1.25,
+            1.5
+          ]
+        },
+        "cell_id": "cell-3e7737a9ac744cf1aba6",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0051",
+          "grid-0033",
+          "grid-0004",
+          "grid-0050"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            3.5,
+            4.0
+          ],
+          "V": [
+            1.0,
+            1.25
+          ]
+        },
+        "cell_id": "cell-84ce6eaec6e2405f1d85",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0049",
+          "case-0009",
+          "grid-0033",
+          "grid-0052"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            3.5,
+            4.0
+          ],
+          "V": [
+            1.25,
+            1.5
+          ]
+        },
+        "cell_id": "cell-5bf551f2720e6d08cfa9",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0033",
+          "grid-0052",
+          "grid-0050",
+          "grid-0012"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            3.0,
+            3.5
+          ],
+          "V": [
+            1.5,
+            1.75
+          ]
+        },
+        "cell_id": "cell-396128128ab27b1bc05d",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0004",
+          "grid-0050",
+          "grid-0060",
+          "grid-0034"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            3.0,
+            3.5
+          ],
+          "V": [
+            1.75,
+            2.0
+          ]
+        },
+        "cell_id": "cell-580f40f01aab1a0e7251",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0060",
+          "grid-0034",
+          "grid-0018",
+          "grid-0059"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            3.5,
+            4.0
+          ],
+          "V": [
+            1.5,
+            1.75
+          ]
+        },
+        "cell_id": "cell-b6b8ad43fd11160cde32",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0050",
+          "grid-0012",
+          "grid-0034",
+          "grid-0057"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            3.5,
+            4.0
+          ],
+          "V": [
+            1.75,
+            2.0
+          ]
+        },
+        "cell_id": "cell-71f82beb59fda5ea11ed",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0034",
+          "grid-0057",
+          "grid-0059",
+          "case-0010"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            2.0,
+            3.0
+          ],
+          "V": [
+            2.0,
+            3.0
+          ]
+        },
+        "cell_id": "cell-2fefce38296e6e0d97c9",
+        "depth": 1,
+        "corner_case_ids": [
+          "case-0006",
+          "grid-0018",
+          "grid-0024",
+          "grid-0005"
+        ],
+        "center_case_id": "grid-0031"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            2.0,
+            3.0
+          ],
+          "V": [
+            3.0,
+            4.0
+          ]
+        },
+        "cell_id": "cell-a68a392f8777b2bc31ee",
+        "depth": 1,
+        "corner_case_ids": [
+          "grid-0024",
+          "grid-0005",
+          "case-0007",
+          "grid-0023"
+        ],
+        "center_case_id": "grid-0032"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            3.0,
+            4.0
+          ],
+          "V": [
+            2.0,
+            3.0
+          ]
+        },
+        "cell_id": "cell-218d390459ce7162a214",
+        "depth": 1,
+        "corner_case_ids": [
+          "grid-0018",
+          "case-0010",
+          "grid-0005",
+          "grid-0015"
+        ],
+        "center_case_id": "grid-0035"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            3.0,
+            4.0
+          ],
+          "V": [
+            3.0,
+            4.0
+          ]
+        },
+        "cell_id": "cell-f64c2fc00f18c6286760",
+        "depth": 1,
+        "corner_case_ids": [
+          "grid-0005",
+          "grid-0015",
+          "grid-0023",
+          "case-0011"
+        ],
+        "center_case_id": "grid-0036"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            2.0,
+            4.0
+          ],
+          "V": [
+            4.0,
+            8.0
+          ]
+        },
+        "cell_id": "cell-7ff4a86bfc5ae0381cdf",
+        "depth": 0,
+        "corner_case_ids": [
+          "case-0007",
+          "case-0011",
+          "case-0008",
+          "case-0012"
+        ],
+        "center_case_id": "grid-0006"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            4.0,
+            5.0
+          ],
+          "V": [
+            1.0,
+            1.25
+          ]
+        },
+        "cell_id": "cell-ab5f2d8e8664685eca26",
+        "depth": 2,
+        "corner_case_ids": [
+          "case-0009",
+          "grid-0061",
+          "grid-0052",
+          "grid-0037"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            4.0,
+            5.0
+          ],
+          "V": [
+            1.25,
+            1.5
+          ]
+        },
+        "cell_id": "cell-c0643a30f237cf5d6539",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0052",
+          "grid-0037",
+          "grid-0012",
+          "grid-0056"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            5.0,
+            6.0
+          ],
+          "V": [
+            1.0,
+            1.25
+          ]
+        },
+        "cell_id": "cell-6c1765498ae5dfd96dd1",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0061",
+          "grid-0010",
+          "grid-0037",
+          "grid-0062"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            5.0,
+            6.0
+          ],
+          "V": [
+            1.25,
+            1.5
+          ]
+        },
+        "cell_id": "cell-6604e646d80ba7145106",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0037",
+          "grid-0062",
+          "grid-0056",
+          "grid-0007"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            4.0,
+            5.0
+          ],
+          "V": [
+            1.5,
+            1.75
+          ]
+        },
+        "cell_id": "cell-7f8356774553d26ab725",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0012",
+          "grid-0056",
+          "grid-0057",
+          "grid-0038"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            4.0,
+            5.0
+          ],
+          "V": [
+            1.75,
+            2.0
+          ]
+        },
+        "cell_id": "cell-44fac0271c64fa8bd625",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0057",
+          "grid-0038",
+          "case-0010",
+          "grid-0053"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            5.0,
+            6.0
+          ],
+          "V": [
+            1.5,
+            1.75
+          ]
+        },
+        "cell_id": "cell-2fc0e84964d97693ba5e",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0056",
+          "grid-0007",
+          "grid-0038",
+          "grid-0058"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            5.0,
+            6.0
+          ],
+          "V": [
+            1.75,
+            2.0
+          ]
+        },
+        "cell_id": "cell-0d66a14984944c04e58c",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0038",
+          "grid-0058",
+          "grid-0053",
+          "grid-0011"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            6.0,
+            8.0
+          ],
+          "V": [
+            1.0,
+            1.5
+          ]
+        },
+        "cell_id": "cell-9fb40e17db961debea96",
+        "depth": 1,
+        "corner_case_ids": [
+          "grid-0010",
+          "case-0013",
+          "grid-0007",
+          "grid-0013"
+        ],
+        "center_case_id": "grid-0041"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            6.0,
+            7.0
+          ],
+          "V": [
+            1.5,
+            1.75
+          ]
+        },
+        "cell_id": "cell-3494c6c7f4df8f7afce1",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0007",
+          "grid-0063",
+          "grid-0058",
+          "grid-0042"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            6.0,
+            7.0
+          ],
+          "V": [
+            1.75,
+            2.0
+          ]
+        },
+        "cell_id": "cell-ceb20cb018943d992603",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0058",
+          "grid-0042",
+          "grid-0011",
+          "grid-0045"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            7.0,
+            8.0
+          ],
+          "V": [
+            1.5,
+            1.75
+          ]
+        },
+        "cell_id": "cell-f41ee959364572ec0e87",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0063",
+          "grid-0013",
+          "grid-0042",
+          "grid-0064"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            7.0,
+            8.0
+          ],
+          "V": [
+            1.75,
+            2.0
+          ]
+        },
+        "cell_id": "cell-d6e4541e4b55e13fe590",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0042",
+          "grid-0064",
+          "grid-0045",
+          "case-0014"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            4.0,
+            5.0
+          ],
+          "V": [
+            2.0,
+            2.5
+          ]
+        },
+        "cell_id": "cell-ee0ddf123968fb18fe67",
+        "depth": 2,
+        "corner_case_ids": [
+          "case-0010",
+          "grid-0053",
+          "grid-0055",
+          "grid-0039"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            4.0,
+            5.0
+          ],
+          "V": [
+            2.5,
+            3.0
+          ]
+        },
+        "cell_id": "cell-2e587da46d4857b0218f",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0055",
+          "grid-0039",
+          "grid-0015",
+          "grid-0054"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            5.0,
+            6.0
+          ],
+          "V": [
+            2.0,
+            2.5
+          ]
+        },
+        "cell_id": "cell-fbf5d34a7c3346e91c69",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0053",
+          "grid-0011",
+          "grid-0039",
+          "grid-0047"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            5.0,
+            6.0
+          ],
+          "V": [
+            2.5,
+            3.0
+          ]
+        },
+        "cell_id": "cell-826a760b7dcca7e936be",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0039",
+          "grid-0047",
+          "grid-0054",
+          "grid-0008"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            4.0,
+            6.0
+          ],
+          "V": [
+            3.0,
+            4.0
+          ]
+        },
+        "cell_id": "cell-c2fdc4d8bb7d13609f44",
+        "depth": 1,
+        "corner_case_ids": [
+          "grid-0015",
+          "grid-0008",
+          "case-0011",
+          "grid-0014"
+        ],
+        "center_case_id": "grid-0040"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            6.0,
+            7.0
+          ],
+          "V": [
+            2.0,
+            2.5
+          ]
+        },
+        "cell_id": "cell-3c400157f2dde859d2a0",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0011",
+          "grid-0045",
+          "grid-0047",
+          "grid-0043"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            6.0,
+            7.0
+          ],
+          "V": [
+            2.5,
+            3.0
+          ]
+        },
+        "cell_id": "cell-4cfffa07d0b7870d1eb5",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0047",
+          "grid-0043",
+          "grid-0008",
+          "grid-0046"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            7.0,
+            8.0
+          ],
+          "V": [
+            2.0,
+            2.5
+          ]
+        },
+        "cell_id": "cell-4ae69eba881333beda03",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0045",
+          "case-0014",
+          "grid-0043",
+          "grid-0048"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            7.0,
+            8.0
+          ],
+          "V": [
+            2.5,
+            3.0
+          ]
+        },
+        "cell_id": "cell-528e872eeb028646aa85",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0043",
+          "grid-0048",
+          "grid-0046",
+          "grid-0016"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            6.0,
+            8.0
+          ],
+          "V": [
+            3.0,
+            4.0
+          ]
+        },
+        "cell_id": "cell-f8ed3271790baf0010e9",
+        "depth": 1,
+        "corner_case_ids": [
+          "grid-0008",
+          "grid-0016",
+          "grid-0014",
+          "case-0015"
+        ],
+        "center_case_id": "grid-0044"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            4.0,
+            8.0
+          ],
+          "V": [
+            4.0,
+            8.0
+          ]
+        },
+        "cell_id": "cell-39381b7695fcba292770",
+        "depth": 0,
+        "corner_case_ids": [
+          "case-0011",
+          "case-0015",
+          "case-0012",
+          "case-0016"
+        ],
+        "center_case_id": "grid-0009"
+      }
+    ]
+  },
+  "columns": [
+    "row_index",
+    "case_id",
+    "status",
+    "U",
+    "V",
+    "energy",
+    "U_numeric",
+    "V_numeric",
+    "energy_numeric"
+  ],
+  "rows": [
+    {
+      "row_index": 0,
+      "case_id": "case-0001",
+      "label": null,
+      "status": "succeeded",
+      "U": 1,
+      "V": 1,
+      "energy": -4.895235946973154,
+      "U_numeric": 1.0,
+      "U_unit": null,
+      "V_numeric": 1.0,
+      "V_unit": null,
+      "energy_numeric": -4.895235946973154,
+      "energy_unit": null
+    },
+    {
+      "row_index": 1,
+      "case_id": "case-0002",
+      "label": null,
+      "status": "succeeded",
+      "U": 1,
+      "V": 2,
+      "energy": 6.100199998614352,
+      "U_numeric": 1.0,
+      "U_unit": null,
+      "V_numeric": 2.0,
+      "V_unit": null,
+      "energy_numeric": 6.100199998614352,
+      "energy_unit": null
+    },
+    {
+      "row_index": 2,
+      "case_id": "case-0003",
+      "label": null,
+      "status": "succeeded",
+      "U": 1,
+      "V": 4,
+      "energy": 11.14971461340492,
+      "U_numeric": 1.0,
+      "U_unit": null,
+      "V_numeric": 4.0,
+      "V_unit": null,
+      "energy_numeric": 11.14971461340492,
+      "energy_unit": null
+    },
+    {
+      "row_index": 3,
+      "case_id": "case-0004",
+      "label": null,
+      "status": "succeeded",
+      "U": 1,
+      "V": 8,
+      "energy": 13.756256362248559,
+      "U_numeric": 1.0,
+      "U_unit": null,
+      "V_numeric": 8.0,
+      "V_unit": null,
+      "energy_numeric": 13.756256362248559,
+      "energy_unit": null
+    },
+    {
+      "row_index": 4,
+      "case_id": "case-0005",
+      "label": null,
+      "status": "succeeded",
+      "U": 2,
+      "V": 1,
+      "energy": 8.687690728530608,
+      "U_numeric": 2.0,
+      "U_unit": null,
+      "V_numeric": 1.0,
+      "V_unit": null,
+      "energy_numeric": 8.687690728530608,
+      "energy_unit": null
+    },
+    {
+      "row_index": 5,
+      "case_id": "case-0006",
+      "label": null,
+      "status": "succeeded",
+      "U": 2,
+      "V": 2,
+      "energy": 20.9045536654692,
+      "U_numeric": 2.0,
+      "U_unit": null,
+      "V_numeric": 2.0,
+      "V_unit": null,
+      "energy_numeric": 20.9045536654692,
+      "energy_unit": null
+    },
+    {
+      "row_index": 6,
+      "case_id": "case-0007",
+      "label": null,
+      "status": "succeeded",
+      "U": 2,
+      "V": 4,
+      "energy": 26.88960747079256,
+      "U_numeric": 2.0,
+      "U_unit": null,
+      "V_numeric": 4.0,
+      "V_unit": null,
+      "energy_numeric": 26.88960747079256,
+      "energy_unit": null
+    },
+    {
+      "row_index": 7,
+      "case_id": "case-0008",
+      "label": null,
+      "status": "succeeded",
+      "U": 2,
+      "V": 8,
+      "energy": 29.698676012211646,
+      "U_numeric": 2.0,
+      "U_unit": null,
+      "V_numeric": 8.0,
+      "V_unit": null,
+      "energy_numeric": 29.698676012211646,
+      "energy_unit": null
+    },
+    {
+      "row_index": 8,
+      "case_id": "case-0009",
+      "label": null,
+      "status": "succeeded",
+      "U": 4,
+      "V": 1,
+      "energy": 18.88741407608917,
+      "U_numeric": 4.0,
+      "U_unit": null,
+      "V_numeric": 1.0,
+      "V_unit": null,
+      "energy_numeric": 18.88741407608917,
+      "energy_unit": null
+    },
+    {
+      "row_index": 9,
+      "case_id": "case-0010",
+      "label": null,
+      "status": "succeeded",
+      "U": 4,
+      "V": 2,
+      "energy": 49.354643428655756,
+      "U_numeric": 4.0,
+      "U_unit": null,
+      "V_numeric": 2.0,
+      "V_unit": null,
+      "energy_numeric": 49.354643428655756,
+      "energy_unit": null
+    },
+    {
+      "row_index": 10,
+      "case_id": "case-0011",
+      "label": null,
+      "status": "succeeded",
+      "U": 4,
+      "V": 4,
+      "energy": 58.26894017856899,
+      "U_numeric": 4.0,
+      "U_unit": null,
+      "V_numeric": 4.0,
+      "V_unit": null,
+      "energy_numeric": 58.26894017856899,
+      "energy_unit": null
+    },
+    {
+      "row_index": 11,
+      "case_id": "case-0012",
+      "label": null,
+      "status": "succeeded",
+      "U": 4,
+      "V": 8,
+      "energy": 61.563661635139354,
+      "U_numeric": 4.0,
+      "U_unit": null,
+      "V_numeric": 8.0,
+      "V_unit": null,
+      "energy_numeric": 61.563661635139354,
+      "energy_unit": null
+    },
+    {
+      "row_index": 12,
+      "case_id": "case-0013",
+      "label": null,
+      "status": "succeeded",
+      "U": 8,
+      "V": 1,
+      "energy": 33.204503748444424,
+      "U_numeric": 8.0,
+      "U_unit": null,
+      "V_numeric": 1.0,
+      "V_unit": null,
+      "energy_numeric": 33.204503748444424,
+      "energy_unit": null
+    },
+    {
+      "row_index": 13,
+      "case_id": "case-0014",
+      "label": null,
+      "status": "succeeded",
+      "U": 8,
+      "V": 2,
+      "energy": 79.22914055033809,
+      "U_numeric": 8.0,
+      "U_unit": null,
+      "V_numeric": 2.0,
+      "V_unit": null,
+      "energy_numeric": 79.22914055033809,
+      "energy_unit": null
+    },
+    {
+      "row_index": 14,
+      "case_id": "case-0015",
+      "label": null,
+      "status": "succeeded",
+      "U": 8,
+      "V": 4,
+      "energy": 120.46108423489261,
+      "U_numeric": 8.0,
+      "U_unit": null,
+      "V_numeric": 4.0,
+      "V_unit": null,
+      "energy_numeric": 120.46108423489261,
+      "energy_unit": null
+    },
+    {
+      "row_index": 15,
+      "case_id": "case-0016",
+      "label": null,
+      "status": "succeeded",
+      "U": 8,
+      "V": 8,
+      "energy": 125.211778761713,
+      "U_numeric": 8.0,
+      "U_unit": null,
+      "V_numeric": 8.0,
+      "V_unit": null,
+      "energy_numeric": 125.211778761713,
+      "energy_unit": null
+    },
+    {
+      "row_index": 16,
+      "case_id": "grid-0001",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.5,
+      "V": 1.5,
+      "energy": 9.449413334547677,
+      "U_numeric": 1.5,
+      "U_unit": null,
+      "V_numeric": 1.5,
+      "V_unit": null,
+      "energy_numeric": 9.449413334547677,
+      "energy_unit": null
+    },
+    {
+      "row_index": 17,
+      "case_id": "grid-0002",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.5,
+      "V": 3.0,
+      "energy": 17.289212328969455,
+      "U_numeric": 1.5,
+      "U_unit": null,
+      "V_numeric": 3.0,
+      "V_unit": null,
+      "energy_numeric": 17.289212328969455,
+      "energy_unit": null
+    },
+    {
+      "row_index": 18,
+      "case_id": "grid-0003",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.5,
+      "V": 6.0,
+      "energy": 20.80059091509056,
+      "U_numeric": 1.5,
+      "U_unit": null,
+      "V_numeric": 6.0,
+      "V_unit": null,
+      "energy_numeric": 20.80059091509056,
+      "energy_unit": null
+    },
+    {
+      "row_index": 19,
+      "case_id": "grid-0004",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.0,
+      "V": 1.5,
+      "energy": 28.987510180375427,
+      "U_numeric": 3.0,
+      "U_unit": null,
+      "V_numeric": 1.5,
+      "V_unit": null,
+      "energy_numeric": 28.987510180375427,
+      "energy_unit": null
+    },
+    {
+      "row_index": 20,
+      "case_id": "grid-0005",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.0,
+      "V": 3.0,
+      "energy": 40.49522328830583,
+      "U_numeric": 3.0,
+      "U_unit": null,
+      "V_numeric": 3.0,
+      "V_unit": null,
+      "energy_numeric": 40.49522328830583,
+      "energy_unit": null
+    },
+    {
+      "row_index": 21,
+      "case_id": "grid-0006",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.0,
+      "V": 6.0,
+      "energy": 44.60427241639802,
+      "U_numeric": 3.0,
+      "U_unit": null,
+      "V_numeric": 6.0,
+      "V_unit": null,
+      "energy_numeric": 44.60427241639802,
+      "energy_unit": null
+    },
+    {
+      "row_index": 22,
+      "case_id": "grid-0007",
+      "label": null,
+      "status": "succeeded",
+      "U": 6.0,
+      "V": 1.5,
+      "energy": 52.5901635684155,
+      "U_numeric": 6.0,
+      "U_unit": null,
+      "V_numeric": 1.5,
+      "V_unit": null,
+      "energy_numeric": 52.5901635684155,
+      "energy_unit": null
+    },
+    {
+      "row_index": 23,
+      "case_id": "grid-0008",
+      "label": null,
+      "status": "succeeded",
+      "U": 6.0,
+      "V": 3.0,
+      "energy": 86.03346621254273,
+      "U_numeric": 6.0,
+      "U_unit": null,
+      "V_numeric": 3.0,
+      "V_unit": null,
+      "energy_numeric": 86.03346621254273,
+      "energy_unit": null
+    },
+    {
+      "row_index": 24,
+      "case_id": "grid-0009",
+      "label": null,
+      "status": "succeeded",
+      "U": 6.0,
+      "V": 6.0,
+      "energy": 92.16066330977556,
+      "U_numeric": 6.0,
+      "U_unit": null,
+      "V_numeric": 6.0,
+      "V_unit": null,
+      "energy_numeric": 92.16066330977556,
+      "energy_unit": null
+    },
+    {
+      "row_index": 25,
+      "case_id": "grid-0010",
+      "label": null,
+      "status": "succeeded",
+      "U": 6.0,
+      "V": 1.0,
+      "energy": 28.852594395462404,
+      "U_numeric": 6.0,
+      "U_unit": null,
+      "V_numeric": 1.0,
+      "V_unit": null,
+      "energy_numeric": 28.852594395462404,
+      "energy_unit": null
+    },
+    {
+      "row_index": 26,
+      "case_id": "grid-0011",
+      "label": null,
+      "status": "succeeded",
+      "U": 6.0,
+      "V": 2.0,
+      "energy": 74.59728116588268,
+      "U_numeric": 6.0,
+      "U_unit": null,
+      "V_numeric": 2.0,
+      "V_unit": null,
+      "energy_numeric": 74.59728116588268,
+      "energy_unit": null
+    },
+    {
+      "row_index": 27,
+      "case_id": "grid-0012",
+      "label": null,
+      "status": "succeeded",
+      "U": 4.0,
+      "V": 1.5,
+      "energy": 43.7276332426124,
+      "U_numeric": 4.0,
+      "U_unit": null,
+      "V_numeric": 1.5,
+      "V_unit": null,
+      "energy_numeric": 43.7276332426124,
+      "energy_unit": null
+    },
+    {
+      "row_index": 28,
+      "case_id": "grid-0013",
+      "label": null,
+      "status": "succeeded",
+      "U": 8.0,
+      "V": 1.5,
+      "energy": 56.59541040879293,
+      "U_numeric": 8.0,
+      "U_unit": null,
+      "V_numeric": 1.5,
+      "V_unit": null,
+      "energy_numeric": 56.59541040879293,
+      "energy_unit": null
+    },
+    {
+      "row_index": 29,
+      "case_id": "grid-0014",
+      "label": null,
+      "status": "succeeded",
+      "U": 6.0,
+      "V": 4.0,
+      "energy": 89.49578907151245,
+      "U_numeric": 6.0,
+      "U_unit": null,
+      "V_numeric": 4.0,
+      "V_unit": null,
+      "energy_numeric": 89.49578907151245,
+      "energy_unit": null
+    },
+    {
+      "row_index": 30,
+      "case_id": "grid-0015",
+      "label": null,
+      "status": "succeeded",
+      "U": 4.0,
+      "V": 3.0,
+      "energy": 55.82681095335895,
+      "U_numeric": 4.0,
+      "U_unit": null,
+      "V_numeric": 3.0,
+      "V_unit": null,
+      "energy_numeric": 55.82681095335895,
+      "energy_unit": null
+    },
+    {
+      "row_index": 31,
+      "case_id": "grid-0016",
+      "label": null,
+      "status": "succeeded",
+      "U": 8.0,
+      "V": 3.0,
+      "energy": 115.15477107918187,
+      "U_numeric": 8.0,
+      "U_unit": null,
+      "V_numeric": 3.0,
+      "V_unit": null,
+      "energy_numeric": 115.15477107918187,
+      "energy_unit": null
+    },
+    {
+      "row_index": 32,
+      "case_id": "grid-0017",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.0,
+      "V": 1.0,
+      "energy": 16.05317410222232,
+      "U_numeric": 3.0,
+      "U_unit": null,
+      "V_numeric": 1.0,
+      "V_unit": null,
+      "energy_numeric": 16.05317410222232,
+      "energy_unit": null
+    },
+    {
+      "row_index": 33,
+      "case_id": "grid-0018",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.0,
+      "V": 2.0,
+      "energy": 35.38024298615134,
+      "U_numeric": 3.0,
+      "U_unit": null,
+      "V_numeric": 2.0,
+      "V_unit": null,
+      "energy_numeric": 35.38024298615134,
+      "energy_unit": null
+    },
+    {
+      "row_index": 34,
+      "case_id": "grid-0019",
+      "label": null,
+      "status": "succeeded",
+      "U": 2.0,
+      "V": 1.5,
+      "energy": 16.222646785579798,
+      "U_numeric": 2.0,
+      "U_unit": null,
+      "V_numeric": 1.5,
+      "V_unit": null,
+      "energy_numeric": 16.222646785579798,
+      "energy_unit": null
+    },
+    {
+      "row_index": 35,
+      "case_id": "grid-0020",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.5,
+      "V": 1.0,
+      "energy": 0.5561562560253259,
+      "U_numeric": 1.5,
+      "U_unit": null,
+      "V_numeric": 1.0,
+      "V_unit": null,
+      "energy_numeric": 0.5561562560253259,
+      "energy_unit": null
+    },
+    {
+      "row_index": 36,
+      "case_id": "grid-0021",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.5,
+      "V": 2.0,
+      "energy": 13.536956980175587,
+      "U_numeric": 1.5,
+      "U_unit": null,
+      "V_numeric": 2.0,
+      "V_unit": null,
+      "energy_numeric": 13.536956980175587,
+      "energy_unit": null
+    },
+    {
+      "row_index": 37,
+      "case_id": "grid-0022",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.0,
+      "V": 1.5,
+      "energy": 2.4993657700752907,
+      "U_numeric": 1.0,
+      "U_unit": null,
+      "V_numeric": 1.5,
+      "V_unit": null,
+      "energy_numeric": 2.4993657700752907,
+      "energy_unit": null
+    },
+    {
+      "row_index": 38,
+      "case_id": "grid-0023",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.0,
+      "V": 4.0,
+      "energy": 42.5940970905056,
+      "U_numeric": 3.0,
+      "U_unit": null,
+      "V_numeric": 4.0,
+      "V_unit": null,
+      "energy_numeric": 42.5940970905056,
+      "energy_unit": null
+    },
+    {
+      "row_index": 39,
+      "case_id": "grid-0024",
+      "label": null,
+      "status": "succeeded",
+      "U": 2.0,
+      "V": 3.0,
+      "energy": 25.042022104155855,
+      "U_numeric": 2.0,
+      "U_unit": null,
+      "V_numeric": 3.0,
+      "V_unit": null,
+      "energy_numeric": 25.042022104155855,
+      "energy_unit": null
+    },
+    {
+      "row_index": 40,
+      "case_id": "grid-0025",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.25,
+      "V": 1.25,
+      "energy": 2.81746997867559,
+      "U_numeric": 1.25,
+      "U_unit": null,
+      "V_numeric": 1.25,
+      "V_unit": null,
+      "energy_numeric": 2.81746997867559,
+      "energy_unit": null
+    },
+    {
+      "row_index": 41,
+      "case_id": "grid-0026",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.25,
+      "V": 1.75,
+      "energy": 8.206098996208137,
+      "U_numeric": 1.25,
+      "U_unit": null,
+      "V_numeric": 1.75,
+      "V_unit": null,
+      "energy_numeric": 8.206098996208137,
+      "energy_unit": null
+    },
+    {
+      "row_index": 42,
+      "case_id": "grid-0027",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.75,
+      "V": 1.25,
+      "energy": 9.11006762859914,
+      "U_numeric": 1.75,
+      "U_unit": null,
+      "V_numeric": 1.25,
+      "V_unit": null,
+      "energy_numeric": 9.11006762859914,
+      "energy_unit": null
+    },
+    {
+      "row_index": 43,
+      "case_id": "grid-0028",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.75,
+      "V": 1.75,
+      "energy": 15.402610598835551,
+      "U_numeric": 1.75,
+      "U_unit": null,
+      "V_numeric": 1.75,
+      "V_unit": null,
+      "energy_numeric": 15.402610598835551,
+      "energy_unit": null
+    },
+    {
+      "row_index": 44,
+      "case_id": "grid-0029",
+      "label": null,
+      "status": "succeeded",
+      "U": 2.5,
+      "V": 1.25,
+      "energy": 17.72128675354188,
+      "U_numeric": 2.5,
+      "U_unit": null,
+      "V_numeric": 1.25,
+      "V_unit": null,
+      "energy_numeric": 17.72128675354188,
+      "energy_unit": null
+    },
+    {
+      "row_index": 45,
+      "case_id": "grid-0030",
+      "label": null,
+      "status": "succeeded",
+      "U": 2.5,
+      "V": 1.75,
+      "energy": 25.970338723677344,
+      "U_numeric": 2.5,
+      "U_unit": null,
+      "V_numeric": 1.75,
+      "V_unit": null,
+      "energy_numeric": 25.970338723677344,
+      "energy_unit": null
+    },
+    {
+      "row_index": 46,
+      "case_id": "grid-0031",
+      "label": null,
+      "status": "succeeded",
+      "U": 2.5,
+      "V": 2.5,
+      "energy": 31.050817823151892,
+      "U_numeric": 2.5,
+      "U_unit": null,
+      "V_numeric": 2.5,
+      "V_unit": null,
+      "energy_numeric": 31.050817823151892,
+      "energy_unit": null
+    },
+    {
+      "row_index": 47,
+      "case_id": "grid-0032",
+      "label": null,
+      "status": "succeeded",
+      "U": 2.5,
+      "V": 3.5,
+      "energy": 33.91630444016254,
+      "U_numeric": 2.5,
+      "U_unit": null,
+      "V_numeric": 3.5,
+      "V_unit": null,
+      "energy_numeric": 33.91630444016254,
+      "energy_unit": null
+    },
+    {
+      "row_index": 48,
+      "case_id": "grid-0033",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.5,
+      "V": 1.25,
+      "energy": 30.03688737265213,
+      "U_numeric": 3.5,
+      "U_unit": null,
+      "V_numeric": 1.25,
+      "V_unit": null,
+      "energy_numeric": 30.03688737265213,
+      "energy_unit": null
+    },
+    {
+      "row_index": 49,
+      "case_id": "grid-0034",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.5,
+      "V": 1.75,
+      "energy": 39.44242825492764,
+      "U_numeric": 3.5,
+      "U_unit": null,
+      "V_numeric": 1.75,
+      "V_unit": null,
+      "energy_numeric": 39.44242825492764,
+      "energy_unit": null
+    },
+    {
+      "row_index": 50,
+      "case_id": "grid-0035",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.5,
+      "V": 2.5,
+      "energy": 46.07703938844904,
+      "U_numeric": 3.5,
+      "U_unit": null,
+      "V_numeric": 2.5,
+      "V_unit": null,
+      "energy_numeric": 46.07703938844904,
+      "energy_unit": null
+    },
+    {
+      "row_index": 51,
+      "case_id": "grid-0036",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.5,
+      "V": 3.5,
+      "energy": 49.49608886026232,
+      "U_numeric": 3.5,
+      "U_unit": null,
+      "V_numeric": 3.5,
+      "V_unit": null,
+      "energy_numeric": 49.49608886026232,
+      "energy_unit": null
+    },
+    {
+      "row_index": 52,
+      "case_id": "grid-0037",
+      "label": null,
+      "status": "succeeded",
+      "U": 5.0,
+      "V": 1.25,
+      "energy": 35.17407617993749,
+      "U_numeric": 5.0,
+      "U_unit": null,
+      "V_numeric": 1.25,
+      "V_unit": null,
+      "energy_numeric": 35.17407617993749,
+      "energy_unit": null
+    },
+    {
+      "row_index": 53,
+      "case_id": "grid-0038",
+      "label": null,
+      "status": "succeeded",
+      "U": 5.0,
+      "V": 1.75,
+      "energy": 59.591838224850996,
+      "U_numeric": 5.0,
+      "U_unit": null,
+      "V_numeric": 1.75,
+      "V_unit": null,
+      "energy_numeric": 59.591838224850996,
+      "energy_unit": null
+    },
+    {
+      "row_index": 54,
+      "case_id": "grid-0039",
+      "label": null,
+      "status": "succeeded",
+      "U": 5.0,
+      "V": 2.5,
+      "energy": 68.12970981366746,
+      "U_numeric": 5.0,
+      "U_unit": null,
+      "V_numeric": 2.5,
+      "V_unit": null,
+      "energy_numeric": 68.12970981366746,
+      "energy_unit": null
+    },
+    {
+      "row_index": 55,
+      "case_id": "grid-0040",
+      "label": null,
+      "status": "succeeded",
+      "U": 5.0,
+      "V": 3.5,
+      "energy": 72.76342310917542,
+      "U_numeric": 5.0,
+      "U_unit": null,
+      "V_numeric": 3.5,
+      "V_unit": null,
+      "energy_numeric": 72.76342310917542,
+      "energy_unit": null
+    },
+    {
+      "row_index": 56,
+      "case_id": "grid-0041",
+      "label": null,
+      "status": "succeeded",
+      "U": 7.0,
+      "V": 1.25,
+      "energy": 42.90945919040091,
+      "U_numeric": 7.0,
+      "U_unit": null,
+      "V_numeric": 1.25,
+      "V_unit": null,
+      "energy_numeric": 42.90945919040091,
+      "energy_unit": null
+    },
+    {
+      "row_index": 57,
+      "case_id": "grid-0042",
+      "label": null,
+      "status": "succeeded",
+      "U": 7.0,
+      "V": 1.75,
+      "energy": 65.08157503072482,
+      "U_numeric": 7.0,
+      "U_unit": null,
+      "V_numeric": 1.75,
+      "V_unit": null,
+      "energy_numeric": 65.08157503072482,
+      "energy_unit": null
+    },
+    {
+      "row_index": 58,
+      "case_id": "grid-0043",
+      "label": null,
+      "status": "succeeded",
+      "U": 7.0,
+      "V": 2.5,
+      "energy": 95.73810310661051,
+      "U_numeric": 7.0,
+      "U_unit": null,
+      "V_numeric": 2.5,
+      "V_unit": null,
+      "energy_numeric": 95.73810310661051,
+      "energy_unit": null
+    },
+    {
+      "row_index": 59,
+      "case_id": "grid-0044",
+      "label": null,
+      "status": "succeeded",
+      "U": 7.0,
+      "V": 3.5,
+      "energy": 103.41638448167313,
+      "U_numeric": 7.0,
+      "U_unit": null,
+      "V_numeric": 3.5,
+      "V_unit": null,
+      "energy_numeric": 103.41638448167313,
+      "energy_unit": null
+    },
+    {
+      "row_index": 60,
+      "case_id": "grid-0045",
+      "label": null,
+      "status": "succeeded",
+      "U": 7.0,
+      "V": 2.0,
+      "energy": 78.82108111141798,
+      "U_numeric": 7.0,
+      "U_unit": null,
+      "V_numeric": 2.0,
+      "V_unit": null,
+      "energy_numeric": 78.82108111141798,
+      "energy_unit": null
+    },
+    {
+      "row_index": 61,
+      "case_id": "grid-0046",
+      "label": null,
+      "status": "succeeded",
+      "U": 7.0,
+      "V": 3.0,
+      "energy": 100.78904538365299,
+      "U_numeric": 7.0,
+      "U_unit": null,
+      "V_numeric": 3.0,
+      "V_unit": null,
+      "energy_numeric": 100.78904538365299,
+      "energy_unit": null
+    },
+    {
+      "row_index": 62,
+      "case_id": "grid-0047",
+      "label": null,
+      "status": "succeeded",
+      "U": 6.0,
+      "V": 2.5,
+      "energy": 82.31527684339022,
+      "U_numeric": 6.0,
+      "U_unit": null,
+      "V_numeric": 2.5,
+      "V_unit": null,
+      "energy_numeric": 82.31527684339022,
+      "energy_unit": null
+    },
+    {
+      "row_index": 63,
+      "case_id": "grid-0048",
+      "label": null,
+      "status": "succeeded",
+      "U": 8.0,
+      "V": 2.5,
+      "energy": 101.97361819497584,
+      "U_numeric": 8.0,
+      "U_unit": null,
+      "V_numeric": 2.5,
+      "V_unit": null,
+      "energy_numeric": 101.97361819497584,
+      "energy_unit": null
+    },
+    {
+      "row_index": 64,
+      "case_id": "grid-0049",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.5,
+      "V": 1.0,
+      "energy": 19.336655317536394,
+      "U_numeric": 3.5,
+      "U_unit": null,
+      "V_numeric": 1.0,
+      "V_unit": null,
+      "energy_numeric": 19.336655317536394,
+      "energy_unit": null
+    },
+    {
+      "row_index": 65,
+      "case_id": "grid-0050",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.5,
+      "V": 1.5,
+      "energy": 34.717924777111016,
+      "U_numeric": 3.5,
+      "U_unit": null,
+      "V_numeric": 1.5,
+      "V_unit": null,
+      "energy_numeric": 34.717924777111016,
+      "energy_unit": null
+    },
+    {
+      "row_index": 66,
+      "case_id": "grid-0051",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.0,
+      "V": 1.25,
+      "energy": 26.531139215997765,
+      "U_numeric": 3.0,
+      "U_unit": null,
+      "V_numeric": 1.25,
+      "V_unit": null,
+      "energy_numeric": 26.531139215997765,
+      "energy_unit": null
+    },
+    {
+      "row_index": 67,
+      "case_id": "grid-0052",
+      "label": null,
+      "status": "succeeded",
+      "U": 4.0,
+      "V": 1.25,
+      "energy": 32.92387144593522,
+      "U_numeric": 4.0,
+      "U_unit": null,
+      "V_numeric": 1.25,
+      "V_unit": null,
+      "energy_numeric": 32.92387144593522,
+      "energy_unit": null
+    },
+    {
+      "row_index": 68,
+      "case_id": "grid-0053",
+      "label": null,
+      "status": "succeeded",
+      "U": 5.0,
+      "V": 2.0,
+      "energy": 70.56814626910692,
+      "U_numeric": 5.0,
+      "U_unit": null,
+      "V_numeric": 2.0,
+      "V_unit": null,
+      "energy_numeric": 70.56814626910692,
+      "energy_unit": null
+    },
+    {
+      "row_index": 69,
+      "case_id": "grid-0054",
+      "label": null,
+      "status": "succeeded",
+      "U": 5.0,
+      "V": 3.0,
+      "energy": 71.02460373448947,
+      "U_numeric": 5.0,
+      "U_unit": null,
+      "V_numeric": 3.0,
+      "V_unit": null,
+      "energy_numeric": 71.02460373448947,
+      "energy_unit": null
+    },
+    {
+      "row_index": 70,
+      "case_id": "grid-0055",
+      "label": null,
+      "status": "succeeded",
+      "U": 4.0,
+      "V": 2.5,
+      "energy": 53.504312243866885,
+      "U_numeric": 4.0,
+      "U_unit": null,
+      "V_numeric": 2.5,
+      "V_unit": null,
+      "energy_numeric": 53.504312243866885,
+      "energy_unit": null
+    },
+    {
+      "row_index": 71,
+      "case_id": "grid-0056",
+      "label": null,
+      "status": "succeeded",
+      "U": 5.0,
+      "V": 1.5,
+      "energy": 48.53842638141276,
+      "U_numeric": 5.0,
+      "U_unit": null,
+      "V_numeric": 1.5,
+      "V_unit": null,
+      "energy_numeric": 48.53842638141276,
+      "energy_unit": null
+    },
+    {
+      "row_index": 72,
+      "case_id": "grid-0057",
+      "label": null,
+      "status": "succeeded",
+      "U": 4.0,
+      "V": 1.75,
+      "energy": 45.76453190358222,
+      "U_numeric": 4.0,
+      "U_unit": null,
+      "V_numeric": 1.75,
+      "V_unit": null,
+      "energy_numeric": 45.76453190358222,
+      "energy_unit": null
+    },
+    {
+      "row_index": 73,
+      "case_id": "grid-0058",
+      "label": null,
+      "status": "succeeded",
+      "U": 6.0,
+      "V": 1.75,
+      "energy": 63.36430244900582,
+      "U_numeric": 6.0,
+      "U_unit": null,
+      "V_numeric": 1.75,
+      "V_unit": null,
+      "energy_numeric": 63.36430244900582,
+      "energy_unit": null
+    },
+    {
+      "row_index": 74,
+      "case_id": "grid-0059",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.5,
+      "V": 2.0,
+      "energy": 42.445636518254844,
+      "U_numeric": 3.5,
+      "U_unit": null,
+      "V_numeric": 2.0,
+      "V_unit": null,
+      "energy_numeric": 42.445636518254844,
+      "energy_unit": null
+    },
+    {
+      "row_index": 75,
+      "case_id": "grid-0060",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.0,
+      "V": 1.75,
+      "energy": 32.815151638503714,
+      "U_numeric": 3.0,
+      "U_unit": null,
+      "V_numeric": 1.75,
+      "V_unit": null,
+      "energy_numeric": 32.815151638503714,
+      "energy_unit": null
+    },
+    {
+      "row_index": 76,
+      "case_id": "grid-0061",
+      "label": null,
+      "status": "succeeded",
+      "U": 5.0,
+      "V": 1.0,
+      "energy": 23.33555105973161,
+      "U_numeric": 5.0,
+      "U_unit": null,
+      "V_numeric": 1.0,
+      "V_unit": null,
+      "energy_numeric": 23.33555105973161,
+      "energy_unit": null
+    },
+    {
+      "row_index": 77,
+      "case_id": "grid-0062",
+      "label": null,
+      "status": "succeeded",
+      "U": 6.0,
+      "V": 1.25,
+      "energy": 39.2200784494731,
+      "U_numeric": 6.0,
+      "U_unit": null,
+      "V_numeric": 1.25,
+      "V_unit": null,
+      "energy_numeric": 39.2200784494731,
+      "energy_unit": null
+    },
+    {
+      "row_index": 78,
+      "case_id": "grid-0063",
+      "label": null,
+      "status": "succeeded",
+      "U": 7.0,
+      "V": 1.5,
+      "energy": 54.3507210080953,
+      "U_numeric": 7.0,
+      "U_unit": null,
+      "V_numeric": 1.5,
+      "V_unit": null,
+      "energy_numeric": 54.3507210080953,
+      "energy_unit": null
+    },
+    {
+      "row_index": 79,
+      "case_id": "grid-0064",
+      "label": null,
+      "status": "succeeded",
+      "U": 8.0,
+      "V": 1.75,
+      "energy": 67.77876209024512,
+      "U_numeric": 8.0,
+      "U_unit": null,
+      "V_numeric": 1.75,
+      "V_unit": null,
+      "energy_numeric": 67.77876209024512,
+      "energy_unit": null
+    },
+    {
+      "row_index": 80,
+      "case_id": "grid-0065",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.25,
+      "V": 1.0,
+      "energy": -2.0868313072651072,
+      "U_numeric": 1.25,
+      "U_unit": null,
+      "V_numeric": 1.0,
+      "V_unit": null,
+      "energy_numeric": -2.0868313072651072,
+      "energy_unit": null
+    },
+    {
+      "row_index": 81,
+      "case_id": "grid-0066",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.25,
+      "V": 1.5,
+      "energy": 5.993867505094471,
+      "U_numeric": 1.25,
+      "U_unit": null,
+      "V_numeric": 1.5,
+      "V_unit": null,
+      "energy_numeric": 5.993867505094471,
+      "energy_unit": null
+    },
+    {
+      "row_index": 82,
+      "case_id": "grid-0067",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.0,
+      "V": 1.25,
+      "energy": -0.440610051991595,
+      "U_numeric": 1.0,
+      "U_unit": null,
+      "V_numeric": 1.25,
+      "V_unit": null,
+      "energy_numeric": -0.440610051991595,
+      "energy_unit": null
+    },
+    {
+      "row_index": 83,
+      "case_id": "grid-0068",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.5,
+      "V": 1.25,
+      "energy": 6.005253168982911,
+      "U_numeric": 1.5,
+      "U_unit": null,
+      "V_numeric": 1.25,
+      "V_unit": null,
+      "energy_numeric": 6.005253168982911,
+      "energy_unit": null
+    }
+  ],
+  "row_count": 84,
+  "excluded_rows": [],
+  "schema": "pyscf-agent.postprocess-plot-data.v1"
+}

@@ -13,7 +13,7 @@ from pyscf_agent.application import CalculationApplicationService
 from pyscf_agent.executors import JobHandle, JobStatus, JobState, LocalExecutor
 from pyscf_agent.executors.inspection import LOG_TAIL_BYTES
 from pyscf_agent.providers.block2.progress import parse_sweep_progress
-from pyscf_agent.pyscf_agent_web_api import handle_task_view_request
+from pyscf_agent.web.api import handle_task_view_request
 from pyscf_agent.remote.rpc_cli import dispatch_rpc
 from pyscf_agent.workbench import LocalWorkbench
 from tests.pyscf_agent import test_mcp_server as mcp_tests

@@ -107,6 +107,11 @@ const initialTaskSession = createTaskSession({
   inheritWorkDir: true,
 });
 document.getElementById('open-saved-study').addEventListener('click', () => openSavedStudy());
+document.getElementById('report-example-select').addEventListener('change', event => {
+  document.getElementById('open-report-example').disabled = !event.target.value;
+});
+document.getElementById('open-report-example').addEventListener('click', openReportExample);
+loadReportExamples();
 document.getElementById('refresh-saved-studies').addEventListener('click', listSavedStudies);
 document.getElementById('refresh-saved-study').addEventListener('click', () => refreshSavedStudy());
 document.getElementById('collect-saved-study').addEventListener('click', collectSavedStudy);

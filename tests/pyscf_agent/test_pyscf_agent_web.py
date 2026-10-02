@@ -8,7 +8,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-import pyscf_agent.pyscf_agent_web as web
+import pyscf_agent.web.server as web
 
 
 class AgentWebServerTests(unittest.TestCase):

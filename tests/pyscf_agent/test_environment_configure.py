@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 from unittest import mock
 
-import configure
+from pyscf_agent import configure
 
 
 class EnvironmentConfigureTests(unittest.TestCase):
@@ -147,7 +147,7 @@ class EnvironmentConfigureTests(unittest.TestCase):
             self.assertIn('[remote:amarel]', remote_path.read_text(encoding='utf-8'))
             self.assertIn('[server:amarel]', server_path.read_text(encoding='utf-8'))
 
-    @mock.patch('configure.shutil.which')
+    @mock.patch('pyscf_agent.configure.shutil.which')
     def test_uses_configured_miniconda_instead_of_mamba(self, which):
         which.return_value = '/opt/miniconda/bin/conda'
 
@@ -158,7 +158,7 @@ class EnvironmentConfigureTests(unittest.TestCase):
         self.assertEqual(executable, '/srv/miniconda/bin/conda')
         which.assert_not_called()
 
-    @mock.patch('configure.shutil.which')
+    @mock.patch('pyscf_agent.configure.shutil.which')
     def test_discovers_conda_client_only(self, which):
         which.return_value = '/opt/miniconda/bin/conda'
 

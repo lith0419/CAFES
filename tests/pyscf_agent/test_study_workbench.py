@@ -14,7 +14,7 @@ from urllib.request import Request, urlopen
 from computational_study_agent.application import StudyApplicationService
 from computational_study_agent.web_ui import DEFAULT_STUDY_SPEC
 from pyscf_agent.application import CalculationApplicationService
-from pyscf_agent.pyscf_agent_web import AgentWebHandler
+from pyscf_agent.web.server import AgentWebHandler
 from tests.computational_study_agent.test_retry_collection import Remote
 from tests.computational_study_agent.test_study_background import inline_launcher
 from tests.pyscf_agent.test_mcp_server import HAS_MCP, with_client
@@ -173,7 +173,7 @@ class StudyWorkbenchTests(unittest.IsolatedAsyncioTestCase):
         before = self.executor.submit_count
         builder = Mock()
         builder.build_result_analysis.return_value = 'Saved results were analyzed.'
-        with patch('pyscf_agent.pyscf_agent_web.llm_request_builder', builder):
+        with patch('pyscf_agent.web.server.llm_request_builder', builder):
             code, analyzed = self.post('result-analysis', study_id=study_id,
                 report={'study_id': 'wrong', 'cases': []}, plan={'study_id': 'wrong'})
         self.assertEqual(code, 200, analyzed)

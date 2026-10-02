@@ -1,0 +1,3520 @@
+{
+  "cells": [
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.0,
+          1.25
+        ],
+        "V": [
+          1.0,
+          1.25
+        ]
+      },
+      "cell_id": "cell-2f96ba6720260a3b75dd",
+      "depth": 2,
+      "corner_case_ids": [
+        "case-0001",
+        "grid-0065",
+        "grid-0067",
+        "grid-0025"
+      ],
+      "center_case_id": null,
+      "color_value": 0.40701874854965375,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.0,
+          1.25
+        ],
+        "V": [
+          1.25,
+          1.5
+        ]
+      },
+      "cell_id": "cell-c6b2bab83235eefc48d5",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0067",
+        "grid-0025",
+        "grid-0022",
+        "grid-0066"
+      ],
+      "center_case_id": null,
+      "color_value": 0.4404029255697931,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.25,
+          1.5
+        ],
+        "V": [
+          1.0,
+          1.25
+        ]
+      },
+      "cell_id": "cell-ade7613e2b5d79a26681",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0065",
+        "grid-0020",
+        "grid-0025",
+        "grid-0068"
+      ],
+      "center_case_id": null,
+      "color_value": 0.39581722753224646,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.25,
+          1.5
+        ],
+        "V": [
+          1.25,
+          1.5
+        ]
+      },
+      "cell_id": "cell-96f6443a0e408c40a4fb",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0025",
+        "grid-0068",
+        "grid-0066",
+        "grid-0001"
+      ],
+      "center_case_id": null,
+      "color_value": 0.43515218479137874,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.0,
+          1.5
+        ],
+        "V": [
+          1.5,
+          2.0
+        ]
+      },
+      "cell_id": "cell-fbd23cbcb28abaac4c11",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0022",
+        "grid-0001",
+        "case-0002",
+        "grid-0021"
+      ],
+      "center_case_id": "grid-0026",
+      "color_value": 0.4643069329020644,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.5,
+          2.0
+        ],
+        "V": [
+          1.0,
+          1.5
+        ]
+      },
+      "cell_id": "cell-3b5464c85107e7731721",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0020",
+        "case-0005",
+        "grid-0001",
+        "grid-0019"
+      ],
+      "center_case_id": "grid-0027",
+      "color_value": 0.4100161786350787,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.5,
+          2.0
+        ],
+        "V": [
+          1.5,
+          2.0
+        ]
+      },
+      "cell_id": "cell-8a471492c0b52e795677",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0001",
+        "grid-0019",
+        "grid-0021",
+        "case-0006"
+      ],
+      "center_case_id": "grid-0028",
+      "color_value": 0.45929645649950285,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.0,
+          2.0
+        ],
+        "V": [
+          2.0,
+          4.0
+        ]
+      },
+      "cell_id": "cell-8312fc82cab88981791b",
+      "depth": 0,
+      "corner_case_ids": [
+        "case-0002",
+        "case-0006",
+        "case-0003",
+        "case-0007"
+      ],
+      "center_case_id": "grid-0002",
+      "color_value": 0.4881055629384341,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.0,
+          2.0
+        ],
+        "V": [
+          4.0,
+          8.0
+        ]
+      },
+      "cell_id": "cell-07a221bf6f55c33d42d9",
+      "depth": 0,
+      "corner_case_ids": [
+        "case-0003",
+        "case-0007",
+        "case-0004",
+        "case-0008"
+      ],
+      "center_case_id": "grid-0003",
+      "color_value": 0.4965120438468176,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.0,
+          3.0
+        ],
+        "V": [
+          1.0,
+          1.5
+        ]
+      },
+      "cell_id": "cell-f7f7523c92c8b0bdc6ca",
+      "depth": 1,
+      "corner_case_ids": [
+        "case-0005",
+        "grid-0017",
+        "grid-0019",
+        "grid-0004"
+      ],
+      "center_case_id": "grid-0029",
+      "color_value": 0.3707276577846203,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.0,
+          3.0
+        ],
+        "V": [
+          1.5,
+          2.0
+        ]
+      },
+      "cell_id": "cell-209aefbb98e8bfcfbfc0",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0019",
+        "grid-0004",
+        "case-0006",
+        "grid-0018"
+      ],
+      "center_case_id": "grid-0030",
+      "color_value": 0.4494605436918418,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.0,
+          3.5
+        ],
+        "V": [
+          1.0,
+          1.25
+        ]
+      },
+      "cell_id": "cell-6ba265bfff3dedfcae66",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0017",
+        "grid-0049",
+        "grid-0051",
+        "grid-0033"
+      ],
+      "center_case_id": null,
+      "color_value": 0.18661882483748615,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.0,
+          3.5
+        ],
+        "V": [
+          1.25,
+          1.5
+        ]
+      },
+      "cell_id": "cell-3e7737a9ac744cf1aba6",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0051",
+        "grid-0033",
+        "grid-0004",
+        "grid-0050"
+      ],
+      "center_case_id": null,
+      "color_value": 0.2764083799228159,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.5,
+          4.0
+        ],
+        "V": [
+          1.0,
+          1.25
+        ]
+      },
+      "cell_id": "cell-84ce6eaec6e2405f1d85",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0049",
+        "case-0009",
+        "grid-0033",
+        "grid-0052"
+      ],
+      "center_case_id": null,
+      "color_value": 0.15492154421413262,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.5,
+          4.0
+        ],
+        "V": [
+          1.25,
+          1.5
+        ]
+      },
+      "cell_id": "cell-5bf551f2720e6d08cfa9",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0033",
+        "grid-0052",
+        "grid-0050",
+        "grid-0012"
+      ],
+      "center_case_id": null,
+      "color_value": 0.19888824601113891,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.0,
+          3.5
+        ],
+        "V": [
+          1.5,
+          1.75
+        ]
+      },
+      "cell_id": "cell-396128128ab27b1bc05d",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0004",
+        "grid-0050",
+        "grid-0060",
+        "grid-0034"
+      ],
+      "center_case_id": null,
+      "color_value": 0.413814129507694,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.0,
+          3.5
+        ],
+        "V": [
+          1.75,
+          2.0
+        ]
+      },
+      "cell_id": "cell-580f40f01aab1a0e7251",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0060",
+        "grid-0034",
+        "grid-0018",
+        "grid-0059"
+      ],
+      "center_case_id": null,
+      "color_value": 0.44521401102153113,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.5,
+          4.0
+        ],
+        "V": [
+          1.5,
+          1.75
+        ]
+      },
+      "cell_id": "cell-b6b8ad43fd11160cde32",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0050",
+        "grid-0012",
+        "grid-0034",
+        "grid-0057"
+      ],
+      "center_case_id": null,
+      "color_value": 0.3396026847019115,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.5,
+          4.0
+        ],
+        "V": [
+          1.75,
+          2.0
+        ]
+      },
+      "cell_id": "cell-71f82beb59fda5ea11ed",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0034",
+        "grid-0057",
+        "grid-0059",
+        "case-0010"
+      ],
+      "center_case_id": null,
+      "color_value": 0.4345421623728552,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.0,
+          3.0
+        ],
+        "V": [
+          2.0,
+          3.0
+        ]
+      },
+      "cell_id": "cell-2fefce38296e6e0d97c9",
+      "depth": 1,
+      "corner_case_ids": [
+        "case-0006",
+        "grid-0018",
+        "grid-0024",
+        "grid-0005"
+      ],
+      "center_case_id": "grid-0031",
+      "color_value": 0.4791751967607695,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.0,
+          3.0
+        ],
+        "V": [
+          3.0,
+          4.0
+        ]
+      },
+      "cell_id": "cell-a68a392f8777b2bc31ee",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0024",
+        "grid-0005",
+        "case-0007",
+        "grid-0023"
+      ],
+      "center_case_id": "grid-0032",
+      "color_value": 0.4900616907231333,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.0,
+          4.0
+        ],
+        "V": [
+          2.0,
+          3.0
+        ]
+      },
+      "cell_id": "cell-218d390459ce7162a214",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0018",
+        "case-0010",
+        "grid-0005",
+        "grid-0015"
+      ],
+      "center_case_id": "grid-0035",
+      "color_value": 0.4743821111217648,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.0,
+          4.0
+        ],
+        "V": [
+          3.0,
+          4.0
+        ]
+      },
+      "cell_id": "cell-f64c2fc00f18c6286760",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0005",
+        "grid-0015",
+        "grid-0023",
+        "case-0011"
+      ],
+      "center_case_id": "grid-0036",
+      "color_value": 0.4886974315074675,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.0,
+          4.0
+        ],
+        "V": [
+          4.0,
+          8.0
+        ]
+      },
+      "cell_id": "cell-7ff4a86bfc5ae0381cdf",
+      "depth": 0,
+      "corner_case_ids": [
+        "case-0007",
+        "case-0011",
+        "case-0008",
+        "case-0012"
+      ],
+      "center_case_id": "grid-0006",
+      "color_value": 0.4962496473809988,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          5.0
+        ],
+        "V": [
+          1.0,
+          1.25
+        ]
+      },
+      "cell_id": "cell-ab5f2d8e8664685eca26",
+      "depth": 2,
+      "corner_case_ids": [
+        "case-0009",
+        "grid-0061",
+        "grid-0052",
+        "grid-0037"
+      ],
+      "center_case_id": null,
+      "color_value": 0.17328138506546617,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          5.0
+        ],
+        "V": [
+          1.25,
+          1.5
+        ]
+      },
+      "cell_id": "cell-c0643a30f237cf5d6539",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0052",
+        "grid-0037",
+        "grid-0012",
+        "grid-0056"
+      ],
+      "center_case_id": null,
+      "color_value": 0.14078029154701,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          5.0,
+          6.0
+        ],
+        "V": [
+          1.0,
+          1.25
+        ]
+      },
+      "cell_id": "cell-6c1765498ae5dfd96dd1",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0061",
+        "grid-0010",
+        "grid-0037",
+        "grid-0062"
+      ],
+      "center_case_id": null,
+      "color_value": 0.13730539886018478,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          5.0,
+          6.0
+        ],
+        "V": [
+          1.25,
+          1.5
+        ]
+      },
+      "cell_id": "cell-6604e646d80ba7145106",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0037",
+        "grid-0062",
+        "grid-0056",
+        "grid-0007"
+      ],
+      "center_case_id": null,
+      "color_value": 0.11992881274144954,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          5.0
+        ],
+        "V": [
+          1.5,
+          1.75
+        ]
+      },
+      "cell_id": "cell-7f8356774553d26ab725",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0012",
+        "grid-0056",
+        "grid-0057",
+        "grid-0038"
+      ],
+      "center_case_id": null,
+      "color_value": 0.19168336320729545,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          5.0
+        ],
+        "V": [
+          1.75,
+          2.0
+        ]
+      },
+      "cell_id": "cell-44fac0271c64fa8bd625",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0057",
+        "grid-0038",
+        "case-0010",
+        "grid-0053"
+      ],
+      "center_case_id": null,
+      "color_value": 0.27165684388886113,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          5.0,
+          6.0
+        ],
+        "V": [
+          1.5,
+          1.75
+        ]
+      },
+      "cell_id": "cell-2fc0e84964d97693ba5e",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0056",
+        "grid-0007",
+        "grid-0038",
+        "grid-0058"
+      ],
+      "center_case_id": null,
+      "color_value": 0.09491017628328524,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          5.0,
+          6.0
+        ],
+        "V": [
+          1.75,
+          2.0
+        ]
+      },
+      "cell_id": "cell-0d66a14984944c04e58c",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0038",
+        "grid-0058",
+        "grid-0053",
+        "grid-0011"
+      ],
+      "center_case_id": null,
+      "color_value": 0.10166271518697462,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          8.0
+        ],
+        "V": [
+          1.0,
+          1.5
+        ]
+      },
+      "cell_id": "cell-9fb40e17db961debea96",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0010",
+        "case-0013",
+        "grid-0007",
+        "grid-0013"
+      ],
+      "center_case_id": "grid-0041",
+      "color_value": 0.06647096258499138,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          7.0
+        ],
+        "V": [
+          1.5,
+          1.75
+        ]
+      },
+      "cell_id": "cell-3494c6c7f4df8f7afce1",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0007",
+        "grid-0063",
+        "grid-0058",
+        "grid-0042"
+      ],
+      "center_case_id": null,
+      "color_value": 0.08145349175601371,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          7.0
+        ],
+        "V": [
+          1.75,
+          2.0
+        ]
+      },
+      "cell_id": "cell-ceb20cb018943d992603",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0058",
+        "grid-0042",
+        "grid-0011",
+        "grid-0045"
+      ],
+      "center_case_id": null,
+      "color_value": 0.11309739552086946,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.0,
+          8.0
+        ],
+        "V": [
+          1.5,
+          1.75
+        ]
+      },
+      "cell_id": "cell-f41ee959364572ec0e87",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0063",
+        "grid-0013",
+        "grid-0042",
+        "grid-0064"
+      ],
+      "center_case_id": null,
+      "color_value": 0.07245746545934385,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.0,
+          8.0
+        ],
+        "V": [
+          1.75,
+          2.0
+        ]
+      },
+      "cell_id": "cell-d6e4541e4b55e13fe590",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0042",
+        "grid-0064",
+        "grid-0045",
+        "case-0014"
+      ],
+      "center_case_id": null,
+      "color_value": 0.10562984015130802,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          5.0
+        ],
+        "V": [
+          2.0,
+          2.5
+        ]
+      },
+      "cell_id": "cell-ee0ddf123968fb18fe67",
+      "depth": 2,
+      "corner_case_ids": [
+        "case-0010",
+        "grid-0053",
+        "grid-0055",
+        "grid-0039"
+      ],
+      "center_case_id": null,
+      "color_value": 0.3742852822113922,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          5.0
+        ],
+        "V": [
+          2.5,
+          3.0
+        ]
+      },
+      "cell_id": "cell-2e587da46d4857b0218f",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0055",
+        "grid-0039",
+        "grid-0015",
+        "grid-0054"
+      ],
+      "center_case_id": null,
+      "color_value": 0.47397907851802445,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          5.0,
+          6.0
+        ],
+        "V": [
+          2.0,
+          2.5
+        ]
+      },
+      "cell_id": "cell-fbf5d34a7c3346e91c69",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0053",
+        "grid-0011",
+        "grid-0039",
+        "grid-0047"
+      ],
+      "center_case_id": null,
+      "color_value": 0.28075513634074106,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          5.0,
+          6.0
+        ],
+        "V": [
+          2.5,
+          3.0
+        ]
+      },
+      "cell_id": "cell-826a760b7dcca7e936be",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0039",
+        "grid-0047",
+        "grid-0054",
+        "grid-0008"
+      ],
+      "center_case_id": null,
+      "color_value": 0.46663044259127356,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          6.0
+        ],
+        "V": [
+          3.0,
+          4.0
+        ]
+      },
+      "cell_id": "cell-c2fdc4d8bb7d13609f44",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0015",
+        "grid-0008",
+        "case-0011",
+        "grid-0014"
+      ],
+      "center_case_id": "grid-0040",
+      "color_value": 0.4861779770724897,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          7.0
+        ],
+        "V": [
+          2.0,
+          2.5
+        ]
+      },
+      "cell_id": "cell-3c400157f2dde859d2a0",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0011",
+        "grid-0045",
+        "grid-0047",
+        "grid-0043"
+      ],
+      "center_case_id": null,
+      "color_value": 0.2881587619443655,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          7.0
+        ],
+        "V": [
+          2.5,
+          3.0
+        ]
+      },
+      "cell_id": "cell-4cfffa07d0b7870d1eb5",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0047",
+        "grid-0043",
+        "grid-0008",
+        "grid-0046"
+      ],
+      "center_case_id": null,
+      "color_value": 0.4547763917397757,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.0,
+          8.0
+        ],
+        "V": [
+          2.0,
+          2.5
+        ]
+      },
+      "cell_id": "cell-4ae69eba881333beda03",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0045",
+        "case-0014",
+        "grid-0043",
+        "grid-0048"
+      ],
+      "center_case_id": null,
+      "color_value": 0.19377379340248635,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.0,
+          8.0
+        ],
+        "V": [
+          2.5,
+          3.0
+        ]
+      },
+      "cell_id": "cell-528e872eeb028646aa85",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0043",
+        "grid-0048",
+        "grid-0046",
+        "grid-0016"
+      ],
+      "center_case_id": null,
+      "color_value": 0.359620293182964,
+      "value_source": "bilinear_corner_mean"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          8.0
+        ],
+        "V": [
+          3.0,
+          4.0
+        ]
+      },
+      "cell_id": "cell-f8ed3271790baf0010e9",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0008",
+        "grid-0016",
+        "grid-0014",
+        "case-0015"
+      ],
+      "center_case_id": "grid-0044",
+      "color_value": 0.48061494507700736,
+      "value_source": "computed_center"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          8.0
+        ],
+        "V": [
+          4.0,
+          8.0
+        ]
+      },
+      "cell_id": "cell-39381b7695fcba292770",
+      "depth": 0,
+      "corner_case_ids": [
+        "case-0011",
+        "case-0015",
+        "case-0012",
+        "case-0016"
+      ],
+      "center_case_id": "grid-0009",
+      "color_value": 0.4954182683136241,
+      "value_source": "computed_center"
+    }
+  ],
+  "kind": "postprocess_plot_data",
+  "study_id": "example-honeycomb-cdw",
+  "plot_output": "mean_double_occupancy-heatmap-U-V",
+  "plot_artifact_prefix": "plot-",
+  "plot_spec": {
+    "tool": "heatmap",
+    "x": "U",
+    "y": "V",
+    "color": "mean_double_occupancy",
+    "group": null,
+    "title": "Mean double occupancy",
+    "xlabel": "U",
+    "ylabel": "V",
+    "colorbar_label": "",
+    "colormap": "RdBu_r",
+    "center": 0.0,
+    "output": "mean_double_occupancy-heatmap-U-V",
+    "style": "pyscf_agent_classic",
+    "sort_by_x": true,
+    "figure_size": [
+      6.299212598425196,
+      6.299212598425196
+    ],
+    "dpi": 160,
+    "units": {
+      "U": null,
+      "V": null,
+      "mean_double_occupancy": null
+    },
+    "local_cells": [
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            1.0,
+            1.25
+          ],
+          "V": [
+            1.0,
+            1.25
+          ]
+        },
+        "cell_id": "cell-2f96ba6720260a3b75dd",
+        "depth": 2,
+        "corner_case_ids": [
+          "case-0001",
+          "grid-0065",
+          "grid-0067",
+          "grid-0025"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            1.0,
+            1.25
+          ],
+          "V": [
+            1.25,
+            1.5
+          ]
+        },
+        "cell_id": "cell-c6b2bab83235eefc48d5",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0067",
+          "grid-0025",
+          "grid-0022",
+          "grid-0066"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            1.25,
+            1.5
+          ],
+          "V": [
+            1.0,
+            1.25
+          ]
+        },
+        "cell_id": "cell-ade7613e2b5d79a26681",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0065",
+          "grid-0020",
+          "grid-0025",
+          "grid-0068"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            1.25,
+            1.5
+          ],
+          "V": [
+            1.25,
+            1.5
+          ]
+        },
+        "cell_id": "cell-96f6443a0e408c40a4fb",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0025",
+          "grid-0068",
+          "grid-0066",
+          "grid-0001"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            1.0,
+            1.5
+          ],
+          "V": [
+            1.5,
+            2.0
+          ]
+        },
+        "cell_id": "cell-fbd23cbcb28abaac4c11",
+        "depth": 1,
+        "corner_case_ids": [
+          "grid-0022",
+          "grid-0001",
+          "case-0002",
+          "grid-0021"
+        ],
+        "center_case_id": "grid-0026"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            1.5,
+            2.0
+          ],
+          "V": [
+            1.0,
+            1.5
+          ]
+        },
+        "cell_id": "cell-3b5464c85107e7731721",
+        "depth": 1,
+        "corner_case_ids": [
+          "grid-0020",
+          "case-0005",
+          "grid-0001",
+          "grid-0019"
+        ],
+        "center_case_id": "grid-0027"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            1.5,
+            2.0
+          ],
+          "V": [
+            1.5,
+            2.0
+          ]
+        },
+        "cell_id": "cell-8a471492c0b52e795677",
+        "depth": 1,
+        "corner_case_ids": [
+          "grid-0001",
+          "grid-0019",
+          "grid-0021",
+          "case-0006"
+        ],
+        "center_case_id": "grid-0028"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            1.0,
+            2.0
+          ],
+          "V": [
+            2.0,
+            4.0
+          ]
+        },
+        "cell_id": "cell-8312fc82cab88981791b",
+        "depth": 0,
+        "corner_case_ids": [
+          "case-0002",
+          "case-0006",
+          "case-0003",
+          "case-0007"
+        ],
+        "center_case_id": "grid-0002"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            1.0,
+            2.0
+          ],
+          "V": [
+            4.0,
+            8.0
+          ]
+        },
+        "cell_id": "cell-07a221bf6f55c33d42d9",
+        "depth": 0,
+        "corner_case_ids": [
+          "case-0003",
+          "case-0007",
+          "case-0004",
+          "case-0008"
+        ],
+        "center_case_id": "grid-0003"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            2.0,
+            3.0
+          ],
+          "V": [
+            1.0,
+            1.5
+          ]
+        },
+        "cell_id": "cell-f7f7523c92c8b0bdc6ca",
+        "depth": 1,
+        "corner_case_ids": [
+          "case-0005",
+          "grid-0017",
+          "grid-0019",
+          "grid-0004"
+        ],
+        "center_case_id": "grid-0029"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            2.0,
+            3.0
+          ],
+          "V": [
+            1.5,
+            2.0
+          ]
+        },
+        "cell_id": "cell-209aefbb98e8bfcfbfc0",
+        "depth": 1,
+        "corner_case_ids": [
+          "grid-0019",
+          "grid-0004",
+          "case-0006",
+          "grid-0018"
+        ],
+        "center_case_id": "grid-0030"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            3.0,
+            3.5
+          ],
+          "V": [
+            1.0,
+            1.25
+          ]
+        },
+        "cell_id": "cell-6ba265bfff3dedfcae66",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0017",
+          "grid-0049",
+          "grid-0051",
+          "grid-0033"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            3.0,
+            3.5
+          ],
+          "V": [
+            1.25,
+            1.5
+          ]
+        },
+        "cell_id": "cell-3e7737a9ac744cf1aba6",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0051",
+          "grid-0033",
+          "grid-0004",
+          "grid-0050"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            3.5,
+            4.0
+          ],
+          "V": [
+            1.0,
+            1.25
+          ]
+        },
+        "cell_id": "cell-84ce6eaec6e2405f1d85",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0049",
+          "case-0009",
+          "grid-0033",
+          "grid-0052"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            3.5,
+            4.0
+          ],
+          "V": [
+            1.25,
+            1.5
+          ]
+        },
+        "cell_id": "cell-5bf551f2720e6d08cfa9",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0033",
+          "grid-0052",
+          "grid-0050",
+          "grid-0012"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            3.0,
+            3.5
+          ],
+          "V": [
+            1.5,
+            1.75
+          ]
+        },
+        "cell_id": "cell-396128128ab27b1bc05d",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0004",
+          "grid-0050",
+          "grid-0060",
+          "grid-0034"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            3.0,
+            3.5
+          ],
+          "V": [
+            1.75,
+            2.0
+          ]
+        },
+        "cell_id": "cell-580f40f01aab1a0e7251",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0060",
+          "grid-0034",
+          "grid-0018",
+          "grid-0059"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            3.5,
+            4.0
+          ],
+          "V": [
+            1.5,
+            1.75
+          ]
+        },
+        "cell_id": "cell-b6b8ad43fd11160cde32",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0050",
+          "grid-0012",
+          "grid-0034",
+          "grid-0057"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            3.5,
+            4.0
+          ],
+          "V": [
+            1.75,
+            2.0
+          ]
+        },
+        "cell_id": "cell-71f82beb59fda5ea11ed",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0034",
+          "grid-0057",
+          "grid-0059",
+          "case-0010"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            2.0,
+            3.0
+          ],
+          "V": [
+            2.0,
+            3.0
+          ]
+        },
+        "cell_id": "cell-2fefce38296e6e0d97c9",
+        "depth": 1,
+        "corner_case_ids": [
+          "case-0006",
+          "grid-0018",
+          "grid-0024",
+          "grid-0005"
+        ],
+        "center_case_id": "grid-0031"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            2.0,
+            3.0
+          ],
+          "V": [
+            3.0,
+            4.0
+          ]
+        },
+        "cell_id": "cell-a68a392f8777b2bc31ee",
+        "depth": 1,
+        "corner_case_ids": [
+          "grid-0024",
+          "grid-0005",
+          "case-0007",
+          "grid-0023"
+        ],
+        "center_case_id": "grid-0032"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            3.0,
+            4.0
+          ],
+          "V": [
+            2.0,
+            3.0
+          ]
+        },
+        "cell_id": "cell-218d390459ce7162a214",
+        "depth": 1,
+        "corner_case_ids": [
+          "grid-0018",
+          "case-0010",
+          "grid-0005",
+          "grid-0015"
+        ],
+        "center_case_id": "grid-0035"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            3.0,
+            4.0
+          ],
+          "V": [
+            3.0,
+            4.0
+          ]
+        },
+        "cell_id": "cell-f64c2fc00f18c6286760",
+        "depth": 1,
+        "corner_case_ids": [
+          "grid-0005",
+          "grid-0015",
+          "grid-0023",
+          "case-0011"
+        ],
+        "center_case_id": "grid-0036"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            2.0,
+            4.0
+          ],
+          "V": [
+            4.0,
+            8.0
+          ]
+        },
+        "cell_id": "cell-7ff4a86bfc5ae0381cdf",
+        "depth": 0,
+        "corner_case_ids": [
+          "case-0007",
+          "case-0011",
+          "case-0008",
+          "case-0012"
+        ],
+        "center_case_id": "grid-0006"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            4.0,
+            5.0
+          ],
+          "V": [
+            1.0,
+            1.25
+          ]
+        },
+        "cell_id": "cell-ab5f2d8e8664685eca26",
+        "depth": 2,
+        "corner_case_ids": [
+          "case-0009",
+          "grid-0061",
+          "grid-0052",
+          "grid-0037"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            4.0,
+            5.0
+          ],
+          "V": [
+            1.25,
+            1.5
+          ]
+        },
+        "cell_id": "cell-c0643a30f237cf5d6539",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0052",
+          "grid-0037",
+          "grid-0012",
+          "grid-0056"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            5.0,
+            6.0
+          ],
+          "V": [
+            1.0,
+            1.25
+          ]
+        },
+        "cell_id": "cell-6c1765498ae5dfd96dd1",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0061",
+          "grid-0010",
+          "grid-0037",
+          "grid-0062"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            5.0,
+            6.0
+          ],
+          "V": [
+            1.25,
+            1.5
+          ]
+        },
+        "cell_id": "cell-6604e646d80ba7145106",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0037",
+          "grid-0062",
+          "grid-0056",
+          "grid-0007"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            4.0,
+            5.0
+          ],
+          "V": [
+            1.5,
+            1.75
+          ]
+        },
+        "cell_id": "cell-7f8356774553d26ab725",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0012",
+          "grid-0056",
+          "grid-0057",
+          "grid-0038"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            4.0,
+            5.0
+          ],
+          "V": [
+            1.75,
+            2.0
+          ]
+        },
+        "cell_id": "cell-44fac0271c64fa8bd625",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0057",
+          "grid-0038",
+          "case-0010",
+          "grid-0053"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            5.0,
+            6.0
+          ],
+          "V": [
+            1.5,
+            1.75
+          ]
+        },
+        "cell_id": "cell-2fc0e84964d97693ba5e",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0056",
+          "grid-0007",
+          "grid-0038",
+          "grid-0058"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            5.0,
+            6.0
+          ],
+          "V": [
+            1.75,
+            2.0
+          ]
+        },
+        "cell_id": "cell-0d66a14984944c04e58c",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0038",
+          "grid-0058",
+          "grid-0053",
+          "grid-0011"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            6.0,
+            8.0
+          ],
+          "V": [
+            1.0,
+            1.5
+          ]
+        },
+        "cell_id": "cell-9fb40e17db961debea96",
+        "depth": 1,
+        "corner_case_ids": [
+          "grid-0010",
+          "case-0013",
+          "grid-0007",
+          "grid-0013"
+        ],
+        "center_case_id": "grid-0041"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            6.0,
+            7.0
+          ],
+          "V": [
+            1.5,
+            1.75
+          ]
+        },
+        "cell_id": "cell-3494c6c7f4df8f7afce1",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0007",
+          "grid-0063",
+          "grid-0058",
+          "grid-0042"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            6.0,
+            7.0
+          ],
+          "V": [
+            1.75,
+            2.0
+          ]
+        },
+        "cell_id": "cell-ceb20cb018943d992603",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0058",
+          "grid-0042",
+          "grid-0011",
+          "grid-0045"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            7.0,
+            8.0
+          ],
+          "V": [
+            1.5,
+            1.75
+          ]
+        },
+        "cell_id": "cell-f41ee959364572ec0e87",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0063",
+          "grid-0013",
+          "grid-0042",
+          "grid-0064"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            7.0,
+            8.0
+          ],
+          "V": [
+            1.75,
+            2.0
+          ]
+        },
+        "cell_id": "cell-d6e4541e4b55e13fe590",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0042",
+          "grid-0064",
+          "grid-0045",
+          "case-0014"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            4.0,
+            5.0
+          ],
+          "V": [
+            2.0,
+            2.5
+          ]
+        },
+        "cell_id": "cell-ee0ddf123968fb18fe67",
+        "depth": 2,
+        "corner_case_ids": [
+          "case-0010",
+          "grid-0053",
+          "grid-0055",
+          "grid-0039"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            4.0,
+            5.0
+          ],
+          "V": [
+            2.5,
+            3.0
+          ]
+        },
+        "cell_id": "cell-2e587da46d4857b0218f",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0055",
+          "grid-0039",
+          "grid-0015",
+          "grid-0054"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            5.0,
+            6.0
+          ],
+          "V": [
+            2.0,
+            2.5
+          ]
+        },
+        "cell_id": "cell-fbf5d34a7c3346e91c69",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0053",
+          "grid-0011",
+          "grid-0039",
+          "grid-0047"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            5.0,
+            6.0
+          ],
+          "V": [
+            2.5,
+            3.0
+          ]
+        },
+        "cell_id": "cell-826a760b7dcca7e936be",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0039",
+          "grid-0047",
+          "grid-0054",
+          "grid-0008"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            4.0,
+            6.0
+          ],
+          "V": [
+            3.0,
+            4.0
+          ]
+        },
+        "cell_id": "cell-c2fdc4d8bb7d13609f44",
+        "depth": 1,
+        "corner_case_ids": [
+          "grid-0015",
+          "grid-0008",
+          "case-0011",
+          "grid-0014"
+        ],
+        "center_case_id": "grid-0040"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            6.0,
+            7.0
+          ],
+          "V": [
+            2.0,
+            2.5
+          ]
+        },
+        "cell_id": "cell-3c400157f2dde859d2a0",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0011",
+          "grid-0045",
+          "grid-0047",
+          "grid-0043"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            6.0,
+            7.0
+          ],
+          "V": [
+            2.5,
+            3.0
+          ]
+        },
+        "cell_id": "cell-4cfffa07d0b7870d1eb5",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0047",
+          "grid-0043",
+          "grid-0008",
+          "grid-0046"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            7.0,
+            8.0
+          ],
+          "V": [
+            2.0,
+            2.5
+          ]
+        },
+        "cell_id": "cell-4ae69eba881333beda03",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0045",
+          "case-0014",
+          "grid-0043",
+          "grid-0048"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            7.0,
+            8.0
+          ],
+          "V": [
+            2.5,
+            3.0
+          ]
+        },
+        "cell_id": "cell-528e872eeb028646aa85",
+        "depth": 2,
+        "corner_case_ids": [
+          "grid-0043",
+          "grid-0048",
+          "grid-0046",
+          "grid-0016"
+        ],
+        "center_case_id": null
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            6.0,
+            8.0
+          ],
+          "V": [
+            3.0,
+            4.0
+          ]
+        },
+        "cell_id": "cell-f8ed3271790baf0010e9",
+        "depth": 1,
+        "corner_case_ids": [
+          "grid-0008",
+          "grid-0016",
+          "grid-0014",
+          "case-0015"
+        ],
+        "center_case_id": "grid-0044"
+      },
+      {
+        "group": {},
+        "bounds": {
+          "U": [
+            4.0,
+            8.0
+          ],
+          "V": [
+            4.0,
+            8.0
+          ]
+        },
+        "cell_id": "cell-39381b7695fcba292770",
+        "depth": 0,
+        "corner_case_ids": [
+          "case-0011",
+          "case-0015",
+          "case-0012",
+          "case-0016"
+        ],
+        "center_case_id": "grid-0009"
+      }
+    ]
+  },
+  "columns": [
+    "row_index",
+    "case_id",
+    "status",
+    "U",
+    "V",
+    "mean_double_occupancy",
+    "U_numeric",
+    "V_numeric",
+    "mean_double_occupancy_numeric"
+  ],
+  "rows": [
+    {
+      "row_index": 0,
+      "case_id": "case-0001",
+      "label": null,
+      "status": "succeeded",
+      "U": 1,
+      "V": 1,
+      "mean_double_occupancy": 0.391858460903885,
+      "U_numeric": 1.0,
+      "U_unit": null,
+      "V_numeric": 1.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.391858460903885,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 1,
+      "case_id": "case-0002",
+      "label": null,
+      "status": "succeeded",
+      "U": 1,
+      "V": 2,
+      "mean_double_occupancy": 0.47469265259008026,
+      "U_numeric": 1.0,
+      "U_unit": null,
+      "V_numeric": 2.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.47469265259008026,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 2,
+      "case_id": "case-0003",
+      "label": null,
+      "status": "succeeded",
+      "U": 1,
+      "V": 4,
+      "mean_double_occupancy": 0.49337630758858186,
+      "U_numeric": 1.0,
+      "U_unit": null,
+      "V_numeric": 4.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.49337630758858186,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 3,
+      "case_id": "case-0004",
+      "label": null,
+      "status": "succeeded",
+      "U": 1,
+      "V": 8,
+      "mean_double_occupancy": 0.4979239746437996,
+      "U_numeric": 1.0,
+      "U_unit": null,
+      "V_numeric": 8.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4979239746437996,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 4,
+      "case_id": "case-0005",
+      "label": null,
+      "status": "succeeded",
+      "U": 2,
+      "V": 1,
+      "mean_double_occupancy": 0.3731897571789884,
+      "U_numeric": 2.0,
+      "U_unit": null,
+      "V_numeric": 1.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.3731897571789884,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 5,
+      "case_id": "case-0006",
+      "label": null,
+      "status": "succeeded",
+      "U": 2,
+      "V": 2,
+      "mean_double_occupancy": 0.46823225613938807,
+      "U_numeric": 2.0,
+      "U_unit": null,
+      "V_numeric": 2.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.46823225613938807,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 6,
+      "case_id": "case-0007",
+      "label": null,
+      "status": "succeeded",
+      "U": 2,
+      "V": 4,
+      "mean_double_occupancy": 0.4927427974779377,
+      "U_numeric": 2.0,
+      "U_unit": null,
+      "V_numeric": 4.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4927427974779377,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 7,
+      "case_id": "case-0008",
+      "label": null,
+      "status": "succeeded",
+      "U": 2,
+      "V": 8,
+      "mean_double_occupancy": 0.4978143167865757,
+      "U_numeric": 2.0,
+      "U_unit": null,
+      "V_numeric": 8.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4978143167865757,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 8,
+      "case_id": "case-0009",
+      "label": null,
+      "status": "succeeded",
+      "U": 4,
+      "V": 1,
+      "mean_double_occupancy": 0.200576604871736,
+      "U_numeric": 4.0,
+      "U_unit": null,
+      "V_numeric": 1.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.200576604871736,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 9,
+      "case_id": "case-0010",
+      "label": null,
+      "status": "succeeded",
+      "U": 4,
+      "V": 2,
+      "mean_double_occupancy": 0.44422118907491887,
+      "U_numeric": 4.0,
+      "U_unit": null,
+      "V_numeric": 2.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.44422118907491887,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 10,
+      "case_id": "case-0011",
+      "label": null,
+      "status": "succeeded",
+      "U": 4,
+      "V": 4,
+      "mean_double_occupancy": 0.49102425885231177,
+      "U_numeric": 4.0,
+      "U_unit": null,
+      "V_numeric": 4.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.49102425885231177,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 11,
+      "case_id": "case-0012",
+      "label": null,
+      "status": "succeeded",
+      "U": 4,
+      "V": 8,
+      "mean_double_occupancy": 0.4975811262537667,
+      "U_numeric": 4.0,
+      "U_unit": null,
+      "V_numeric": 8.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4975811262537667,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 12,
+      "case_id": "case-0013",
+      "label": null,
+      "status": "succeeded",
+      "U": 8,
+      "V": 1,
+      "mean_double_occupancy": 0.059484125375356335,
+      "U_numeric": 8.0,
+      "U_unit": null,
+      "V_numeric": 1.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.059484125375356335,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 13,
+      "case_id": "case-0014",
+      "label": null,
+      "status": "succeeded",
+      "U": 8,
+      "V": 2,
+      "mean_double_occupancy": 0.07591396614538364,
+      "U_numeric": 8.0,
+      "U_unit": null,
+      "V_numeric": 2.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.07591396614538364,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 14,
+      "case_id": "case-0015",
+      "label": null,
+      "status": "succeeded",
+      "U": 8,
+      "V": 4,
+      "mean_double_occupancy": 0.4850023735303625,
+      "U_numeric": 8.0,
+      "U_unit": null,
+      "V_numeric": 4.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4850023735303625,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 15,
+      "case_id": "case-0016",
+      "label": null,
+      "status": "succeeded",
+      "U": 8,
+      "V": 8,
+      "mean_double_occupancy": 0.4970634441020282,
+      "U_numeric": 8.0,
+      "U_unit": null,
+      "V_numeric": 8.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4970634441020282,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 16,
+      "case_id": "grid-0001",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.5,
+      "V": 1.5,
+      "mean_double_occupancy": 0.44615450720488403,
+      "U_numeric": 1.5,
+      "U_unit": null,
+      "V_numeric": 1.5,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.44615450720488403,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 17,
+      "case_id": "grid-0002",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.5,
+      "V": 3.0,
+      "mean_double_occupancy": 0.4881055629384341,
+      "U_numeric": 1.5,
+      "U_unit": null,
+      "V_numeric": 3.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4881055629384341,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 18,
+      "case_id": "grid-0003",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.5,
+      "V": 6.0,
+      "mean_double_occupancy": 0.4965120438468176,
+      "U_numeric": 1.5,
+      "U_unit": null,
+      "V_numeric": 6.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4965120438468176,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 19,
+      "case_id": "grid-0004",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.0,
+      "V": 1.5,
+      "mean_double_occupancy": 0.40656519199257213,
+      "U_numeric": 3.0,
+      "U_unit": null,
+      "V_numeric": 1.5,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.40656519199257213,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 20,
+      "case_id": "grid-0005",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.0,
+      "V": 3.0,
+      "mean_double_occupancy": 0.4852614132278198,
+      "U_numeric": 3.0,
+      "U_unit": null,
+      "V_numeric": 3.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4852614132278198,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 21,
+      "case_id": "grid-0006",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.0,
+      "V": 6.0,
+      "mean_double_occupancy": 0.4962496473809988,
+      "U_numeric": 3.0,
+      "U_unit": null,
+      "V_numeric": 6.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4962496473809988,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 22,
+      "case_id": "grid-0007",
+      "label": null,
+      "status": "succeeded",
+      "U": 6.0,
+      "V": 1.5,
+      "mean_double_occupancy": 0.0773482243033597,
+      "U_numeric": 6.0,
+      "U_unit": null,
+      "V_numeric": 1.5,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.0773482243033597,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 23,
+      "case_id": "grid-0008",
+      "label": null,
+      "status": "succeeded",
+      "U": 6.0,
+      "V": 3.0,
+      "mean_double_occupancy": 0.4739432216639464,
+      "U_numeric": 6.0,
+      "U_unit": null,
+      "V_numeric": 3.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4739432216639464,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 24,
+      "case_id": "grid-0009",
+      "label": null,
+      "status": "succeeded",
+      "U": 6.0,
+      "V": 6.0,
+      "mean_double_occupancy": 0.4954182683136241,
+      "U_numeric": 6.0,
+      "U_unit": null,
+      "V_numeric": 6.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4954182683136241,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 25,
+      "case_id": "grid-0010",
+      "label": null,
+      "status": "succeeded",
+      "U": 6.0,
+      "V": 1.0,
+      "mean_double_occupancy": 0.0796523680781649,
+      "U_numeric": 6.0,
+      "U_unit": null,
+      "V_numeric": 1.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.0796523680781649,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 26,
+      "case_id": "grid-0011",
+      "label": null,
+      "status": "succeeded",
+      "U": 6.0,
+      "V": 2.0,
+      "mean_double_occupancy": 0.09091121476872632,
+      "U_numeric": 6.0,
+      "U_unit": null,
+      "V_numeric": 2.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.09091121476872632,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 27,
+      "case_id": "grid-0012",
+      "label": null,
+      "status": "succeeded",
+      "U": 4.0,
+      "V": 1.5,
+      "mean_double_occupancy": 0.1377744314980471,
+      "U_numeric": 4.0,
+      "U_unit": null,
+      "V_numeric": 1.5,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.1377744314980471,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 28,
+      "case_id": "grid-0013",
+      "label": null,
+      "status": "succeeded",
+      "U": 8.0,
+      "V": 1.5,
+      "mean_double_occupancy": 0.056237091971583344,
+      "U_numeric": 8.0,
+      "U_unit": null,
+      "V_numeric": 1.5,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.056237091971583344,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 29,
+      "case_id": "grid-0014",
+      "label": null,
+      "status": "succeeded",
+      "U": 6.0,
+      "V": 4.0,
+      "mean_double_occupancy": 0.4886711480977248,
+      "U_numeric": 6.0,
+      "U_unit": null,
+      "V_numeric": 4.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4886711480977248,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 30,
+      "case_id": "grid-0015",
+      "label": null,
+      "status": "succeeded",
+      "U": 4.0,
+      "V": 3.0,
+      "mean_double_occupancy": 0.4825271561945379,
+      "U_numeric": 4.0,
+      "U_unit": null,
+      "V_numeric": 3.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4825271561945379,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 31,
+      "case_id": "grid-0016",
+      "label": null,
+      "status": "succeeded",
+      "U": 8.0,
+      "V": 3.0,
+      "mean_double_occupancy": 0.4558614529808737,
+      "U_numeric": 8.0,
+      "U_unit": null,
+      "V_numeric": 3.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4558614529808737,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 32,
+      "case_id": "grid-0017",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.0,
+      "V": 1.0,
+      "mean_double_occupancy": 0.28607595221296717,
+      "U_numeric": 3.0,
+      "U_unit": null,
+      "V_numeric": 1.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.28607595221296717,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 33,
+      "case_id": "grid-0018",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.0,
+      "V": 2.0,
+      "mean_double_occupancy": 0.45885356494101764,
+      "U_numeric": 3.0,
+      "U_unit": null,
+      "V_numeric": 2.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.45885356494101764,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 34,
+      "case_id": "grid-0019",
+      "label": null,
+      "status": "succeeded",
+      "U": 2.0,
+      "V": 1.5,
+      "mean_double_occupancy": 0.4366304979203488,
+      "U_numeric": 2.0,
+      "U_unit": null,
+      "V_numeric": 1.5,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4366304979203488,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 35,
+      "case_id": "grid-0020",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.5,
+      "V": 1.0,
+      "mean_double_occupancy": 0.36059254277359043,
+      "U_numeric": 1.5,
+      "U_unit": null,
+      "V_numeric": 1.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.36059254277359043,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 36,
+      "case_id": "grid-0021",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.5,
+      "V": 2.0,
+      "mean_double_occupancy": 0.47174655399055976,
+      "U_numeric": 1.5,
+      "U_unit": null,
+      "V_numeric": 2.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.47174655399055976,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 37,
+      "case_id": "grid-0022",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.0,
+      "V": 1.5,
+      "mean_double_occupancy": 0.45361730437920705,
+      "U_numeric": 1.0,
+      "U_unit": null,
+      "V_numeric": 1.5,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.45361730437920705,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 38,
+      "case_id": "grid-0023",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.0,
+      "V": 4.0,
+      "mean_double_occupancy": 0.49194043439187,
+      "U_numeric": 3.0,
+      "U_unit": null,
+      "V_numeric": 4.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.49194043439187,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 39,
+      "case_id": "grid-0024",
+      "label": null,
+      "status": "succeeded",
+      "U": 2.0,
+      "V": 3.0,
+      "mean_double_occupancy": 0.48724266273120015,
+      "U_numeric": 2.0,
+      "U_unit": null,
+      "V_numeric": 3.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.48724266273120015,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 40,
+      "case_id": "grid-0025",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.25,
+      "V": 1.25,
+      "mean_double_occupancy": 0.4258100134152405,
+      "U_numeric": 1.25,
+      "U_unit": null,
+      "V_numeric": 1.25,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4258100134152405,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 41,
+      "case_id": "grid-0026",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.25,
+      "V": 1.75,
+      "mean_double_occupancy": 0.4643069329020644,
+      "U_numeric": 1.25,
+      "U_unit": null,
+      "V_numeric": 1.75,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4643069329020644,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 42,
+      "case_id": "grid-0027",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.75,
+      "V": 1.25,
+      "mean_double_occupancy": 0.4100161786350787,
+      "U_numeric": 1.75,
+      "U_unit": null,
+      "V_numeric": 1.25,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4100161786350787,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 43,
+      "case_id": "grid-0028",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.75,
+      "V": 1.75,
+      "mean_double_occupancy": 0.45929645649950285,
+      "U_numeric": 1.75,
+      "U_unit": null,
+      "V_numeric": 1.75,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.45929645649950285,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 44,
+      "case_id": "grid-0029",
+      "label": null,
+      "status": "succeeded",
+      "U": 2.5,
+      "V": 1.25,
+      "mean_double_occupancy": 0.3707276577846203,
+      "U_numeric": 2.5,
+      "U_unit": null,
+      "V_numeric": 1.25,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.3707276577846203,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 45,
+      "case_id": "grid-0030",
+      "label": null,
+      "status": "succeeded",
+      "U": 2.5,
+      "V": 1.75,
+      "mean_double_occupancy": 0.4494605436918418,
+      "U_numeric": 2.5,
+      "U_unit": null,
+      "V_numeric": 1.75,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4494605436918418,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 46,
+      "case_id": "grid-0031",
+      "label": null,
+      "status": "succeeded",
+      "U": 2.5,
+      "V": 2.5,
+      "mean_double_occupancy": 0.4791751967607695,
+      "U_numeric": 2.5,
+      "U_unit": null,
+      "V_numeric": 2.5,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4791751967607695,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 47,
+      "case_id": "grid-0032",
+      "label": null,
+      "status": "succeeded",
+      "U": 2.5,
+      "V": 3.5,
+      "mean_double_occupancy": 0.4900616907231333,
+      "U_numeric": 2.5,
+      "U_unit": null,
+      "V_numeric": 3.5,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4900616907231333,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 48,
+      "case_id": "grid-0033",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.5,
+      "V": 1.25,
+      "mean_double_occupancy": 0.14894173583735865,
+      "U_numeric": 3.5,
+      "U_unit": null,
+      "V_numeric": 1.25,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.14894173583735865,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 49,
+      "case_id": "grid-0034",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.5,
+      "V": 1.75,
+      "mean_double_occupancy": 0.4289444618009583,
+      "U_numeric": 3.5,
+      "U_unit": null,
+      "V_numeric": 1.75,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4289444618009583,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 50,
+      "case_id": "grid-0035",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.5,
+      "V": 2.5,
+      "mean_double_occupancy": 0.4743821111217648,
+      "U_numeric": 3.5,
+      "U_unit": null,
+      "V_numeric": 2.5,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4743821111217648,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 51,
+      "case_id": "grid-0036",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.5,
+      "V": 3.5,
+      "mean_double_occupancy": 0.4886974315074675,
+      "U_numeric": 3.5,
+      "U_unit": null,
+      "V_numeric": 3.5,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4886974315074675,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 52,
+      "case_id": "grid-0037",
+      "label": null,
+      "status": "succeeded",
+      "U": 5.0,
+      "V": 1.25,
+      "mean_double_occupancy": 0.19062555772596562,
+      "U_numeric": 5.0,
+      "U_unit": null,
+      "V_numeric": 1.25,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.19062555772596562,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 53,
+      "case_id": "grid-0038",
+      "label": null,
+      "status": "succeeded",
+      "U": 5.0,
+      "V": 1.75,
+      "mean_double_occupancy": 0.1113828155676168,
+      "U_numeric": 5.0,
+      "U_unit": null,
+      "V_numeric": 1.75,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.1113828155676168,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 54,
+      "case_id": "grid-0039",
+      "label": null,
+      "status": "succeeded",
+      "U": 5.0,
+      "V": 2.5,
+      "mean_double_occupancy": 0.4631561228086758,
+      "U_numeric": 5.0,
+      "U_unit": null,
+      "V_numeric": 2.5,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4631561228086758,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 55,
+      "case_id": "grid-0040",
+      "label": null,
+      "status": "succeeded",
+      "U": 5.0,
+      "V": 3.5,
+      "mean_double_occupancy": 0.4861779770724897,
+      "U_numeric": 5.0,
+      "U_unit": null,
+      "V_numeric": 3.5,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4861779770724897,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 56,
+      "case_id": "grid-0041",
+      "label": null,
+      "status": "succeeded",
+      "U": 7.0,
+      "V": 1.25,
+      "mean_double_occupancy": 0.06647096258499138,
+      "U_numeric": 7.0,
+      "U_unit": null,
+      "V_numeric": 1.25,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.06647096258499138,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 57,
+      "case_id": "grid-0042",
+      "label": null,
+      "status": "succeeded",
+      "U": 7.0,
+      "V": 1.75,
+      "mean_double_occupancy": 0.09219003512974275,
+      "U_numeric": 7.0,
+      "U_unit": null,
+      "V_numeric": 1.75,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.09219003512974275,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 58,
+      "case_id": "grid-0043",
+      "label": null,
+      "status": "succeeded",
+      "U": 7.0,
+      "V": 2.5,
+      "mean_double_occupancy": 0.42783912344972014,
+      "U_numeric": 7.0,
+      "U_unit": null,
+      "V_numeric": 2.5,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.42783912344972014,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 59,
+      "case_id": "grid-0044",
+      "label": null,
+      "status": "succeeded",
+      "U": 7.0,
+      "V": 3.5,
+      "mean_double_occupancy": 0.48061494507700736,
+      "U_numeric": 7.0,
+      "U_unit": null,
+      "V_numeric": 3.5,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.48061494507700736,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 60,
+      "case_id": "grid-0045",
+      "label": null,
+      "status": "succeeded",
+      "U": 7.0,
+      "V": 2.0,
+      "mean_double_occupancy": 0.18338132958107792,
+      "U_numeric": 7.0,
+      "U_unit": null,
+      "V_numeric": 2.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.18338132958107792,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 61,
+      "case_id": "grid-0046",
+      "label": null,
+      "status": "succeeded",
+      "U": 7.0,
+      "V": 3.0,
+      "mean_double_occupancy": 0.4668198418674986,
+      "U_numeric": 7.0,
+      "U_unit": null,
+      "V_numeric": 3.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4668198418674986,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 62,
+      "case_id": "grid-0047",
+      "label": null,
+      "status": "succeeded",
+      "U": 6.0,
+      "V": 2.5,
+      "mean_double_occupancy": 0.45050337997793766,
+      "U_numeric": 6.0,
+      "U_unit": null,
+      "V_numeric": 2.5,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.45050337997793766,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 63,
+      "case_id": "grid-0048",
+      "label": null,
+      "status": "succeeded",
+      "U": 8.0,
+      "V": 2.5,
+      "mean_double_occupancy": 0.08796075443376367,
+      "U_numeric": 8.0,
+      "U_unit": null,
+      "V_numeric": 2.5,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.08796075443376367,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 64,
+      "case_id": "grid-0049",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.5,
+      "V": 1.0,
+      "mean_double_occupancy": 0.14044932184164224,
+      "U_numeric": 3.5,
+      "U_unit": null,
+      "V_numeric": 1.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.14044932184164224,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 65,
+      "case_id": "grid-0050",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.5,
+      "V": 1.5,
+      "mean_double_occupancy": 0.3791183024033563,
+      "U_numeric": 3.5,
+      "U_unit": null,
+      "V_numeric": 1.5,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.3791183024033563,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 66,
+      "case_id": "grid-0051",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.0,
+      "V": 1.25,
+      "mean_double_occupancy": 0.17100828945797658,
+      "U_numeric": 3.0,
+      "U_unit": null,
+      "V_numeric": 1.25,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.17100828945797658,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 67,
+      "case_id": "grid-0052",
+      "label": null,
+      "status": "succeeded",
+      "U": 4.0,
+      "V": 1.25,
+      "mean_double_occupancy": 0.12971851430579365,
+      "U_numeric": 4.0,
+      "U_unit": null,
+      "V_numeric": 1.25,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.12971851430579365,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 68,
+      "case_id": "grid-0053",
+      "label": null,
+      "status": "succeeded",
+      "U": 5.0,
+      "V": 2.0,
+      "mean_double_occupancy": 0.11844982780762447,
+      "U_numeric": 5.0,
+      "U_unit": null,
+      "V_numeric": 2.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.11844982780762447,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 69,
+      "case_id": "grid-0054",
+      "label": null,
+      "status": "succeeded",
+      "U": 5.0,
+      "V": 3.0,
+      "mean_double_occupancy": 0.47891904591453444,
+      "U_numeric": 5.0,
+      "U_unit": null,
+      "V_numeric": 3.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.47891904591453444,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 70,
+      "case_id": "grid-0055",
+      "label": null,
+      "status": "succeeded",
+      "U": 4.0,
+      "V": 2.5,
+      "mean_double_occupancy": 0.47131398915434963,
+      "U_numeric": 4.0,
+      "U_unit": null,
+      "V_numeric": 2.5,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.47131398915434963,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 71,
+      "case_id": "grid-0056",
+      "label": null,
+      "status": "succeeded",
+      "U": 5.0,
+      "V": 1.5,
+      "mean_double_occupancy": 0.10500266265823362,
+      "U_numeric": 5.0,
+      "U_unit": null,
+      "V_numeric": 1.5,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.10500266265823362,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 72,
+      "case_id": "grid-0057",
+      "label": null,
+      "status": "succeeded",
+      "U": 4.0,
+      "V": 1.75,
+      "mean_double_occupancy": 0.4125735431052843,
+      "U_numeric": 4.0,
+      "U_unit": null,
+      "V_numeric": 1.75,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4125735431052843,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 73,
+      "case_id": "grid-0058",
+      "label": null,
+      "status": "succeeded",
+      "U": 6.0,
+      "V": 1.75,
+      "mean_double_occupancy": 0.08590700260393087,
+      "U_numeric": 6.0,
+      "U_unit": null,
+      "V_numeric": 1.75,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.08590700260393087,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 74,
+      "case_id": "grid-0059",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.5,
+      "V": 2.0,
+      "mean_double_occupancy": 0.4524294555102593,
+      "U_numeric": 3.5,
+      "U_unit": null,
+      "V_numeric": 2.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4524294555102593,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 75,
+      "case_id": "grid-0060",
+      "label": null,
+      "status": "succeeded",
+      "U": 3.0,
+      "V": 1.75,
+      "mean_double_occupancy": 0.44062856183388915,
+      "U_numeric": 3.0,
+      "U_unit": null,
+      "V_numeric": 1.75,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.44062856183388915,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 76,
+      "case_id": "grid-0061",
+      "label": null,
+      "status": "succeeded",
+      "U": 5.0,
+      "V": 1.0,
+      "mean_double_occupancy": 0.1722048633583694,
+      "U_numeric": 5.0,
+      "U_unit": null,
+      "V_numeric": 1.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.1722048633583694,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 77,
+      "case_id": "grid-0062",
+      "label": null,
+      "status": "succeeded",
+      "U": 6.0,
+      "V": 1.25,
+      "mean_double_occupancy": 0.10673880627823917,
+      "U_numeric": 6.0,
+      "U_unit": null,
+      "V_numeric": 1.25,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.10673880627823917,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 78,
+      "case_id": "grid-0063",
+      "label": null,
+      "status": "succeeded",
+      "U": 7.0,
+      "V": 1.5,
+      "mean_double_occupancy": 0.07036870498702152,
+      "U_numeric": 7.0,
+      "U_unit": null,
+      "V_numeric": 1.5,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.07036870498702152,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 79,
+      "case_id": "grid-0064",
+      "label": null,
+      "status": "succeeded",
+      "U": 8.0,
+      "V": 1.75,
+      "mean_double_occupancy": 0.07103402974902781,
+      "U_numeric": 8.0,
+      "U_unit": null,
+      "V_numeric": 1.75,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.07103402974902781,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 80,
+      "case_id": "grid-0065",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.25,
+      "V": 1.0,
+      "mean_double_occupancy": 0.37832077810041775,
+      "U_numeric": 1.25,
+      "U_unit": null,
+      "V_numeric": 1.0,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.37832077810041775,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 81,
+      "case_id": "grid-0066",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.25,
+      "V": 1.5,
+      "mean_double_occupancy": 0.4500986427056531,
+      "U_numeric": 1.25,
+      "U_unit": null,
+      "V_numeric": 1.5,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4500986427056531,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 82,
+      "case_id": "grid-0067",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.0,
+      "V": 1.25,
+      "mean_double_occupancy": 0.4320857417790718,
+      "U_numeric": 1.0,
+      "U_unit": null,
+      "V_numeric": 1.25,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4320857417790718,
+      "mean_double_occupancy_unit": null
+    },
+    {
+      "row_index": 83,
+      "case_id": "grid-0068",
+      "label": null,
+      "status": "succeeded",
+      "U": 1.5,
+      "V": 1.25,
+      "mean_double_occupancy": 0.4185455758397373,
+      "U_numeric": 1.5,
+      "U_unit": null,
+      "V_numeric": 1.25,
+      "V_unit": null,
+      "mean_double_occupancy_numeric": 0.4185455758397373,
+      "mean_double_occupancy_unit": null
+    }
+  ],
+  "row_count": 84,
+  "excluded_rows": [],
+  "schema": "pyscf-agent.postprocess-plot-data.v1"
+}

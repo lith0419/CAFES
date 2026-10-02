@@ -76,6 +76,7 @@ from . import (
     retries,
     dmet_continuation,
     cancellation,
+    example_studies,
 )
 
 
@@ -355,6 +356,10 @@ class StudyApplicationService:
     _install_review_plan = preparation._install_review_plan
 
     run_postprocessing = postprocessing.run_postprocessing
+
+    list_examples = example_studies.list_examples
+
+    import_example = example_studies.import_example
 
     suggest_postprocessing = postprocessing.suggest_postprocessing
 

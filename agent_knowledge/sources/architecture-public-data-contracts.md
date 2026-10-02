@@ -35,7 +35,7 @@ top-level fields while allowing additive fields.
 - remote RPC envelopes, benchmark reports, and installation/remote
   verification reports also carry versioned schemas.
 - `HamiltonianDatasetSpec`, `HamiltonianSample`, rejection, and dataset
-  manifest contracts live in `computational_study_agent.hamiltonian_dataset_contracts`.
+  manifest contracts live in `computational_study_agent.datasets.hamiltonian.contracts`.
   `StudyReport.dataset_manifest` carries the typed dataset summary; numerical
   trajectory matrices stay in referenced artifacts.
 - `RuntimeIdentity` records a deployed source snapshot and public contract;

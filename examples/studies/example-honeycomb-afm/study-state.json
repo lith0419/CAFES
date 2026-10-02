@@ -1,0 +1,2635 @@
+{
+  "schema": "pyscf-agent.study-state.v1",
+  "study_id": "example-honeycomb-afm",
+  "cases": {
+    "case-0001": {
+      "case_id": "case-0001",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0001",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "case-0002": {
+      "case_id": "case-0002",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0002",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "case-0003": {
+      "case_id": "case-0003",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0003",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "case-0004": {
+      "case_id": "case-0004",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0004",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "case-0005": {
+      "case_id": "case-0005",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0005",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "case-0006": {
+      "case_id": "case-0006",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0006",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "case-0007": {
+      "case_id": "case-0007",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0007",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "case-0008": {
+      "case_id": "case-0008",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0008",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "case-0009": {
+      "case_id": "case-0009",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0009",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "case-0010": {
+      "case_id": "case-0010",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0010",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "case-0011": {
+      "case_id": "case-0011",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0011",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "case-0012": {
+      "case_id": "case-0012",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0012",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "case-0013": {
+      "case_id": "case-0013",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0013",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "case-0014": {
+      "case_id": "case-0014",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0014",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "case-0015": {
+      "case_id": "case-0015",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0015",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "case-0016": {
+      "case_id": "case-0016",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0016",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0001": {
+      "case_id": "grid-0001",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0001",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0002": {
+      "case_id": "grid-0002",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0002",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0003": {
+      "case_id": "grid-0003",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0003",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0004": {
+      "case_id": "grid-0004",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0004",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0005": {
+      "case_id": "grid-0005",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0005",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0006": {
+      "case_id": "grid-0006",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0006",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0007": {
+      "case_id": "grid-0007",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0001",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0008": {
+      "case_id": "grid-0008",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0008",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0009": {
+      "case_id": "grid-0009",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0009",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0010": {
+      "case_id": "grid-0010",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0010",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0011": {
+      "case_id": "grid-0011",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0011",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0012": {
+      "case_id": "grid-0012",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0012",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0013": {
+      "case_id": "grid-0013",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0013-attempt-2-c9077e1c",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0014": {
+      "case_id": "grid-0014",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0014-attempt-2-71f47c81",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0015": {
+      "case_id": "grid-0015",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0015",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0016": {
+      "case_id": "grid-0016",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0016",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0017": {
+      "case_id": "grid-0017",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0017",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0018": {
+      "case_id": "grid-0018",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0018",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0019": {
+      "case_id": "grid-0019",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0019",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0020": {
+      "case_id": "grid-0020",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0020",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0021": {
+      "case_id": "grid-0021",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0021",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0022": {
+      "case_id": "grid-0022",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0022",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0023": {
+      "case_id": "grid-0023",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0023",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0024": {
+      "case_id": "grid-0024",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0024",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0025": {
+      "case_id": "grid-0025",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0025",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0026": {
+      "case_id": "grid-0026",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0026",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0027": {
+      "case_id": "grid-0027",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0027",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0028": {
+      "case_id": "grid-0028",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0028",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0029": {
+      "case_id": "grid-0029",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0029",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0030": {
+      "case_id": "grid-0030",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0030-attempt-2-f79327d7",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0031": {
+      "case_id": "grid-0031",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0031",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0032": {
+      "case_id": "grid-0032",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0032",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0033": {
+      "case_id": "grid-0033",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0033",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0034": {
+      "case_id": "grid-0034",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0034",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0035": {
+      "case_id": "grid-0035",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0035",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0036": {
+      "case_id": "grid-0036",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0036",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0037": {
+      "case_id": "grid-0037",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0037",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0038": {
+      "case_id": "grid-0038",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0038",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0039": {
+      "case_id": "grid-0039",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0039",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0040": {
+      "case_id": "grid-0040",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0040",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0041": {
+      "case_id": "grid-0041",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0041",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0042": {
+      "case_id": "grid-0042",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0042",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0043": {
+      "case_id": "grid-0043",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0043",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0044": {
+      "case_id": "grid-0044",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0044",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0045": {
+      "case_id": "grid-0045",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0045",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0046": {
+      "case_id": "grid-0046",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0046",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0047": {
+      "case_id": "grid-0047",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0047",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0048": {
+      "case_id": "grid-0048",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0048",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0049": {
+      "case_id": "grid-0049",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0049",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0050": {
+      "case_id": "grid-0050",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0050",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0051": {
+      "case_id": "grid-0051",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0051",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0052": {
+      "case_id": "grid-0052",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0052",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0053": {
+      "case_id": "grid-0053",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0053",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0054": {
+      "case_id": "grid-0054",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0054",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0055": {
+      "case_id": "grid-0055",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0055",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0056": {
+      "case_id": "grid-0056",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0056",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0057": {
+      "case_id": "grid-0057",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0057",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0058": {
+      "case_id": "grid-0058",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0058",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0059": {
+      "case_id": "grid-0059",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0059",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0060": {
+      "case_id": "grid-0060",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0060",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0061": {
+      "case_id": "grid-0061",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0061",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0062": {
+      "case_id": "grid-0062",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0062-attempt-2-bf4cad32",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0063": {
+      "case_id": "grid-0063",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0063",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0064": {
+      "case_id": "grid-0064",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0064",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0065": {
+      "case_id": "grid-0065",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0065",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0066": {
+      "case_id": "grid-0066",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0066",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0067": {
+      "case_id": "grid-0067",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0067-attempt-2-2b70d0bc",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0068": {
+      "case_id": "grid-0068",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0068",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0069": {
+      "case_id": "grid-0069",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0069",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0070": {
+      "case_id": "grid-0070",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0070",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0071": {
+      "case_id": "grid-0071",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0071-attempt-2-6bf9d161",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0072": {
+      "case_id": "grid-0072",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0072",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0073": {
+      "case_id": "grid-0073",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0073-attempt-2-ce824bbc",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0074": {
+      "case_id": "grid-0074",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0074",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0075": {
+      "case_id": "grid-0075",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0075",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0076": {
+      "case_id": "grid-0076",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0076-attempt-2-6f71a785",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0077": {
+      "case_id": "grid-0077",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0077",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0078": {
+      "case_id": "grid-0078",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0078",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0079": {
+      "case_id": "grid-0079",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0079",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0080": {
+      "case_id": "grid-0080",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0080",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0081": {
+      "case_id": "grid-0081",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0081-attempt-2-8a702c31",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0082": {
+      "case_id": "grid-0082",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0082",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0083": {
+      "case_id": "grid-0083",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0083",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0084": {
+      "case_id": "grid-0084",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0084",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0085": {
+      "case_id": "grid-0085",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0085",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0086": {
+      "case_id": "grid-0086",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0086",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0087": {
+      "case_id": "grid-0087",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0087",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0088": {
+      "case_id": "grid-0088",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0088",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0089": {
+      "case_id": "grid-0089",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0089",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0090": {
+      "case_id": "grid-0090",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0090",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0091": {
+      "case_id": "grid-0091",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0091",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0092": {
+      "case_id": "grid-0092",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0092",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0093": {
+      "case_id": "grid-0093",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0093",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0094": {
+      "case_id": "grid-0094",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0094",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0095": {
+      "case_id": "grid-0095",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0095-attempt-2-a5857761",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0096": {
+      "case_id": "grid-0096",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0096",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0097": {
+      "case_id": "grid-0097",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0097-attempt-2-e540672a",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0098": {
+      "case_id": "grid-0098",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0098",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0099": {
+      "case_id": "grid-0099",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0099",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0100": {
+      "case_id": "grid-0100",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0100-attempt-2-d2ddf2b1",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0101": {
+      "case_id": "grid-0101",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0101",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0102": {
+      "case_id": "grid-0102",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0102",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0103": {
+      "case_id": "grid-0103",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0103",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0104": {
+      "case_id": "grid-0104",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0104",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0105": {
+      "case_id": "grid-0105",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0105-attempt-2-e5cadac9",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0106": {
+      "case_id": "grid-0106",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0106",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0107": {
+      "case_id": "grid-0107",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0107",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0108": {
+      "case_id": "grid-0108",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0108",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0109": {
+      "case_id": "grid-0109",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0109-attempt-2-977420f0",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0110": {
+      "case_id": "grid-0110",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0110",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0111": {
+      "case_id": "grid-0111",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0111",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0112": {
+      "case_id": "grid-0112",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0112",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0113": {
+      "case_id": "grid-0113",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0113-attempt-2-413e33f9",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0114": {
+      "case_id": "grid-0114",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0114",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0115": {
+      "case_id": "grid-0115",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0115",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0116": {
+      "case_id": "grid-0116",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0116-attempt-2-814dd512",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0117": {
+      "case_id": "grid-0117",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0117",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0118": {
+      "case_id": "grid-0118",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0118",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0119": {
+      "case_id": "grid-0119",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0119",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0120": {
+      "case_id": "grid-0120",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0120",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0121": {
+      "case_id": "grid-0121",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0121",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0122": {
+      "case_id": "grid-0122",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0122",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0123": {
+      "case_id": "grid-0123",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0123",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0124": {
+      "case_id": "grid-0124",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0124-attempt-2-5bf36458",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0125": {
+      "case_id": "grid-0125",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0125",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0126": {
+      "case_id": "grid-0126",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0126",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0127": {
+      "case_id": "grid-0127",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0127",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0128": {
+      "case_id": "grid-0128",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0128-attempt-2-99d40abf",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0129": {
+      "case_id": "grid-0129",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0129",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0130": {
+      "case_id": "grid-0130",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0130",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0131": {
+      "case_id": "grid-0131",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0131",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0132": {
+      "case_id": "grid-0132",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0132",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0133": {
+      "case_id": "grid-0133",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0133",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0134": {
+      "case_id": "grid-0134",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0134-attempt-2-4a19ee2d",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0135": {
+      "case_id": "grid-0135",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0135",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0136": {
+      "case_id": "grid-0136",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0136",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0137": {
+      "case_id": "grid-0137",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0137",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0138": {
+      "case_id": "grid-0138",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0138",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0139": {
+      "case_id": "grid-0139",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0139",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0140": {
+      "case_id": "grid-0140",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0140",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0141": {
+      "case_id": "grid-0141",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0141",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0142": {
+      "case_id": "grid-0142",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0142",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0143": {
+      "case_id": "grid-0143",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0143",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0144": {
+      "case_id": "grid-0144",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0144",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0145": {
+      "case_id": "grid-0145",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0145-attempt-2-8fdc4619",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0146": {
+      "case_id": "grid-0146",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0146",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0147": {
+      "case_id": "grid-0147",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0147",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0148": {
+      "case_id": "grid-0148",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0148",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0149": {
+      "case_id": "grid-0149",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0149",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0150": {
+      "case_id": "grid-0150",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0150",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0151": {
+      "case_id": "grid-0151",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0151",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0152": {
+      "case_id": "grid-0152",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0152",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0153": {
+      "case_id": "grid-0153",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0153",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0154": {
+      "case_id": "grid-0154",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0154-attempt-2-998750a1",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0155": {
+      "case_id": "grid-0155",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0155",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0156": {
+      "case_id": "grid-0156",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0156",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0157": {
+      "case_id": "grid-0157",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0157-attempt-2-7f469dfa",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0158": {
+      "case_id": "grid-0158",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0158",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0159": {
+      "case_id": "grid-0159",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0159",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0160": {
+      "case_id": "grid-0160",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0160",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0161": {
+      "case_id": "grid-0161",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0161",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0162": {
+      "case_id": "grid-0162",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0162",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0163": {
+      "case_id": "grid-0163",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0163",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0164": {
+      "case_id": "grid-0164",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0164",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0165": {
+      "case_id": "grid-0165",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0165",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0166": {
+      "case_id": "grid-0166",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0166",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0167": {
+      "case_id": "grid-0167",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0167",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0168": {
+      "case_id": "grid-0168",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0168",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0169": {
+      "case_id": "grid-0169",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0169",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0170": {
+      "case_id": "grid-0170",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0170",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0171": {
+      "case_id": "grid-0171",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0171-attempt-2-be4b5b96",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0172": {
+      "case_id": "grid-0172",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0172",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0173": {
+      "case_id": "grid-0173",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0173",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0174": {
+      "case_id": "grid-0174",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0174",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0175": {
+      "case_id": "grid-0175",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0175-attempt-2-42ea72cd",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0176": {
+      "case_id": "grid-0176",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0176",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0177": {
+      "case_id": "grid-0177",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0177",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0178": {
+      "case_id": "grid-0178",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0178",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0179": {
+      "case_id": "grid-0179",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0179-attempt-2-ee12efc3",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0180": {
+      "case_id": "grid-0180",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0180",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0181": {
+      "case_id": "grid-0181",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0181",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0182": {
+      "case_id": "grid-0182",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0182",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0183": {
+      "case_id": "grid-0183",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0183",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0184": {
+      "case_id": "grid-0184",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0184",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0185": {
+      "case_id": "grid-0185",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0185",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0186": {
+      "case_id": "grid-0186",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0186-attempt-2-9996ffa8",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0187": {
+      "case_id": "grid-0187",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0187",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0188": {
+      "case_id": "grid-0188",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0188",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0189": {
+      "case_id": "grid-0189",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0189-attempt-3-dbcb8934",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0190": {
+      "case_id": "grid-0190",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0190-attempt-2-818d9e32",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0191": {
+      "case_id": "grid-0191",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0191",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0192": {
+      "case_id": "grid-0192",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0192",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0193": {
+      "case_id": "grid-0193",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0193",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0194": {
+      "case_id": "grid-0194",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0194",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0195": {
+      "case_id": "grid-0195",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0195",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0196": {
+      "case_id": "grid-0196",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0196",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0197": {
+      "case_id": "grid-0197",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0197",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0198": {
+      "case_id": "grid-0198",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0198",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0199": {
+      "case_id": "grid-0199",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0199",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0200": {
+      "case_id": "grid-0200",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0200",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0201": {
+      "case_id": "grid-0201",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0201-attempt-2-5cf6eaaa",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0202": {
+      "case_id": "grid-0202",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0202",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0203": {
+      "case_id": "grid-0203",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0203",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0204": {
+      "case_id": "grid-0204",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0204",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0205": {
+      "case_id": "grid-0205",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0205",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0206": {
+      "case_id": "grid-0206",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0206-attempt-2-d2bc7863",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0207": {
+      "case_id": "grid-0207",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0207",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0208": {
+      "case_id": "grid-0208",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0208",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0209": {
+      "case_id": "grid-0209",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0209",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0210": {
+      "case_id": "grid-0210",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0210",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0211": {
+      "case_id": "grid-0211",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0211",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0212": {
+      "case_id": "grid-0212",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0212",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0213": {
+      "case_id": "grid-0213",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0213",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0214": {
+      "case_id": "grid-0214",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0214",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0215": {
+      "case_id": "grid-0215",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0215",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0216": {
+      "case_id": "grid-0216",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0216-attempt-2-a3ab7da6",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0217": {
+      "case_id": "grid-0217",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0217",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0218": {
+      "case_id": "grid-0218",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0218",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0219": {
+      "case_id": "grid-0219",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0219",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0220": {
+      "case_id": "grid-0220",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0220",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0221": {
+      "case_id": "grid-0221",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0221",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0222": {
+      "case_id": "grid-0222",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0222",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "grid-0223": {
+      "case_id": "grid-0223",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "grid-0223",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    }
+  }
+}

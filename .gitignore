@@ -26,14 +26,11 @@ node_modules/
 __pycache__/
 *.py[cod]
 .pytest_cache/
-# Local numerical dataset packages; publication is managed separately.
-/datasets/QM9_CCSD_upload*/
-/datasets/qm9-ccsd500-v2-dict/
+# Restored numerical datasets stay local; originals are archived on Amarel.
+/datasets/
 # Local manuscript material.
 /docs/si/
 /manuscript/
 
-# Research material stays outside the public source repository.
-/datasets/
+# Local research reports are not part of the public source distribution.
 /reports/
-/docs/development/

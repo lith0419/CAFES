@@ -1,0 +1,1369 @@
+{
+"schema": "cafes.example-row-template.v1",
+"document": {
+"study_id": "example-lutein-gs",
+"name": "Lutein GS \u00b7 23 geometries",
+"objective": "Inspect archived calculation results",
+"system_type": "molecular",
+"observables": [
+"energy"
+],
+"comparison": {
+"x_axis": "BLA",
+"y_axis": "energy"
+},
+"capability_snapshot": {},
+"resource_policy": {},
+"cost_estimate": {},
+"grid_refinement": {},
+"grid_refinement_source": {},
+"workflow_configuration": {},
+"workflow_provenance": {
+"report_example": {
+"imported": true,
+"execution_inputs_complete": false,
+"note": "Archived calculation settings are retained for inspection; required source:// restart files and execution history are not bundled."
+}
+},
+"gate_configuration": {},
+"gate_provenance": {},
+"gate_decisions": [],
+"lifecycle": {
+"schema": "pyscf-agent.study-lifecycle.v1",
+"scope": "study",
+"entity_id": "example-lutein-gs",
+"revision": 1,
+"stage": "planned",
+"terminal": false,
+"current_event": "created",
+"created_at": "2026-10-02T00:29:47.936042+00:00",
+"updated_at": "2026-10-02T00:29:47.936042+00:00",
+"history": [
+{
+"sequence": 1,
+"event": "created",
+"from_stage": null,
+"to_stage": "planned",
+"revision": 1,
+"at": "2026-10-02T00:29:47.936042+00:00",
+"details": {}
+}
+],
+"allowed_events": [
+"execution_started",
+"review_requested",
+"configuration_changed",
+"cancelled"
+]
+},
+"schema": "pyscf-agent.study-plan.v1"
+},
+"row_field": "cases",
+"row_count": 23,
+"row_template": {
+"case_id": "point01",
+"label": "point01",
+"request": {
+"task_type": "molecular",
+"method": "casscf",
+"job": {
+"name": "single_point"
+},
+"analysis": {
+"outputs": [
+"energy"
+]
+},
+"runtime": {
+"max_cycle": 200,
+"conv_tol": 1e-08,
+"conv_tol_grad": null,
+"grid_level": null,
+"diis_space": null,
+"verbose": 5,
+"scf_algorithm": "standard"
+},
+"molecular_dynamics": {
+"profile": null,
+"ensemble": "nve",
+"temperature_kelvin": 300.0,
+"time_step_au": 50.0,
+"steps": 100,
+"sample_stride": 10,
+"sample_offset": 9,
+"velocity_seed": 0,
+"ao_convention": "qh9",
+"store_velocities": true,
+"store_fock": true,
+"store_overlap": true
+},
+"initial_state": {
+"mode": "projected_1rdm",
+"source_case_id": null,
+"source_artifact": {
+"kind": "one_particle_state",
+"path": "source://cluster/benchmarks/lutein-m2000-scan-20260921/inputs/anchor-density.npz"
+}
+},
+"model_hamiltonian": {
+"spec": {},
+"input_file": null
+},
+"periodic": {
+"structure_format": "poscar",
+"structure_text": null,
+"basis": "gth-szv-molopt-sr",
+"pseudo": "gth-pbe",
+"kmesh": [
+1,
+1,
+1
+],
+"kpoint_scheme": "gamma_centered",
+"kpoint_shift": [
+0.0,
+0.0,
+0.0
+],
+"dimension": 3,
+"precision": 1e-08,
+"ke_cutoff": null,
+"fft_mesh": null,
+"density_fitting_method": "fft",
+"density_fitting_auxbasis": null,
+"exxdiv": "ewald",
+"smearing_method": "none",
+"smearing_sigma": null,
+"smearing_fix_spin": false,
+"band_path_mode": "auto",
+"band_path": null,
+"band_path_special_points": {},
+"band_path_npoints": 80,
+"band_path_reference_distance": 0.025,
+"band_path_symprec": 1e-05
+},
+"solver": {
+"name": "block2_dmrg",
+"options": {
+"preset": "balanced",
+"symmetry": "su2",
+"nroots": 1,
+"n_threads": 16,
+"n_mkl_threads": 1,
+"stack_memory_gb": 16,
+"bond_dimensions": [
+2000
+],
+"final_bond_dimension": 2000,
+"max_bond_dimension": 2000,
+"sweeps": 30,
+"noises": [
+0.0001,
+0.0001,
+0.0001,
+0.0001,
+1e-05,
+1e-05,
+1e-05,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0
+],
+"davidson_thresholds": [
+1e-08,
+1e-08,
+1e-08,
+1e-08,
+1e-09,
+1e-09,
+1e-09,
+1e-09,
+1e-09,
+1e-09,
+1e-09,
+1e-09,
+1e-09,
+1e-09,
+1e-09,
+1e-09,
+1e-09,
+1e-09,
+1e-09,
+1e-09,
+1e-09,
+1e-09,
+1e-09,
+1e-09,
+1e-09,
+1e-09,
+1e-09,
+1e-09,
+1e-09,
+1e-09
+],
+"energy_tolerance": 1e-08,
+"discarded_weight_tolerance": 1e-06,
+"adaptive_schedule": false,
+"bond_dimension_planning": false,
+"estimate_energy_error": false,
+"entanglement_active_space_review": false,
+"cutoff": 1e-20,
+"integral_cutoff": 1e-12,
+"mpo_algorithm": "conventional",
+"seed": 1234,
+"iprint": 1,
+"save_mps": true,
+"compute_1rdm": true,
+"compute_2rdm": true,
+"compute_entanglement": false,
+"compute_mutual_information": false,
+"compute_bipartite_entanglement": false,
+"compute_symmetry_analysis": false,
+"orbital_restart_manifest": "source://cluster/benchmarks/lutein-m2000-scan-20260921/inputs/anchor-orbitals.json",
+"orbital_restart_provenance": {
+"source_study_id": "20260921-162332-44895605",
+"source_run_id": "case-0001",
+"source_geometry_index": 12,
+"transfer": "orbitals_only",
+"purpose": "representative_endpoint"
+}
+}
+},
+"orbital_processing": {
+"enabled": true,
+"localization_method": "pipek_mezey",
+"localization_scope": "active_space",
+"localization_occupation_thresholds": [],
+"use_natural_orbitals": false,
+"orbital_ordering": "fiedler",
+"orbital_order": [],
+"frozen_orbital_indices": [
+0,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+30,
+31,
+32,
+33,
+34,
+35,
+36,
+37,
+38,
+39,
+40,
+41
+],
+"continuation_policy": "target_scf_core"
+},
+"density_fitting": {
+"enabled": true,
+"auxbasis": "def2-svp-jkfit",
+"apply_to": "scf_and_casscf"
+},
+"embedding": {
+"enabled": false,
+"provider": "libdmet",
+"localization_method": "manual",
+"minimal_basis": "minao",
+"include_pao": true,
+"correlated_orbital_indices": [],
+"correlated_atom_indices": [],
+"fragments": [],
+"interaction": {},
+"approved": false,
+"audit_artifact": {},
+"reference_artifact": {},
+"localized_subspace_artifact": {},
+"localized_hamiltonian_artifact": {}
+},
+"active_space": {
+"enabled": true,
+"selection_method": "manual",
+"ncas": 20,
+"nelecas": 20,
+"orbital_indices": [
+146,
+147,
+148,
+149,
+150,
+151,
+152,
+153,
+154,
+155,
+156,
+157,
+158,
+159,
+160,
+161,
+162,
+163,
+164,
+165
+],
+"occupation_window": [
+0.02,
+1.98
+],
+"energy_window": null,
+"avas_targets": [],
+"avas_threshold": 0.2,
+"avas_minimal_basis": "minao",
+"avas_with_iao": false,
+"avas_openshell_option": 2,
+"avas_ncore": 0,
+"initial_mo_coeff": null,
+"target_method": null,
+"target_solver": null,
+"target_solver_options": {},
+"approved": true
+},
+"post_cas": {
+"sc_nevpt2": {
+"enabled": false,
+"root": 0,
+"density_fit": true
+}
+},
+"workflow": {
+"modules": [],
+"module_config": {},
+"dependency_policy": "auto"
+},
+"quality_gates": {
+"enabled": true,
+"gates": [],
+"gate_config": {}
+},
+"atom": "C 12.69003500 -0.52696300 0.68991000\nC 13.95786300 0.14251800 0.27127200\nC 13.84415200 1.57711200 0.00697400\nC 12.75950900 1.89863600 -0.92606200\nC 11.59247900 1.05131400 -0.88893200\nC 11.53849500 -0.09814300 -0.14886000\nC 10.41083700 -0.88672100 -0.10836900\nC 9.09731800 -0.53830100 -0.07120200\nC 7.96625800 -1.27706000 -0.13787500\nC 6.69566700 -0.67266500 -0.04105300\nC 5.49256200 -1.20708800 -0.10367200\nC 4.24429900 -0.59435800 -0.00820800\nC 3.01281000 -1.09008400 -0.06628600\nC 1.86872100 -0.24297000 0.06113800\nC 0.59930000 -0.53498500 0.03003200\nC 12.37380800 -0.16159000 2.09699600\nC 12.90706000 -1.99577000 0.61263200\nC 10.49400000 1.49456400 -1.70056100\nC 7.99827300 -2.70239200 -0.32355000\nC 2.74116300 -2.49035200 -0.25846600\nO 15.07489700 2.15022700 -0.51905100\nC -12.09600300 -0.20443800 -1.23162000\nC -13.36485500 -0.99278900 -1.25376300\nC -14.32384800 -0.62661600 -0.20228800\nC -13.70809000 -0.35884600 1.06956000\nC -12.41570500 -0.14638600 1.25587500\nC -11.47173700 -0.28816800 0.14432500\nC -10.31522200 0.55755100 0.25927800\nC -9.01731800 0.22230200 0.20330600\nC -7.89744100 0.99944100 0.30658400\nC -6.61857600 0.43674300 0.21821600\nC -5.41409300 0.97490800 0.28546200\nC -4.16772900 0.36514100 0.19071400\nC -2.93317700 0.86297300 0.25195000\nC -1.79141600 0.01810600 0.12496900\nC -0.52051300 0.31076200 0.15699400\nC -12.38762500 1.21293900 -1.55653000\nC -11.15680900 -0.75277700 -2.23943800\nC -11.84379700 0.20058400 2.52483200\nC -8.05526000 2.41275400 0.50892100\nC -2.66608600 2.26332700 0.44701800\nO -15.37507300 -1.61947200 -0.03187700\nH 14.34634000 -0.31964600 -0.63053900\nH 14.73602600 -0.02014600 1.00793600\nH 13.66918600 2.09334300 0.94632500\nH 13.16889600 1.87593700 -1.93443300\nH 12.46949600 2.93427600 -0.77561500\nH 10.58665200 -1.93287500 -0.13754700\nH 8.94288000 0.50850400 0.05744400\nH 6.71947400 0.38156300 0.10454700\nH 5.45127900 -2.26045000 -0.24797800\nH 4.32440500 0.45868900 0.13678100\nH 2.10717700 0.78444800 0.20304100\nH 0.33301500 -1.55650800 -0.11091000\nH 11.46755200 -0.62633300 2.45005200\nH 12.23883300 0.89898600 2.22906200\nH 13.14957200 -0.45594500 2.78401000\nH 13.82640000 -2.29968700 1.08829000\nH 12.96235600 -2.34911600 -0.40283900\nH 12.13758100 -2.57099100 1.09981700\nH 9.82264100 2.11928900 -1.13137700\nH 9.90378100 0.69475600 -2.12158300\nH 10.79792000 2.08801600 -2.55119700\nH 7.50267900 -3.21968200 0.48493100\nH 8.98061900 -3.14202400 -0.38525400\nH 7.49697900 -2.99441000 -1.23484500\nH 2.17545800 -2.90089100 0.56471500\nH 3.60985100 -3.12190700 -0.35236600\nH 2.16298400 -2.66236800 -1.15418800\nH 15.73806700 1.96436100 0.14508400\nH -13.14616800 -2.04954300 -1.14698200\nH -13.84515900 -0.91691800 -2.22114700\nH -14.83765900 0.28896700 -0.49264400\nH -14.39210300 -0.33765800 1.87678800\nH -11.14997700 -1.32819200 0.27348800\nH -10.55330000 1.58085100 0.39990900\nH -8.84382100 -0.81847900 0.05522400\nH -6.62126900 -0.61911500 0.06950000\nH -5.37120400 2.02671000 0.43331300\nH -4.24378300 -0.68778900 0.04307100\nH -2.02788100 -1.00976700 -0.01784300\nH -0.25518200 1.33229200 0.29871000\nH -12.94730600 1.32233600 -2.47121000\nH -11.49953000 1.80924000 -1.68749700\nH -12.96673700 1.69587900 -0.78651100\nH -10.20861400 -0.23940200 -2.24014800\nH -11.54204600 -0.68177200 -3.24290900\nH -10.93309300 -1.79365200 -2.07559500\nH -12.50631500 0.05906300 3.36474200\nH -11.55331800 1.24064100 2.54698500\nH -10.95927400 -0.37559400 2.74985200\nH -8.59817600 2.62417000 1.41906400\nH -8.61324500 2.86854500 -0.29653800\nH -7.14226400 2.98057400 0.58172100\nH -2.10068100 2.67745600 -0.37476300\nH -2.08862200 2.43581600 1.34328300\nH -3.53647800 2.89239000 0.54159900\nH -15.77103100 -1.70410300 -0.89912600",
+"basis": "def2-svpd",
+"unit": "Angstrom",
+"charge": 0,
+"spin": 0,
+"symmetry": false,
+"restricted": true
+},
+"variables": {
+"BLA": -0.0590729642
+},
+"operations": [],
+"model_spec": {}
+},
+"changes": [
+{
+"paths": [
+[
+"case_id"
+],
+[
+"label"
+]
+],
+"values": [
+null,
+{
+"set": "point02"
+},
+{
+"set": "point03"
+},
+{
+"set": "point04"
+},
+{
+"set": "point05"
+},
+{
+"set": "point06"
+},
+{
+"set": "point07"
+},
+{
+"set": "point08"
+},
+{
+"set": "point09"
+},
+{
+"set": "point10"
+},
+{
+"set": "point11"
+},
+{
+"set": "point12"
+},
+{
+"set": "point13"
+},
+{
+"set": "point14"
+},
+{
+"set": "point15"
+},
+{
+"set": "point16"
+},
+{
+"set": "point17"
+},
+{
+"set": "point18"
+},
+{
+"set": "point19"
+},
+{
+"set": "point20"
+},
+{
+"set": "point21"
+},
+{
+"set": "point22"
+},
+{
+"set": "point23"
+}
+]
+},
+{
+"paths": [
+[
+"request",
+"initial_state",
+"source_artifact",
+"path"
+]
+],
+"values": [
+null,
+{
+"set": "source://cluster/benchmarks/lutein-m2000-scan-20260921/scan-studies/20260921-195030-ed11d92c/cases/case-0017/result-one-particle-state.npz"
+},
+{
+"set": "source://cluster/benchmarks/lutein-four-paths-20260921/representative-studies/20260921-202020-5cab2190/cases/case-0001-attempt-2-df89f903/result-one-particle-state.npz"
+},
+{
+"set": "source://cluster/benchmarks/lutein-m2000-scan-20260921/scan-studies/20260921-195030-ed11d92c/cases/case-0017/result-one-particle-state.npz"
+},
+{
+"set": "source://cluster/benchmarks/lutein-m2000-scan-20260921/scan-studies/20260921-195030-ed11d92c/cases/case-0011/result-one-particle-state.npz"
+},
+{
+"set": "source://cluster/benchmarks/lutein-four-paths-20260921/representative-studies/20260921-202029-00f2db1e/cases/case-0001-attempt-2-17a75460/result-one-particle-state.npz"
+},
+{
+"set": "source://cluster/benchmarks/lutein-m2000-scan-20260921/scan-studies/20260921-195030-ed11d92c/cases/case-0011/result-one-particle-state.npz"
+},
+{
+"set": "source://cluster/benchmarks/lutein-m2000-scan-20260921/scan-studies/20260921-195030-ed11d92c/cases/case-0005/result-one-particle-state.npz"
+},
+{
+"set": "source://cluster/benchmarks/lutein-four-paths-20260921/representative-studies/20260921-202029-00f2db1e/cases/case-0001-attempt-2-17a75460/result-one-particle-state.npz"
+},
+{
+"set": "source://cluster/benchmarks/lutein-m2000-scan-20260921/scan-studies/20260921-195030-ed11d92c/cases/case-0005/result-one-particle-state.npz"
+},
+{
+"set": "source://cluster/benchmarks/lutein-four-paths-20260921/representative-studies/20260921-202029-00f2db1e/cases/case-0001-attempt-2-17a75460/result-one-particle-state.npz"
+},
+null,
+{
+"set": "source://cluster/benchmarks/lutein-m2000-scan-20260921/scan-studies/20260921-195030-ed11d92c/cases/case-0004/result-one-particle-state.npz"
+},
+{
+"set": "source://cluster/benchmarks/lutein-four-paths-20260921/representative-studies/20260921-202029-00f2db1e/cases/case-0001-attempt-2-17a75460/result-one-particle-state.npz"
+},
+{
+"set": "source://cluster/benchmarks/lutein-m2000-scan-20260921/scan-studies/20260921-195030-ed11d92c/cases/case-0008-attempt-2-f1aa6530/result-one-particle-state.npz"
+},
+{
+"set": "source://cluster/benchmarks/lutein-m2000-scan-20260921/scan-studies/20260921-195030-ed11d92c/cases/case-0010/result-one-particle-state.npz"
+},
+{
+"set": "source://cluster/benchmarks/lutein-four-paths-20260921/representative-studies/20260921-202029-00f2db1e/cases/case-0001-attempt-2-17a75460/result-one-particle-state.npz"
+},
+{
+"set": "source://cluster/benchmarks/lutein-m2000-scan-20260921/scan-studies/20260921-195030-ed11d92c/cases/case-0010/result-one-particle-state.npz"
+},
+{
+"set": "source://cluster/benchmarks/lutein-m2000-scan-20260921/scan-studies/20260921-195030-ed11d92c/cases/case-0016/result-one-particle-state.npz"
+},
+{
+"set": "source://cluster/benchmarks/lutein-four-paths-20260921/representative-studies/20260921-202029-7048e977/cases/case-0001-attempt-2-f24dc6fc/result-one-particle-state.npz"
+},
+{
+"set": "source://cluster/benchmarks/lutein-m2000-scan-20260921/scan-studies/20260921-195030-ed11d92c/cases/case-0016/result-one-particle-state.npz"
+},
+{
+"set": "source://cluster/benchmarks/lutein-four-paths-20260921/representative-studies/20260921-202029-7048e977/cases/case-0001-attempt-2-f24dc6fc/result-one-particle-state.npz"
+},
+null
+]
+},
+{
+"paths": [
+[
+"request",
+"initial_state",
+"source_artifact",
+"size_bytes"
+]
+],
+"values": [
+null,
+{
+"set": 25993812
+},
+{
+"set": 25993296
+},
+{
+"set": 25993812
+},
+{
+"set": 25993121
+},
+{
+"set": 25993320
+},
+{
+"set": 25993121
+},
+{
+"set": 25994016
+},
+{
+"set": 25993320
+},
+{
+"set": 25994016
+},
+{
+"set": 25993320
+},
+null,
+{
+"set": 25995029
+},
+{
+"set": 25993320
+},
+{
+"set": 25995261
+},
+{
+"set": 25995122
+},
+{
+"set": 25993320
+},
+{
+"set": 25995122
+},
+{
+"set": 25994231
+},
+{
+"set": 25996222
+},
+{
+"set": 25994231
+},
+{
+"set": 25996222
+},
+null
+]
+},
+{
+"paths": [
+[
+"request",
+"initial_state",
+"source_artifact",
+"mime_type"
+]
+],
+"values": [
+null,
+{
+"set": "application/x-npz"
+},
+{
+"set": "application/x-npz"
+},
+{
+"set": "application/x-npz"
+},
+{
+"set": "application/x-npz"
+},
+{
+"set": "application/x-npz"
+},
+{
+"set": "application/x-npz"
+},
+{
+"set": "application/x-npz"
+},
+{
+"set": "application/x-npz"
+},
+{
+"set": "application/x-npz"
+},
+{
+"set": "application/x-npz"
+},
+null,
+{
+"set": "application/x-npz"
+},
+{
+"set": "application/x-npz"
+},
+{
+"set": "application/x-npz"
+},
+{
+"set": "application/x-npz"
+},
+{
+"set": "application/x-npz"
+},
+{
+"set": "application/x-npz"
+},
+{
+"set": "application/x-npz"
+},
+{
+"set": "application/x-npz"
+},
+{
+"set": "application/x-npz"
+},
+{
+"set": "application/x-npz"
+},
+null
+]
+},
+{
+"paths": [
+[
+"request",
+"initial_state",
+"source_artifact",
+"description"
+]
+],
+"values": [
+null,
+{
+"set": "Reusable AO reference 1RDM for compatible molecular continuation calculations"
+},
+{
+"set": "Reusable AO reference 1RDM for compatible molecular continuation calculations"
+},
+{
+"set": "Reusable AO reference 1RDM for compatible molecular continuation calculations"
+},
+{
+"set": "Reusable AO reference 1RDM for compatible molecular continuation calculations"
+},
+{
+"set": "Reusable AO reference 1RDM for compatible molecular continuation calculations"
+},
+{
+"set": "Reusable AO reference 1RDM for compatible molecular continuation calculations"
+},
+{
+"set": "Reusable AO reference 1RDM for compatible molecular continuation calculations"
+},
+{
+"set": "Reusable AO reference 1RDM for compatible molecular continuation calculations"
+},
+{
+"set": "Reusable AO reference 1RDM for compatible molecular continuation calculations"
+},
+{
+"set": "Reusable AO reference 1RDM for compatible molecular continuation calculations"
+},
+null,
+{
+"set": "Reusable AO reference 1RDM for compatible molecular continuation calculations"
+},
+{
+"set": "Reusable AO reference 1RDM for compatible molecular continuation calculations"
+},
+{
+"set": "Reusable AO reference 1RDM for compatible molecular continuation calculations"
+},
+{
+"set": "Reusable AO reference 1RDM for compatible molecular continuation calculations"
+},
+{
+"set": "Reusable AO reference 1RDM for compatible molecular continuation calculations"
+},
+{
+"set": "Reusable AO reference 1RDM for compatible molecular continuation calculations"
+},
+{
+"set": "Reusable AO reference 1RDM for compatible molecular continuation calculations"
+},
+{
+"set": "Reusable AO reference 1RDM for compatible molecular continuation calculations"
+},
+{
+"set": "Reusable AO reference 1RDM for compatible molecular continuation calculations"
+},
+{
+"set": "Reusable AO reference 1RDM for compatible molecular continuation calculations"
+},
+null
+]
+},
+{
+"paths": [
+[
+"request",
+"solver",
+"options",
+"orbital_restart_manifest"
+]
+],
+"values": [
+null,
+{
+"set": "source://cluster/benchmarks/lutein-m2000-scan-20260921/scan-studies/20260921-195030-ed11d92c/cases/case-0017/artifact-block2-mps-manifest.json"
+},
+{
+"set": "source://cluster/benchmarks/lutein-four-paths-20260921/representative-studies/20260921-202020-5cab2190/cases/case-0001-attempt-2-df89f903/artifact-block2-mps-manifest.json"
+},
+{
+"set": "source://cluster/benchmarks/lutein-m2000-scan-20260921/scan-studies/20260921-195030-ed11d92c/cases/case-0017/artifact-block2-mps-manifest.json"
+},
+{
+"set": "source://cluster/benchmarks/lutein-m2000-scan-20260921/scan-studies/20260921-195030-ed11d92c/cases/case-0011/artifact-block2-mps-manifest.json"
+},
+{
+"set": "source://cluster/benchmarks/lutein-four-paths-20260921/representative-studies/20260921-202029-00f2db1e/cases/case-0001-attempt-2-17a75460/artifact-block2-mps-manifest.json"
+},
+{
+"set": "source://cluster/benchmarks/lutein-m2000-scan-20260921/scan-studies/20260921-195030-ed11d92c/cases/case-0011/artifact-block2-mps-manifest.json"
+},
+{
+"set": "source://cluster/benchmarks/lutein-m2000-scan-20260921/scan-studies/20260921-195030-ed11d92c/cases/case-0005/artifact-block2-mps-manifest.json"
+},
+{
+"set": "source://cluster/benchmarks/lutein-four-paths-20260921/representative-studies/20260921-202029-00f2db1e/cases/case-0001-attempt-2-17a75460/artifact-block2-mps-manifest.json"
+},
+{
+"set": "source://cluster/benchmarks/lutein-m2000-scan-20260921/scan-studies/20260921-195030-ed11d92c/cases/case-0005/artifact-block2-mps-manifest.json"
+},
+{
+"set": "source://cluster/benchmarks/lutein-four-paths-20260921/representative-studies/20260921-202029-00f2db1e/cases/case-0001-attempt-2-17a75460/artifact-block2-mps-manifest.json"
+},
+null,
+{
+"set": "source://cluster/benchmarks/lutein-m2000-scan-20260921/scan-studies/20260921-195030-ed11d92c/cases/case-0004/artifact-block2-mps-manifest.json"
+},
+{
+"set": "source://cluster/benchmarks/lutein-four-paths-20260921/representative-studies/20260921-202029-00f2db1e/cases/case-0001-attempt-2-17a75460/artifact-block2-mps-manifest.json"
+},
+{
+"set": "source://cluster/benchmarks/lutein-m2000-scan-20260921/scan-studies/20260921-195030-ed11d92c/cases/case-0008-attempt-2-f1aa6530/artifact-block2-mps-manifest.json"
+},
+{
+"set": "source://cluster/benchmarks/lutein-m2000-scan-20260921/scan-studies/20260921-195030-ed11d92c/cases/case-0010/artifact-block2-mps-manifest.json"
+},
+{
+"set": "source://cluster/benchmarks/lutein-four-paths-20260921/representative-studies/20260921-202029-00f2db1e/cases/case-0001-attempt-2-17a75460/artifact-block2-mps-manifest.json"
+},
+{
+"set": "source://cluster/benchmarks/lutein-m2000-scan-20260921/scan-studies/20260921-195030-ed11d92c/cases/case-0010/artifact-block2-mps-manifest.json"
+},
+{
+"set": "source://cluster/benchmarks/lutein-m2000-scan-20260921/scan-studies/20260921-195030-ed11d92c/cases/case-0016/artifact-block2-mps-manifest.json"
+},
+{
+"set": "source://cluster/benchmarks/lutein-four-paths-20260921/representative-studies/20260921-202029-7048e977/cases/case-0001-attempt-2-f24dc6fc/artifact-block2-mps-manifest.json"
+},
+{
+"set": "source://cluster/benchmarks/lutein-m2000-scan-20260921/scan-studies/20260921-195030-ed11d92c/cases/case-0016/artifact-block2-mps-manifest.json"
+},
+{
+"set": "source://cluster/benchmarks/lutein-four-paths-20260921/representative-studies/20260921-202029-7048e977/cases/case-0001-attempt-2-f24dc6fc/artifact-block2-mps-manifest.json"
+},
+null
+]
+},
+{
+"paths": [
+[
+"request",
+"solver",
+"options",
+"orbital_restart_provenance",
+"source_study_id"
+]
+],
+"values": [
+null,
+{
+"set": "20260921-195030-ed11d92c"
+},
+{
+"set": "20260921-202020-5cab2190"
+},
+{
+"set": "20260921-195030-ed11d92c"
+},
+{
+"set": "20260921-195030-ed11d92c"
+},
+{
+"set": "20260921-202029-00f2db1e"
+},
+{
+"set": "20260921-195030-ed11d92c"
+},
+{
+"set": "20260921-195030-ed11d92c"
+},
+{
+"set": "20260921-202029-00f2db1e"
+},
+{
+"set": "20260921-195030-ed11d92c"
+},
+{
+"set": "20260921-202029-00f2db1e"
+},
+null,
+{
+"set": "20260921-195030-ed11d92c"
+},
+{
+"set": "20260921-202029-00f2db1e"
+},
+{
+"set": "20260921-195030-ed11d92c"
+},
+{
+"set": "20260921-195030-ed11d92c"
+},
+{
+"set": "20260921-202029-00f2db1e"
+},
+{
+"set": "20260921-195030-ed11d92c"
+},
+{
+"set": "20260921-195030-ed11d92c"
+},
+{
+"set": "20260921-202029-7048e977"
+},
+{
+"set": "20260921-195030-ed11d92c"
+},
+{
+"set": "20260921-202029-7048e977"
+},
+null
+]
+},
+{
+"paths": [
+[
+"request",
+"solver",
+"options",
+"orbital_restart_provenance",
+"source_run_id"
+]
+],
+"values": [
+null,
+{
+"set": "case-0017"
+},
+{
+"set": "case-0001-attempt-2-df89f903"
+},
+{
+"set": "case-0017"
+},
+{
+"set": "case-0011"
+},
+{
+"set": "case-0001-attempt-2-17a75460"
+},
+{
+"set": "case-0011"
+},
+{
+"set": "case-0005"
+},
+{
+"set": "case-0001-attempt-2-17a75460"
+},
+{
+"set": "case-0005"
+},
+{
+"set": "case-0001-attempt-2-17a75460"
+},
+null,
+{
+"set": "case-0004"
+},
+{
+"set": "case-0001-attempt-2-17a75460"
+},
+{
+"set": "case-0008-attempt-2-f1aa6530"
+},
+{
+"set": "case-0010"
+},
+{
+"set": "case-0001-attempt-2-17a75460"
+},
+{
+"set": "case-0010"
+},
+{
+"set": "case-0016"
+},
+{
+"set": "case-0001-attempt-2-f24dc6fc"
+},
+{
+"set": "case-0016"
+},
+{
+"set": "case-0001-attempt-2-f24dc6fc"
+},
+null
+]
+},
+{
+"paths": [
+[
+"request",
+"solver",
+"options",
+"orbital_restart_provenance",
+"source_geometry_index"
+]
+],
+"values": [
+null,
+{
+"set": 3
+},
+{
+"set": 1
+},
+{
+"set": 3
+},
+{
+"set": 6
+},
+null,
+{
+"set": 6
+},
+{
+"set": 9
+},
+null,
+{
+"set": 9
+},
+null,
+null,
+{
+"set": 14
+},
+null,
+{
+"set": 16
+},
+{
+"set": 17
+},
+null,
+{
+"set": 17
+},
+{
+"set": 20
+},
+{
+"set": 23
+},
+{
+"set": 20
+},
+{
+"set": 23
+},
+null
+]
+},
+{
+"paths": [
+[
+"request",
+"solver",
+"options",
+"orbital_restart_provenance",
+"target_geometry_index"
+]
+],
+"values": [
+null,
+{
+"set": 2
+},
+null,
+{
+"set": 4
+},
+{
+"set": 5
+},
+null,
+{
+"set": 7
+},
+{
+"set": 8
+},
+null,
+{
+"set": 10
+},
+{
+"set": 11
+},
+null,
+{
+"set": 13
+},
+null,
+{
+"set": 15
+},
+null,
+null,
+{
+"set": 18
+},
+{
+"set": 19
+},
+null,
+{
+"set": 21
+},
+{
+"set": 22
+},
+null
+]
+},
+{
+"paths": [
+[
+"request",
+"solver",
+"options",
+"orbital_restart_provenance",
+"purpose"
+]
+],
+"values": [
+null,
+{
+"set": "complete_frozen42_ground_state_scan_with_target_scf_core"
+},
+{
+"set": "recursive_bisection_level2"
+},
+{
+"set": "complete_frozen42_ground_state_scan_with_target_scf_core"
+},
+{
+"set": "complete_frozen42_ground_state_scan_with_target_scf_core"
+},
+{
+"set": "bisection_midpoint"
+},
+{
+"set": "complete_frozen42_ground_state_scan_with_target_scf_core"
+},
+{
+"set": "complete_frozen42_ground_state_scan_with_target_scf_core"
+},
+{
+"set": "recursive_bisection_level2"
+},
+{
+"set": "complete_frozen42_ground_state_scan_with_target_scf_core"
+},
+{
+"set": "complete_frozen42_ground_state_scan_with_target_scf_core"
+},
+null,
+{
+"set": "complete_frozen42_ground_state_scan_with_target_scf_core"
+},
+{
+"set": "recursive_bisection_level2"
+},
+{
+"set": "complete_frozen42_ground_state_scan_with_target_scf_core"
+},
+{
+"set": "remaining_scan_nearest_completed"
+},
+{
+"set": "bisection_midpoint"
+},
+{
+"set": "complete_frozen42_ground_state_scan_with_target_scf_core"
+},
+{
+"set": "complete_frozen42_ground_state_scan_with_target_scf_core"
+},
+{
+"set": "recursive_bisection_level2"
+},
+{
+"set": "complete_frozen42_ground_state_scan_with_target_scf_core"
+},
+{
+"set": "complete_frozen42_ground_state_scan_with_target_scf_core"
+},
+null
+]
+},
+{
+"paths": [
+[
+"request",
+"atom"
+]
+],
+"values": [
+null,
+{
+"set": "C 12.65691700 -0.49730000 0.70458100\nC 13.93669300 0.15280100 0.29188400\nC 13.84120100 1.58526300 0.00822200\nC 12.76613600 1.91035300 -0.93490000\nC 11.59143400 1.07242000 -0.90174400\nC 11.52517600 -0.07211700 -0.16180400\nC 10.39494600 -0.86435300 -0.14072500\nC 9.08751300 -0.52042600 -0.09023800\nC 7.96644200 -1.29483200 -0.15180900\nC 6.69327200 -0.72729400 -0.05900300\nC 5.48155600 -1.26107800 -0.12095100\nC 4.24333400 -0.64663200 -0.02370800\nC 3.00226400 -1.13775700 -0.08232500\nC 1.86903700 -0.28841600 0.04760700\nC 0.59276200 -0.57370200 0.01748500\nC 12.32223800 -0.10176800 2.09906900\nC 12.85872900 -1.96929600 0.65920500\nC 10.49862300 1.52407700 -1.71740800\nC 8.11252000 -2.71480800 -0.32645700\nC 2.73033900 -2.53725100 -0.27809200\nO 15.08218700 2.13669400 -0.51719300\nC -12.10174900 -0.18633200 -1.22231300\nC -13.37591700 -0.96615800 -1.24213700\nC -14.32931400 -0.59554300 -0.18713700\nC -13.70798200 -0.33440300 1.08337400\nC -12.41364500 -0.13090700 1.26621100\nC -11.47397100 -0.27679700 0.15157200\nC -10.31119800 0.56110300 0.26490500\nC -9.01762300 0.21895300 0.20615400\nC -7.88995300 0.99101700 0.30808100\nC -6.61920300 0.42362600 0.21714000\nC -5.40700100 0.95699400 0.28304600\nC -4.16937900 0.34368300 0.18587600\nC -2.92653900 0.83601100 0.24596700\nC -1.79509100 -0.01158500 0.11642300\nC -0.51750900 0.27438900 0.14696800\nC -12.38490100 1.23353300 -1.54380800\nC -11.16932900 -0.73911100 -2.23399500\nC -11.83575200 0.20966100 2.53419100\nC -8.04422200 2.40491300 0.51200600\nC -2.65767600 2.23582500 0.44287400\nO -15.38671100 -1.58159100 -0.01550000\nH 14.32969200 -0.32555700 -0.59936900\nH 14.70458700 -0.00866400 1.03946200\nH 13.66731100 2.11501400 0.94024900\nH 13.18179700 1.87665400 -1.94024400\nH 12.48463500 2.94936800 -0.79291500\nH 10.57427700 -1.90898200 -0.21595900\nH 8.91528300 0.52211100 0.03974900\nH 6.69839500 0.32906200 0.08563500\nH 5.43544600 -2.31288900 -0.26754500\nH 4.32338500 0.40616800 0.12396600\nH 2.10975500 0.73832900 0.19141600\nH 0.32413200 -1.59443300 -0.12531700\nH 11.40594400 -0.55088800 2.44636600\nH 12.19546100 0.96238500 2.20861600\nH 13.08419800 -0.39001900 2.80387800\nH 13.76097500 -2.27449200 1.16569700\nH 12.93847800 -2.34186600 -0.34774700\nH 12.06842000 -2.52604800 1.13451400\nH 9.82913700 2.15031500 -1.14791100\nH 9.90468300 0.72852700 -2.14127300\nH 10.80888400 2.11728500 -2.56569400\nH 7.19705900 -3.28344500 -0.32587500\nH 8.71833000 -3.15278300 0.45369700\nH 8.59638400 -2.94856000 -1.26361000\nH 2.16431200 -2.94999000 0.54388100\nH 3.59827500 -3.16948200 -0.37387700\nH 2.15165500 -2.70702800 -1.17401600\nH 15.73903600 1.95047200 0.15308300\nH -13.16399700 -2.02454900 -1.13794600\nH -13.85858100 -0.88529300 -2.20793900\nH -14.83774700 0.32407900 -0.47418700\nH -14.38942300 -0.31032300 1.89269800\nH -11.15880800 -1.31920200 0.27775500\nH -10.54366100 1.58565300 0.40717900\nH -8.84887100 -0.82238100 0.05684100\nH -6.62467300 -0.63207500 0.06725200\nH -5.36231000 2.00861600 0.43208700\nH -4.24795400 -0.70892900 0.03678600\nH -2.03422500 -1.03873500 -0.02775300\nH -0.24972400 1.29516500 0.29007600\nH -12.94666600 1.34831000 -2.45654900\nH -11.49325200 1.82411800 -1.67650700\nH -12.95838400 1.71895900 -0.77114500\nH -10.21767300 -0.23220000 -2.23656200\nH -11.55705400 -0.66353900 -3.23617400\nH -10.95222200 -1.78180000 -2.07282600\nH -12.49694700 0.07143800 3.37569000\nH -11.53766400 1.24753700 2.55744000\nH -10.95483300 -0.37335400 2.75569900\nH -8.58426600 2.61662800 1.42371800\nH -8.60287300 2.86262400 -0.29182200\nH -7.12956700 2.97031200 0.58303400\nH -2.09226400 2.65067500 -0.37858800\nH -2.07916000 2.40648300 1.33885700\nH -3.52687300 2.86622400 0.53911800\nH -15.78591500 -1.66175800 -0.88168600"
+},
+{
+"set": "C 12.64596900 -0.50386100 0.71685100\nC 13.93967300 0.12705200 0.31817400\nC 13.86746500 1.56001000 0.02956300\nC 12.80672800 1.89938100 -0.92481100\nC 11.62105300 1.07616700 -0.90498100\nC 11.53398900 -0.06873300 -0.16968600\nC 10.39692900 -0.85285000 -0.16956600\nC 9.09486000 -0.49986900 -0.11522800\nC 7.96458300 -1.26536700 -0.18833200\nC 6.70092000 -0.69184300 -0.08988200\nC 5.48000800 -1.21936700 -0.14917700\nC 4.25213900 -0.60315200 -0.04719500\nC 3.01003100 -1.12426400 -0.10665700\nC 1.87171200 -0.30489800 0.02325700\nC 0.58611400 -0.57968100 -0.00237200\nC 12.29617200 -0.09496700 2.10365300\nC 12.82761000 -1.97865000 0.68371400\nC 10.54026200 1.54410200 -1.72791100\nC 8.10515300 -2.68432600 -0.37964600\nC 2.84532900 -2.54010900 -0.30649400\nO 15.12167100 2.09185100 -0.48470500\nC -12.11692400 -0.17935700 -1.20381200\nC -13.39771800 -0.94838100 -1.21886700\nC -14.34244300 -0.57232700 -0.15801000\nC -13.71229400 -0.31961300 1.10986300\nC -12.41533600 -0.12754900 1.28641100\nC -11.48278200 -0.27850800 0.16648900\nC -10.31218000 0.54940400 0.27603000\nC -9.02265100 0.19708600 0.21172100\nC -7.88628900 0.96053800 0.31019800\nC -6.62487200 0.38620800 0.21389500\nC -5.40371600 0.91267900 0.27626400\nC -4.17594300 0.29667600 0.17436000\nC -2.93279100 0.81829200 0.23583800\nC -1.79582900 0.00035800 0.10615800\nC -0.50904700 0.27580700 0.13229300\nC -12.38985900 1.24360500 -1.52043700\nC -11.19459300 -0.73751500 -2.22179400\nC -11.82802100 0.20462800 2.55229600\nC -8.03289300 2.37564100 0.51670400\nC -2.77020200 2.23418700 0.43749000\nO -15.40727100 -1.54977800 0.01677100\nH 14.33662600 -0.35951800 -0.56681200\nH 14.69593700 -0.04290500 1.07564600\nH 13.69227500 2.09455200 0.95862000\nH 13.23211800 1.86022500 -1.92578500\nH 12.53745300 2.94183700 -0.78504600\nH 10.57242100 -1.89572200 -0.27515400\nH 8.93046900 0.54241700 0.02733500\nH 6.70928200 0.36395500 0.05872900\nH 5.42629600 -2.27174100 -0.29767100\nH 4.31797600 0.44900000 0.10140900\nH 2.10086400 0.72614500 0.16865300\nH 0.30581700 -1.59621400 -0.14545900\nH 11.36902400 -0.52980700 2.44014600\nH 12.18169100 0.97142800 2.20460400\nH 13.04387200 -0.38847000 2.82144200\nH 13.71392800 -2.29355200 1.21187200\nH 12.92464700 -2.35821300 -0.31910900\nH 12.01846400 -2.52089700 1.14394800\nH 9.87440200 2.17624000 -1.16080800\nH 9.93918900 0.75738000 -2.15821400\nH 10.86441100 2.13578700 -2.57192900\nH 7.18604300 -3.24654000 -0.40345200\nH 8.69403600 -3.13538400 0.40586800\nH 8.60404100 -2.90949000 -1.31093500\nH 1.82816000 -2.89417300 -0.34035300\nH 3.31909900 -3.10951600 0.47990400\nH 3.29105600 -2.86344700 -1.23593700\nH 15.76896800 1.89746400 0.19249800\nH -13.19420200 -2.00877200 -1.11832500\nH -13.88470200 -0.86110200 -2.18193600\nH -14.84452800 0.35229000 -0.44014500\nH -14.38928600 -0.29179000 1.92279500\nH -11.17581200 -1.32385700 0.28844500\nH -10.53621600 1.57558600 0.42065500\nH -8.86211400 -0.84521800 0.06045300\nH -6.63435200 -0.66920900 0.06233600\nH -5.35036700 1.96486300 0.42696400\nH -4.24116800 -0.75511800 0.02386900\nH -2.02358900 -1.03096400 -0.03983100\nH -0.22951400 1.29236500 0.27572500\nH -12.95556900 1.36529800 -2.42983900\nH -11.49400500 1.82699000 -1.65661400\nH -12.95505300 1.73197900 -0.74353700\nH -10.23865200 -0.23877600 -2.22806200\nH -11.58686900 -0.65603800 -3.22173500\nH -10.98560600 -1.78244000 -2.06441800\nH -12.48641000 0.07095600 3.39672300\nH -11.51971900 1.23950000 2.57643200\nH -10.95177300 -0.38746000 2.76817500\nH -8.56869500 2.58864100 1.43049600\nH -8.59138600 2.83713500 -0.28493000\nH -7.11489100 2.93585200 0.58560900\nH -1.75335600 2.58888000 0.47525600\nH -3.21925400 2.55657900 1.36565600\nH -3.24154500 2.80385300 -0.35016100\nH -15.81165400 -1.62446500 -0.84750300"
+},
+{
+"set": "C 12.63822800 -0.50292700 0.72738600\nC 13.93754000 0.12110700 0.33615200\nC 13.87344300 1.55335800 0.04184800\nC 12.82031900 1.89457600 -0.92037700\nC 11.63117600 1.07587800 -0.90595800\nC 11.53585300 -0.06661300 -0.17028000\nC 10.39591000 -0.84919500 -0.17811700\nC 9.09716100 -0.49440200 -0.12344300\nC 7.96222800 -1.25876500 -0.20001100\nC 6.70420600 -0.68526900 -0.10143100\nC 5.47743400 -1.21296100 -0.16005700\nC 4.25631800 -0.59830900 -0.05817400\nC 3.00688900 -1.11978400 -0.11655000\nC 1.87583200 -0.30333600 0.01309400\nC 0.58361500 -0.57813300 -0.01052800\nC 12.27906400 -0.08675800 2.10957800\nC 12.81337500 -1.97859700 0.70177300\nC 10.55623600 1.54744600 -1.73478600\nC 8.10506400 -2.67745000 -0.39457400\nC 2.84818800 -2.53638000 -0.31552600\nO 15.13334900 2.07770600 -0.46620000\nC -12.12064200 -0.17972700 -1.19846900\nC -13.40335800 -0.94565300 -1.21018400\nC -14.34457800 -0.56693900 -0.14717000\nC -13.71071500 -0.31541900 1.11909100\nC -12.41284800 -0.12665500 1.29245100\nC -11.48341500 -0.28007300 0.17026800\nC -10.31028900 0.54513000 0.27697600\nC -9.02323600 0.19081400 0.21161700\nC -7.88281100 0.95352100 0.30771200\nC -6.62663700 0.37917900 0.21097000\nC -5.40003100 0.90589100 0.27135600\nC -4.17855600 0.29125800 0.16932500\nC -2.92849800 0.81320800 0.22882700\nC -1.79859100 -0.00193700 0.09950300\nC -0.50521800 0.27359700 0.12353500\nC -12.39096700 1.24377000 -1.51491900\nC -11.20221400 -0.74042400 -2.21858100\nC -11.82167900 0.20422600 2.55687400\nC -8.03096700 2.36918800 0.51243900\nC -2.77146400 2.23006200 0.42861500\nO -15.41136800 -1.54172300 0.03050600\nH 14.33896300 -0.37036100 -0.54408000\nH 14.68738000 -0.04928100 1.09987500\nH 13.69479300 2.09189300 0.96794100\nH 13.25172900 1.85072300 -1.91851900\nH 12.55456000 2.93847500 -0.78506800\nH 10.57221900 -1.89085300 -0.29487400\nH 8.93372900 0.54770900 0.02173900\nH 6.71108700 0.37051200 0.04725400\nH 5.42660100 -2.26565500 -0.30786100\nH 4.31946000 0.45413700 0.08972900\nH 2.10192500 0.72864500 0.15701000\nH 0.30696200 -1.59597700 -0.15196600\nH 11.34723800 -0.51602200 2.44026000\nH 12.16857200 0.98055000 2.20521100\nH 13.01957000 -0.38062100 2.83464000\nH 13.69245300 -2.29543500 1.24074400\nH 12.91963200 -2.36256100 -0.29844200\nH 11.99656300 -2.51515500 1.15512400\nH 9.89090500 2.18342500 -1.17143300\nH 9.95312100 0.76280900 -2.16604400\nH 10.88698600 2.13592300 -2.57841500\nH 7.18624800 -3.23971300 -0.42725700\nH 8.68794300 -3.13007100 0.39442300\nH 8.61101300 -2.89987600 -1.32264600\nH 1.83224700 -2.89379800 -0.35194500\nH 3.32190400 -3.10289400 0.47297000\nH 3.29776600 -2.85889200 -1.24338500\nH 15.77537400 1.88278200 0.21584800\nH -13.20219700 -2.00650600 -1.10978300\nH -13.89246100 -0.85750100 -2.17209900\nH -14.84506300 0.35882900 -0.42836700\nH -14.38568000 -0.28559900 1.93363600\nH -11.17869600 -1.32613400 0.29169000\nH -10.53279000 1.57194300 0.42044800\nH -8.86353900 -0.85176800 0.06168800\nH -6.63477500 -0.67642200 0.06081000\nH -5.34927600 1.95848300 0.42063800\nH -4.24139100 -0.76090300 0.02023500\nH -2.02332100 -1.03420500 -0.04479200\nH -0.22932200 1.29147000 0.26521400\nH -12.95879300 1.36648800 -2.42286400\nH -11.49407300 1.82492700 -1.65373300\nH -12.95291900 1.73381300 -0.73671700\nH -10.24502800 -0.24412700 -2.22723400\nH -11.59668500 -0.65811500 -3.21759000\nH -10.99551900 -1.78585300 -2.06152500\nH -12.47866200 0.07320200 3.40280900\nH -11.50981700 1.23805900 2.57983800\nH -10.94698600 -0.39074400 2.77111300\nH -8.56642300 2.58277300 1.42622000\nH -8.59000200 2.82889100 -0.28975900\nH -7.11336100 2.93019700 0.58022000\nH -1.75577500 2.58812900 0.46660500\nH -3.22236700 2.55194400 1.35602600\nH -3.24430500 2.79657000 -0.36037400\nH -15.81806700 -1.61564300 -0.83274800"
+},
+{
+"set": "C 12.63361100 -0.50239600 0.73383200\nC 13.93703600 0.11633700 0.34782100\nC 13.87910800 1.54803000 0.04928000\nC 12.83148100 1.89062900 -0.91852800\nC 11.63956700 1.07557000 -0.90745000\nC 11.53813700 -0.06463900 -0.17134700\nC 10.39523100 -0.84571000 -0.18392500\nC 9.09969300 -0.48907200 -0.12849900\nC 7.96023000 -1.25249200 -0.20660700\nC 6.70758700 -0.67880300 -0.10793600\nC 5.47511600 -1.20660700 -0.16588400\nC 4.26049100 -0.59329700 -0.06423600\nC 3.00374900 -1.11514900 -0.12174100\nC 1.87996700 -0.30164500 0.00732800\nC 0.58076100 -0.57658900 -0.01522000\nC 12.26832000 -0.08118800 2.11285600\nC 12.80351800 -1.97872300 0.71316300\nC 10.56883900 1.55003800 -1.74033300\nC 8.10493300 -2.67112900 -0.40260500\nC 2.85099700 -2.53255600 -0.31990600\nO 15.14313200 2.06664300 -0.45442600\nC -12.12444200 -0.17918300 -1.19527200\nC -13.40908800 -0.94191700 -1.20467300\nC -14.34727500 -0.56112200 -0.13970900\nC -13.71028200 -0.31149200 1.12535800\nC -12.41160800 -0.12606900 1.29620400\nC -11.48480200 -0.28150500 0.17215500\nC -10.30916000 0.54085600 0.27696300\nC -9.02462100 0.18456700 0.21090400\nC -7.88016700 0.94649500 0.30550800\nC -6.62901900 0.37195200 0.20855100\nC -5.39703200 0.89877000 0.26773900\nC -4.18172200 0.28535500 0.16576400\nC -2.92474500 0.80762800 0.22407200\nC -1.80193800 -0.00463000 0.09524200\nC -0.50159300 0.27111300 0.11813000\nC -12.39191100 1.24504400 -1.51089600\nC -11.20951000 -0.74193100 -2.21739200\nC -11.81714900 0.20266400 2.55961800\nC -8.02968900 2.36260300 0.50913900\nC -2.77341500 2.22535900 0.42276500\nO -15.41611900 -1.53330600 0.03985800\nH 14.34146000 -0.37883300 -0.52894700\nH 14.68225000 -0.05443200 1.11596100\nH 13.69816500 2.08960000 0.97316000\nH 13.26699300 1.84286900 -1.91466700\nH 12.56871200 2.93570400 -0.78675900\nH 10.57186400 -1.88654300 -0.30809000\nH 8.93715400 0.55299100 0.01812700\nH 6.71318900 0.37698400 0.04051500\nH 5.42696200 -2.25958400 -0.31308700\nH 4.32105300 0.45940100 0.08297400\nH 2.10281600 0.73118300 0.15042500\nH 0.30806400 -1.59569000 -0.15579600\nH 11.33303100 -0.50603600 2.43944000\nH 12.16133300 0.98678400 2.20500900\nH 13.00364500 -0.37587300 2.84283800\nH 13.67753500 -2.29732400 1.25926500\nH 12.91563500 -2.36568200 -0.28526000\nH 11.98136800 -2.51103100 1.16188200\nH 9.90439700 2.18926100 -1.17964700\nH 9.96374500 0.76709100 -2.17188300\nH 10.90436300 2.13580000 -2.58391300\nH 7.18647800 -3.23374900 -0.43940700\nH 8.68512800 -3.12410700 0.38808100\nH 8.61420700 -2.89199400 -1.32917200\nH 1.83629600 -2.89350700 -0.35709800\nH 3.32607900 -3.09638300 0.46965600\nH 3.30277700 -2.85376600 -1.24711500\nH 15.78136300 1.87130900 0.23105600\nH -13.21035600 -2.00328800 -1.10492100\nH -13.89984300 -0.85233000 -2.16561200\nH -14.84603300 0.36594300 -0.41969000\nH -14.38357200 -0.28013400 1.94123000\nH -11.18248600 -1.32836200 0.29270300\nH -10.53014300 1.56823100 0.41976000\nH -8.86567900 -0.85821300 0.06182400\nH -6.63598400 -0.68373600 0.05924300\nH -5.34872000 1.95166500 0.41618400\nH -4.24218500 -0.76706500 0.01752500\nH -2.02344000 -1.03773700 -0.04814800\nH -0.22964100 1.29023500 0.25892700\nH -12.96135200 1.36935300 -2.41761500\nH -11.49387500 1.82399500 -1.65152400\nH -12.95099100 1.73634000 -0.73141600\nH -10.25105400 -0.24813100 -2.22777000\nH -11.60573800 -0.65825200 -3.21558900\nH -11.00524400 -1.78795300 -2.06110400\nH -12.47310700 0.07378100 3.40667500\nH -11.50169100 1.23541300 2.58220900\nH -10.94415300 -0.39536700 2.77222900\nH -8.56489500 2.57638600 1.42294900\nH -8.58911600 2.82103400 -0.29343400\nH -7.11242100 2.92427100 0.57619000\nH -1.75893100 2.58692400 0.46075000\nH -3.22581200 2.54603400 1.34982200\nH -3.24811100 2.78913700 -0.36701200\nH -15.82470900 -1.60601200 -0.82260600"
+},
+{
+"set": "C 12.63065200 -0.50169000 0.73835700\nC 13.93737500 0.11320700 0.35721700\nC 13.88411400 1.54438900 0.05518500\nC 12.84123200 1.88768700 -0.91754700\nC 11.64717600 1.07534200 -0.90912900\nC 11.54096000 -0.06239100 -0.17281100\nC 10.39484300 -0.84245600 -0.18867900\nC 9.10268300 -0.48411400 -0.13232400\nC 7.95862000 -1.24695800 -0.21114400\nC 6.71118100 -0.67302900 -0.11234200\nC 5.47318700 -1.20101700 -0.16964600\nC 4.26471700 -0.58888400 -0.06817300\nC 3.00095300 -1.11121400 -0.12495100\nC 1.88414500 -0.30057400 0.00357000\nC 0.57790000 -0.57577600 -0.01826400\nC 12.26010000 -0.07732500 2.11500000\nC 12.79652400 -1.97847200 0.72075300\nC 10.57995600 1.55209200 -1.74555100\nC 8.10516200 -2.66558700 -0.40779000\nC 2.85403400 -2.52940500 -0.32250300\nO 15.15145600 2.05873000 -0.44451800\nC -12.12843800 -0.17825400 -1.19295300\nC -13.41519300 -0.93751700 -1.20035500\nC -14.35050000 -0.55439400 -0.13371700\nC -13.71065700 -0.30682700 1.13031800\nC -12.41116600 -0.12513800 1.29901600\nC -11.48675200 -0.28272500 0.17330800\nC -10.30844600 0.53653600 0.27651200\nC -9.02671900 0.17822900 0.21000200\nC -7.87800100 0.93949000 0.30345200\nC -6.63181100 0.36455000 0.20641900\nC -5.39446000 0.89140500 0.26473800\nC -4.18514000 0.27895300 0.16292200\nC -2.92131600 0.80151100 0.22035300\nC -1.80542500 -0.00803300 0.09212400\nC -0.49806900 0.26798600 0.11428600\nC -12.39265200 1.24674500 -1.50781300\nC -11.21683500 -0.74318700 -2.21682500\nC -11.81366700 0.20154800 2.56154200\nC -8.02878300 2.35590400 0.50623900\nC -2.77540000 2.22001700 0.41825000\nO -15.42167800 -1.52370200 0.04744900\nH 14.34479100 -0.38480000 -0.51655100\nH 14.67853500 -0.05760400 1.12924300\nH 13.70077300 2.08840500 0.97715500\nH 13.28030500 1.83650100 -1.91191100\nH 12.58074300 2.93370600 -0.78904000\nH 10.57188200 -1.88259600 -0.31839200\nH 8.94077200 0.55791000 0.01528300\nH 6.71555800 0.38275900 0.03581500\nH 5.42753800 -2.25422300 -0.31639900\nH 4.32280200 0.46401000 0.07848700\nH 2.10377500 0.73302300 0.14608800\nH 0.30912600 -1.59604500 -0.15831300\nH 11.32197500 -0.49884300 2.43774800\nH 12.15593300 0.99110600 2.20505500\nH 12.99104600 -0.37314400 2.84891000\nH 13.66660400 -2.29865500 1.27218200\nH 12.91314500 -2.36725800 -0.27644600\nH 11.97031900 -2.50774800 1.16561000\nH 9.91634400 2.19424200 -1.18726000\nH 9.97313600 0.77049500 -2.17710300\nH 10.91948000 2.13529600 -2.58925900\nH 7.18714200 -3.22880400 -0.44670000\nH 8.68414500 -3.11834700 0.38384200\nH 8.61623700 -2.88536900 -1.33357600\nH 1.84058200 -2.89392400 -0.35998500\nH 3.33085700 -3.09073800 0.46773500\nH 3.30748800 -2.84908000 -1.24938200\nH 15.78638800 1.86335800 0.24401000\nH -13.21919400 -1.99944900 -1.10116600\nH -13.90734300 -0.84638700 -2.16043300\nH -14.84720100 0.37409200 -0.41263700\nH -14.38248800 -0.27368800 1.94731900\nH -11.18707500 -1.33043300 0.29300500\nH -10.52784400 1.56448400 0.41879100\nH -8.86841600 -0.86470400 0.06159400\nH -6.63773300 -0.69119000 0.05779700\nH -5.34839300 1.94454600 0.41252600\nH -4.24340200 -0.77366600 0.01532900\nH -2.02375400 -1.04189400 -0.05063600\nH -0.23004300 1.28828000 0.25450400\nH -12.96344900 1.37277100 -2.41344200\nH -11.49332300 1.82329000 -1.65004200\nH -12.94894500 1.73940500 -0.72720100\nH -10.25703600 -0.25204600 -2.22865100\nH -11.61452100 -0.65804900 -3.21431800\nH -11.01521800 -1.78982900 -2.06125300\nH -12.46878000 0.07495700 3.40959900\nH -11.49453900 1.23318200 2.58369400\nH -10.94246500 -0.39956500 2.77280400\nH -8.56383600 2.56976700 1.42006000\nH -8.58850600 2.81329400 -0.29665300\nH -7.11181100 2.91814400 0.57276400\nH -1.76205300 2.58485600 0.45623800\nH -3.22913500 2.53936500 1.34506200\nH -3.25184100 2.78136000 -0.37215100\nH -15.83194400 -1.59506700 -0.81433000"
+},
+{
+"set": "C 12.62849100 -0.50095500 0.74245700\nC 13.93823300 0.11086000 0.36651100\nC 13.88888900 1.54146600 0.06085000\nC 12.85081000 1.88466700 -0.91709900\nC 11.65493400 1.07444900 -0.91109500\nC 11.54443400 -0.06017100 -0.17443900\nC 10.39466100 -0.83971500 -0.19288600\nC 9.10623600 -0.47964600 -0.13572600\nC 7.95730800 -1.24214900 -0.21495500\nC 6.71508800 -0.66777900 -0.11633200\nC 5.47158600 -1.19588500 -0.17308100\nC 4.26902300 -0.58458400 -0.07179600\nC 2.99843200 -1.10727800 -0.12790700\nC 1.88827900 -0.29916500 0.00003100\nC 0.57516600 -0.57465500 -0.02117700\nC 12.25254300 -0.07419800 2.11687800\nC 12.79097500 -1.97810200 0.72720400\nC 10.59117500 1.55296400 -1.75130400\nC 8.10565600 -2.66074800 -0.41163600\nC 2.85670300 -2.52613900 -0.32482300\nO 15.15933100 2.05226700 -0.43456200\nC -12.13269400 -0.17723100 -1.19087100\nC -13.42143400 -0.93317000 -1.19642100\nC -14.35390400 -0.54809200 -0.12799800\nC -13.71122300 -0.30273600 1.13503400\nC -12.41094600 -0.12467100 1.30157400\nC -11.48895600 -0.28415700 0.17416300\nC -10.30798800 0.53200000 0.27590000\nC -9.02936500 0.17198900 0.20897900\nC -7.87622000 0.93302900 0.30151400\nC -6.63495700 0.35776300 0.20439800\nC -5.39228000 0.88481500 0.26194500\nC -4.18871200 0.27323500 0.16026700\nC -2.91824800 0.79618700 0.21693600\nC -1.80890600 -0.01086000 0.08920300\nC -0.49468600 0.26546600 0.11068800\nC -12.39387600 1.24858300 -1.50456900\nC -11.22436500 -0.74397500 -2.21666900\nC -11.81039400 0.19967900 2.56326400\nC -8.02853700 2.34961600 0.50355700\nC -2.77744700 2.21540600 0.41411600\nO -15.42726800 -1.51471600 0.05461600\nH 14.34916400 -0.38978900 -0.50409200\nH 14.67521800 -0.05948700 1.14260700\nH 13.70255200 2.08791600 0.98078100\nH 13.29359100 1.82983700 -1.90957900\nH 12.59217300 2.93156300 -0.79231400\nH 10.57228500 -1.87919500 -0.32715700\nH 8.94476300 0.56236300 0.01241600\nH 6.71839800 0.38801600 0.03141600\nH 5.42816100 -2.24929400 -0.31929500\nH 4.32494500 0.46847100 0.07431400\nH 2.10492900 0.73510800 0.14205000\nH 0.31010100 -1.59599400 -0.16073800\nH 11.31168200 -0.49274200 2.43551700\nH 12.15099200 0.99461700 2.20536800\nH 12.97911600 -0.37135100 2.85457900\nH 13.65748000 -2.29968400 1.28342200\nH 12.91182100 -2.36824300 -0.26896500\nH 11.96121300 -2.50494000 1.16833400\nH 9.92829800 2.19818700 -1.19571400\nH 9.98278000 0.77246700 -2.18259100\nH 10.93465700 2.13329300 -2.59534400\nH 7.18807900 -3.22462800 -0.45191900\nH 8.68386300 -3.11294300 0.38082900\nH 8.61810400 -2.87983700 -1.33678700\nH 1.84433700 -2.89375700 -0.36244300\nH 3.33508100 -3.08522900 0.46601000\nH 3.31151200 -2.84449300 -1.25144700\nH 15.79090300 1.85735000 0.25717900\nH -13.22801800 -1.99565000 -1.09804600\nH -13.91498800 -0.84033500 -2.15561300\nH -14.84869200 0.38179100 -0.40565700\nH -14.38156500 -0.26807000 1.95319300\nH -11.19191100 -1.33273400 0.29276000\nH -10.52599300 1.56049000 0.41776300\nH -8.87125100 -0.87101300 0.06115900\nH -6.63978600 -0.69800600 0.05636100\nH -5.34840000 1.93816000 0.40917000\nH -4.24484100 -0.77955200 0.01324400\nH -2.02426700 -1.04539000 -0.05302200\nH -0.23034400 1.28682000 0.25042200\nH -12.96618800 1.37648400 -2.40897900\nH -11.49336400 1.82287600 -1.64840200\nH -12.94731600 1.74232500 -0.72261400\nH -10.26328800 -0.25537600 -2.22984400\nH -11.62353000 -0.65718100 -3.21342700\nH -11.02526500 -1.79124500 -2.06207800\nH -12.46464900 0.07522900 3.41229900\nH -11.48756100 1.23016800 2.58518900\nH -10.94102000 -0.40459000 2.77304200\nH -8.56354600 2.56340200 1.41737200\nH -8.58862200 2.80595500 -0.29962300\nH -7.11197000 2.91260200 0.56965200\nH -1.76518900 2.58335900 0.45205600\nH -3.23237600 2.53347900 1.34073200\nH -3.25556800 2.77448700 -0.37681800\nH -15.83923800 -1.58462700 -0.80647000"
+},
+{
+"set": "C 12.62695900 -0.49983800 0.74592300\nC 13.93938300 0.10983900 0.37558900\nC 13.89305600 1.53981800 0.06624600\nC 12.85983900 1.88209600 -0.91723700\nC 11.66252300 1.07336100 -0.91345000\nC 11.54838300 -0.05766800 -0.17647400\nC 10.39465600 -0.83729200 -0.19694300\nC 9.11027900 -0.47565200 -0.13878800\nC 7.95626400 -1.23818200 -0.21808700\nC 6.71926400 -0.66340200 -0.11955300\nC 5.47028900 -1.19174500 -0.17572200\nC 4.27338300 -0.58111700 -0.07466400\nC 2.99621800 -1.10422200 -0.13015000\nC 1.89234500 -0.29835400 -0.00271600\nC 0.57260500 -0.57411300 -0.02335800\nC 12.24535600 -0.07163700 2.11831700\nC 12.78686500 -1.97724700 0.73216700\nC 10.60208100 1.55314300 -1.75759700\nC 8.10658900 -2.65668100 -0.41456800\nC 2.85926700 -2.52369600 -0.32640500\nO 15.16635500 2.04798300 -0.42447000\nC -12.13713300 -0.17590300 -1.18914300\nC -13.42792800 -0.92838100 -1.19297300\nC -14.35753700 -0.54139700 -0.12274400\nC -13.71204000 -0.29846600 1.13932300\nC -12.41098200 -0.12418500 1.30376600\nC -11.49140600 -0.28555100 0.17467300\nC -10.30766900 0.52734300 0.27507400\nC -9.03246400 0.16573200 0.20787600\nC -7.87460200 0.92685000 0.29966800\nC -6.63833000 0.35122400 0.20256800\nC -5.39028000 0.87854800 0.25947600\nC -4.19230500 0.26767000 0.15799900\nC -2.91537300 0.79102800 0.21402700\nC -1.81225800 -0.01382700 0.08684700\nC -0.49141900 0.26276300 0.10777900\nC -12.39511900 1.25078900 -1.50151900\nC -11.23211900 -0.74440700 -2.21690200\nC -11.80739200 0.19759100 2.56466400\nC -8.02860100 2.34349600 0.50102600\nC -2.77927200 2.21085900 0.41053300\nO -15.43315200 -1.50526800 0.06119000\nH 14.35444000 -0.39314300 -0.49170700\nH 14.67206700 -0.05950800 1.15594400\nH 13.70302900 2.08860000 0.98403500\nH 13.30647900 1.82345900 -1.90771600\nH 12.60256900 2.92977500 -0.79659200\nH 10.57319500 -1.87606100 -0.33535400\nH 8.94897600 0.56631600 0.00973600\nH 6.72148900 0.39240800 0.02768700\nH 5.42897900 -2.24532000 -0.32144600\nH 4.32728100 0.47207100 0.07092200\nH 2.10627300 0.73651600 0.13879300\nH 0.31093400 -1.59640100 -0.16247400\nH 11.30191900 -0.48774500 2.43250800\nH 12.14603300 0.99746700 2.20587000\nH 12.96758600 -0.37027500 2.85967100\nH 13.65014800 -2.30002800 1.29268100\nH 12.91178100 -2.36815400 -0.26320200\nH 11.95404000 -2.50236200 1.16957700\nH 9.93983900 2.20148200 -1.20491000\nH 9.99227000 0.77349800 -2.18837400\nH 10.94939400 2.13037200 -2.60214600\nH 7.18954700 -3.22143800 -0.45538400\nH 8.68474300 -3.10805500 0.37835800\nH 8.61977400 -2.87515100 -1.33942800\nH 1.84790600 -2.89417900 -0.36402900\nH 3.33913600 -3.08070100 0.46494200\nH 3.31520700 -2.84087900 -1.25283000\nH 15.79447800 1.85401500 0.27067200\nH -13.23721100 -1.99143400 -1.09553700\nH -13.92284500 -0.83366600 -2.15127600\nH -14.85032700 0.38994800 -0.39904800\nH -14.38091400 -0.26227200 1.95861300\nH -11.19713400 -1.33504100 0.29205300\nH -10.52432600 1.55639200 0.41651300\nH -8.87426000 -0.87728400 0.06060700\nH -6.64205700 -0.70456200 0.05508500\nH -5.34848500 1.93206400 0.40616400\nH -4.24643100 -0.78526000 0.01152200\nH -2.02491700 -1.04894300 -0.05486000\nH -0.23045300 1.28506500 0.24704000\nH -12.96884600 1.38074900 -2.40473900\nH -11.49336500 1.82276100 -1.64680200\nH -12.94572200 1.74555500 -0.71821000\nH -10.26972100 -0.25845700 -2.23133300\nH -11.63271900 -0.65577400 -3.21292200\nH -11.03566400 -1.79234000 -2.06342300\nH -12.46083600 0.07529200 3.41463600\nH -11.48069200 1.22686600 2.58648000\nH -10.93996800 -0.40999400 2.77292900\nH -8.56367100 2.55712200 1.41480200\nH -8.58904000 2.79880100 -0.30244800\nH -7.11248400 2.90729700 0.56679500\nH -1.76800900 2.58164400 0.44847300\nH -3.23532100 2.52779400 1.33694400\nH -3.25886500 2.76787600 -0.38091400\nH -15.84681100 -1.57357400 -0.79921400"
+},
+{
+"set": "C 12.62579200 -0.49835800 0.74931600\nC 13.94076300 0.10956600 0.38482300\nC 13.89708300 1.53886400 0.07170400\nC 12.86875700 1.87984600 -0.91742700\nC 11.67022600 1.07217200 -0.91586500\nC 11.55276900 -0.05491000 -0.17861500\nC 10.39481800 -0.83508300 -0.20093500\nC 9.11472800 -0.47198700 -0.14182200\nC 7.95543400 -1.23484500 -0.22118100\nC 6.72366800 -0.65969200 -0.12268700\nC 5.46921200 -1.18837600 -0.17831500\nC 4.27778600 -0.57830300 -0.07737500\nC 2.99424500 -1.10185000 -0.13229900\nC 1.89633700 -0.29797500 -0.00534200\nC 0.57019600 -0.57399300 -0.02549500\nC 12.23829500 -0.06901500 2.11968400\nC 12.78347000 -1.97597600 0.73680200\nC 10.61310300 1.55292300 -1.76415900\nC 8.10795400 -2.65317700 -0.41739700\nC 2.86172300 -2.52183500 -0.32803600\nO 15.17312500 2.04472400 -0.41417900\nC -12.14177600 -0.17448000 -1.18747500\nC -13.43470300 -0.92334200 -1.18960800\nC -14.36140700 -0.53438100 -0.11757700\nC -13.71308200 -0.29396700 1.14353300\nC -12.41124200 -0.12363300 1.30589200\nC -11.49409600 -0.28695600 0.17512500\nC -10.30750800 0.52255600 0.27420200\nC -9.03596800 0.15942900 0.20675700\nC -7.87314200 0.92089500 0.29788400\nC -6.64192900 0.34490000 0.20079900\nC -5.38844500 0.87257900 0.25711900\nC -4.19594800 0.26226600 0.15582000\nC -2.91268000 0.78604700 0.21125700\nC -1.81551100 -0.01686300 0.08456700\nC -0.48827800 0.25997200 0.10499700\nC -12.39639100 1.25310900 -1.49851200\nC -11.24014300 -0.74481100 -2.21719400\nC -11.80458600 0.19546000 2.56600200\nC -8.02899900 2.33750600 0.49860800\nC -2.78093700 2.20639500 0.40714400\nO -15.43935900 -1.49539400 0.06765400\nH 14.36024000 -0.39566300 -0.47903600\nH 14.66903200 -0.05850100 1.16954900\nH 13.70311700 2.08997800 0.98727100\nH 13.31935100 1.81747400 -1.90582800\nH 12.61252900 2.92821800 -0.80100700\nH 10.57456400 -1.87309000 -0.34321200\nH 8.95333600 0.56989700 0.00703900\nH 6.72476800 0.39611500 0.02412000\nH 5.42993900 -2.24207700 -0.32365400\nH 4.32976900 0.47498800 0.06777000\nH 2.10776500 0.73741400 0.13573200\nH 0.31165900 -1.59712800 -0.16422400\nH 11.29234200 -0.48291100 2.42921500\nH 12.14100400 1.00033800 2.20649400\nH 12.95611500 -0.36913300 2.86471300\nH 13.64364300 -2.29982100 1.30146600\nH 12.91245000 -2.36746900 -0.25782100\nH 11.94778100 -2.49964500 1.17048100\nH 9.95137000 2.20437600 -1.21456200\nH 10.00203600 0.77397600 -2.19435700\nH 10.96424300 2.12693200 -2.60927100\nH 7.19153800 -3.21897900 -0.45853200\nH 8.68630100 -3.10359800 0.37589200\nH 8.62175400 -2.87099600 -1.34204500\nH 1.85128900 -2.89494800 -0.36570900\nH 3.34293000 -3.07698400 0.46375400\nH 3.31871100 -2.83789100 -1.25428700\nH 15.79775100 1.85193800 0.28443500\nH -13.24681300 -1.98698500 -1.09313200\nH -13.93095600 -0.82666400 -2.14702100\nH -14.85210100 0.39846800 -0.39252000\nH -14.38048600 -0.25617200 1.96394600\nH -11.20270800 -1.33738000 0.29128400\nH -10.52284800 1.55217200 0.41523000\nH -8.87743700 -0.88355100 0.06001000\nH -6.64452300 -0.71089100 0.05383300\nH -5.34866700 1.92623500 0.40331100\nH -4.24817300 -0.79078100 0.00983500\nH -2.02569500 -1.05249100 -0.05668300\nH -0.23043100 1.28312100 0.24385300\nH -12.97153500 1.38520800 -2.40052100\nH -11.49333800 1.82264400 -1.64527200\nH -12.94406500 1.74895200 -0.71383200\nH -10.27638800 -0.26160300 -2.23288600\nH -11.64216800 -0.65428900 -3.21246900\nH -11.04643800 -1.79341900 -2.06483500\nH -12.45722300 0.07535500 3.41690600\nH -11.47391500 1.22347100 2.58772900\nH -10.93919300 -0.41553200 2.77274100\nH -8.56417400 2.55088100 1.41234600\nH -8.58985000 2.79176000 -0.30513400\nH -7.11339400 2.90222600 0.56408300\nH -1.77059000 2.57978000 0.44505400\nH -3.23798200 2.52228300 1.33338200\nH -3.26189700 2.76152500 -0.38475200\nH -15.85470200 -1.56203300 -0.79207000"
+},
+{
+"set": "C 12.62498100 -0.49664600 0.75279700\nC 13.94235700 0.11002900 0.39456000\nC 13.90088600 1.53858300 0.07748500\nC 12.87770000 1.87769700 -0.91768700\nC 11.67813900 1.07075300 -0.91834700\nC 11.55760100 -0.05205500 -0.18074800\nC 10.39520800 -0.83312000 -0.20472700\nC 9.11957700 -0.46861500 -0.14476900\nC 7.95482900 -1.23203300 -0.22410800\nC 6.72831800 -0.65647900 -0.12588300\nC 5.46834400 -1.18558300 -0.18105000\nC 4.28226700 -0.57592700 -0.08037700\nC 2.99247000 -1.09993900 -0.13478400\nC 1.90028200 -0.29783000 -0.00832000\nC 0.56791700 -0.57409800 -0.02797300\nC 12.23120500 -0.06657700 2.12112800\nC 12.78088500 -1.97442300 0.74118900\nC 10.62440400 1.55213500 -1.77106100\nC 8.10968600 -2.65017200 -0.41980900\nC 2.86409400 -2.52038900 -0.32985300\nO 15.17960800 2.04260700 -0.40314200\nC -12.14677800 -0.17287500 -1.18574300\nC -13.44182400 -0.91811500 -1.18610500\nC -14.36548000 -0.52731600 -0.11210300\nC -13.71417600 -0.28957300 1.14798600\nC -12.41155400 -0.12323800 1.30811400\nC -11.49698800 -0.28838900 0.17554000\nC -10.30750900 0.51767700 0.27324500\nC -9.03980500 0.15312100 0.20552900\nC -7.87183600 0.91517800 0.29602600\nC -6.64573000 0.33883500 0.19890600\nC -5.38675400 0.86697200 0.25461400\nC -4.19963500 0.25712600 0.15341800\nC -2.91011900 0.78136500 0.20824100\nC -1.81867500 -0.01981400 0.08200600\nC -0.48522500 0.25725200 0.10192100\nC -12.39806900 1.25564300 -1.49521300\nC -11.24866700 -0.74487500 -2.21761200\nC -11.80167600 0.19296900 2.56739100\nC -8.02971700 2.33167200 0.49617100\nC -2.78245900 2.20215000 0.40352900\nO -15.44572500 -1.48549400 0.07447300\nH 14.36674700 -0.39735500 -0.46563000\nH 14.66598200 -0.05637000 1.18389800\nH 13.70242600 2.09206600 0.99065700\nH 13.33250700 1.81136000 -1.90383300\nH 12.62226800 2.92672400 -0.80590900\nH 10.57635400 -1.87034700 -0.35051100\nH 8.95791500 0.57317800 0.00421700\nH 6.72826900 0.39933800 0.02035300\nH 5.43105300 -2.23940300 -0.32588600\nH 4.33242300 0.47745900 0.06427100\nH 2.10939800 0.73802700 0.13229000\nH 0.31229200 -1.59800500 -0.16626800\nH 11.28277400 -0.47851400 2.42566300\nH 12.13573300 1.00298400 2.20744800\nH 12.94447900 -0.36821700 2.86989800\nH 13.63805800 -2.29918200 1.30987700\nH 12.91399000 -2.36625200 -0.25276100\nH 11.94254900 -2.49701000 1.17105900\nH 9.96309700 2.20682900 -1.22484300\nH 10.01217600 0.77373000 -2.20052500\nH 10.97944600 2.12266100 -2.61685000\nH 7.19395000 -3.21712500 -0.46107400\nH 8.68835100 -3.09945600 0.37385800\nH 8.62404800 -2.86744900 -1.34425300\nH 1.85452300 -2.89595100 -0.36749400\nH 3.34655700 -3.07372000 0.46239800\nH 3.32202200 -2.83552000 -1.25591600\nH 15.80054200 1.85135100 0.29917500\nH -13.25675100 -1.98235000 -1.09074300\nH -13.93952600 -0.81935100 -2.14255100\nH -14.85411800 0.40705800 -0.38551000\nH -14.38000500 -0.25023900 1.96960300\nH -11.20851100 -1.33976500 0.29029900\nH -10.52156300 1.54786100 0.41390100\nH -8.88074000 -0.88977700 0.05927100\nH -6.64715100 -0.71694900 0.05242700\nH -5.34895100 1.92074300 0.40032900\nH -4.25003200 -0.79602300 0.00792300\nH -2.02657400 -1.05590100 -0.05877000\nH -0.23027800 1.28117200 0.24034800\nH -12.97469600 1.39001000 -2.39594100\nH -11.49374800 1.82277800 -1.64344400\nH -12.94275700 1.75242600 -0.70905000\nH -10.28356100 -0.26442000 -2.23461300\nH -11.65223000 -0.65230700 -3.21207500\nH -11.05771000 -1.79417500 -2.06654700\nH -12.45343800 0.07510600 3.41927700\nH -11.46685500 1.21964000 2.58907300\nH -10.93842200 -0.42159500 2.77247400\nH -8.56502500 2.54470100 1.40988200\nH -8.59104600 2.78485200 -0.30780700\nH -7.11468500 2.89741100 0.56137200\nH -1.77296200 2.57794500 0.44138700\nH -3.24040500 2.51708400 1.32961000\nH -3.26469500 2.75552300 -0.38877700\nH -15.86286100 -1.55036800 -0.78451700"
+},
+{
+"set": "C 12.62458800 -0.49483300 0.75594100\nC 13.94425400 0.11076200 0.40391000\nC 13.90483700 1.53856700 0.08291900\nC 12.88666600 1.87571900 -0.91814600\nC 11.68616500 1.06933300 -0.92092700\nC 11.56277800 -0.04907000 -0.18303700\nC 10.39576200 -0.83123700 -0.20851000\nC 9.12473200 -0.46531500 -0.14765100\nC 7.95439100 -1.22945100 -0.22691600\nC 6.73316700 -0.65351800 -0.12878100\nC 5.46764600 -1.18315400 -0.18340500\nC 4.28682500 -0.57385800 -0.08283900\nC 2.99086100 -1.09839500 -0.13669200\nC 1.90420100 -0.29788900 -0.01069300\nC 0.56574200 -0.57442000 -0.02988200\nC 12.22464300 -0.06423600 2.12229700\nC 12.77885500 -1.97274200 0.74503400\nC 10.63574700 1.55125600 -1.77802100\nC 8.11169500 -2.64732400 -0.42212200\nC 2.86644800 -2.51924300 -0.33118800\nO 15.18611600 2.04091200 -0.39256400\nC -12.15197200 -0.17124000 -1.18424300\nC -13.44917000 -0.91277700 -1.18293000\nC -14.36982100 -0.52009100 -0.10704800\nC -13.71562000 -0.28504700 1.15206700\nC -12.41223100 -0.12281800 1.31006500\nC -11.50018400 -0.28985300 0.17575800\nC -10.30776600 0.51269100 0.27216900\nC -9.04401000 0.14672900 0.20430400\nC -7.87072500 0.90956100 0.29427400\nC -6.64975500 0.33285200 0.19723100\nC -5.38523800 0.86154200 0.25243100\nC -4.20341100 0.25207800 0.15144700\nC -2.90771600 0.77683900 0.20574100\nC -1.82179900 -0.02276200 0.07997100\nC -0.48225400 0.25454700 0.09941900\nC -12.39982700 1.25821900 -1.49215800\nC -11.25734700 -0.74493800 -2.21819600\nC -11.79919000 0.19043200 2.56855100\nC -8.03073900 2.32589500 0.49381300\nC -2.78401100 2.19802700 0.40039200\nO -15.45240600 -1.47538500 0.08079600\nH 14.37353900 -0.39870000 -0.45261700\nH 14.66327700 -0.05389500 1.19777700\nH 13.70192000 2.09436600 0.99370600\nH 13.34557500 1.80553300 -1.90205900\nH 12.63191900 2.92534200 -0.81092500\nH 10.57839000 -1.86766800 -0.35759300\nH 8.96268200 0.57635400 0.00148000\nH 6.73193600 0.40229000 0.01695200\nH 5.43232300 -2.23706400 -0.32781700\nH 4.33519400 0.47960500 0.06134000\nH 2.11113500 0.73839400 0.12945300\nH 0.31287500 -1.59903700 -0.16775900\nH 11.27382100 -0.47432100 2.42185800\nH 12.13092400 1.00550900 2.20829100\nH 12.93344100 -0.36744000 2.87467500\nH 13.63313800 -2.29839100 1.31754800\nH 12.91594600 -2.36478400 -0.24829300\nH 11.93802000 -2.49437900 1.17117100\nH 9.97488000 2.20916400 -1.23517500\nH 10.02238200 0.77335500 -2.20670700\nH 10.99460800 2.11828100 -2.62450200\nH 7.19667500 -3.21549000 -0.46345600\nH 8.69077600 -3.09543200 0.37187600\nH 8.62657400 -2.86401700 -1.34639900\nH 1.85770300 -2.89713300 -0.36880200\nH 3.35011200 -3.07089200 0.46146200\nH 3.32525500 -2.83346100 -1.25709100\nH 15.80344700 1.85124800 0.31335600\nH -13.26699300 -1.97760700 -1.08865700\nH -13.94823300 -0.81189600 -2.13844300\nH -14.85633100 0.41581900 -0.37897400\nH -14.37993200 -0.24410700 1.97483000\nH -11.21470800 -1.34218900 0.28914200\nH -10.52054000 1.54345800 0.41237700\nH -8.88426300 -0.89605700 0.05856800\nH -6.64995500 -0.72291900 0.05126300\nH -5.34940700 1.91541300 0.39764400\nH -4.25200000 -0.80116000 0.00644100\nH -2.02753500 -1.05926800 -0.06033800\nH -0.23005300 1.27917800 0.23742000\nH -12.97790200 1.39490000 -2.39161000\nH -11.49420700 1.82289000 -1.64184500\nH -12.94150100 1.75597100 -0.70452500\nH -10.29087600 -0.26728400 -2.23644000\nH -11.66236400 -0.65029600 -3.21187100\nH -11.06920200 -1.79492900 -2.06841200\nH -12.45014300 0.07492800 3.42137700\nH -11.46006600 1.21569500 2.59018100\nH -10.93820300 -0.42782300 2.77205500\nH -8.56627300 2.53856400 1.40745000\nH -8.59250700 2.77797300 -0.31045000\nH -7.11631400 2.89270100 0.55881000\nH -1.77534200 2.57615800 0.43820700\nH -3.24284600 2.51209200 1.32629500\nH -3.26745600 2.74968400 -0.39233500\nH -15.87124600 -1.53849300 -0.77749500"
+},
+{
+"set": "C 12.62472700 -0.49296700 0.75892600\nC 13.94654100 0.11170200 0.41293800\nC 13.90901400 1.53878100 0.08817400\nC 12.89564500 1.87396800 -0.91851300\nC 11.69429800 1.06799300 -0.92328400\nC 11.56833000 -0.04599200 -0.18520300\nC 10.39655400 -0.82945000 -0.21199200\nC 9.13018200 -0.46213000 -0.15024600\nC 7.95413300 -1.22715200 -0.22941400\nC 6.73818800 -0.65082600 -0.13143000\nC 5.46707200 -1.18106700 -0.18560500\nC 4.29142700 -0.57204100 -0.08519700\nC 2.98933900 -1.09713100 -0.13858200\nC 1.90806000 -0.29808000 -0.01303600\nC 0.56359300 -0.57489000 -0.03181100\nC 12.21883500 -0.06204500 2.12341100\nC 12.77749000 -1.97098600 0.74848700\nC 10.64708800 1.55040100 -1.78461600\nC 8.11399300 -2.64472300 -0.42413700\nC 2.86873400 -2.51831600 -0.33252000\nO 15.19268300 2.03961400 -0.38236600\nC -12.15744000 -0.16960300 -1.18279100\nC -13.45680300 -0.90739000 -1.17976900\nC -14.37443500 -0.51275800 -0.10201800\nC -13.71733500 -0.28039800 1.15610800\nC -12.41319900 -0.12233200 1.31196400\nC -11.50367800 -0.29130100 0.17592600\nC -10.30830400 0.50767500 0.27100900\nC -9.04857400 0.14032200 0.20301200\nC -7.86985600 0.90407800 0.29248700\nC -6.65403700 0.32699700 0.19551300\nC -5.38393000 0.85632300 0.25021800\nC -4.20732400 0.24715800 0.14941700\nC -2.90548200 0.77247500 0.20320800\nC -1.82495600 -0.02568700 0.07789300\nC -0.47940200 0.25188500 0.09691700\nC -12.40180700 1.26077800 -1.48920900\nC -11.26632200 -0.74505300 -2.21879600\nC -11.79698700 0.18791200 2.56965300\nC -8.03211400 2.32019000 0.49144300\nC -2.78558200 2.19400000 0.39725700\nO -15.45937300 -1.46512600 0.08714600\nH 14.38057700 -0.39971700 -0.44002600\nH 14.66110000 -0.05122200 1.21115200\nH 13.70180500 2.09679500 0.99664000\nH 13.35846100 1.80014100 -1.90026000\nH 12.64147900 2.92412400 -0.81564900\nH 10.58073100 -1.86508500 -0.36413000\nH 8.96761100 0.57938700 -0.00100000\nH 6.73574400 0.40496300 0.01380000\nH 5.43369800 -2.23504600 -0.32962100\nH 4.33804500 0.48148100 0.05855200\nH 2.11291700 0.73858900 0.12668000\nH 0.31337300 -1.60016700 -0.16929700\nH 11.26575500 -0.47041900 2.41811500\nH 12.12676500 1.00786000 2.20924300\nH 12.92331500 -0.36682000 2.87920100\nH 13.62903500 -2.29751400 1.32456900\nH 12.91836400 -2.36310100 -0.24428400\nH 11.93433000 -2.49180900 1.17102000\nH 9.98664600 2.21139400 -1.24504000\nH 10.03264700 0.77298000 -2.21256400\nH 11.00963200 2.11403900 -2.63173900\nH 7.19973400 -3.21418100 -0.46546400\nH 8.69359000 -3.09162000 0.37013900\nH 8.62933700 -2.86078400 -1.34828700\nH 1.86077500 -2.89841800 -0.37011900\nH 3.35352300 -3.06836500 0.46051700\nH 3.32838700 -2.83167500 -1.25826100\nH 15.80655700 1.85153800 0.32698700\nH -13.27755700 -1.97280800 -1.08654100\nH -13.95721300 -0.80440800 -2.13435100\nH -14.85879000 0.42468100 -0.37249600\nH -14.38012400 -0.23779700 1.98001300\nH -11.22123600 -1.34458900 0.28797100\nH -10.51978900 1.53903200 0.41076300\nH -8.88802700 -0.90232500 0.05779700\nH -6.65298600 -0.72875200 0.05003900\nH -5.35005600 1.91027300 0.39495000\nH -4.25413700 -0.80615200 0.00488600\nH -2.02863000 -1.06257300 -0.06197000\nH -0.22983900 1.27717700 0.23452000\nH -12.98133300 1.39975700 -2.38737400\nH -11.49487900 1.82294300 -1.64040300\nH -12.94042800 1.75954100 -0.70012400\nH -10.29848400 -0.27023000 -2.23830300\nH -11.67278200 -0.64836400 -3.21168400\nH -11.08102400 -1.79572500 -2.07024400\nH -12.44713900 0.07482600 3.42341300\nH -11.45348100 1.21171900 2.59121600\nH -10.93834400 -0.43410000 2.77159200\nH -8.56789400 2.53243800 1.40500900\nH -8.59436000 2.77114100 -0.31309100\nH -7.11833500 2.88812800 0.55624800\nH -1.77770300 2.57435100 0.43503300\nH -3.24526300 2.50723200 1.32299100\nH -3.27017500 2.74402800 -0.39586500\nH -15.87991200 -1.52649600 -0.77043900"
+},
+{
+"set": "C 12.62523100 -0.49104600 0.76186800\nC 13.94905000 0.11326100 0.42241800\nC 13.91300700 1.53955800 0.09381900\nC 12.90479300 1.87227400 -0.91893300\nC 11.70269700 1.06651200 -0.92575400\nC 11.57428800 -0.04295200 -0.18741900\nC 10.39763300 -0.82782900 -0.21539900\nC 9.13597100 -0.45905300 -0.15289500\nC 7.95411700 -1.22507000 -0.23186100\nC 6.74345800 -0.64830800 -0.13413600\nC 5.46670600 -1.17924100 -0.18776300\nC 4.29617400 -0.57039700 -0.08761400\nC 2.98798800 -1.09611200 -0.14043200\nC 1.91196200 -0.29838500 -0.01545100\nC 0.56155300 -0.57551800 -0.03376200\nC 12.21298500 -0.06036500 2.12449600\nC 12.77697700 -1.96913700 0.75144200\nC 10.65875400 1.54915200 -1.79152700\nC 8.11658400 -2.64234600 -0.42577300\nC 2.87111000 -2.51764000 -0.33354600\nO 15.19904000 2.03937000 -0.37122600\nC -12.16344800 -0.16768000 -1.18131700\nC -13.46493300 -0.90176400 -1.17642100\nC -14.37930700 -0.50543400 -0.09651600\nC -13.71903600 -0.27593900 1.16049200\nC -12.41414000 -0.12207000 1.31393600\nC -11.50740200 -0.29274900 0.17593300\nC -10.30903900 0.50260600 0.26957500\nC -9.05338200 0.13385000 0.20150200\nC -7.86913100 0.89866300 0.29044900\nC -6.65846600 0.32117500 0.19361500\nC -5.38272400 0.85121900 0.24777400\nC -4.21128000 0.24226700 0.14724000\nC -2.90330800 0.76820800 0.20047100\nC -1.82805200 -0.02863900 0.07572300\nC -0.47655000 0.24923500 0.09428800\nC -12.40445900 1.26366400 -1.48587900\nC -11.27607400 -0.74461000 -2.21970200\nC -11.79447400 0.18494800 2.57071700\nC -8.03370100 2.31454000 0.48867500\nC -2.78714300 2.19006700 0.39371100\nO -15.46647700 -1.45497800 0.09409400\nH 14.38839400 -0.39994100 -0.42675300\nH 14.65887500 -0.04758300 1.22523500\nH 13.70086300 2.09974000 0.99981300\nH 13.37183500 1.79449000 -1.89830400\nH 12.65110400 2.92296100 -0.82090200\nH 10.58338700 -1.86269300 -0.37021500\nH 8.97280900 0.58232200 -0.00376300\nH 6.73978600 0.40748100 0.01039200\nH 5.43527800 -2.23329900 -0.33118300\nH 4.34105400 0.48319700 0.05551400\nH 2.11479800 0.73866900 0.12365300\nH 0.31390500 -1.60143900 -0.17068600\nH 11.25766200 -0.46727500 2.41393700\nH 12.12238700 1.00965300 2.21054000\nH 12.91297700 -0.36688000 2.88374400\nH 13.62592400 -2.29644100 1.33091000\nH 12.92166200 -2.36099000 -0.24088700\nH 11.93172400 -2.48955300 1.17028600\nH 9.99877300 2.21345000 -1.25548700\nH 10.04319400 0.77212100 -2.21850500\nH 11.02505500 2.10906400 -2.63945500\nH 7.20309900 -3.21313200 -0.46688300\nH 8.69677400 -3.08783100 0.36883600\nH 8.63232700 -2.85796900 -1.34978700\nH 1.86392200 -2.89991300 -0.37103600\nH 3.35701200 -3.06598000 0.45995800\nH 3.33156900 -2.83034800 -1.25907700\nH 15.80919800 1.85317200 0.34182200\nH -13.28855500 -1.96777100 -1.08448200\nH -13.96690100 -0.79651900 -2.12993600\nH -14.86162800 0.43353900 -0.36527400\nH -14.38011900 -0.23175900 1.98568000\nH -11.22799800 -1.34701100 0.28635800\nH -10.51920900 1.53457800 0.40874600\nH -8.89194400 -0.90864800 0.05693400\nH -6.65614200 -0.73455800 0.04876000\nH -5.35080200 1.90525000 0.39188600\nH -4.25632700 -0.81112300 0.00332900\nH -2.02971900 -1.06590400 -0.06353600\nH -0.22955300 1.27517300 0.23132700\nH -12.98565800 1.40511500 -2.38257900\nH -11.49629700 1.82338800 -1.63869100\nH -12.93984300 1.76323600 -0.69510400\nH -10.30689500 -0.27259600 -2.24059000\nH -11.68420100 -0.64565100 -3.21168100\nH -11.09357300 -1.79598400 -2.07266200\nH -12.44377500 0.07472600 3.42549800\nH -11.44599700 1.20708000 2.59210000\nH -10.93853700 -0.44130200 2.77102100\nH -8.56978900 2.52644000 1.40212000\nH -8.59639600 2.76426900 -0.31620400\nH -7.12059200 2.88364800 0.55328700\nH -1.78003900 2.57259500 0.43140400\nH -3.24766100 2.50263800 1.31922500\nH -3.27284000 2.73838800 -0.39988500\nH -15.88891600 -1.51449500 -0.76268800"
+},
+{
+"set": "C 12.62630400 -0.48920300 0.76460100\nC 13.95200700 0.11462600 0.43122600\nC 13.91748300 1.54021200 0.09913400\nC 12.91401800 1.87080700 -0.91910900\nC 11.71122200 1.06522900 -0.92786000\nC 11.58056400 -0.03980600 -0.18941300\nC 10.39894900 -0.82619300 -0.21851900\nC 9.14200200 -0.45594100 -0.15536100\nC 7.95426400 -1.22307000 -0.23418500\nC 6.74886800 -0.64586200 -0.13669200\nC 5.46643100 -1.17756500 -0.18981600\nC 4.30095600 -0.56884500 -0.08989700\nC 2.98668400 -1.09523600 -0.14217100\nC 1.91581000 -0.29872800 -0.01773500\nC 0.55948400 -0.57621200 -0.03559600\nC 12.20827500 -0.05876500 2.12553100\nC 12.77694000 -1.96737300 0.75406000\nC 10.67041200 1.54820500 -1.79778400\nC 8.11941700 -2.64000700 -0.42741500\nC 2.87347700 -2.51706400 -0.33449800\nO 15.20570200 2.03896500 -0.36088600\nC -12.16967400 -0.16590300 -1.17992600\nC -13.47327100 -0.89626800 -1.17317200\nC -14.38447100 -0.49810700 -0.09126400\nC -13.72115000 -0.27128400 1.16464800\nC -12.41553300 -0.12161800 1.31578000\nC -11.51148500 -0.29418600 0.17592200\nC -10.31015200 0.49753400 0.26811300\nC -9.05858800 0.12737400 0.20004000\nC -7.86872100 0.89336600 0.28848700\nC -6.66319300 0.31543800 0.19187100\nC -5.38176900 0.84627300 0.24550200\nC -4.21543000 0.23746000 0.14523800\nC -2.90133400 0.76408000 0.19790700\nC -1.83124800 -0.03155100 0.07369800\nC -0.47381900 0.24666100 0.09180400\nC -12.40728800 1.26636000 -1.48283900\nC -11.28596200 -0.74444200 -2.22053300\nC -11.79252000 0.18231500 2.57167300\nC -8.03567800 2.30898000 0.48592300\nC -2.78885700 2.18624200 0.39032100\nO -15.47383700 -1.44484100 0.10083900\nH 14.39615200 -0.40023900 -0.41443800\nH 14.65742000 -0.04440200 1.23825200\nH 13.70092000 2.10237800 1.00285200\nH 13.38489800 1.78952600 -1.89628900\nH 12.66077000 2.92194700 -0.82536900\nH 10.58628000 -1.86031900 -0.37567200\nH 8.97814900 0.58525700 -0.00632600\nH 6.74394000 0.40990700 0.00721000\nH 5.43694000 -2.23168400 -0.33266500\nH 4.34410400 0.48480500 0.05263900\nH 2.11668900 0.73868200 0.12077300\nH 0.31433100 -1.60274100 -0.17196200\nH 11.25088200 -0.46425200 2.41011600\nH 12.11912700 1.01135700 2.21183900\nH 12.90410700 -0.36697500 2.88791000\nH 13.62345300 -2.29553100 1.33660200\nH 12.92508500 -2.35892200 -0.23788100\nH 11.92972600 -2.48736300 1.16946600\nH 10.01087700 2.21555800 -1.26503000\nH 10.05381400 0.77160200 -2.22397200\nH 11.04028800 2.10470300 -2.64636000\nH 7.20672000 -3.21210100 -0.46886500\nH 8.69978300 -3.08416600 0.36778300\nH 8.63602300 -2.85511900 -1.35105100\nH 1.86705300 -2.90147300 -0.37189600\nH 3.36046200 -3.06374500 0.45945500\nH 3.33473800 -2.82912500 -1.25982200\nH 15.81242600 1.85446500 0.35552900\nH -13.29977900 -1.96284300 -1.08235900\nH -13.97670000 -0.78887600 -2.12567400\nH -14.86477000 0.44232900 -0.35848500\nH -14.38060100 -0.22537100 1.99104500\nH -11.23515000 -1.34939500 0.28491300\nH -10.51900500 1.53012900 0.40662100\nH -8.89617900 -0.91495800 0.05617700\nH -6.65957500 -0.74027400 0.04766500\nH -5.35178100 1.90037500 0.38895400\nH -4.25872200 -0.81599600 0.00195400\nH -2.03096700 -1.06916900 -0.06495600\nH -0.22931600 1.27320900 0.22828400\nH -12.99008700 1.41017500 -2.37812500\nH -11.49788600 1.82361400 -1.63728700\nH -12.93947500 1.76683900 -0.69048100\nH -10.31545000 -0.27524000 -2.24279300\nH -11.69566100 -0.64334600 -3.21164800\nH -11.10627400 -1.79648800 -2.07484000\nH -12.44092600 0.07472200 3.42746700\nH -11.43941900 1.20286700 2.59286000\nH -10.93910600 -0.44787400 2.77036700\nH -8.57212700 2.52054300 1.39921400\nH -8.59880100 2.75743700 -0.31934200\nH -7.12326600 2.87929800 0.55036800\nH -1.78252400 2.57092100 0.42790300\nH -3.25017900 2.49817900 1.31562200\nH -3.27565900 2.73287000 -0.40373500\nH -15.89806900 -1.50265900 -0.75517100"
+},
+{
+"set": "C 12.62798800 -0.48746600 0.76706000\nC 13.95534000 0.11634700 0.43974300\nC 13.92196900 1.54128800 0.10435200\nC 12.92302600 1.86965900 -0.91914000\nC 11.71963500 1.06408800 -0.92963300\nC 11.58708600 -0.03666900 -0.19115300\nC 10.40047200 -0.82462300 -0.22106100\nC 9.14821700 -0.45283800 -0.15740900\nC 7.95457400 -1.22117600 -0.23603500\nC 6.75438900 -0.64351200 -0.13885500\nC 5.46627000 -1.17605100 -0.19159200\nC 4.30576900 -0.56738800 -0.09197100\nC 2.98544900 -1.09450700 -0.14382700\nC 1.91962000 -0.29912300 -0.01995300\nC 0.55742600 -0.57698000 -0.03744600\nC 12.20439500 -0.05803500 2.12656100\nC 12.77792300 -1.96565500 0.75568800\nC 10.68175300 1.54724500 -1.80355500\nC 8.12242900 -2.63775700 -0.42848400\nC 2.87580000 -2.51658900 -0.33541000\nO 15.21213000 2.03939900 -0.35077200\nC -12.17612600 -0.16426000 -1.17851700\nC -13.48190300 -0.89075600 -1.16980800\nC -14.38987800 -0.49046900 -0.08595000\nC -13.72346200 -0.26634900 1.16886100\nC -12.41713600 -0.12108700 1.31764800\nC -11.51582300 -0.29564100 0.17594600\nC -10.31155000 0.49246200 0.26658700\nC -9.06405500 0.12089800 0.19838300\nC -7.86854200 0.88817100 0.28627000\nC -6.66810800 0.30980100 0.18977500\nC -5.38101100 0.84148900 0.24288500\nC -4.21969200 0.23273800 0.14294500\nC -2.89950300 0.76009000 0.19513600\nC -1.83448900 -0.03442400 0.07155900\nC -0.47117500 0.24414700 0.08930300\nC -12.41019800 1.26889300 -1.47997200\nC -11.29612500 -0.74461400 -2.22126100\nC -11.79071300 0.17967600 2.57262400\nC -8.03789900 2.30346700 0.48301400\nC -2.79061400 2.18251900 0.38671400\nO -15.48168900 -1.43407700 0.10771500\nH 14.40433100 -0.39992700 -0.40250100\nH 14.65644800 -0.04081000 1.25085200\nH 13.70105700 2.10528500 1.00587300\nH 13.39757700 1.78504400 -1.89419800\nH 12.67008500 2.92119800 -0.82956800\nH 10.58926600 -1.85807300 -0.38013600\nH 8.98360900 0.58818500 -0.00861100\nH 6.74817300 0.41222400 0.00441600\nH 5.43872400 -2.23021200 -0.33390400\nH 4.34719400 0.48630000 0.05002100\nH 2.11860200 0.73861200 0.11800700\nH 0.31471400 -1.60408300 -0.17329300\nH 11.24512000 -0.46246100 2.40629700\nH 12.11647200 1.01212600 2.21369100\nH 12.89629200 -0.36816400 2.89173400\nH 13.62252000 -2.29466200 1.34053000\nH 12.92888600 -2.35645100 -0.23612800\nH 11.92923200 -2.48562800 1.16809300\nH 10.02267300 2.21758400 -1.27401900\nH 10.06414200 0.77101000 -2.22888300\nH 11.05500400 2.10035500 -2.65282600\nH 7.21052100 -3.21115300 -0.47042500\nH 8.70280800 -3.08053400 0.36744700\nH 8.64008700 -2.85242500 -1.35161700\nH 1.87011000 -2.90304500 -0.37277600\nH 3.36378100 -3.06168100 0.45899100\nH 3.33788200 -2.82802200 -1.26050700\nH 15.81560500 1.85647900 0.36878600\nH -13.31142800 -1.95789700 -1.07993200\nH -13.98676400 -0.78131100 -2.12131900\nH -14.86791400 0.45150500 -0.35175200\nH -14.38125900 -0.21857500 1.99647000\nH -11.24255300 -1.35176900 0.28363500\nH -10.51906400 1.52567300 0.40446900\nH -8.90062700 -0.92125100 0.05518000\nH -6.66319000 -0.74587900 0.04622400\nH -5.35295000 1.89564200 0.38571900\nH -4.26123600 -0.82077700 0.00030800\nH -2.03231400 -1.07236700 -0.06650800\nH -0.22911800 1.27127500 0.22524000\nH -12.99454700 1.41500800 -2.37387500\nH -11.49951800 1.82358500 -1.63610300\nH -12.93918300 1.77040700 -0.68612400\nH -10.32423600 -0.27834500 -2.24491100\nH -11.70734800 -0.64142800 -3.21152900\nH -11.11937700 -1.79732900 -2.07679700\nH -12.43835000 0.07531500 3.42940100\nH -11.43234900 1.19840100 2.59344200\nH -10.94026500 -0.45494600 2.76989600\nH -8.57459800 2.51460700 1.39623400\nH -8.60159600 2.75067400 -0.32251900\nH -7.12619900 2.87503500 0.54718800\nH -1.78502200 2.56926800 0.42423700\nH -3.25276800 2.49387300 1.31176700\nH -3.27842600 2.72749100 -0.40782800\nH -15.90769100 -1.49018400 -0.74752800"
+},
+{
+"set": "C 12.63014500 -0.48563100 0.76937800\nC 13.95914900 0.11795000 0.44779700\nC 13.92703300 1.54220600 0.10924800\nC 12.93250500 1.86850500 -0.91928600\nC 11.72848600 1.06299700 -0.93148600\nC 11.59409900 -0.03347800 -0.19304200\nC 10.40234600 -0.82309200 -0.22376600\nC 9.15479100 -0.44975800 -0.15948800\nC 7.95513900 -1.21941800 -0.23779200\nC 6.76018700 -0.64124200 -0.14096400\nC 5.46629300 -1.17471100 -0.19317800\nC 4.31075500 -0.56603800 -0.09390200\nC 2.98431700 -1.09395000 -0.14521700\nC 1.92349100 -0.29960400 -0.02201500\nC 0.55538800 -0.57791800 -0.03910200\nC 12.20118600 -0.05675100 2.12736900\nC 12.77918900 -1.96387400 0.75756500\nC 10.69347000 1.54650200 -1.80915500\nC 8.12579600 -2.63564300 -0.42928100\nC 2.87827500 -2.51628900 -0.33582900\nO 15.21911900 2.03951000 -0.34116600\nC -12.18313600 -0.16225800 -1.17728500\nC -13.49103500 -0.88494900 -1.16663300\nC -14.39569000 -0.48288800 -0.08068000\nC -13.72610300 -0.26158900 1.17297200\nC -12.41908700 -0.12070500 1.31934200\nC -11.52057700 -0.29705200 0.17568000\nC -10.31330200 0.48732100 0.26482000\nC -9.06991200 0.11427400 0.19676100\nC -7.86862600 0.88289500 0.28418500\nC -6.67330700 0.30399200 0.18797600\nC -5.38044700 0.83660400 0.24055000\nC -4.22413700 0.22784800 0.14092500\nC -2.89778100 0.75599100 0.19254100\nC -1.83779900 -0.03747000 0.06955600\nC -0.46855900 0.24154800 0.08686900\nC -12.41377000 1.27183200 -1.47692300\nC -11.30697100 -0.74413100 -2.22241000\nC -11.78918400 0.17668700 2.57339300\nC -8.04044100 2.29789000 0.48004000\nC -2.79252300 2.17867500 0.38317700\nO -15.48966500 -1.42368000 0.11454700\nH 14.41266500 -0.39973000 -0.39115600\nH 14.65612500 -0.03744700 1.26276400\nH 13.70194100 2.10795100 1.00863900\nH 13.41056400 1.78062500 -1.89227600\nH 12.67998600 2.92043500 -0.83374200\nH 10.59268600 -1.85586400 -0.38459500\nH 8.98934300 0.59106300 -0.01095900\nH 6.75267500 0.41447800 0.00149100\nH 5.44070000 -2.22892100 -0.33479100\nH 4.35043600 0.48769800 0.04736200\nH 2.12056600 0.73846900 0.11521900\nH 0.31512300 -1.60560000 -0.17427100\nH 11.24004600 -0.45993300 2.40248600\nH 12.11458400 1.01348000 2.21502500\nH 12.88920000 -0.36862300 2.89532900\nH 13.62153500 -2.29373000 1.34517100\nH 12.93339300 -2.35415500 -0.23395700\nH 11.92875500 -2.48362100 1.16665300\nH 10.03486900 2.21962400 -1.28258900\nH 10.07487700 0.77069900 -2.23377100\nH 11.06996000 2.09648800 -2.65898100\nH 7.21474500 -3.21050700 -0.47077900\nH 8.70694900 -3.07685200 0.36693400\nH 8.64373200 -2.84989300 -1.35234200\nH 1.87333600 -2.90482600 -0.37307500\nH 3.36728300 -3.05966100 0.45909200\nH 3.34115900 -2.82723000 -1.26066900\nH 15.81939000 1.85825400 0.38149000\nH -13.32350700 -1.95265500 -1.07797500\nH -13.99741900 -0.77324700 -2.11706800\nH -14.87169400 0.46056200 -0.34483800\nH -14.38218800 -0.21203200 2.00183100\nH -11.25044100 -1.35413200 0.28180200\nH -10.51941400 1.52119200 0.40185400\nH -8.90541000 -0.92768300 0.05437300\nH -6.66707700 -0.75165700 0.04515200\nH -5.35431600 1.89081200 0.38263400\nH -4.26392200 -0.82571600 -0.00100600\nH -2.03372400 -1.07574600 -0.06779900\nH -0.22895000 1.26925500 0.22215000\nH -12.99982500 1.42044600 -2.36929900\nH -11.50186800 1.82401900 -1.63477300\nH -12.93939900 1.77417300 -0.68137000\nH -10.33376200 -0.28070400 -2.24754400\nH -11.71988800 -0.63871100 -3.21173700\nH -11.13305700 -1.79751500 -2.07939700\nH -12.43595800 0.07538000 3.43118500\nH -11.42561400 1.19357400 2.59395100\nH -10.94169400 -0.46235500 2.76908700\nH -8.57755300 2.50872800 1.39307100\nH -8.60454800 2.74375900 -0.32592800\nH -7.12946400 2.87070400 0.54405300\nH -1.78769000 2.56752300 0.42056300\nH -3.25546600 2.48950100 1.30799100\nH -3.28139600 2.72192500 -0.41186500\nH -15.91749100 -1.47807300 -0.73989400"
+},
+{
+"set": "C 12.63291900 -0.48387100 0.77144700\nC 13.96335000 0.11993000 0.45562200\nC 13.93211400 1.54356700 0.11413500\nC 12.94187100 1.86765500 -0.91931500\nC 11.73734800 1.06203700 -0.93310100\nC 11.60142300 -0.03027000 -0.19473100\nC 10.40449600 -0.82161700 -0.22603300\nC 9.16163100 -0.44666300 -0.16132900\nC 7.95591400 -1.21774400 -0.23924600\nC 6.76616200 -0.63903500 -0.14283500\nC 5.46646000 -1.17352900 -0.19451500\nC 4.31583900 -0.56479000 -0.09565600\nC 2.98327700 -1.09358700 -0.14642100\nC 1.92738400 -0.30020900 -0.02395700\nC 0.55336300 -0.57904000 -0.04064300\nC 12.19876300 -0.05619900 2.12815300\nC 12.78148400 -1.96212600 0.75856900\nC 10.70506500 1.54571700 -1.81444000\nC 8.12940500 -2.63360500 -0.42961600\nC 2.88084200 -2.51617100 -0.33594200\nO 15.22593200 2.04053800 -0.33155200\nC -12.19056600 -0.16015600 -1.17607900\nC -13.50059800 -0.87900100 -1.16335600\nC -14.40182000 -0.47509600 -0.07523300\nC -13.72892700 -0.25661800 1.17719600\nC -12.42122700 -0.12022500 1.32101700\nC -11.52565100 -0.29840000 0.17531800\nC -10.31535400 0.48219300 0.26283900\nC -9.07607500 0.10759900 0.19489800\nC -7.86894100 0.87763000 0.28181600\nC -6.67872300 0.29813000 0.18592500\nC -5.38005800 0.83170900 0.23796300\nC -4.22872000 0.22284900 0.13876100\nC -2.89617700 0.75184700 0.18983000\nC -1.84117000 -0.04064700 0.06757700\nC -0.46598500 0.23886900 0.08449400\nC -12.41774000 1.27486400 -1.47389600\nC -11.31833900 -0.74355900 -2.22363400\nC -11.78767500 0.17368100 2.57407400\nC -8.04320400 2.29229200 0.47674400\nC -2.79454000 2.17477800 0.37938200\nO -15.49799500 -1.41299500 0.12169400\nH 14.42147000 -0.39889300 -0.38012200\nH 14.65626700 -0.03365100 1.27435600\nH 13.70275200 2.11087200 1.01146600\nH 13.42335300 1.77664500 -1.89026600\nH 12.68961500 2.91992300 -0.83773400\nH 10.59630800 -1.85377600 -0.38817200\nH 8.99527700 0.59395900 -0.01326000\nH 6.75730800 0.41666600 -0.00127900\nH 5.44285100 -2.22778700 -0.33532900\nH 4.35374400 0.48899200 0.04479400\nH 2.12255900 0.73819600 0.11247300\nH 0.31554000 -1.60729300 -0.17506000\nH 11.23590700 -0.45843400 2.39864400\nH 12.11329500 1.01404400 2.21681000\nH 12.88307800 -0.37001200 2.89862300\nH 13.62204400 -2.29280400 1.34827200\nH 12.93839000 -2.35149500 -0.23289000\nH 11.92974400 -2.48204300 1.16471600\nH 10.04693500 2.22160200 -1.29085500\nH 10.08552400 0.77027700 -2.23827000\nH 11.08467100 2.09255800 -2.66487100\nH 7.21920200 -3.20989500 -0.47107600\nH 8.71092900 -3.07317900 0.36721000\nH 8.64804600 -2.84756500 -1.35233300\nH 1.87665600 -2.90678900 -0.37305600\nH 3.37085600 -3.05776100 0.45954900\nH 3.34454900 -2.82670300 -1.26048400\nH 15.82311500 1.86091300 0.39406900\nH -13.33604400 -1.94726500 -1.07588000\nH -14.00857000 -0.76505900 -2.11267500\nH -14.87576600 0.46983100 -0.33774100\nH -14.38321700 -0.20519100 2.00735900\nH -11.25868800 -1.35642700 0.27986600\nH -10.51999600 1.51673900 0.39897300\nH -8.91048100 -0.93416200 0.05337900\nH -6.67118800 -0.75748800 0.04391600\nH -5.35584600 1.88596500 0.37922500\nH -4.26673600 -0.83076400 -0.00236200\nH -2.03520400 -1.07925000 -0.06898700\nH -0.22882500 1.26714800 0.21902700\nH -13.00556600 1.42598600 -2.36468600\nH -11.50462900 1.82452200 -1.63356400\nH -12.93992800 1.77804000 -0.67660600\nH -10.34378800 -0.28305000 -2.25026300\nH -11.73296700 -0.63582200 -3.21199500\nH -11.14733800 -1.79762200 -2.08211400\nH -12.43356300 0.07581800 3.43293300\nH -11.41845300 1.18854000 2.59422900\nH -10.94344600 -0.47012400 2.76821000\nH -8.58069800 2.50284400 1.38960000\nH -8.60775700 2.73680100 -0.32964300\nH -7.13294800 2.86635500 0.54054300\nH -1.79046300 2.56571200 0.41663900\nH -3.25831200 2.48518100 1.30389800\nH -3.28442100 2.71623600 -0.41623400\nH -15.92771100 -1.46568900 -0.73190300"
+},
+{
+"set": "C 12.63621500 -0.48231900 0.77345800\nC 13.96803600 0.12160300 0.46314000\nC 13.93777900 1.54467000 0.11891700\nC 12.95154500 1.86685700 -0.91904200\nC 11.74649300 1.06117500 -0.93435200\nC 11.60911900 -0.02710200 -0.19618100\nC 10.40690600 -0.82016500 -0.22803400\nC 9.16872100 -0.44348400 -0.16302800\nC 7.95686400 -1.21601600 -0.24061200\nC 6.77230400 -0.63670600 -0.14465600\nC 5.46673300 -1.17225400 -0.19585400\nC 4.32100100 -0.56336300 -0.09744100\nC 2.98227200 -1.09307600 -0.14768200\nC 1.93126800 -0.30057600 -0.02597900\nC 0.55130900 -0.57996600 -0.04227800\nC 12.19720300 -0.05593100 2.12900100\nC 12.78419200 -1.96058700 0.75937500\nC 10.71684900 1.54516200 -1.81913000\nC 8.13317600 -2.63149100 -0.42987600\nC 2.88339200 -2.51587700 -0.33608200\nO 15.23323200 2.04118100 -0.32241100\nC -12.19837500 -0.15822500 -1.17485000\nC -13.51050200 -0.87325900 -1.15992700\nC -14.40824700 -0.46746800 -0.06963100\nC -13.73199700 -0.25170400 1.18151500\nC -12.42365000 -0.11979800 1.32271500\nC -11.53104900 -0.29981800 0.17494800\nC -10.31778400 0.47704600 0.26073500\nC -9.08258400 0.10092700 0.19296000\nC -7.86957200 0.87250000 0.27933200\nC -6.68440900 0.29239800 0.18378300\nC -5.37991600 0.82704900 0.23523600\nC -4.23349200 0.21804400 0.13647700\nC -2.89473400 0.74798100 0.18697200\nC -1.84464300 -0.04360600 0.06548200\nC -0.46349100 0.23647400 0.08200600\nC -12.42215800 1.27768300 -1.47092700\nC -11.33013100 -0.74317600 -2.22484200\nC -11.78640900 0.17064500 2.57473200\nC -8.04634900 2.28681100 0.47325200\nC -2.79671800 2.17114500 0.37537100\nO -15.50654500 -1.40251400 0.12914700\nH 14.43046400 -0.39830100 -0.36955700\nH 14.65707300 -0.03034900 1.28541400\nH 13.70455000 2.11343700 1.01432400\nH 13.43618700 1.77299800 -1.88809000\nH 12.69961100 2.91943600 -0.84106000\nH 10.60010700 -1.85175500 -0.39121300\nH 9.00144600 0.59692900 -0.01546400\nH 6.76212600 0.41896400 -0.00398100\nH 5.44508900 -2.22654800 -0.33585500\nH 4.35714400 0.49045400 0.04218800\nH 2.12456800 0.73814500 0.10963100\nH 0.31591300 -1.60877400 -0.17591100\nH 11.23274000 -0.45725900 2.39509900\nH 12.11284800 1.01431400 2.21874800\nH 12.87802300 -0.37170000 2.90176100\nH 13.62305800 -2.29219300 1.35097000\nH 12.94357000 -2.34897700 -0.23207600\nH 11.93120300 -2.48064000 1.16271200\nH 10.05921700 2.22365100 -1.29831400\nH 10.09636600 0.77015200 -2.24230100\nH 11.09944500 2.08907800 -2.67005900\nH 7.22380800 -3.20916400 -0.47152400\nH 8.71486900 -3.06946300 0.36768200\nH 8.65271700 -2.84516300 -1.35213700\nH 1.87994500 -2.90853100 -0.37305800\nH 3.37438200 -3.05569300 0.45998800\nH 3.34791100 -2.82604200 -1.26031900\nH 15.82751200 1.86307700 0.40596600\nH -13.34888800 -1.94205900 -1.07355400\nH -14.02010000 -0.75716200 -2.10811300\nH -14.88019300 0.47887800 -0.33054000\nH -14.38445200 -0.19832000 2.01299700\nH -11.26720700 -1.35875800 0.27798400\nH -10.52097100 1.51227600 0.39583300\nH -8.91581800 -0.94062800 0.05241400\nH -6.67553200 -0.76318800 0.04266300\nH -5.35764800 1.88135000 0.37560700\nH -4.26971300 -0.83561400 -0.00377200\nH -2.03678600 -1.08252600 -0.07024400\nH -0.22877300 1.26531200 0.21575800\nH -13.01183600 1.43123600 -2.36007900\nH -11.50788400 1.82482900 -1.63254300\nH -12.94084100 1.78171700 -0.67189200\nH -10.35428200 -0.28552600 -2.25308400\nH -11.74654200 -0.63323000 -3.21221000\nH -11.16197100 -1.79788400 -2.08473300\nH -12.43138700 0.07634000 3.43467200\nH -11.41145500 1.18341100 2.59439800\nH -10.94553600 -0.47797700 2.76734600\nH -8.58428100 2.49710800 1.38589400\nH -8.61132200 2.72989500 -0.33360600\nH -7.13683800 2.86215800 0.53685700\nH -1.79339800 2.56415800 0.41248600\nH -3.26132100 2.48117400 1.29957300\nH -3.28759300 2.71077700 -0.42084500\nH -15.93818400 -1.45359500 -0.72357400"
+},
+{
+"set": "C 12.64012500 -0.48087400 0.77520500\nC 13.97314600 0.12354700 0.47038500\nC 13.94351500 1.54610000 0.12373200\nC 12.96122000 1.86628900 -0.91865400\nC 11.75572100 1.06044800 -0.93541500\nC 11.61716700 -0.02395300 -0.19753900\nC 10.40961800 -0.81878900 -0.22975000\nC 9.17608700 -0.44031700 -0.16452100\nC 7.95803800 -1.21439800 -0.24162700\nC 6.77863900 -0.63443300 -0.14624600\nC 5.46716000 -1.17111700 -0.19691200\nC 4.32627800 -0.56199600 -0.09906900\nC 2.98136000 -1.09270800 -0.14874900\nC 1.93518600 -0.30100400 -0.02795500\nC 0.54927300 -0.58102500 -0.04386700\nC 12.19640400 -0.05629100 2.12977800\nC 12.78783800 -1.95911800 0.75942900\nC 10.72857600 1.54470000 -1.82345900\nC 8.13721100 -2.62949600 -0.42953000\nC 2.88606000 -2.51573100 -0.33579700\nO 15.24044500 2.04258000 -0.31315800\nC -12.20670000 -0.15609900 -1.17364000\nC -13.52089000 -0.86734200 -1.15637300\nC -14.41498900 -0.45976700 -0.06374200\nC -13.73518600 -0.24675500 1.18602400\nC -12.42620000 -0.11940300 1.32441200\nC -11.53676200 -0.30119400 0.17443000\nC -10.32051400 0.47189400 0.25836400\nC -9.08937800 0.09418700 0.19082500\nC -7.87043000 0.86737600 0.27658500\nC -6.69029500 0.28659900 0.18146800\nC -5.37994000 0.82237600 0.23227500\nC -4.23839200 0.21313800 0.13402600\nC -2.89339000 0.74408900 0.18388800\nC -1.84816400 -0.04666900 0.06329600\nC -0.46102200 0.23404400 0.07942700\nC -12.42716600 1.28071000 -1.46780900\nC -11.34261200 -0.74246500 -2.22625500\nC -11.78504500 0.16742600 2.57530000\nC -8.04973800 2.28132900 0.46933600\nC -2.79901800 2.16748700 0.37093400\nO -15.51531500 -1.39203200 0.13703500\nH 14.43991000 -0.39714400 -0.35940300\nH 14.65840800 -0.02678100 1.29607700\nH 13.70629100 2.11609700 1.01730900\nH 13.44896000 1.76968800 -1.88582300\nH 12.70951100 2.91914000 -0.84421300\nH 10.60416000 -1.84986800 -0.39357900\nH 9.00782900 0.59988800 -0.01764500\nH 6.76711200 0.42121800 -0.00664000\nH 5.44749200 -2.22545400 -0.33593100\nH 4.36063300 0.49186300 0.03956600\nH 2.12660300 0.73804000 0.10667400\nH 0.31630800 -1.61039100 -0.17655900\nH 11.23047000 -0.45697000 2.39150900\nH 12.11298200 1.01390800 2.22098400\nH 12.87390600 -0.37415200 2.90459400\nH 13.62526400 -2.29165200 1.35254600\nH 12.94944800 -2.34619600 -0.23217500\nH 11.93385400 -2.47961300 1.16007700\nH 10.07144400 2.22569500 -1.30530000\nH 10.10718100 0.77010300 -2.24598000\nH 11.11401000 2.08579700 -2.67487000\nH 7.22869900 -3.20860700 -0.47108700\nH 8.71922600 -3.06569800 0.36874100\nH 8.65750000 -2.84302400 -1.35138600\nH 1.88336400 -2.91044500 -0.37260600\nH 3.37800500 -3.05363900 0.46095200\nH 3.35143000 -2.82567600 -1.25966100\nH 15.83188100 1.86599100 0.41790200\nH -13.36218300 -1.93667200 -1.07120400\nH -14.03224400 -0.74902600 -2.10333800\nH -14.88503400 0.48796900 -0.32293700\nH -14.38568400 -0.19136800 2.01890900\nH -11.27606600 -1.36105100 0.27582700\nH -10.52218900 1.50783900 0.39222500\nH -8.92140500 -0.94716100 0.05139600\nH -6.68007900 -0.76896100 0.04137300\nH -5.35960400 1.87672700 0.37160400\nH -4.27280400 -0.84056900 -0.00520200\nH -2.03840800 -1.08591500 -0.07143900\nH -0.22875700 1.26344500 0.21224500\nH -13.01885100 1.43677400 -2.35519300\nH -11.51178300 1.82537500 -1.63149800\nH -12.94219700 1.78550700 -0.66689400\nH -10.36548200 -0.28767100 -2.25621300\nH -11.76094700 -0.63020000 -3.21254700\nH -11.17727500 -1.79782500 -2.08769100\nH -12.42907800 0.07719900 3.43638600\nH -11.40376500 1.17784000 2.59429200\nH -10.94794400 -0.48648000 2.76642000\nH -8.58810200 2.49146000 1.38174700\nH -8.61515100 2.72289300 -0.33803000\nH -7.14098300 2.85798500 0.53266900\nH -1.79646400 2.56259700 0.40786400\nH -3.26446800 2.47726600 1.29477200\nH -3.29087900 2.70517800 -0.42596100\nH -15.94898700 -1.44151300 -0.71474400"
+},
+{
+"set": "C 12.64461300 -0.47944700 0.77686300\nC 13.97874500 0.12546900 0.47727500\nC 13.94972900 1.54753400 0.12831700\nC 12.97111600 1.86587600 -0.91817000\nC 11.76518100 1.05983300 -0.93626100\nC 11.62560100 -0.02077900 -0.19869100\nC 10.41267000 -0.81742900 -0.23116100\nC 9.18375900 -0.43711600 -0.16577200\nC 7.95945800 -1.21282300 -0.24236200\nC 6.78519900 -0.63216200 -0.14756600\nC 5.46777000 -1.17005500 -0.19771700\nC 4.33169500 -0.56064600 -0.10048600\nC 2.98055800 -1.09242800 -0.14964300\nC 1.93914400 -0.30145700 -0.02982200\nC 0.54723800 -0.58216400 -0.04543000\nC 12.19648400 -0.05672000 2.13057300\nC 12.79211800 -1.95766700 0.75930500\nC 10.74037000 1.54435000 -1.82735000\nC 8.14148800 -2.62752700 -0.42889100\nC 2.88887100 -2.51564300 -0.33531500\nO 15.24801800 2.04395600 -0.30445300\nC -12.21553300 -0.15385000 -1.17244800\nC -13.53178600 -0.86126300 -1.15268200\nC -14.42208500 -0.45191300 -0.05763300\nC -13.73858800 -0.24173800 1.19067200\nC -12.42899600 -0.11905800 1.32611000\nC -11.54283900 -0.30255100 0.17379000\nC -10.32362700 0.46673000 0.25575300\nC -9.09654500 0.08737900 0.18844500\nC -7.87159900 0.86223100 0.27362600\nC -6.69646600 0.28073000 0.17889700\nC -5.38021900 0.81770000 0.22902200\nC -4.24350200 0.20817500 0.13125400\nC -2.89222300 0.74021700 0.18050700\nC -1.85180200 -0.04977800 0.06092800\nC -0.45862100 0.23162300 0.07677400\nC -12.43270100 1.28387300 -1.46460700\nC -11.35575900 -0.74158700 -2.22783300\nC -11.78378700 0.16390200 2.57582900\nC -8.05342400 2.27578800 0.46523200\nC -2.80153500 2.16381500 0.36620700\nO -15.52438900 -1.38140900 0.14525000\nH 14.44960600 -0.39596400 -0.34973200\nH 14.66041200 -0.02332900 1.30618200\nH 13.70880600 2.11869400 1.02016000\nH 13.46173100 1.76669900 -1.88357400\nH 12.71965400 2.91898200 -0.84705400\nH 10.60852300 -1.84803300 -0.39537400\nH 9.01446600 0.60286500 -0.01963700\nH 6.77231000 0.42346000 -0.00905700\nH 5.45009800 -2.22442200 -0.33573400\nH 4.36423800 0.49324600 0.03712100\nH 2.12867500 0.73790400 0.10378700\nH 0.31671400 -1.61207700 -0.17716500\nH 11.22920000 -0.45683300 2.38817300\nH 12.11391000 1.01342000 2.22328900\nH 12.87088400 -0.37662300 2.90725000\nH 13.62828400 -2.29111300 1.35369000\nH 12.95570400 -2.34339300 -0.23250400\nH 11.93728800 -2.47866100 1.15748800\nH 10.08372900 2.22768200 -1.31166100\nH 10.11811300 0.77015600 -2.24927400\nH 11.12844200 2.08281900 -2.67919600\nH 7.23382000 -3.20803900 -0.47052000\nH 8.72366500 -3.06197300 0.37019500\nH 8.66267300 -2.84093400 -1.35025200\nH 1.88693800 -2.91243100 -0.37199500\nH 3.38173900 -3.05162200 0.46214200\nH 3.35514300 -2.82537900 -1.25877500\nH 15.83679200 1.86879700 0.42910000\nH -13.37601300 -1.93111800 -1.06873800\nH -14.04499300 -0.74069800 -2.09835700\nH -14.89025000 0.49720500 -0.31504300\nH -14.38703200 -0.18432400 2.02501900\nH -11.28528800 -1.36331700 0.27346200\nH -10.52373400 1.50339600 0.38836200\nH -8.92735400 -0.95375100 0.05016200\nH -6.68490800 -0.77479100 0.03982100\nH -5.36182400 1.87208700 0.36731900\nH -4.27607400 -0.84557300 -0.00690400\nH -2.04014200 -1.08934100 -0.07277700\nH -0.22882000 1.26157700 0.20862400\nH -13.02654700 1.44250700 -2.35009200\nH -11.51624400 1.82604700 -1.63052600\nH -12.94391000 1.78938800 -0.66169800\nH -10.37736400 -0.28965100 -2.25964500\nH -11.77615300 -0.62696500 -3.21297800\nH -11.19323200 -1.79759300 -2.09087100\nH -12.42681300 0.07783200 3.43809100\nH -11.39596600 1.17183600 2.59419000\nH -10.95064600 -0.49548200 2.76535800\nH -8.59223500 2.48573900 1.37740700\nH -8.61925500 2.71585600 -0.34264200\nH -7.14541700 2.85373300 0.52832400\nH -1.79976200 2.56103900 0.40302900\nH -3.26791100 2.47333300 1.28964300\nH -3.29432400 2.69955700 -0.43140200\nH -15.96015100 -1.42928600 -0.70554900"
+},
+{
+"set": "C 12.64964800 -0.47803100 0.77819700\nC 13.98479600 0.12738100 0.48348300\nC 13.95631100 1.54899800 0.13240800\nC 12.98098000 1.86571100 -0.91772800\nC 11.77470600 1.05938000 -0.93703100\nC 11.63430800 -0.01757200 -0.19982300\nC 10.41592800 -0.81607700 -0.23238800\nC 9.19161000 -0.43385800 -0.16696400\nC 7.96102800 -1.21128900 -0.24297400\nC 6.79186000 -0.62991000 -0.14881500\nC 5.46843800 -1.16910000 -0.19835500\nC 4.33713700 -0.55934800 -0.10173700\nC 2.97974900 -1.09228100 -0.15024400\nC 1.94307200 -0.30197500 -0.03137100\nC 0.54517100 -0.58345200 -0.04652400\nC 12.19751900 -0.05721300 2.13117400\nC 12.79692600 -1.95622400 0.75879000\nC 10.75207700 1.54414200 -1.83095500\nC 8.14600800 -2.62559900 -0.42791100\nC 2.89164700 -2.51569000 -0.33437500\nO 15.25580200 2.04537900 -0.29667700\nC -12.22467100 -0.15149000 -1.17155900\nC -13.54297500 -0.85508200 -1.14935100\nC -14.42950400 -0.44399900 -0.05187800\nC -13.74230000 -0.23663400 1.19496100\nC -12.43213400 -0.11871100 1.32746400\nC -11.54925500 -0.30389400 0.17283700\nC -10.32705500 0.46155300 0.25290300\nC -9.10398500 0.08050400 0.18609600\nC -7.87299900 0.85710100 0.27076800\nC -6.70282700 0.27478400 0.17670300\nC -5.38064800 0.81297100 0.22627600\nC -4.24872800 0.20303800 0.12927400\nC -2.89112000 0.73622000 0.17792900\nC -1.85548600 -0.05306800 0.05927200\nC -0.45625800 0.22911500 0.07465500\nC -12.43853500 1.28714000 -1.46163700\nC -11.36919500 -0.74049100 -2.22970400\nC -11.78282300 0.16032500 2.57599600\nC -8.05737000 2.27027400 0.46105700\nC -2.80408900 2.16004000 0.36199600\nO -15.53374000 -1.37077500 0.15316800\nH 14.45947300 -0.39469400 -0.34093900\nH 14.66311700 -0.01998200 1.31535600\nH 13.71205300 2.12118600 1.02268700\nH 13.47416400 1.76430900 -1.88154500\nH 12.72967200 2.91901400 -0.84955200\nH 10.61303500 -1.84625700 -0.39666100\nH 9.02121900 0.60589700 -0.02173500\nH 6.77757500 0.42568500 -0.01150600\nH 5.45277300 -2.22350100 -0.33523700\nH 4.36784500 0.49457600 0.03474100\nH 2.13071700 0.73769800 0.10112300\nH 0.31709100 -1.61390900 -0.17718600\nH 11.22895700 -0.45672600 2.38489700\nH 12.11586300 1.01286300 2.22548500\nH 12.86902600 -0.37923000 2.90947900\nH 13.63199100 -2.29061600 1.35419300\nH 12.96218400 -2.34057900 -0.23327500\nH 11.94135900 -2.47770000 1.15474400\nH 10.09588300 2.22962500 -1.31756100\nH 10.12903900 0.77033000 -2.25236100\nH 11.14260300 2.08020300 -2.68316900\nH 7.23922800 -3.20758600 -0.46952500\nH 8.72837100 -3.05812300 0.37205700\nH 8.66810500 -2.83898500 -1.34874300\nH 1.89047300 -2.91454200 -0.37079700\nH 3.38549300 -3.04966400 0.46380300\nH 3.35873900 -2.82532800 -1.25743700\nH 15.84219400 1.87154600 0.43910200\nH -13.39012200 -1.92545400 -1.06665700\nH -14.05799600 -0.73224300 -2.09374800\nH -14.89583500 0.50646600 -0.30750600\nH -14.38870600 -0.17705100 2.03073900\nH -11.29491300 -1.36556900 0.27076100\nH -10.52555500 1.49897700 0.38397000\nH -8.93351700 -0.96040900 0.04912700\nH -6.68993500 -0.78071200 0.03883200\nH -5.36417800 1.86740400 0.36334200\nH -4.27945900 -0.85074000 -0.00776100\nH -2.04191200 -1.09294400 -0.07332800\nH -0.22893400 1.25961700 0.20545000\nH -13.03452300 1.44839600 -2.34521100\nH -11.52101700 1.82683300 -1.62975600\nH -12.94592100 1.79331400 -0.65671900\nH -10.38953600 -0.29143500 -2.26326700\nH -11.79158100 -0.62339300 -3.21370600\nH -11.20952200 -1.79715000 -2.09443200\nH -12.42488400 0.07890700 3.43942900\nH -11.38796800 1.16553800 2.59352900\nH -10.95403100 -0.50490100 2.76409500\nH -8.59676700 2.48013700 1.37289700\nH -8.62349900 2.70876800 -0.34744800\nH -7.15012500 2.84952000 0.52398700\nH -1.80308700 2.55936600 0.39851400\nH -3.27127300 2.46948500 1.28502700\nH -3.29788500 2.69368800 -0.43637000\nH -15.97158900 -1.41711200 -0.69664000"
+},
+{
+"set": "C 12.65535100 -0.47690700 0.77917900\nC 13.99133600 0.12946500 0.48950400\nC 13.96303100 1.55071800 0.13666800\nC 12.99108200 1.86565400 -0.91716800\nC 11.78446000 1.05906500 -0.93763100\nC 11.64347800 -0.01445100 -0.20095100\nC 10.41957100 -0.81478300 -0.23348100\nC 9.19983600 -0.43052800 -0.16804900\nC 7.96286500 -1.20969900 -0.24330100\nC 6.79881000 -0.62752300 -0.14977100\nC 5.46936900 -1.16810300 -0.19858400\nC 4.34279500 -0.55796200 -0.10258900\nC 2.97912900 -1.09215400 -0.15037800\nC 1.94710600 -0.30243200 -0.03265700\nC 0.54315900 -0.58473600 -0.04741900\nC 12.19925500 -0.05870900 2.13165100\nC 12.80279300 -1.95502500 0.75723500\nC 10.76385900 1.54412400 -1.83417900\nC 8.15067300 -2.62360100 -0.42648200\nC 2.89469000 -2.51575400 -0.33282600\nO 15.26359400 2.04755900 -0.28850700\nC -12.23440600 -0.14905100 -1.17069800\nC -13.55473300 -0.84882600 -1.14578100\nC -14.43727700 -0.43601900 -0.04573800\nC -13.74614100 -0.23142900 1.19949000\nC -12.43542800 -0.11836500 1.32882500\nC -11.55602200 -0.30521300 0.17171000\nC -10.33085000 0.45636500 0.24966100\nC -9.11177700 0.07354300 0.18345300\nC -7.87469100 0.85194000 0.26756500\nC -6.70944900 0.26874400 0.17426100\nC -5.38132400 0.80824200 0.22320200\nC -4.25414600 0.19785500 0.12707100\nC -2.89020000 0.73232000 0.17510400\nC -1.85925200 -0.05631600 0.05757100\nC -0.45391100 0.22671500 0.07254700\nC -12.44504200 1.29047600 -1.45863800\nC -11.38345700 -0.73928100 -2.23177700\nC -11.78178200 0.15666000 2.57604500\nC -8.06158900 2.26471400 0.45630900\nC -2.80699800 2.15638200 0.35732600\nO -15.54330600 -1.36016200 0.16173500\nH 14.46996600 -0.39291000 -0.33244700\nH 14.66633700 -0.01649900 1.32429000\nH 13.71514900 2.12369400 1.02544200\nH 13.48686800 1.76199900 -1.87936800\nH 12.73994300 2.91915500 -0.85200300\nH 10.61783100 -1.84459900 -0.39747800\nH 9.02835700 0.60899800 -0.02381400\nH 6.78312500 0.42804700 -0.01378100\nH 5.45575800 -2.22253600 -0.33422500\nH 4.37162300 0.49600100 0.03259500\nH 2.13284700 0.73756300 0.09856000\nH 0.31753400 -1.61574400 -0.17684300\nH 11.22956700 -0.45798700 2.38143600\nH 12.11823700 1.01123400 2.22803900\nH 12.86803700 -0.38300400 2.91135400\nH 13.63697700 -2.29040800 1.35332100\nH 12.96960600 -2.33752000 -0.23529000\nH 11.94673200 -2.47739800 1.15091900\nH 10.10811300 2.23162100 -1.32290400\nH 10.14006200 0.77071100 -2.25513000\nH 11.15667300 2.07796200 -2.68671200\nH 7.24471800 -3.20698300 -0.46775200\nH 8.73338500 -3.05414600 0.37427900\nH 8.67341900 -2.83712100 -1.34689700\nH 1.89430200 -2.91673100 -0.36902200\nH 3.38948100 -3.04761600 0.46615800\nH 3.36268900 -2.82536800 -1.25542100\nH 15.84757700 1.87512700 0.44951900\nH -13.40478100 -1.91970300 -1.06435000\nH -14.07173300 -0.72372100 -2.08879700\nH -14.90190400 0.51572700 -0.29952000\nH -14.39036200 -0.16953300 2.03678800\nH -11.30487900 -1.36778400 0.26781300\nH -10.52768500 1.49458000 0.37894600\nH -8.94002000 -0.96716500 0.04802200\nH -6.69520200 -0.78673600 0.03776700\nH -5.36680800 1.86272900 0.35887000\nH -4.28296200 -0.85596500 -0.00864900\nH -2.04372900 -1.09651800 -0.07375600\nH -0.22907400 1.25777000 0.20212900\nH -13.04337200 1.45436400 -2.34014600\nH -11.52652600 1.82770100 -1.62917900\nH -12.94841100 1.79728100 -0.65159400\nH -10.40256700 -0.29308000 -2.26732400\nH -11.80804800 -0.61972400 -3.21453400\nH -11.22658900 -1.79657800 -2.09821400\nH -12.42277700 0.08027400 3.44073000\nH -11.37949700 1.15893800 2.59256000\nH -10.95765800 -0.51471400 2.76271400\nH -8.60159200 2.47463400 1.36776700\nH -8.62798900 2.70152200 -0.35290600\nH -7.15509300 2.84524300 0.51901000\nH -1.80683300 2.55795900 0.39356300\nH -3.27511300 2.46583500 1.27986200\nH -3.30180500 2.68775000 -0.44191100\nH -15.98337300 -1.40503100 -0.68700000"
+},
+{
+"set": "C 12.66155200 -0.47566800 0.78052900\nC 13.99832100 0.13156500 0.49552900\nC 13.97018300 1.55246400 0.14102300\nC 13.00124600 1.86580700 -0.91616300\nC 11.79434400 1.05889100 -0.93765700\nC 11.65293200 -0.01126500 -0.20146400\nC 10.42348900 -0.81354400 -0.23389200\nC 9.20826800 -0.42728700 -0.16868200\nC 7.96494000 -1.20838800 -0.24331400\nC 6.80588900 -0.62538200 -0.15077400\nC 5.47033700 -1.16735600 -0.19912800\nC 4.34847700 -0.55667600 -0.10413900\nC 2.97848000 -1.09212500 -0.15137800\nC 1.95110200 -0.30292100 -0.03480800\nC 0.54110200 -0.58613300 -0.04917300\nC 12.20182900 -0.05996500 2.13255400\nC 12.80912000 -1.95371200 0.75618200\nC 10.77566000 1.54416900 -1.83665100\nC 8.15583900 -2.62190800 -0.42460200\nC 2.89763600 -2.51588600 -0.33189800\nO 15.27172100 2.04967200 -0.28059600\nC -12.24477100 -0.14639600 -1.16953100\nC -13.56705200 -0.84243600 -1.14163500\nC -14.44534300 -0.42806400 -0.03878800\nC -13.74994200 -0.22631300 1.20466000\nC -12.43871800 -0.11815100 1.33050300\nC -11.56307900 -0.30651500 0.17066600\nC -10.33496300 0.45121500 0.24627700\nC -9.11985900 0.06661600 0.18054300\nC -7.87664800 0.84692200 0.26397100\nC -6.71628900 0.26279800 0.17127000\nC -5.38215600 0.80362600 0.21938600\nC -4.25970500 0.19267900 0.12393200\nC -2.88931600 0.72839900 0.17120900\nC -1.86310800 -0.05968800 0.05488600\nC -0.45164400 0.22426300 0.06950100\nC -12.45237800 1.29405300 -1.45503800\nC -11.39859600 -0.73761100 -2.23387000\nC -11.78038000 0.15251800 2.57629400\nC -8.06613000 2.25927800 0.45127800\nC -2.80972400 2.15262600 0.35160100\nO -15.55299300 -1.34972000 0.17134900\nH 14.48060100 -0.39110300 -0.32410500\nH 14.67023300 -0.01308700 1.33299900\nH 13.71906000 2.12616400 1.02841800\nH 13.49936200 1.76010700 -1.87690000\nH 12.75023700 2.91948300 -0.85377200\nH 10.62293800 -1.84302600 -0.39732800\nH 9.03553900 0.61199800 -0.02565700\nH 6.78877600 0.43016900 -0.01626500\nH 5.45871800 -2.22182500 -0.33336400\nH 4.37544600 0.49731400 0.02971100\nH 2.13494400 0.73738800 0.09508000\nH 0.31796000 -1.61768400 -0.17732900\nH 11.23110900 -0.45900900 2.37868900\nH 12.12142900 1.00984700 2.23094300\nH 12.86810000 -0.38644500 2.91348900\nH 13.64258900 -2.29003500 1.35274200\nH 12.97718900 -2.33446100 -0.23680300\nH 11.95267100 -2.47691300 1.14790400\nH 10.12026200 2.23346100 -1.32733800\nH 10.15124600 0.77110300 -2.25725800\nH 11.17059900 2.07603200 -2.68941300\nH 7.25084100 -3.20685800 -0.46596800\nH 8.73856400 -3.05033900 0.37725800\nH 8.67973700 -2.83554200 -1.34431700\nH 1.89801000 -2.91891900 -0.36778700\nH 3.39334600 -3.04553100 0.46797200\nH 3.36651200 -2.82565600 -1.25398200\nH 15.85349500 1.87851800 0.45947500\nH -13.41991700 -1.91380500 -1.06158700\nH -14.08626100 -0.71501100 -2.08312600\nH -14.90842700 0.52491600 -0.29054600\nH -14.39176700 -0.16213200 2.04362800\nH -11.31510800 -1.36997200 0.26476200\nH -10.53009600 1.49022400 0.37372800\nH -8.94676400 -0.97386400 0.04663500\nH -6.70072300 -0.79265200 0.03613900\nH -5.36953800 1.85815200 0.35365800\nH -4.28666500 -0.86117400 -0.01040300\nH -2.04565700 -1.10020700 -0.07508900\nH -0.22934500 1.25587300 0.19780000\nH -13.05334700 1.46067500 -2.33424000\nH -11.53298200 1.82891600 -1.62823300\nH -12.95149100 1.80130100 -0.64563100\nH -10.41651900 -0.29421000 -2.27157200\nH -11.82563300 -0.61543100 -3.21524400\nH -11.24445000 -1.79555200 -2.10224400\nH -12.42013800 0.08147000 3.44235300\nH -11.37017700 1.15159500 2.59173400\nH -10.96129900 -0.52540900 2.76136100\nH -8.60667900 2.46916500 1.36241300\nH -8.63290800 2.69441800 -0.35856000\nH -7.16042800 2.84116600 0.51370900\nH -1.81030700 2.55622300 0.38755800\nH -3.27870100 2.46216200 1.27365100\nH -3.30541300 2.68181900 -0.44850900\nH -15.99545200 -1.39315400 -0.67620800"
+}
+]
+},
+{
+"paths": [
+[
+"variables",
+"BLA"
+]
+],
+"values": [
+null,
+{
+"set": -0.0465727978
+},
+{
+"set": -0.0340722503
+},
+{
+"set": -0.0240727937
+},
+{
+"set": -0.014072318
+},
+{
+"set": -0.0040733243
+},
+{
+"set": 0.0059282302
+},
+{
+"set": 0.0159277427
+},
+{
+"set": 0.0259265505
+},
+{
+"set": 0.0359257567
+},
+{
+"set": 0.0459268378
+},
+{
+"set": 0.0559242852
+},
+{
+"set": 0.0659194806
+},
+{
+"set": 0.0759093457
+},
+{
+"set": 0.085829855
+},
+{
+"set": 0.0958308273
+},
+{
+"set": 0.1058296012
+},
+{
+"set": 0.115831617
+},
+{
+"set": 0.1258311027
+},
+{
+"set": 0.1358309797
+},
+{
+"set": 0.1458315784
+},
+{
+"set": 0.155829761
+},
+{
+"set": 0.1658306063
+}
+]
+}
+],
+"expanded_sha256": "9f63096b5a7b39deb683552fa0871cc2a2e2602eda638bb0c38208e3ebac49b3"
+}

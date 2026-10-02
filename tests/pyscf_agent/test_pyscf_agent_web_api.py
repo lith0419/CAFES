@@ -6,7 +6,7 @@ import unittest
 from copy import deepcopy
 from pathlib import Path
 
-import pyscf_agent.pyscf_agent_web_api as web_api
+import pyscf_agent.web.api as web_api
 from pyscf_agent.application import ExecutionTargetRegistry
 from pyscf_agent.executors import JobHandle, JobState, JobStatus, LocalExecutor
 from pyscf_agent.lifecycle import task_lifecycle_for_preparation

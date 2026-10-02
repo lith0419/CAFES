@@ -43,6 +43,7 @@ from pyscf_agent.web.api import (
 from pyscf_agent.web.ui import build_index_html
 from computational_study_agent.web_api import (
     handle_saved_study_request,
+    handle_example_study_request,
     handle_study_adaptive_plan_request,
     handle_study_adaptive_run_request,
     handle_study_execution_collect_request,
@@ -301,6 +302,8 @@ class AgentWebHandler(BaseHTTPRequestHandler):
             self._handle_save_model_hamiltonian_input(request_body)
             return
         routes = {
+            '/api/study-examples': partial(handle_example_study_request, action='list'),
+            '/api/study-example-import': partial(handle_example_study_request, action='import'),
             '/api/study-list': partial(handle_saved_study_request, action='list'),
             '/api/study-open': partial(handle_saved_study_request, action='open'),
             '/api/study-start': partial(handle_saved_study_request, action='start'),

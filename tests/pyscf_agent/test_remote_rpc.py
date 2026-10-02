@@ -11,10 +11,10 @@ from unittest import mock
 
 from pyscf_agent.executors import BatchHandle, JobHandle, JobState, JobStatus
 from pyscf_agent.remote.rpc_cli import dispatch_rpc, main
-from computational_study_agent.hamiltonian_dataset_postprocessing import (
+from computational_study_agent.datasets.hamiltonian.postprocessing import (
     HAMILTONIAN_DATASET_GENERATION_REQUEST_SCHEMA,
 )
-from computational_study_agent.hamiltonian_dataset_contracts import (
+from computational_study_agent.datasets.hamiltonian.contracts import (
     HAMILTONIAN_MANIFEST_SCHEMA,
 )
 

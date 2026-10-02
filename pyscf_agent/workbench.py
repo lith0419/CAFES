@@ -99,7 +99,7 @@ class LocalWorkbench:
             if started:
                 with self.log_path.open('ab') as log:
                     process = subprocess.Popen([
-                        self.python, '-u', '-m', 'pyscf_agent.pyscf_agent_web',
+                        self.python, '-u', '-m', 'pyscf_agent.web.server',
                         '--host', '127.0.0.1', '--port', '0', '--no-open-browser',
                         '--workbench-state', str(self.state_path),
                         '--workbench-id', self.identity, *self.arguments,

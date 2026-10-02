@@ -10,7 +10,7 @@ import numpy as np
 from pyscf import gto
 
 from computational_study_agent import StudyApplicationService
-from computational_study_agent.hamiltonian_dataset_contracts import (
+from computational_study_agent.datasets.hamiltonian.contracts import (
     HamiltonianDatasetSpec,
     MolecularDynamicsSamplingSpec,
 )

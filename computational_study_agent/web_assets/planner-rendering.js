@@ -207,8 +207,9 @@ function renderReport(report) {
   updateActiveTaskSessionStatus(report && report.status === 'succeeded' ? 'completed' : 'failed');
   snapshotCurrentTaskSession();
   refreshPostprocessContext();
-  const phasePlots = (report.artifacts || []).filter(a => a.kind === 'postprocess-plot' && /\/dmet-phases\//.test(a.path || ''));
-  if (phasePlots.length) renderPostprocessArtifacts(phasePlots);
+  const savedPlots = (Array.isArray(report.artifacts) ? report.artifacts : [])
+    .filter(artifact => artifact && artifact.kind === 'postprocess-plot');
+  if (savedPlots.length) renderPostprocessArtifacts(savedPlots);
 }
 
 function handleStudyModeChange() {
@@ -304,12 +305,18 @@ function wikiEvidenceSummary(evidence) {
   return `Retrieved Wiki Rules:\n${pages.slice(0, 6).map((page) => `- ${page.title || page.slug || 'Untitled rule'}`).join('\n')}`;
 }
 
-function executionStatusSummary(execution) {
+function executionStatusSummary(execution, report = null) {
   const payload = execution && typeof execution === 'object' ? execution : {};
   const expected = Number(payload.expected || payload.task_count || 0);
   const terminal = Number(payload.terminal || 0);
   const available = Number(payload.report_available || 0);
-  const state = String(payload.status || 'unknown').replace(/_/g, ' ');
+  const hasSavedTaskReports = report && Array.isArray(report.cases)
+    && report.cases.some(item => item && item.task_report
+      && typeof item.task_report === 'object' && !Array.isArray(item.task_report)
+      && Object.keys(item.task_report).length > 0);
+  const state = hasSavedTaskReports && payload.status === 'not_found'
+    ? 'saved task reports (execution receipts unavailable)'
+    : String(payload.status || 'unknown').replace(/_/g, ' ');
   const counts = payload.task_status_counts;
   const planned = Number(payload.task_count || 0);
   const labels = {pending: 'in progress', not_executed: 'awaiting execution'};

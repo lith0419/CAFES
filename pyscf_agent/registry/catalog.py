@@ -184,7 +184,7 @@ STUDY_PROVIDER_BINDINGS = {
     ),
     'study.hamiltonian_dataset_assembly': (
         'provider.pyscf_agent',
-        'computational_study_agent.hamiltonian_dataset_finalize.finalize_hamiltonian_dataset',
+        'computational_study_agent.datasets.hamiltonian.finalize.finalize_hamiltonian_dataset',
     ),
     'core.study_report': ('provider.pyscf_agent', 'computational_study_agent.results.study_report'),
 }

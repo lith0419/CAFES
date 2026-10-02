@@ -1,0 +1,259 @@
+{
+  "schema": "pyscf-agent.study-state.v1",
+  "study_id": "example-lutein-gs",
+  "cases": {
+    "point01": {
+      "case_id": "point01",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0001-attempt-2-df89f903",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "point02": {
+      "case_id": "point02",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0019-attempt-2-6fd023a4",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "point03": {
+      "case_id": "point03",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0017",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "point04": {
+      "case_id": "point04",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0015-attempt-2-7cd1bed4",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "point05": {
+      "case_id": "point05",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0013-attempt-2-ef7a5ef2",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "point06": {
+      "case_id": "point06",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0011",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "point07": {
+      "case_id": "point07",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0009-attempt-2-9eef3a0a",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "point08": {
+      "case_id": "point08",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0007-attempt-2-505e21aa",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "point09": {
+      "case_id": "point09",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0005",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "point10": {
+      "case_id": "point10",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0003-attempt-2-86cca1b2",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "point11": {
+      "case_id": "point11",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0001-attempt-3-30d905f8",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "point12": {
+      "case_id": "point12",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0001-attempt-2-17a75460",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "point13": {
+      "case_id": "point13",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0002-attempt-2-cb50e801",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "point14": {
+      "case_id": "point14",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0004",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "point15": {
+      "case_id": "point15",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0006-attempt-2-78e2bc62",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "point16": {
+      "case_id": "point16",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0008-attempt-2-f1aa6530",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "point17": {
+      "case_id": "point17",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0010",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "point18": {
+      "case_id": "point18",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0012-attempt-2-9ff7aedd",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "point19": {
+      "case_id": "point19",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0014-attempt-2-a8529b91",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "point20": {
+      "case_id": "point20",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0016",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "point21": {
+      "case_id": "point21",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0018-attempt-2-1e4417f7",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "point22": {
+      "case_id": "point22",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0020-attempt-2-ae3ad770",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    },
+    "point23": {
+      "case_id": "point23",
+      "attempt_count": 1,
+      "imported_snapshot": true,
+      "task_report": {
+        "schema": "pyscf-agent.task-report.v1",
+        "run_id": "case-0001-attempt-2-f24dc6fc",
+        "execution_status": "succeeded",
+        "analysis_summary": "Imported status only; full evidence is in study-report.json."
+      }
+    }
+  }
+}

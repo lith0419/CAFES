@@ -83,8 +83,8 @@ class PublicApiBoundaryTests(unittest.TestCase):
 
     def test_product_entry_points_do_not_import_compatibility_backend(self):
         product_sources = (
-            REPO_ROOT / 'pyscf_agent' / 'pyscf_agent_cli.py',
-            REPO_ROOT / 'pyscf_agent' / 'pyscf_agent_web.py',
+            REPO_ROOT / 'pyscf_agent' / 'cli.py',
+            REPO_ROOT / 'pyscf_agent' / 'web' / 'server.py',
             REPO_ROOT / 'pyscf_agent' / 'benchmarks' / 'fcdmft_si_g0w0.py',
             REPO_ROOT / 'pyscf_agent' / 'benchmarks' / 'suite.py',
         )

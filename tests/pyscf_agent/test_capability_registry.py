@@ -10,8 +10,8 @@ from pathlib import Path
 import computational_study_agent.postprocessing as postprocessing
 import computational_study_agent.web_ui as study_web_ui
 from computational_study_agent.adaptive.initial_scan import initial_scan_method_for_options
-import pyscf_agent.pyscf_agent_cli as pyscf_agent_cli
-import pyscf_agent.pyscf_agent_web_ui as agent_web_ui
+import pyscf_agent.cli as pyscf_agent_cli
+import pyscf_agent.web.ui as agent_web_ui
 from pyscf_agent.backend import artifacts as backend_artifacts
 from pyscf_agent.backend.model_hamiltonian import operations as model_operations
 from pyscf_agent.registry import platform as registry_platform

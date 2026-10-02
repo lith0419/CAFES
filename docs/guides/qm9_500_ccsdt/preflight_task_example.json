@@ -1,0 +1,38 @@
+{
+  "task_type": "molecular",
+  "system": {
+    "atom": "C -0.0126981359 1.0858041578 0.0080009958; H 0.002150416 -0.0060313176 0.0019761204; H 1.0117308433 1.4637511618 0.0002765748; H -0.540815069 1.4475266138 -0.8766437152; H -0.5238136345 1.4379326443 0.9063972942",
+    "basis": "def2-svp",
+    "unit": "Angstrom",
+    "charge": 0,
+    "spin": 0,
+    "symmetry": false
+  },
+  "method": {
+    "name": "ccsd_t",
+    "restricted": true
+  },
+  "job": {
+    "name": "single_point"
+  },
+  "analysis": {
+    "outputs": [
+      "energy"
+    ]
+  },
+  "runtime": {
+    "conv_tol": 1e-10,
+    "conv_tol_grad": 0.000001,
+    "max_cycle": 100
+  },
+  "density_fitting": {
+    "enabled": false
+  },
+  "workflow": {
+    "module_config": {
+      "molecular.correlation_diagnostics": {
+        "scf_stability": true
+      }
+    }
+  }
+}

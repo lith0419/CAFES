@@ -111,6 +111,43 @@ async function listSavedStudies() {
   }
 }
 
+async function loadReportExamples() {
+  const select = document.getElementById('report-example-select');
+  try {
+    const payload = await postJson('/api/study-examples', {});
+    select.replaceChildren(new Option('Select an example', ''));
+    (payload.examples || []).forEach(item => select.add(new Option(item.name, item.study_id)));
+    if (!(payload.examples || []).length) {
+      setStatus('report-example-status', 'Report examples are available in the source checkout.');
+    }
+  } catch (error) {
+    select.replaceChildren(new Option('Examples unavailable', ''));
+    setStatus('report-example-status', error.message, 'error');
+  }
+}
+
+async function openReportExample() {
+  const studyId = document.getElementById('report-example-select').value;
+  if (!studyId) return;
+  const button = document.getElementById('open-report-example');
+  button.disabled = true;
+  setStatus('report-example-status', 'Opening example…');
+  try {
+    await executionTargetsReady;
+    const imported = await postJson('/api/study-example-import', {
+      study_id: studyId, work_dir: executionWorkDir(),
+    });
+    const opened = await openSavedStudy({studyId: imported.study_id, workDir: imported.work_dir,
+      executionTarget: imported.execution_target});
+    if (!opened) throw new Error('The example could not be opened. See the Saved Study status.');
+    setStatus('report-example-status', 'Example loaded. Saved results and figures are ready to inspect.');
+  } catch (error) {
+    setStatus('report-example-status', error.message, 'error');
+  } finally {
+    button.disabled = !document.getElementById('report-example-select').value;
+  }
+}
+
 async function openSavedStudy(options = {}) {
   const studyId = options.studyId || document.getElementById('saved-study-id').value.trim();
   if (!studyId) {
@@ -150,7 +187,7 @@ async function openSavedStudy(options = {}) {
         systemType: plan.system_type, studyMode: saved.mode });
     }
     currentSavedStudy = { studyId, workDir: saved.work_dir, executionTarget: request.execution_target };
-    await refreshSavedStudy(saved);
+    return await refreshSavedStudy(saved);
   } catch (error) {
     if (activeTaskSession() === openingSession) {
       setStatus('saved-study-status', error.message, 'error');
@@ -230,8 +267,7 @@ async function refreshSavedStudy(loaded = null, reconcileCompletedReview = true)
     // Re-read once when that status confirms the saved review was consumed.
     if (reconcileCompletedReview && pending && !running && execution.study_status
         && !execution.pending_review && execution.agent && execution.agent.finished_at) {
-      await refreshSavedStudy(null, false);
-      return;
+      return await refreshSavedStudy(null, false);
     }
     if (running || (!pending && ['running', 'interrupted', 'connection_interrupted', 'submission_unknown'].includes(execution.status))) {
       currentExecution = { studyId: identity.studyId, workDir: identity.workDir,
@@ -241,9 +277,10 @@ async function refreshSavedStudy(loaded = null, reconcileCompletedReview = true)
     if (!pending) renderLiveStudyTable(execution);
     if (running) renderRunningGridProgress(execution, plan, report);
     const displayStatus = execution.status === 'cancelled' ? 'cancelled' : running ? 'running' : pending ? pending.status : report ? report.status : 'prepared';
-    setStatus('saved-study-status', `${saved.study_id} · ${displayStatus} · ${executionStatusSummary(execution)}`);
+    setStatus('saved-study-status', `${saved.study_id} · ${displayStatus} · ${executionStatusSummary(execution, report)}`);
     snapshotCurrentTaskSession();
     scheduleSavedStudyPolling(identity, execution);
+    return true;
   } catch (error) {
     if (currentSavedStudy === identity && version === savedStudyRefreshVersion) {
       document.getElementById('run-study').disabled = true;

@@ -12,7 +12,7 @@ python -m pip install -e '.[dev]'
 ruff check .
 mypy
 python -m unittest discover -s tests -t . -p 'test*.py'
-python configure.py verify-install --output /tmp/pyscf-agent-wheel-check.json
+python -m pyscf_agent.configure verify-install --output /tmp/pyscf-agent-wheel-check.json
 ```
 
 Ruff checks correctness, unused imports (F401), and misplaced imports (E402),
@@ -43,28 +43,36 @@ Nothing migrates existing runs, remote release caches or private configuration
 automatically. Use the existing explicit remote work-directory configuration on
 clusters. Resource/path lookup itself does not create directories.
 
-## Compatibility ownership
+## Supported entry points
 
-| Compatibility surface | Current implementation | Removal criterion |
-| --- | --- | --- |
-| `pyscf_agent.pyscf_agent_web*` | `pyscf_agent.web.{server,api,ui}` | A documented breaking release after installed launchers and generated commands migrate. |
-| `pyscf_agent.pyscf_agent_cli` | `pyscf_agent.cli` | Same release policy as command entry points. |
-| `hamiltonian_dataset_*` | `computational_study_agent.datasets.hamiltonian.*` | Old callers and saved dataset workflow identifiers have a tested migration. |
-| Root `configure.py` | `pyscf_agent.configure` | Source-install documentation and external launchers stop requiring the wrapper. |
-| Dataset `select_seeds.py` scripts | Frozen generation snapshots | Retain with the published dataset; these are evidence, not compatibility adapters. |
+The nine forwarding modules and duplicate Web command were removed during
+cleanup of the new repository. Use these entry points:
 
-Application maintainers own these adapters. They contain no alternative execution
-logic. Keep runtime aliases through the current 0.2 series. Target removal is **0.3.0**,
-conditional on migrating documented entry points, installed launchers, and saved
-workflow identifiers and passing their migration tests. If a condition remains
-unmet, document the deferred surface rather than deleting it automatically.
-The new grid modules were never published under their flat names and need no aliases.
+| Area | Module or command |
+| --- | --- |
+| Calculation CLI | `pyscf_agent.cli` / `pyscf-agent` |
+| Web server | `pyscf_agent.web.server` / `pyscf-agent-web` |
+| Web API and UI | `pyscf_agent.web.api`, `pyscf_agent.web.ui` |
+| Hamiltonian datasets | `computational_study_agent.datasets.hamiltonian.{contracts,planner,finalize,postprocessing}` |
+| Source configuration | `python -m pyscf_agent.configure` |
+| Installed configuration | `pyscf-agent-configure` |
+
+Repository launchers, tests, registry bindings, installation instructions, and
+distribution scripts use these paths. This cleanup removes the old import and
+command names. Persisted report readers, checkpoint validation, and scientific
+provider compatibility remain separate concerns. Archived dataset selectors
+remain generation evidence.
 
 ## Data and scientific boundaries
 
-Shared QM9 preparation tools live in `tools/datasets/qm9`. Research datasets,
-calculation outputs and campaign reports are maintained separately from this
-public source repository.
+Scientific baselines and report evidence remain versioned. Selected QM9 geometries
+and their provenance were archived on Amarel on 2026-10-01; see
+[storage and restore locations](repository-storage.md).
+Shared QM9 preparation mechanisms moved to `tools/datasets/qm9`;
+the two selection policies and output defaults are preserved. Historical dataset
+scripts and their original SHA256SUMS remain in that archive as generation snapshots. Source archives,
+temporary caches and fresh calculations belong in external configured locations.
+Report-specific reproduction scripts stay with their evidence.
 
 This reorganization does not change CAS/DMET algorithms or solver parameters.
 Large numerical functions and a wholesale catalog-format conversion require

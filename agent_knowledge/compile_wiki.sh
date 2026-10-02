@@ -18,7 +18,7 @@ if [[ -z "${LLMWIKI_PROVIDER:-}" ]]; then
 No llmwiki LLM provider is configured.
 
 From the repository root, initialize and load the private PySCF-agent endpoint:
-  python configure.py init-llm
+  python -m pyscf_agent.configure init-llm
   source ./llm.env
 
 Then run this script from the same shell.

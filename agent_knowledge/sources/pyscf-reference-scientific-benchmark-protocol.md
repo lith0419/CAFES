@@ -111,8 +111,8 @@ The full AO DF tensor keeps peak RSS near 42 GiB in all these cases. Neither
 small discarded weights nor reduced integral timings establish chemical
 accuracy, active-space adequacy, or a general full-workflow speedup.
 
-The supporting campaign report is maintained separately from this public
-source repository. The 23-geometry scan and full M=2000 orbital optimization
+See `reports/lutein-overnight-results-2026-09-21.md` for settings, identities
+and numerical evidence. The 23-geometry scan and full M=2000 orbital optimization
 remain unperformed; cross-geometry orbital projection is separate work.
 
 ### Opt-in block2 scaling campaigns

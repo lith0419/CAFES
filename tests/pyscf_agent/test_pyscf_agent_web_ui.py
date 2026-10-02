@@ -3,7 +3,7 @@ from __future__ import annotations
 import unittest
 from pathlib import Path
 
-import pyscf_agent.pyscf_agent_web_ui as web_ui
+import pyscf_agent.web.ui as web_ui
 
 
 WEB_ASSET_DIR = Path(__file__).resolve().parents[2] / 'pyscf_agent' / 'web_assets'

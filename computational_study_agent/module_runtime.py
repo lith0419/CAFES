@@ -59,7 +59,7 @@ def build_study_module_runtime_registry() -> StudyOrchestrationRegistry:
         ('computational_study_agent.results.integrate', 'study.finalize', 'run_study'),
         ('computational_study_agent.postprocessing.run_postprocessing', 'study.finalize', 'run_postprocessing'),
         (
-            'computational_study_agent.hamiltonian_dataset_finalize.finalize_hamiltonian_dataset',
+            'computational_study_agent.datasets.hamiltonian.finalize.finalize_hamiltonian_dataset',
             'study.finalize',
             'run_study',
         ),

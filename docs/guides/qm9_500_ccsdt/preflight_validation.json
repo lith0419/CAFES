@@ -1,0 +1,8 @@
+{
+  "date": "2026-09-21",
+  "valid": true,
+  "errors": [],
+  "executor": "local-process",
+  "molecule_id": "qm9_000001",
+  "scope": "Interface validation only; no numerical execution; CC-specific controls not yet bound."
+}

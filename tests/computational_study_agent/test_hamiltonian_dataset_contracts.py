@@ -7,7 +7,7 @@ import unittest
 from contextlib import redirect_stdout
 from pathlib import Path
 
-from computational_study_agent.hamiltonian_dataset_contracts import (
+from computational_study_agent.datasets.hamiltonian.contracts import (
     AOBasisMetadata,
     ElectronicStructureSpec,
     HamiltonianDatasetManifest,
@@ -18,7 +18,7 @@ from computational_study_agent.hamiltonian_dataset_contracts import (
     MolecularDynamicsSamplingSpec,
 )
 from computational_study_agent import StudyApplicationService
-from computational_study_agent.hamiltonian_dataset_finalize import (
+from computational_study_agent.datasets.hamiltonian.finalize import (
     finalize_hamiltonian_dataset,
 )
 from computational_study_agent.executor import run_study

@@ -429,6 +429,23 @@ def handle_study_adaptive_plan_request(request_body: bytes) -> JsonResponse:
     return _json_response(HTTPStatus.OK, adaptive_payload)
 
 
+def handle_example_study_request(request_body: bytes, *, action: str) -> JsonResponse:
+    payload, error_response = _decode_json_request(request_body)
+    if error_response is not None:
+        return error_response
+    try:
+        service = get_study_application_service('local')
+        if action == 'list':
+            return _json_response(HTTPStatus.OK, {'examples': service.list_examples()})
+        study_id = payload.get('study_id')
+        if not isinstance(study_id, str):
+            raise ValueError('study_id must be a string')
+        return _json_response(HTTPStatus.OK, service.import_example(
+            study_id, work_dir=payload.get('work_dir')))
+    except Exception as exc:
+        return _handle_error(exc)
+
+
 def handle_saved_study_request(request_body: bytes, *, action: str) -> JsonResponse:
     """HTTP transport for the same saved-Study operations exposed by MCP."""
     payload, error_response = _decode_json_request(request_body)

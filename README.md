@@ -62,8 +62,19 @@ status refresh and observed solver progress, shared by the browser and MCP.
   source-matched remote releases. Web local processes retain cancellation after
   restart and support an optional hard wall-time limit.
 
-See the [documentation index](docs/README.md) and the maintained
-[architecture](docs/architecture.md) for supported workflows and ownership.
+See the [current platform report](docs/status/strong-correlation-agent-platform.md)
+for detailed method support, scientific boundaries, and remaining limitations.
+The September 21 development report (author archive: `reports/development-status-2026-09-21.md`)
+summarizes the current implementation and verification. The latest
+lutein results (author archive: `reports/lutein-overnight-results-2026-09-21.md`) establish
+converged M=600 orbital optimization and quantify the error from restricted
+external virtual spaces; full M=2000 orbital optimization remains untested.
+
+## Report Examples
+
+Open the [Lutein and Honeycomb examples](examples/README.md) in the local
+Planner: four separate saved Studies with results, plots and provenance.
+In the normal Web app, choose **Saved Studies → Report examples → Open Example**.
 
 ## Install
 
@@ -74,7 +85,7 @@ setup is:
 export CONDA_SOLVER=classic
 conda env create --file config/environments/conda.yml
 conda activate pyscf-agent
-python configure.py install
+python -m pyscf_agent.configure install
 pyscf-agent-configure check
 ```
 
@@ -120,7 +131,8 @@ old calculations stay in place. Private
 configuration and run artifacts are excluded from releases and source snapshots.
 Large orbital guesses use lossless array files, and new Study checkpoints keep
 TaskReport references and compact status summaries. Status reads do not load
-numerical arrays; existing inline records remain readable. See the [architecture guide](docs/architecture.md) for storage ownership.
+numerical arrays; existing inline records remain readable. See the
+storage verification (author archive: `reports/file-backed-task-storage-2026-09-21.md`).
 
 ## Documentation
 

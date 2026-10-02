@@ -20,12 +20,25 @@ function start(url, navigationType = 'navigate') {
   let active, ready;
   const context = {
     URL, DEFAULT_WORK_DIR: '/tmp/studies',
+    Option: function(text, value) {this.text = text; this.value = value; this.dataset = {};},
     window: {location: {href: url}, addEventListener: () => {},
       performance: {getEntriesByType: () => [{type: navigationType}]}, history: {
       replaceState: (_, __, value) => {context.window.location.href = String(value);},
     }},
-    document: {getElementById: id => nodes[id] ||= {value: '', listeners: {},
-      addEventListener(event, listener) {this.listeners[event] = listener;}}},
+    document: {getElementById: id => nodes[id] ||= {value: '', listeners: {}, options: [],
+      addEventListener(event, listener) {this.listeners[event] = listener;},
+      replaceChildren(...options) {this.options = options;},
+      add(option) {this.options.push(option);}}},
+    postJson: async route => {
+      if (route === '/api/study-examples') {
+        return {examples: [{study_id: 'example-one', name: 'Example One'}]};
+      }
+      assert.equal(route, '/api/study-list');
+      return {studies: [{study_id: 'saved-one', name: 'Saved One', status: 'completed',
+        work_dir: '/tmp/studies'}]};
+    },
+    executionWorkDir: () => '/tmp/studies', selectedExecutionTarget: () => 'local',
+    setStatus: (_, message, kind) => {assert.notEqual(kind, 'error', message);},
     blankStudySpecForSystem: system_type => ({system_type, base_task: {}}),
     prettyJson: JSON.stringify,
     initializeExecutionTargetSelect: () => new Promise(resolve => {ready = resolve;}),
@@ -60,6 +73,17 @@ async function main() {
   assert.equal(new URL(clean).searchParams.get('theme'), 'dark');
   assert.equal(page.opens.length, 0);
   page.ready(); await Promise.resolve();
+  await new Promise(resolve => setImmediate(resolve));
+  const examples = page.nodes['report-example-select'].options;
+  assert.deepEqual(examples.map(option => [option.text, option.value]), [
+    ['Select an example', ''], ['Example One', 'example-one'],
+  ]);
+  await page.context.listSavedStudies();
+  const studies = page.nodes['saved-study-list'].options;
+  assert.equal(studies.length, 2);
+  assert.equal(studies[0].value, '');
+  assert.equal(studies[1].value, 'saved-one');
+  assert.equal(studies[1].dataset.workDir, '/tmp/studies');
   assert.equal(page.opens.length, 1);
   assert.equal(page.opens[0].studyId, 'old');
   assert.equal(page.opens[0].workDir, '/tmp/remote');

@@ -26,7 +26,7 @@ Create the tested Python 3.10 environment without inheriting user channels:
 export CONDA_SOLVER=classic
 conda env create --file config/environments/conda.yml
 conda activate pyscf-agent
-python configure.py install
+python -m pyscf_agent.configure install
 pyscf-agent-configure check
 ```
 
@@ -41,7 +41,7 @@ pyscf-agent-configure check --slurm
 ```
 
 Preview source-checkout installation commands with
-`python configure.py install --dry-run`.
+`python -m pyscf_agent.configure install --dry-run`.
 Missing compiled Conda dependencies are installed one at a time by default;
 `--batch` requests one combined solve.
 

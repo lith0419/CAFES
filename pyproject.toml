@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pyscf-agent"
-version = "0.2.0"
+version = "0.2.1"
 description = "CAFES: A Correlation-Aware Agentic Framework for Electronic Structure"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -35,7 +35,6 @@ dmft-runtime = ["h5py>=3.8", "mpi4py>=3.1"]
 pyscf-agent-mcp = "pyscf_agent.mcp_server.cli:main"
 pyscf-agent = "pyscf_agent.cli:main"
 pyscf-agent-web = "pyscf_agent.web.server:serve"
-pyscf-agent-webui = "pyscf_agent.web.server:serve"
 pyscf-computational-study = "computational_study_agent.cli:main"
 pyscf-agent-rpc = "pyscf_agent.remote.rpc_cli:main"
 pyscf-agent-benchmark = "pyscf_agent.benchmarks.cli:main"

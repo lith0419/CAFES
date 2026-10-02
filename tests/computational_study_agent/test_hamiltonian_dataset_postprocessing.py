@@ -13,11 +13,11 @@ import numpy as np
 from pyscf_agent.artifacts import ArtifactRepository
 
 from computational_study_agent.execution_receipts import _dataset_execution_progress
-from computational_study_agent.hamiltonian_dataset_contracts import (
+from computational_study_agent.datasets.hamiltonian.contracts import (
     HAMILTONIAN_MANIFEST_SCHEMA,
     HamiltonianDatasetSpec,
 )
-from computational_study_agent.hamiltonian_dataset_postprocessing import (
+from computational_study_agent.datasets.hamiltonian.postprocessing import (
     HAMILTONIAN_DATASET_GENERATION_FILENAME,
     collect_hamiltonian_dataset,
     generate_hamiltonian_dataset,

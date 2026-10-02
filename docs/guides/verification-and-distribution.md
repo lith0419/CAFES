@@ -5,11 +5,11 @@
 ```bash
 python3 -B -m unittest discover -s tests -t . -p 'test*.py'
 python -c "import pyscf_agent, computational_study_agent; print('ok')"
-python configure.py verify-install --output reports/verification/clean-wheel.json
+python -m pyscf_agent.configure verify-install --output reports/verification/clean-wheel.json
 pyscf-agent-configure verify-install --output reports/verification/installed-package.json
 ```
 
-From a source checkout, `python configure.py verify-install` builds a wheel,
+From a source checkout, `python -m pyscf_agent.configure verify-install` builds a wheel,
 installs it in a temporary environment, and imports it outside the source tree.
 From an installed wheel, `pyscf-agent-configure verify-install` validates that
 installation in place. Both modes check schemas, CLI entry points, Web assets,
@@ -109,10 +109,19 @@ publish compatible Linux wheels.
 ./clean.sh
 ```
 
-This removes reproducible caches and build outputs and then verifies that none
-remain. `--check` audits without deleting, `--all` also removes local
-environments and Node dependencies, and `--runs` explicitly removes calculation
-logs and artifacts. Before creating a release, use:
+This removes caches and build intermediates, then verifies the selected scope.
+`--check` audits without deleting. Additional scopes require explicit flags:
+
+- `--all`: local environments and Node dependencies.
+- `--dist`: prepared distribution packages.
+- `--wiki`: generated wiki pages and curation state.
+- `--scratch`: `block2-scratch/` solver files.
+- `--runs`: calculation logs and artifacts; refuses the entire cleanup if
+  a Git `.bundle` backup is present under `runs/`.
+
+Default cleanup preserves all of those directories. See the
+[storage guide](repository-storage.md) for archived data and retained backups.
+Before creating a release, use:
 
 ```bash
 ./clean.sh --yes --release

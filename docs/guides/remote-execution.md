@@ -18,12 +18,13 @@ pyscf-agent "run H2 with HF/STO-3G" \
 
 The same target options are accepted by `pyscf-computational-study`.
 
-The packaged Amarel template uses partition `p_cs2114_1` and pins new jobs to
-`halk0121` through `extra_sbatch_args = --nodelist=halk0121`. The executor passes
-this option to `sbatch`, with the same effect as `#SBATCH --nodelist=halk0121`.
-Every resource profile inherits the server setting. Change the partition and
-node when configuring another cluster. Existing installations use their private
-server configuration; editing the template only changes newly generated configs.
+The template leaves `partition` and `extra_sbatch_args` empty. Set `partition`
+to a partition you can access; leaving it empty uses the cluster default.
+`extra_sbatch_args` supplies optional arguments to `sbatch`, including
+`--nodelist` if you need to request specific nodes you are authorized to use.
+Leave it empty to let Slurm choose the nodes. Every resource profile inherits
+these server settings unless overridden. Existing installations use their
+private server configuration; template changes apply to newly generated configs.
 
 ## SSH To Slurm
 
@@ -122,7 +123,7 @@ From a source checkout, deploy the current source and bind this worktree to its
 own immutable server release:
 
 ```bash
-python configure.py deploy-remote \
+python -m pyscf_agent.configure deploy-remote \
   --environment-id research-md \
   --profile amarel \
   --remote-config ~/.pyscf-agent/remote.ini \

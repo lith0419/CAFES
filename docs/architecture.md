@@ -36,7 +36,8 @@ Useful ownership references:
 
 ## Enforced boundaries and compatibility
 
-The architecture enforces one-way imports from application adapters to Study to task infrastructure.
+The [September 25 architecture review](architecture-review.md) establishes
+one-way imports from application adapters to Study to task infrastructure.
 Applications may also call task services directly. Shared contracts and storage
 primitives must not import Study or presentation code. The shared platform
 registry contains declarative Study contracts; those declarations do not import

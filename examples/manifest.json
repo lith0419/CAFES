@@ -1,0 +1,111 @@
+{
+  "schema": "cafes.planner-examples.v1",
+  "studies": [
+    {
+      "study_id": "example-lutein-gs",
+      "name": "Lutein GS \u00b7 23 geometries",
+      "cases": 23,
+      "sources": [
+        {
+          "path": "sources/lutein-provenance.template.json",
+          "sha256": "0b470d39a1262f3e8cb456751c08584ad0aa3ffc961a41913658935b8ebdcb17",
+          "original_archive": {
+            "kind": "author_local_archive",
+            "path": "source://workspace/reports/lutein-local-20261001/provenance.json",
+            "sha256": "e7e3b710f28e60f7f3ce8c72f0be1518893c8d8b276268d6a7acb7982c6038b2"
+          },
+          "transformations": [
+            "Author workspace and cluster path prefixes replaced by source:// identifiers.",
+            "Shared-row JSON template; expansion preserves every field and value."
+          ]
+        }
+      ]
+    },
+    {
+      "study_id": "example-lutein-sa4",
+      "name": "Lutein SA4 \u00b7 23 geometries",
+      "cases": 23,
+      "sources": [
+        {
+          "path": "sources/lutein-provenance.template.json",
+          "sha256": "0b470d39a1262f3e8cb456751c08584ad0aa3ffc961a41913658935b8ebdcb17",
+          "original_archive": {
+            "kind": "author_local_archive",
+            "path": "source://workspace/reports/lutein-local-20261001/provenance.json",
+            "sha256": "e7e3b710f28e60f7f3ce8c72f0be1518893c8d8b276268d6a7acb7982c6038b2"
+          },
+          "transformations": [
+            "Author workspace and cluster path prefixes replaced by source:// identifiers.",
+            "Shared-row JSON template; expansion preserves every field and value."
+          ]
+        }
+      ]
+    },
+    {
+      "study_id": "example-honeycomb-afm",
+      "name": "Honeycomb AFM \u00b7 239 points",
+      "cases": 239,
+      "sources": [
+        {
+          "path": "studies/example-honeycomb-afm/source-snapshot.json",
+          "sha256": "4cfeca35ebba43a802d98c8634f5d4c652a00f03cfa143ce33ed7a7b7c56d304",
+          "original_archive": {
+            "kind": "author_local_archive",
+            "path": "source://workspace/runs/honeycomb-accepted-refinement-20260930/exports/afm239-cdw84-english-reports/afm-239-snapshot.json",
+            "sha256": "744096c31220edd2cb47458f255ea14831bba5ac54928b6b097e2cd62e3649d3"
+          },
+          "transformations": [
+            "Author workspace and cluster path prefixes replaced by source:// identifiers."
+          ]
+        },
+        {
+          "path": "sources/afm-study-plan.template.json",
+          "sha256": "27b4acc7df51a9a1674d9af9e1c79b071d2c0080a22ae1b85191216d17bfae1c",
+          "original_archive": {
+            "kind": "author_local_archive",
+            "path": "source://workspace/runs/honeycomb-accepted-refinement-20260930/afm-study-plan.json",
+            "sha256": "6b66cd1dae5b0963d56cfd54296bf8d790121527dd16e4b72b7692063bca725c"
+          },
+          "transformations": [
+            "Author workspace and cluster path prefixes replaced by source:// identifiers.",
+            "Shared-row JSON template; expansion preserves every field and value."
+          ]
+        }
+      ]
+    },
+    {
+      "study_id": "example-honeycomb-cdw",
+      "name": "Honeycomb CDW \u00b7 84 points",
+      "cases": 84,
+      "sources": [
+        {
+          "path": "studies/example-honeycomb-cdw/source-snapshot.json",
+          "sha256": "4f65e9895713e48ca36cffe5e0fec1a865f7636ddcae9dace08bf09050a29c18",
+          "original_archive": {
+            "kind": "author_local_archive",
+            "path": "source://workspace/runs/honeycomb-accepted-refinement-20260930/exports/afm239-cdw84-english-reports/cdw-84-snapshot.json",
+            "sha256": "34efda15a15d3198c5be311d9ee2b0c898206c917d39898e6d2f1428cc5cce95"
+          },
+          "transformations": [
+            "Author workspace and cluster path prefixes replaced by source:// identifiers."
+          ]
+        },
+        {
+          "path": "sources/cdw-study-plan.template.json",
+          "sha256": "5555159e3ab224287efb3d52a6cd2c9b7be70212ad72156a329215b09219660d",
+          "original_archive": {
+            "kind": "author_local_archive",
+            "path": "source://workspace/runs/honeycomb-accepted-refinement-20260930/cdw-study-plan.json",
+            "sha256": "53f2d619604da01bc549f8b2ca47477b91e2eb9772023a99f2fd40b015e65a0b"
+          },
+          "transformations": [
+            "Author workspace and cluster path prefixes replaced by source:// identifiers.",
+            "Shared-row JSON template; expansion preserves every field and value."
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": "Imported frozen evidence for native Planner inspection; no calculations executed.",
+  "source_path_base": "examples/"
+}

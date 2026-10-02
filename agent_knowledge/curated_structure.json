@@ -830,7 +830,7 @@
             "StudySpec defines a multi-case objective, StudyPlan expands executable cases, and StudyReport is the authoritative merged study record.",
             "JobHandle and JobStatus describe scheduler identity and lifecycle without replacing scientific status.",
             "Artifact references carry kind, path, size_bytes, mime_type, and description; registered JSON artifacts carry their own versioned schemas. Full initial_mo_coeff matrices use pyscf-agent.numeric-array.v1 NPY references with shape and dtype; only numerical consumers load arrays. Long presentation text stays in artifacts with bounded previews. JSON writes stream into atomic temporary files.",
-            "HamiltonianDatasetSpec, HamiltonianSample, rejection, and manifest contracts live in computational_study_agent.hamiltonian_dataset_contracts; StudyReport has a dataset_manifest field.",
+            "HamiltonianDatasetSpec, HamiltonianSample, rejection, and manifest contracts live in computational_study_agent.datasets.hamiltonian.contracts; StudyReport has a dataset_manifest field.",
             "RuntimeIdentity describes the deployed source and public contract; large numerical arrays stay in registered artifacts."
           ]
         },

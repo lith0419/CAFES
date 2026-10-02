@@ -1,0 +1,26 @@
+{
+  "tool": "line_plot",
+  "x": "BLA",
+  "y": "S0_Ha",
+  "color": null,
+  "group": null,
+  "title": "Lutein SA4: S0 energy",
+  "xlabel": "BLA (Angstrom)",
+  "ylabel": "Energy (Ha)",
+  "colorbar_label": "",
+  "colormap": null,
+  "center": null,
+  "output": "S0-energy",
+  "style": "pyscf_agent_classic",
+  "sort_by_x": true,
+  "figure_size": [
+    6.299212598425196,
+    5.039370078740157
+  ],
+  "dpi": 160,
+  "units": {
+    "BLA": null,
+    "S0_Ha": null
+  },
+  "schema": "pyscf-agent.postprocess-plot-spec.v1"
+}

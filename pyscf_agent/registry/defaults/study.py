@@ -199,7 +199,7 @@ def build_study_families(
                     'initial_scan_execution': 'independent_batch',
                     'refinement_execution': 'single_task_queue',
                     'dependency_policy': 'projected_1rdm_tasks_are_not_batched',
-                    'verification_command': 'configure.py verify-remote --submit-batch-smoke',
+                    'verification_command': 'python -m pyscf_agent.configure verify-remote --submit-batch-smoke',
                     'verification_scope': 'two independent H2/HF tasks in one scheduler batch with TaskReport and artifact checks',
                 },
             ),

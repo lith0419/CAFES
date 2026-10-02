@@ -1,0 +1,3263 @@
+{
+  "tool": "heatmap",
+  "x": "U",
+  "y": "V",
+  "color": "nearest_neighbor_charge_correlation",
+  "group": null,
+  "title": "Charge correlation",
+  "xlabel": "U",
+  "ylabel": "V",
+  "colorbar_label": "",
+  "colormap": "RdBu_r",
+  "center": 0.0,
+  "output": "nearest_neighbor_charge_correlation-heatmap-U-V",
+  "style": "pyscf_agent_classic",
+  "sort_by_x": true,
+  "figure_size": [
+    6.299212598425196,
+    6.299212598425196
+  ],
+  "dpi": 160,
+  "units": {
+    "U": null,
+    "V": null,
+    "nearest_neighbor_charge_correlation": null
+  },
+  "local_cells": [
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.0,
+          1.125
+        ],
+        "V": [
+          1.0,
+          1.125
+        ]
+      },
+      "cell_id": "cell-82fd7eab15ddb850b5da",
+      "depth": 3,
+      "corner_case_ids": [
+        "case-0001",
+        "grid-0195",
+        "grid-0197",
+        "grid-0091"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.0,
+          1.125
+        ],
+        "V": [
+          1.125,
+          1.25
+        ]
+      },
+      "cell_id": "cell-0b26e2e6758d569d378f",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0197",
+        "grid-0091",
+        "grid-0078",
+        "grid-0196"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.125,
+          1.25
+        ],
+        "V": [
+          1.0,
+          1.125
+        ]
+      },
+      "cell_id": "cell-87badeccf5295c0580c4",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0195",
+        "grid-0076",
+        "grid-0091",
+        "grid-0198"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.125,
+          1.25
+        ],
+        "V": [
+          1.125,
+          1.25
+        ]
+      },
+      "cell_id": "cell-033c526fdf89a7722806",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0091",
+        "grid-0198",
+        "grid-0196",
+        "grid-0028"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.0,
+          1.25
+        ],
+        "V": [
+          1.25,
+          1.5
+        ]
+      },
+      "cell_id": "cell-c6b2bab83235eefc48d5",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0078",
+        "grid-0028",
+        "grid-0016",
+        "grid-0077"
+      ],
+      "center_case_id": "grid-0092"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.25,
+          1.375
+        ],
+        "V": [
+          1.0,
+          1.125
+        ]
+      },
+      "cell_id": "cell-0f69554ff7ac1416dfbd",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0076",
+        "grid-0216",
+        "grid-0198",
+        "grid-0093"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.25,
+          1.375
+        ],
+        "V": [
+          1.125,
+          1.25
+        ]
+      },
+      "cell_id": "cell-c843187e0474bc5336f9",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0198",
+        "grid-0093",
+        "grid-0028",
+        "grid-0217"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.375,
+          1.5
+        ],
+        "V": [
+          1.0,
+          1.125
+        ]
+      },
+      "cell_id": "cell-b5c9497c1ad92d7cd9b5",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0216",
+        "grid-0014",
+        "grid-0093",
+        "grid-0206"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.375,
+          1.5
+        ],
+        "V": [
+          1.125,
+          1.25
+        ]
+      },
+      "cell_id": "cell-8616a3a428973f300f3d",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0093",
+        "grid-0206",
+        "grid-0217",
+        "grid-0079"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.25,
+          1.5
+        ],
+        "V": [
+          1.25,
+          1.5
+        ]
+      },
+      "cell_id": "cell-96f6443a0e408c40a4fb",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0028",
+        "grid-0079",
+        "grid-0077",
+        "grid-0001"
+      ],
+      "center_case_id": "grid-0094"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.0,
+          1.5
+        ],
+        "V": [
+          1.5,
+          2.0
+        ]
+      },
+      "cell_id": "cell-fbd23cbcb28abaac4c11",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0016",
+        "grid-0001",
+        "case-0002",
+        "grid-0015"
+      ],
+      "center_case_id": "grid-0029"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.5,
+          1.625
+        ],
+        "V": [
+          1.0,
+          1.125
+        ]
+      },
+      "cell_id": "cell-36a2d0906cbcbc79eef4",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0014",
+        "grid-0204",
+        "grid-0206",
+        "grid-0095"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.5,
+          1.625
+        ],
+        "V": [
+          1.125,
+          1.25
+        ]
+      },
+      "cell_id": "cell-5a737a32fe6fbdddd9d8",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0206",
+        "grid-0095",
+        "grid-0079",
+        "grid-0205"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.625,
+          1.75
+        ],
+        "V": [
+          1.0,
+          1.125
+        ]
+      },
+      "cell_id": "cell-15ac30078aa7b19b9f39",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0204",
+        "grid-0083",
+        "grid-0095",
+        "grid-0190"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.625,
+          1.75
+        ],
+        "V": [
+          1.125,
+          1.25
+        ]
+      },
+      "cell_id": "cell-808a5bf12c8b76f08fe3",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0095",
+        "grid-0190",
+        "grid-0205",
+        "grid-0030"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.5,
+          1.75
+        ],
+        "V": [
+          1.25,
+          1.5
+        ]
+      },
+      "cell_id": "cell-b6a816578103df5b1519",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0079",
+        "grid-0030",
+        "grid-0001",
+        "grid-0084"
+      ],
+      "center_case_id": "grid-0096"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.75,
+          1.875
+        ],
+        "V": [
+          1.0,
+          1.125
+        ]
+      },
+      "cell_id": "cell-aca74ece96c0c8fd2619",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0083",
+        "grid-0188",
+        "grid-0190",
+        "grid-0097"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.75,
+          1.875
+        ],
+        "V": [
+          1.125,
+          1.25
+        ]
+      },
+      "cell_id": "cell-129e3071b1e1da03c9c4",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0190",
+        "grid-0097",
+        "grid-0030",
+        "grid-0189"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.875,
+          2.0
+        ],
+        "V": [
+          1.0,
+          1.125
+        ]
+      },
+      "cell_id": "cell-c44bbe4c6f948f596e3b",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0188",
+        "case-0005",
+        "grid-0097",
+        "grid-0191"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.875,
+          2.0
+        ],
+        "V": [
+          1.125,
+          1.25
+        ]
+      },
+      "cell_id": "cell-48970746755461e820a7",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0097",
+        "grid-0191",
+        "grid-0189",
+        "grid-0081"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.75,
+          2.0
+        ],
+        "V": [
+          1.25,
+          1.5
+        ]
+      },
+      "cell_id": "cell-2feb192541021ae3e950",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0030",
+        "grid-0081",
+        "grid-0084",
+        "grid-0017"
+      ],
+      "center_case_id": "grid-0098"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.5,
+          2.0
+        ],
+        "V": [
+          1.5,
+          2.0
+        ]
+      },
+      "cell_id": "cell-8a471492c0b52e795677",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0001",
+        "grid-0017",
+        "grid-0015",
+        "case-0006"
+      ],
+      "center_case_id": "grid-0031"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.0,
+          2.0
+        ],
+        "V": [
+          2.0,
+          4.0
+        ]
+      },
+      "cell_id": "cell-8312fc82cab88981791b",
+      "depth": 0,
+      "corner_case_ids": [
+        "case-0002",
+        "case-0006",
+        "case-0003",
+        "case-0007"
+      ],
+      "center_case_id": "grid-0002"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          1.0,
+          2.0
+        ],
+        "V": [
+          4.0,
+          8.0
+        ]
+      },
+      "cell_id": "cell-07a221bf6f55c33d42d9",
+      "depth": 0,
+      "corner_case_ids": [
+        "case-0003",
+        "case-0007",
+        "case-0004",
+        "case-0008"
+      ],
+      "center_case_id": "grid-0003"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.0,
+          2.25
+        ],
+        "V": [
+          1.0,
+          1.125
+        ]
+      },
+      "cell_id": "cell-b46a821250b58c510fa6",
+      "depth": 3,
+      "corner_case_ids": [
+        "case-0005",
+        "grid-0202",
+        "grid-0191",
+        "grid-0099"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.0,
+          2.25
+        ],
+        "V": [
+          1.125,
+          1.25
+        ]
+      },
+      "cell_id": "cell-37b4ec3729d6a386ec46",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0191",
+        "grid-0099",
+        "grid-0081",
+        "grid-0199"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.25,
+          2.5
+        ],
+        "V": [
+          1.0,
+          1.125
+        ]
+      },
+      "cell_id": "cell-d3c92716161e08e334c4",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0202",
+        "grid-0080",
+        "grid-0099",
+        "grid-0203"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.25,
+          2.5
+        ],
+        "V": [
+          1.125,
+          1.25
+        ]
+      },
+      "cell_id": "cell-f632dd4c136a2459b685",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0099",
+        "grid-0203",
+        "grid-0199",
+        "grid-0032"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.0,
+          2.25
+        ],
+        "V": [
+          1.25,
+          1.375
+        ]
+      },
+      "cell_id": "cell-f35d5ca652e968fa34d6",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0081",
+        "grid-0199",
+        "grid-0201",
+        "grid-0100"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.0,
+          2.25
+        ],
+        "V": [
+          1.375,
+          1.5
+        ]
+      },
+      "cell_id": "cell-4f5b8e399f347c269558",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0201",
+        "grid-0100",
+        "grid-0017",
+        "grid-0200"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.25,
+          2.5
+        ],
+        "V": [
+          1.25,
+          1.375
+        ]
+      },
+      "cell_id": "cell-07c38699b77ef376d888",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0199",
+        "grid-0032",
+        "grid-0100",
+        "grid-0193"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.25,
+          2.5
+        ],
+        "V": [
+          1.375,
+          1.5
+        ]
+      },
+      "cell_id": "cell-5da0e5bf4bef5ac91dab",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0100",
+        "grid-0193",
+        "grid-0200",
+        "grid-0073"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.5,
+          3.0
+        ],
+        "V": [
+          1.0,
+          1.25
+        ]
+      },
+      "cell_id": "cell-418dc001c52432b3a6d6",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0080",
+        "grid-0024",
+        "grid-0032",
+        "grid-0082"
+      ],
+      "center_case_id": "grid-0103"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.5,
+          2.75
+        ],
+        "V": [
+          1.25,
+          1.375
+        ]
+      },
+      "cell_id": "cell-5f2694fe09de3bc535d8",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0032",
+        "grid-0192",
+        "grid-0193",
+        "grid-0104"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.5,
+          2.75
+        ],
+        "V": [
+          1.375,
+          1.5
+        ]
+      },
+      "cell_id": "cell-4dfa44c70286ff7c26da",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0193",
+        "grid-0104",
+        "grid-0073",
+        "grid-0185"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.75,
+          3.0
+        ],
+        "V": [
+          1.25,
+          1.375
+        ]
+      },
+      "cell_id": "cell-d2d844ebb573a86d472a",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0192",
+        "grid-0082",
+        "grid-0104",
+        "grid-0194"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.75,
+          3.0
+        ],
+        "V": [
+          1.375,
+          1.5
+        ]
+      },
+      "cell_id": "cell-cca1165a1956a6f3cd28",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0104",
+        "grid-0194",
+        "grid-0185",
+        "grid-0004"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.0,
+          2.5
+        ],
+        "V": [
+          1.5,
+          1.75
+        ]
+      },
+      "cell_id": "cell-9d3a7901485bec834d49",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0017",
+        "grid-0073",
+        "grid-0075",
+        "grid-0033"
+      ],
+      "center_case_id": "grid-0101"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.0,
+          2.5
+        ],
+        "V": [
+          1.75,
+          2.0
+        ]
+      },
+      "cell_id": "cell-804d78376fecc60811f6",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0075",
+        "grid-0033",
+        "case-0006",
+        "grid-0074"
+      ],
+      "center_case_id": "grid-0102"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.5,
+          2.75
+        ],
+        "V": [
+          1.5,
+          1.625
+        ]
+      },
+      "cell_id": "cell-ee7fc0e45bbfc4163ea0",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0073",
+        "grid-0185",
+        "grid-0187",
+        "grid-0105"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.5,
+          2.75
+        ],
+        "V": [
+          1.625,
+          1.75
+        ]
+      },
+      "cell_id": "cell-74c950936fed62af0208",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0187",
+        "grid-0105",
+        "grid-0033",
+        "grid-0186"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.75,
+          3.0
+        ],
+        "V": [
+          1.5,
+          1.625
+        ]
+      },
+      "cell_id": "cell-91e80788dc6193b6823c",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0185",
+        "grid-0004",
+        "grid-0105",
+        "grid-0183"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.75,
+          3.0
+        ],
+        "V": [
+          1.625,
+          1.75
+        ]
+      },
+      "cell_id": "cell-ed4edeade8b71d8a6555",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0105",
+        "grid-0183",
+        "grid-0186",
+        "grid-0071"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.5,
+          3.0
+        ],
+        "V": [
+          1.75,
+          2.0
+        ]
+      },
+      "cell_id": "cell-89d280e79af82e7c16b4",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0033",
+        "grid-0071",
+        "grid-0074",
+        "grid-0021"
+      ],
+      "center_case_id": "grid-0106"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.0,
+          4.0
+        ],
+        "V": [
+          1.0,
+          1.5
+        ]
+      },
+      "cell_id": "cell-54fccc64fac00c903da5",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0024",
+        "case-0009",
+        "grid-0004",
+        "grid-0025"
+      ],
+      "center_case_id": "grid-0036"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.0,
+          3.25
+        ],
+        "V": [
+          1.5,
+          1.625
+        ]
+      },
+      "cell_id": "cell-9126dcb9985f2f152702",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0004",
+        "grid-0182",
+        "grid-0183",
+        "grid-0107"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.0,
+          3.25
+        ],
+        "V": [
+          1.625,
+          1.75
+        ]
+      },
+      "cell_id": "cell-21593711f33515800c01",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0183",
+        "grid-0107",
+        "grid-0071",
+        "grid-0143"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.25,
+          3.5
+        ],
+        "V": [
+          1.5,
+          1.625
+        ]
+      },
+      "cell_id": "cell-5228814dd0f5b9051020",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0182",
+        "grid-0070",
+        "grid-0107",
+        "grid-0184"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.25,
+          3.5
+        ],
+        "V": [
+          1.625,
+          1.75
+        ]
+      },
+      "cell_id": "cell-02422e500cfd06af1652",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0107",
+        "grid-0184",
+        "grid-0143",
+        "grid-0037"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.0,
+          3.25
+        ],
+        "V": [
+          1.75,
+          1.875
+        ]
+      },
+      "cell_id": "cell-71766832a12297e74fa2",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0071",
+        "grid-0143",
+        "grid-0145",
+        "grid-0108"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.0,
+          3.25
+        ],
+        "V": [
+          1.875,
+          2.0
+        ]
+      },
+      "cell_id": "cell-1234e20e8342667ea993",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0145",
+        "grid-0108",
+        "grid-0021",
+        "grid-0144"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.25,
+          3.5
+        ],
+        "V": [
+          1.75,
+          1.875
+        ]
+      },
+      "cell_id": "cell-852d3031be4f0a2adfad",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0143",
+        "grid-0037",
+        "grid-0108",
+        "grid-0146"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.25,
+          3.5
+        ],
+        "V": [
+          1.875,
+          2.0
+        ]
+      },
+      "cell_id": "cell-272ace354df8b7a28490",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0108",
+        "grid-0146",
+        "grid-0144",
+        "grid-0067"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.5,
+          4.0
+        ],
+        "V": [
+          1.5,
+          1.75
+        ]
+      },
+      "cell_id": "cell-b6b8ad43fd11160cde32",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0070",
+        "grid-0025",
+        "grid-0037",
+        "grid-0072"
+      ],
+      "center_case_id": "grid-0111"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.5,
+          3.75
+        ],
+        "V": [
+          1.75,
+          1.875
+        ]
+      },
+      "cell_id": "cell-d428aff716d2bc533c4a",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0037",
+        "grid-0180",
+        "grid-0146",
+        "grid-0112"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.5,
+          3.75
+        ],
+        "V": [
+          1.875,
+          2.0
+        ]
+      },
+      "cell_id": "cell-cd26aff693320b2ca1f4",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0146",
+        "grid-0112",
+        "grid-0067",
+        "grid-0177"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.75,
+          4.0
+        ],
+        "V": [
+          1.75,
+          1.875
+        ]
+      },
+      "cell_id": "cell-7344acd93fb806a9656e",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0180",
+        "grid-0072",
+        "grid-0112",
+        "grid-0181"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.75,
+          4.0
+        ],
+        "V": [
+          1.875,
+          2.0
+        ]
+      },
+      "cell_id": "cell-66a6ccaf8e48f5c9887a",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0112",
+        "grid-0181",
+        "grid-0177",
+        "case-0010"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.0,
+          3.0
+        ],
+        "V": [
+          2.0,
+          3.0
+        ]
+      },
+      "cell_id": "cell-2fefce38296e6e0d97c9",
+      "depth": 1,
+      "corner_case_ids": [
+        "case-0006",
+        "grid-0021",
+        "grid-0023",
+        "grid-0005"
+      ],
+      "center_case_id": "grid-0034"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.0,
+          3.0
+        ],
+        "V": [
+          3.0,
+          4.0
+        ]
+      },
+      "cell_id": "cell-a68a392f8777b2bc31ee",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0023",
+        "grid-0005",
+        "case-0007",
+        "grid-0022"
+      ],
+      "center_case_id": "grid-0035"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.0,
+          3.5
+        ],
+        "V": [
+          2.0,
+          2.5
+        ]
+      },
+      "cell_id": "cell-25652be69dd096f460c2",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0021",
+        "grid-0067",
+        "grid-0069",
+        "grid-0038"
+      ],
+      "center_case_id": "grid-0109"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.0,
+          3.5
+        ],
+        "V": [
+          2.5,
+          3.0
+        ]
+      },
+      "cell_id": "cell-f6427fe452255c15c350",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0069",
+        "grid-0038",
+        "grid-0005",
+        "grid-0068"
+      ],
+      "center_case_id": "grid-0110"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.5,
+          3.75
+        ],
+        "V": [
+          2.0,
+          2.25
+        ]
+      },
+      "cell_id": "cell-c3fed996f6030573a747",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0067",
+        "grid-0177",
+        "grid-0179",
+        "grid-0113"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.5,
+          3.75
+        ],
+        "V": [
+          2.25,
+          2.5
+        ]
+      },
+      "cell_id": "cell-50ce1e849175ab7b869a",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0179",
+        "grid-0113",
+        "grid-0038",
+        "grid-0178"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.75,
+          4.0
+        ],
+        "V": [
+          2.0,
+          2.25
+        ]
+      },
+      "cell_id": "cell-f5a0450910c68e379561",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0177",
+        "case-0010",
+        "grid-0113",
+        "grid-0175"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.75,
+          4.0
+        ],
+        "V": [
+          2.25,
+          2.5
+        ]
+      },
+      "cell_id": "cell-8697f1c5add62c6f8531",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0113",
+        "grid-0175",
+        "grid-0178",
+        "grid-0066"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.5,
+          4.0
+        ],
+        "V": [
+          2.5,
+          3.0
+        ]
+      },
+      "cell_id": "cell-71358cde43bc6b05d0d8",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0038",
+        "grid-0066",
+        "grid-0068",
+        "grid-0012"
+      ],
+      "center_case_id": "grid-0114"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          3.0,
+          4.0
+        ],
+        "V": [
+          3.0,
+          4.0
+        ]
+      },
+      "cell_id": "cell-f64c2fc00f18c6286760",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0005",
+        "grid-0012",
+        "grid-0022",
+        "case-0011"
+      ],
+      "center_case_id": "grid-0039"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          2.0,
+          4.0
+        ],
+        "V": [
+          4.0,
+          8.0
+        ]
+      },
+      "cell_id": "cell-7ff4a86bfc5ae0381cdf",
+      "depth": 0,
+      "corner_case_ids": [
+        "case-0007",
+        "case-0011",
+        "case-0008",
+        "case-0012"
+      ],
+      "center_case_id": "grid-0006"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          5.0
+        ],
+        "V": [
+          1.0,
+          1.25
+        ]
+      },
+      "cell_id": "cell-ab5f2d8e8664685eca26",
+      "depth": 2,
+      "corner_case_ids": [
+        "case-0009",
+        "grid-0213",
+        "grid-0215",
+        "grid-0040"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          5.0
+        ],
+        "V": [
+          1.25,
+          1.5
+        ]
+      },
+      "cell_id": "cell-c0643a30f237cf5d6539",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0215",
+        "grid-0040",
+        "grid-0025",
+        "grid-0214"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          5.0,
+          6.0
+        ],
+        "V": [
+          1.0,
+          1.25
+        ]
+      },
+      "cell_id": "cell-6c1765498ae5dfd96dd1",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0213",
+        "grid-0026",
+        "grid-0040",
+        "grid-0089"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          5.0,
+          6.0
+        ],
+        "V": [
+          1.25,
+          1.5
+        ]
+      },
+      "cell_id": "cell-6604e646d80ba7145106",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0040",
+        "grid-0089",
+        "grid-0214",
+        "grid-0007"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          6.0
+        ],
+        "V": [
+          1.5,
+          2.0
+        ]
+      },
+      "cell_id": "cell-0cf24822301e61da7962",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0025",
+        "grid-0007",
+        "case-0010",
+        "grid-0010"
+      ],
+      "center_case_id": "grid-0041"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          7.0
+        ],
+        "V": [
+          1.0,
+          1.25
+        ]
+      },
+      "cell_id": "cell-26145ff14eac8cfef77f",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0026",
+        "grid-0088",
+        "grid-0089",
+        "grid-0046"
+      ],
+      "center_case_id": "grid-0220"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          7.0
+        ],
+        "V": [
+          1.25,
+          1.5
+        ]
+      },
+      "cell_id": "cell-c8eadcfd20e217bfa6ba",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0089",
+        "grid-0046",
+        "grid-0007",
+        "grid-0085"
+      ],
+      "center_case_id": "grid-0221"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.0,
+          8.0
+        ],
+        "V": [
+          1.0,
+          1.25
+        ]
+      },
+      "cell_id": "cell-6a09fee79ea3f7884409",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0088",
+        "case-0013",
+        "grid-0046",
+        "grid-0090"
+      ],
+      "center_case_id": "grid-0222"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.0,
+          8.0
+        ],
+        "V": [
+          1.25,
+          1.5
+        ]
+      },
+      "cell_id": "cell-4cf58d44a1ca50531923",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0046",
+        "grid-0090",
+        "grid-0085",
+        "grid-0027"
+      ],
+      "center_case_id": "grid-0223"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          6.5
+        ],
+        "V": [
+          1.5,
+          1.625
+        ]
+      },
+      "cell_id": "cell-dfcbc35d22cc3e41181f",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0007",
+        "grid-0210",
+        "grid-0211",
+        "grid-0123"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          6.5
+        ],
+        "V": [
+          1.625,
+          1.75
+        ]
+      },
+      "cell_id": "cell-ad604ee927b661d07dc3",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0211",
+        "grid-0123",
+        "grid-0086",
+        "grid-0147"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.5,
+          7.0
+        ],
+        "V": [
+          1.5,
+          1.625
+        ]
+      },
+      "cell_id": "cell-fbc4177958fb9be72a5a",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0210",
+        "grid-0085",
+        "grid-0123",
+        "grid-0212"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.5,
+          7.0
+        ],
+        "V": [
+          1.625,
+          1.75
+        ]
+      },
+      "cell_id": "cell-81c0b844c9121795f726",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0123",
+        "grid-0212",
+        "grid-0147",
+        "grid-0047"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          6.5
+        ],
+        "V": [
+          1.75,
+          1.875
+        ]
+      },
+      "cell_id": "cell-40891b79d52627c433ba",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0086",
+        "grid-0147",
+        "grid-0149",
+        "grid-0124"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          6.5
+        ],
+        "V": [
+          1.875,
+          2.0
+        ]
+      },
+      "cell_id": "cell-96a70a148c96ff0fa031",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0149",
+        "grid-0124",
+        "grid-0010",
+        "grid-0148"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.5,
+          7.0
+        ],
+        "V": [
+          1.75,
+          1.875
+        ]
+      },
+      "cell_id": "cell-a23d1a35f8da31b47029",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0147",
+        "grid-0047",
+        "grid-0124",
+        "grid-0150"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.5,
+          7.0
+        ],
+        "V": [
+          1.875,
+          2.0
+        ]
+      },
+      "cell_id": "cell-01ac5edd5ef429570a81",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0124",
+        "grid-0150",
+        "grid-0148",
+        "grid-0056"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.0,
+          8.0
+        ],
+        "V": [
+          1.5,
+          1.75
+        ]
+      },
+      "cell_id": "cell-f41ee959364572ec0e87",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0085",
+        "grid-0027",
+        "grid-0047",
+        "grid-0087"
+      ],
+      "center_case_id": "grid-0131"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.0,
+          8.0
+        ],
+        "V": [
+          1.75,
+          2.0
+        ]
+      },
+      "cell_id": "cell-d6e4541e4b55e13fe590",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0047",
+        "grid-0087",
+        "grid-0056",
+        "case-0014"
+      ],
+      "center_case_id": "grid-0132"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          4.5
+        ],
+        "V": [
+          2.0,
+          2.25
+        ]
+      },
+      "cell_id": "cell-b66c7062310720c0c779",
+      "depth": 3,
+      "corner_case_ids": [
+        "case-0010",
+        "grid-0174",
+        "grid-0175",
+        "grid-0115"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          4.5
+        ],
+        "V": [
+          2.25,
+          2.5
+        ]
+      },
+      "cell_id": "cell-f7ef941da92d8ebd68d5",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0175",
+        "grid-0115",
+        "grid-0066",
+        "grid-0171"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.5,
+          5.0
+        ],
+        "V": [
+          2.0,
+          2.25
+        ]
+      },
+      "cell_id": "cell-b7d2d3ebf11795c22e3e",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0174",
+        "grid-0065",
+        "grid-0115",
+        "grid-0176"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.5,
+          5.0
+        ],
+        "V": [
+          2.25,
+          2.5
+        ]
+      },
+      "cell_id": "cell-2f2edaf11f46a50c32f9",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0115",
+        "grid-0176",
+        "grid-0171",
+        "grid-0042"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          4.5
+        ],
+        "V": [
+          2.5,
+          2.75
+        ]
+      },
+      "cell_id": "cell-895621ac09825a8cd3b6",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0066",
+        "grid-0171",
+        "grid-0173",
+        "grid-0116"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          4.5
+        ],
+        "V": [
+          2.75,
+          3.0
+        ]
+      },
+      "cell_id": "cell-0d0ad3bbb9443c4c5adf",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0173",
+        "grid-0116",
+        "grid-0012",
+        "grid-0172"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.5,
+          5.0
+        ],
+        "V": [
+          2.5,
+          2.75
+        ]
+      },
+      "cell_id": "cell-0ecd412e3dddd41ac42b",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0171",
+        "grid-0042",
+        "grid-0116",
+        "grid-0169"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.5,
+          5.0
+        ],
+        "V": [
+          2.75,
+          3.0
+        ]
+      },
+      "cell_id": "cell-d87d0675f368d7d64ed5",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0116",
+        "grid-0169",
+        "grid-0172",
+        "grid-0062"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          5.0,
+          6.0
+        ],
+        "V": [
+          2.0,
+          2.5
+        ]
+      },
+      "cell_id": "cell-fbf5d34a7c3346e91c69",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0065",
+        "grid-0010",
+        "grid-0042",
+        "grid-0057"
+      ],
+      "center_case_id": "grid-0119"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          5.0,
+          5.5
+        ],
+        "V": [
+          2.5,
+          2.75
+        ]
+      },
+      "cell_id": "cell-d4dfb18a59980afd9cee",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0042",
+        "grid-0168",
+        "grid-0169",
+        "grid-0120"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          5.0,
+          5.5
+        ],
+        "V": [
+          2.75,
+          3.0
+        ]
+      },
+      "cell_id": "cell-4c7b9812cfb6d33d1f71",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0169",
+        "grid-0120",
+        "grid-0062",
+        "grid-0163"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          5.5,
+          6.0
+        ],
+        "V": [
+          2.5,
+          2.75
+        ]
+      },
+      "cell_id": "cell-527be575ed2bdb7aa9a5",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0168",
+        "grid-0057",
+        "grid-0120",
+        "grid-0170"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          5.5,
+          6.0
+        ],
+        "V": [
+          2.75,
+          3.0
+        ]
+      },
+      "cell_id": "cell-136753e074a752c76117",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0120",
+        "grid-0170",
+        "grid-0163",
+        "grid-0008"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          5.0
+        ],
+        "V": [
+          3.0,
+          3.5
+        ]
+      },
+      "cell_id": "cell-d1190695aed9c2ed507b",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0012",
+        "grid-0062",
+        "grid-0064",
+        "grid-0043"
+      ],
+      "center_case_id": "grid-0117"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          5.0
+        ],
+        "V": [
+          3.5,
+          4.0
+        ]
+      },
+      "cell_id": "cell-99a01b01c500ea65de66",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0064",
+        "grid-0043",
+        "case-0011",
+        "grid-0063"
+      ],
+      "center_case_id": "grid-0118"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          5.0,
+          5.5
+        ],
+        "V": [
+          3.0,
+          3.25
+        ]
+      },
+      "cell_id": "cell-7e718bcf4c8e477e4355",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0062",
+        "grid-0163",
+        "grid-0165",
+        "grid-0121"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          5.0,
+          5.5
+        ],
+        "V": [
+          3.25,
+          3.5
+        ]
+      },
+      "cell_id": "cell-bd088356c96157c951a6",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0165",
+        "grid-0121",
+        "grid-0043",
+        "grid-0164"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          5.5,
+          6.0
+        ],
+        "V": [
+          3.0,
+          3.25
+        ]
+      },
+      "cell_id": "cell-e8fb35a37dd3fb94a2d1",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0163",
+        "grid-0008",
+        "grid-0121",
+        "grid-0166"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          5.5,
+          6.0
+        ],
+        "V": [
+          3.25,
+          3.5
+        ]
+      },
+      "cell_id": "cell-d7d4cd72caf00c089f9d",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0121",
+        "grid-0166",
+        "grid-0164",
+        "grid-0054"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          5.0,
+          6.0
+        ],
+        "V": [
+          3.5,
+          4.0
+        ]
+      },
+      "cell_id": "cell-548c0f672cbf4343df4c",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0043",
+        "grid-0054",
+        "grid-0063",
+        "grid-0011"
+      ],
+      "center_case_id": "grid-0122"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          6.5
+        ],
+        "V": [
+          2.0,
+          2.25
+        ]
+      },
+      "cell_id": "cell-a94096635261b64c37b3",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0010",
+        "grid-0148",
+        "grid-0219",
+        "grid-0125"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          6.5
+        ],
+        "V": [
+          2.25,
+          2.5
+        ]
+      },
+      "cell_id": "cell-0cbd6dc54a3926b1a6dc",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0219",
+        "grid-0125",
+        "grid-0057",
+        "grid-0218"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.5,
+          7.0
+        ],
+        "V": [
+          2.0,
+          2.25
+        ]
+      },
+      "cell_id": "cell-5fc962b26d738435a915",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0148",
+        "grid-0056",
+        "grid-0125",
+        "grid-0208"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.5,
+          7.0
+        ],
+        "V": [
+          2.25,
+          2.5
+        ]
+      },
+      "cell_id": "cell-655e91c5f1ecd64c0307",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0125",
+        "grid-0208",
+        "grid-0218",
+        "grid-0048"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          7.0
+        ],
+        "V": [
+          2.5,
+          3.0
+        ]
+      },
+      "cell_id": "cell-4cfffa07d0b7870d1eb5",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0057",
+        "grid-0048",
+        "grid-0008",
+        "grid-0052"
+      ],
+      "center_case_id": "grid-0126"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.0,
+          7.5
+        ],
+        "V": [
+          2.0,
+          2.25
+        ]
+      },
+      "cell_id": "cell-f2abd1b12cdaabe0d2fc",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0056",
+        "grid-0207",
+        "grid-0208",
+        "grid-0133"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.0,
+          7.5
+        ],
+        "V": [
+          2.25,
+          2.5
+        ]
+      },
+      "cell_id": "cell-61993613b0927bdd97cf",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0208",
+        "grid-0133",
+        "grid-0048",
+        "grid-0139"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.5,
+          8.0
+        ],
+        "V": [
+          2.0,
+          2.25
+        ]
+      },
+      "cell_id": "cell-e8febc15f3882bdae665",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0207",
+        "case-0014",
+        "grid-0133",
+        "grid-0209"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.5,
+          8.0
+        ],
+        "V": [
+          2.25,
+          2.5
+        ]
+      },
+      "cell_id": "cell-ee46e64ff94d3659366d",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0133",
+        "grid-0209",
+        "grid-0139",
+        "grid-0058"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.0,
+          7.5
+        ],
+        "V": [
+          2.5,
+          2.75
+        ]
+      },
+      "cell_id": "cell-b2ee2fab7af2706946c9",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0048",
+        "grid-0139",
+        "grid-0141",
+        "grid-0134"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.0,
+          7.5
+        ],
+        "V": [
+          2.75,
+          3.0
+        ]
+      },
+      "cell_id": "cell-72b2f8c7ccbb09f5fc8b",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0141",
+        "grid-0134",
+        "grid-0052",
+        "grid-0140"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.5,
+          8.0
+        ],
+        "V": [
+          2.5,
+          2.75
+        ]
+      },
+      "cell_id": "cell-429ca1c1e67e6ee2c088",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0139",
+        "grid-0058",
+        "grid-0134",
+        "grid-0142"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.5,
+          8.0
+        ],
+        "V": [
+          2.75,
+          3.0
+        ]
+      },
+      "cell_id": "cell-da7a06e96bcc0a1feac3",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0134",
+        "grid-0142",
+        "grid-0140",
+        "grid-0013"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          6.5
+        ],
+        "V": [
+          3.0,
+          3.25
+        ]
+      },
+      "cell_id": "cell-f601dca44eb90de4b2ee",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0008",
+        "grid-0167",
+        "grid-0166",
+        "grid-0127"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          6.5
+        ],
+        "V": [
+          3.25,
+          3.5
+        ]
+      },
+      "cell_id": "cell-99215534383142c33a0f",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0166",
+        "grid-0127",
+        "grid-0054",
+        "grid-0160"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.5,
+          7.0
+        ],
+        "V": [
+          3.0,
+          3.25
+        ]
+      },
+      "cell_id": "cell-9ec0dab6cce8dcc5e142",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0167",
+        "grid-0052",
+        "grid-0127",
+        "grid-0156"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.5,
+          7.0
+        ],
+        "V": [
+          3.25,
+          3.5
+        ]
+      },
+      "cell_id": "cell-3a5af2d5e78e421f8b3b",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0127",
+        "grid-0156",
+        "grid-0160",
+        "grid-0049"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          6.5
+        ],
+        "V": [
+          3.5,
+          3.75
+        ]
+      },
+      "cell_id": "cell-2ae08b78a282bcd3e16f",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0054",
+        "grid-0160",
+        "grid-0162",
+        "grid-0128"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          6.5
+        ],
+        "V": [
+          3.75,
+          4.0
+        ]
+      },
+      "cell_id": "cell-af38acac935e8a3f8cc6",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0162",
+        "grid-0128",
+        "grid-0011",
+        "grid-0161"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.5,
+          7.0
+        ],
+        "V": [
+          3.5,
+          3.75
+        ]
+      },
+      "cell_id": "cell-0591d197d2e3bf60f775",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0160",
+        "grid-0049",
+        "grid-0128",
+        "grid-0158"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.5,
+          7.0
+        ],
+        "V": [
+          3.75,
+          4.0
+        ]
+      },
+      "cell_id": "cell-74114df0795df73f359d",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0128",
+        "grid-0158",
+        "grid-0161",
+        "grid-0053"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.0,
+          7.5
+        ],
+        "V": [
+          3.0,
+          3.25
+        ]
+      },
+      "cell_id": "cell-1e136890ccb9bcb753f6",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0052",
+        "grid-0140",
+        "grid-0156",
+        "grid-0135"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.0,
+          7.5
+        ],
+        "V": [
+          3.25,
+          3.5
+        ]
+      },
+      "cell_id": "cell-23e07e384f548e1da74b",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0156",
+        "grid-0135",
+        "grid-0049",
+        "grid-0155"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.5,
+          8.0
+        ],
+        "V": [
+          3.0,
+          3.25
+        ]
+      },
+      "cell_id": "cell-8812084bea91d5c41aa1",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0140",
+        "grid-0013",
+        "grid-0135",
+        "grid-0157"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.5,
+          8.0
+        ],
+        "V": [
+          3.25,
+          3.5
+        ]
+      },
+      "cell_id": "cell-4d72c911899f62ef8a1d",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0135",
+        "grid-0157",
+        "grid-0155",
+        "grid-0055"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.0,
+          7.5
+        ],
+        "V": [
+          3.5,
+          3.75
+        ]
+      },
+      "cell_id": "cell-aeddacbbef561194116e",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0049",
+        "grid-0155",
+        "grid-0158",
+        "grid-0136"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.0,
+          7.5
+        ],
+        "V": [
+          3.75,
+          4.0
+        ]
+      },
+      "cell_id": "cell-3e791651218ca51195e4",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0158",
+        "grid-0136",
+        "grid-0053",
+        "grid-0151"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.5,
+          8.0
+        ],
+        "V": [
+          3.5,
+          3.75
+        ]
+      },
+      "cell_id": "cell-8e9c16095c136448c377",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0155",
+        "grid-0055",
+        "grid-0136",
+        "grid-0159"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.5,
+          8.0
+        ],
+        "V": [
+          3.75,
+          4.0
+        ]
+      },
+      "cell_id": "cell-08f8e9a16367a9b8df90",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0136",
+        "grid-0159",
+        "grid-0151",
+        "case-0015"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          6.0
+        ],
+        "V": [
+          4.0,
+          6.0
+        ]
+      },
+      "cell_id": "cell-1ff0171fbb5043175065",
+      "depth": 1,
+      "corner_case_ids": [
+        "case-0011",
+        "grid-0011",
+        "grid-0019",
+        "grid-0009"
+      ],
+      "center_case_id": "grid-0044"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          4.0,
+          6.0
+        ],
+        "V": [
+          6.0,
+          8.0
+        ]
+      },
+      "cell_id": "cell-34a9056600426c21e7f0",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0019",
+        "grid-0009",
+        "case-0012",
+        "grid-0018"
+      ],
+      "center_case_id": "grid-0045"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          7.0
+        ],
+        "V": [
+          4.0,
+          5.0
+        ]
+      },
+      "cell_id": "cell-b3ebe5ef14a0b5a7912b",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0011",
+        "grid-0053",
+        "grid-0060",
+        "grid-0050"
+      ],
+      "center_case_id": "grid-0129"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          7.0
+        ],
+        "V": [
+          5.0,
+          6.0
+        ]
+      },
+      "cell_id": "cell-91139551482006d1a5d8",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0060",
+        "grid-0050",
+        "grid-0009",
+        "grid-0059"
+      ],
+      "center_case_id": "grid-0130"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.0,
+          7.5
+        ],
+        "V": [
+          4.0,
+          4.5
+        ]
+      },
+      "cell_id": "cell-845739f4ea25c42258cf",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0053",
+        "grid-0151",
+        "grid-0153",
+        "grid-0137"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.0,
+          7.5
+        ],
+        "V": [
+          4.5,
+          5.0
+        ]
+      },
+      "cell_id": "cell-f3b839e006e5123d160c",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0153",
+        "grid-0137",
+        "grid-0050",
+        "grid-0152"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.5,
+          8.0
+        ],
+        "V": [
+          4.0,
+          4.5
+        ]
+      },
+      "cell_id": "cell-3874305d55678adc3203",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0151",
+        "case-0015",
+        "grid-0137",
+        "grid-0154"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.5,
+          8.0
+        ],
+        "V": [
+          4.5,
+          5.0
+        ]
+      },
+      "cell_id": "cell-626d6ec8e983d37b9167",
+      "depth": 3,
+      "corner_case_ids": [
+        "grid-0137",
+        "grid-0154",
+        "grid-0152",
+        "grid-0061"
+      ],
+      "center_case_id": null
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          7.0,
+          8.0
+        ],
+        "V": [
+          5.0,
+          6.0
+        ]
+      },
+      "cell_id": "cell-77541ed96f1e6773e55d",
+      "depth": 2,
+      "corner_case_ids": [
+        "grid-0050",
+        "grid-0061",
+        "grid-0059",
+        "grid-0020"
+      ],
+      "center_case_id": "grid-0138"
+    },
+    {
+      "group": {},
+      "bounds": {
+        "U": [
+          6.0,
+          8.0
+        ],
+        "V": [
+          6.0,
+          8.0
+        ]
+      },
+      "cell_id": "cell-e64b8debe96ca57f31c5",
+      "depth": 1,
+      "corner_case_ids": [
+        "grid-0009",
+        "grid-0020",
+        "grid-0018",
+        "case-0016"
+      ],
+      "center_case_id": "grid-0051"
+    }
+  ],
+  "schema": "pyscf-agent.postprocess-plot-spec.v1"
+}

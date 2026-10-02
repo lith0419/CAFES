@@ -8,7 +8,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from computational_study_agent.application import StudyApplicationService
-from computational_study_agent.hamiltonian_dataset_contracts import (
+from computational_study_agent.datasets.hamiltonian.contracts import (
     HAMILTONIAN_MANIFEST_SCHEMA, HAMILTONIAN_SAMPLE_SCHEMA,
 )
 from computational_study_agent.trajectory_selection import (

@@ -169,7 +169,7 @@ This archive was built from the current working tree. Local caches, virtual
 environments, Git metadata, build outputs, and private Slurm configuration were
 excluded. Private configuration is also excluded; packaged templates under
 pyscf_agent/resources/templates are included. Start with:
-python configure.py check
+python -m pyscf_agent.configure check
 EOF
 
 echo "[package] creating $ARCHIVE_PATH"

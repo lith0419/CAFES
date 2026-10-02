@@ -47,12 +47,22 @@ class DistributionScriptTests(unittest.TestCase):
                 root / 'runs',
                 root / '.venv',
                 root / 'agent_knowledge' / 'node_modules',
+                root / 'agent_knowledge' / 'wiki',
+                root / 'block2-scratch',
                 root / '.pyscf-agent',
             ):
                 path.mkdir(parents=True, exist_ok=True)
             (root / '.pyscf-agent' / 'remote.ini').write_text(
                 '[remote]\n', encoding='utf-8'
             )
+
+            preview = subprocess.run(
+                (str(script), '--check'), capture_output=True, text=True, check=False,
+            )
+            self.assertEqual(preview.returncode, 1, preview.stderr)
+            self.assertIn('  - build', preview.stdout)
+            self.assertNotIn('  - dist', preview.stdout)
+            self.assertTrue((root / 'build').is_dir())
 
             result = subprocess.run(
                 (str(script), '--yes'),
@@ -63,7 +73,9 @@ class DistributionScriptTests(unittest.TestCase):
             )
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertFalse((root / 'build').exists())
-            self.assertFalse((root / 'dist').exists())
+            self.assertTrue((root / 'dist').is_dir())
+            self.assertTrue((root / 'agent_knowledge' / 'wiki').is_dir())
+            self.assertTrue((root / 'block2-scratch').is_dir())
             self.assertFalse((root / 'package.egg-info').exists())
             self.assertFalse((root / 'module' / '__pycache__').exists())
             self.assertTrue((root / 'runs').is_dir())
@@ -72,7 +84,7 @@ class DistributionScriptTests(unittest.TestCase):
             self.assertTrue((root / '.pyscf-agent' / 'remote.ini').is_file())
 
             result = subprocess.run(
-                (str(script), '--yes', '--all', '--runs'),
+                (str(script), '--yes', '--all', '--runs', '--dist', '--wiki', '--scratch'),
                 cwd=str(root),
                 capture_output=True,
                 check=False,
@@ -80,9 +92,30 @@ class DistributionScriptTests(unittest.TestCase):
             )
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertFalse((root / 'runs').exists())
+            self.assertFalse((root / 'dist').exists())
+            self.assertFalse((root / 'agent_knowledge' / 'wiki').exists())
+            self.assertFalse((root / 'block2-scratch').exists())
             self.assertFalse((root / '.venv').exists())
             self.assertFalse((root / 'agent_knowledge' / 'node_modules').exists())
             self.assertTrue((root / '.pyscf-agent' / 'remote.ini').is_file())
+
+    def test_clean_refuses_to_delete_git_backups_before_any_mutation(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            script = root / 'clean.sh'
+            script.write_bytes((self.repo_root / 'clean.sh').read_bytes())
+            backup = root / 'runs' / 'history' / 'before.bundle'
+            backup.parent.mkdir(parents=True)
+            backup.write_bytes(b'backup evidence')
+            (root / 'build').mkdir()
+            result = subprocess.run(
+                ('bash', str(script), '--yes', '--runs'),
+                capture_output=True, text=True, check=False,
+            )
+            self.assertEqual(result.returncode, 2, result.stderr)
+            self.assertIn('Git bundle backup exists', result.stderr)
+            self.assertEqual(backup.read_bytes(), b'backup evidence')
+            self.assertTrue((root / 'build').is_dir())
 
     def test_release_metadata_has_one_core_langgraph_contract(self):
         metadata = (self.repo_root / 'pyproject.toml').read_text(encoding='utf-8')
@@ -237,7 +270,7 @@ class DistributionScriptTests(unittest.TestCase):
 
             required = {
                 'pyscf-agent-test/README.md',
-                'pyscf-agent-test/configure.py',
+                'pyscf-agent-test/pyscf_agent/configure.py',
                 'pyscf-agent-test/config/environments/conda.yml',
                 'pyscf-agent-test/pyscf_agent/resources/templates/llm.env',
                 'pyscf-agent-test/pyscf_agent/resources/templates/remote.ini',

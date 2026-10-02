@@ -27,7 +27,7 @@ For manual startup from the repository, use the same Python environment,
 output root and executor options as MCP. For a local setup:
 
 ```sh
-.venv/bin/python -m pyscf_agent.pyscf_agent_web \
+.venv/bin/python -m pyscf_agent.web.server \
   --no-open-browser --port 8765 --work-dir ./runs
 ```
 
@@ -105,5 +105,6 @@ requires existing port forwarding to reach it from the desktop. Live remote
 UI acceptance and large numerical calculations are outside this increment's
 verification scope.
 
-See the [MCP interface](mcp.md) and [plugin guide](../../plugins/pyscf-agent/README.md)
-for current setup and workbench launch instructions.
+See the [initial workbench record](../development/2026-09-16-study-workbench.md),
+[saved planning migration](../development/2026-09-16-saved-study-planning.md) and
+[workbench launcher](../development/2026-09-16-workbench-launcher.md).

@@ -6,7 +6,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-import pyscf_agent.pyscf_agent_cli as pyscf_agent_cli
+import pyscf_agent.cli as pyscf_agent_cli
 from pyscf_agent.application import (
     CalculationApplicationService,
     CalculationFeatureUnavailableError,

@@ -2,7 +2,7 @@
 
 ## Clean Installation
 
-`python configure.py verify-install` builds a wheel from the current checkout,
+`python -m pyscf_agent.configure verify-install` builds a wheel from the current checkout,
 installs that wheel into a temporary environment, changes to a directory outside
 the source tree, and verifies:
 
@@ -42,7 +42,7 @@ for that server only. The client and Web UI pass profile ids, not raw Slurm
 arguments. `expected_cluster_id` must match the selected server section before
 the remote result is trusted.
 
-`python configure.py verify-remote --profile NAME` performs a read-only RPC
+`python -m pyscf_agent.configure verify-remote --profile NAME` performs a read-only RPC
 capability check and compares the server's public contract version with the
 client. Adding `--submit-smoke` submits a minimal H2/HF calculation, polls it to
 a terminal scheduler state, fetches the result, validates the returned
@@ -61,7 +61,7 @@ collectable for error inspection.
 
 ## Source-Matched Remote Releases
 
-`configure.py deploy-remote` creates an immutable source release plus a private
+`python -m pyscf_agent.configure deploy-remote` creates an immutable source release plus a private
 worktree-specific `remote.ini`, runtime identity, and binding. The deployment
 reuses the configured server Python/dependencies and derives a server profile
 from the chosen base profile; it does not provision a new scientific environment.

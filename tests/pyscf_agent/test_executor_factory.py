@@ -7,8 +7,8 @@ from computational_study_agent.cli import build_parser as build_study_parser
 
 from pyscf_agent.executors import LocalExecutor
 from pyscf_agent.executors.factory import create_task_executor
-from pyscf_agent.pyscf_agent_cli import build_parser as build_calculation_parser
-from pyscf_agent.pyscf_agent_web import build_parser as build_web_parser
+from pyscf_agent.cli import build_parser as build_calculation_parser
+from pyscf_agent.web.server import build_parser as build_web_parser
 
 
 class ExecutorFactoryTests(unittest.TestCase):

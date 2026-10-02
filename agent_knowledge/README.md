@@ -55,7 +55,7 @@ LLM configuration. From the repository root, load the private local file before
 entering this directory:
 
 ```bash
-python configure.py init-llm
+python -m pyscf_agent.configure init-llm
 # Edit ./llm.env, then:
 source ./llm.env
 cd agent_knowledge
