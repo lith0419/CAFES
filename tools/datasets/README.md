@@ -16,9 +16,5 @@ the published selections; use the maintained tools here for subsequent work.
 Running these commands requires the original optional RDKit/PySCF dependencies;
 this refactor does not download the source archive or regenerate selections.
 
-The selected geometries, provenance manifests, IDs, checksums and bulk datasets
-were archived on Amarel on 2026-10-01 and removed from this checkout after
-checksum verification. See [storage and restore locations](../../docs/guides/repository-storage.md).
-Source archives, caches, and new calculation outputs belong outside the checkout.
-Report-specific reproduction recipes stay
-beside their reports; they are not part of the installed runtime API.
+Provide source datasets separately and pass their location with `--source-dir`.
+Keep source archives, caches and new calculation outputs outside the checkout.

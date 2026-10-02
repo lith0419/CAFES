@@ -266,7 +266,7 @@ reference retains a degeneracy and diverges at beta=1000. Such a failure remains
 failed; no automatic zero-temperature retry or solver substitution is applied.
 The former optional zero-temperature CCSD default is superseded. Historical
 runs and the September 24 comparison remain unchanged evidence of that policy.
-See `docs/development/2026-09-25-ccsd-dmet-shared-beta.md` for the current contract.
+The effective beta and recorded smearing fields above define the current contract.
 
 Recovery must identify the failing loop. `runtime.max_cycle` does not control
 DMET; `max_iterations` controls its outer loop, while `solver_max_cycle` is

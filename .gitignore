@@ -26,7 +26,7 @@ node_modules/
 __pycache__/
 *.py[cod]
 .pytest_cache/
-# Restored numerical datasets stay local; originals are archived on Amarel.
+# Numerical datasets stay outside the public source repository.
 /datasets/
 # Local manuscript material.
 /docs/si/
@@ -34,3 +34,11 @@ __pycache__/
 
 # Local research reports are not part of the public source distribution.
 /reports/
+
+# Internal development records remain in the private repository.
+/docs/development/
+/docs/status/
+/docs/architecture-review.md
+/docs/guides/repository-storage.md
+/docs/guides/qm9_500_ccsdt/
+/docs/guides/qm9_500_dft_aimd/

@@ -1,1 +1,10 @@
 graft examples
+
+# Keep internal records out of public Python source distributions.
+prune reports
+prune docs/development
+prune docs/status
+exclude docs/architecture-review.md
+exclude docs/guides/repository-storage.md
+prune docs/guides/qm9_500_ccsdt
+prune docs/guides/qm9_500_dft_aimd

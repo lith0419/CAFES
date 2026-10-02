@@ -62,13 +62,8 @@ status refresh and observed solver progress, shared by the browser and MCP.
   source-matched remote releases. Web local processes retain cancellation after
   restart and support an optional hard wall-time limit.
 
-See the [current platform report](docs/status/strong-correlation-agent-platform.md)
-for detailed method support, scientific boundaries, and remaining limitations.
-The September 21 development report (author archive: `reports/development-status-2026-09-21.md`)
-summarizes the current implementation and verification. The latest
-lutein results (author archive: `reports/lutein-overnight-results-2026-09-21.md`) establish
-converged M=600 orbital optimization and quantify the error from restricted
-external virtual spaces; full M=2000 orbital optimization remains untested.
+See the [documentation index](docs/README.md) and
+[architecture](docs/architecture.md) for supported workflows and ownership.
 
 ## Report Examples
 

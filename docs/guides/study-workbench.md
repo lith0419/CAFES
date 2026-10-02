@@ -105,6 +105,5 @@ requires existing port forwarding to reach it from the desktop. Live remote
 UI acceptance and large numerical calculations are outside this increment's
 verification scope.
 
-See the [initial workbench record](../development/2026-09-16-study-workbench.md),
-[saved planning migration](../development/2026-09-16-saved-study-planning.md) and
-[workbench launcher](../development/2026-09-16-workbench-launcher.md).
+See [MCP setup](mcp.md) and the [Python API guide](python-api.md)
+for launcher configuration and saved Study operations.

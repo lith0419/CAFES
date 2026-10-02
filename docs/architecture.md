@@ -36,8 +36,7 @@ Useful ownership references:
 
 ## Enforced boundaries and compatibility
 
-The [September 25 architecture review](architecture-review.md) establishes
-one-way imports from application adapters to Study to task infrastructure.
+The architecture enforces one-way imports from application adapters to Study to task infrastructure.
 Applications may also call task services directly. Shared contracts and storage
 primitives must not import Study or presentation code. The shared platform
 registry contains declarative Study contracts; those declarations do not import
@@ -46,9 +45,8 @@ the executable Study package. They remain shared metadata in this distribution.
 Local architecture tests reject Study or inbound-adapter imports from task
 infrastructure. Web implementations now live under `pyscf_agent.web`, and Study
 grid and Hamiltonian dataset implementations under `computational_study_agent.grid`
-and `computational_study_agent.datasets.hamiltonian`. Old module names alias
-the same module objects, preserving callers and stored runtime binding identifiers.
-Console aliases remain supported.
+and `computational_study_agent.datasets.hamiltonian`. Supported module paths and
+commands are listed in the [maintenance guide](guides/architecture-maintenance.md).
 
 `StudyApplicationService` composes explicit use-case functions from preparation,
 saved-study, execution, dataset, postprocessing, analysis, path-recovery, and MPS

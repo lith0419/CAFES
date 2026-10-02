@@ -119,8 +119,7 @@ This removes caches and build intermediates, then verifies the selected scope.
 - `--runs`: calculation logs and artifacts; refuses the entire cleanup if
   a Git `.bundle` backup is present under `runs/`.
 
-Default cleanup preserves all of those directories. See the
-[storage guide](repository-storage.md) for archived data and retained backups.
+Default cleanup preserves all of those directories.
 Before creating a release, use:
 
 ```bash

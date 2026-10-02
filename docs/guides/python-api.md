@@ -179,8 +179,7 @@ Completed legacy child/stage results can be imported from persisted evidence
 into the original Study checkpoint without recalculation. Pending historical
 child executions require collection before migration. Historical reports remain
 readable, but browser-only numerical snapshots cannot initialize execution
-state. See the [Study/Task/Run correction](../development/2026-09-06-study-task-run-organization.md)
-for the implementation and migration boundary.
+state.
 
 Local dataset generation publishes each successful attempt in a separate
 `generation-*` subdirectory under the requested output directory. Use the
@@ -269,7 +268,7 @@ receive distinct run directories while stable case IDs remain suitable for
 merging. Recovering an already pending execution reuses its handles. A missing
 or corrupt checkpoint/receipt and an unknown submission outcome require
 reconciliation rather than automatic resubmission. See the
-[implementation and migration record](../development/2026-09-04-study-retry-and-collection.md).
+[selected-case retry guide](selected-case-retries.md).
 
 For an unknown SSH submission, explicitly select the existing server evidence:
 
