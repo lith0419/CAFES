@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it using the metadata below."
+message: "If you use CAFES, please cite the paper in preferred-citation below."
 title: "CAFES: A Correlation-Aware Agentic Framework for Electronic Structure"
 type: software
 version: 0.2.1
@@ -10,3 +10,15 @@ authors:
     email: "tenghui.li@rutgers.edu"
 license: Apache-2.0
 repository-code: "https://github.com/lith0419/CAFES"
+preferred-citation:
+  type: article
+  title: "Automated Many-Body Simulations of Strongly Correlated Systems Using a Correlation-Aware Agentic Framework"
+  authors:
+    - family-names: "Li"
+      given-names: "Tenghui"
+    - family-names: "Sun"
+      given-names: "Chong"
+  year: 2026
+  journal: "arXiv"
+  doi: "10.48550/arXiv.2610.00943"
+  url: "https://arxiv.org/abs/2610.00943"

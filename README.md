@@ -151,6 +151,26 @@ python3 -B -m unittest discover -s tests -t . -p 'test*.py'
 Scientific benchmarks and clean-wheel checks are described in the
 [verification guide](docs/guides/verification-and-distribution.md).
 
+## Citation
+
+If you use CAFES in your research, please cite:
+
+Tenghui Li and Chong Sun. *Automated Many-Body Simulations of Strongly Correlated
+Systems Using a Correlation-Aware Agentic Framework* (2026).
+[arXiv:2610.00943](https://arxiv.org/abs/2610.00943).
+
+```bibtex
+@misc{li2026cafes,
+  title={Automated Many-Body Simulations of Strongly Correlated Systems Using a Correlation-Aware Agentic Framework},
+  author={Tenghui Li and Chong Sun},
+  year={2026},
+  eprint={2610.00943},
+  archivePrefix={arXiv},
+  primaryClass={physics.comp-ph},
+  url={https://arxiv.org/abs/2610.00943},
+}
+```
+
 ## Author
 
 Tenghui Li, Rutgers University, tenghui.li@rutgers.edu
